@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import util.DriverUtils;
 
@@ -55,6 +56,12 @@ public class TestOpeartionsTour {
 
 		driver.findElement(By.name("confirmPassword")).sendKeys("test1234");
 
+		
+		Select countryDropdown = new Select(driver.findElement(By.name("country")));
+		//countryDropdown.selectByIndex(1);
+		//countryDropdown.selectByValue("6");
+		countryDropdown.selectByVisibleText("ANGOLA ");;
+		
 		Thread.sleep(3000);
 	}
 
