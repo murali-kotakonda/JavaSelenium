@@ -38,6 +38,12 @@ public class TestOpeartionsTour {
 		fName.sendKeys("krishna"); // enter values to field
 
 		driver.findElement(By.name("lastName")).sendKeys("singamreddy");
+		
+		Thread.sleep(3000);
+		driver.findElement(By.name("lastName")).clear();
+		
+		driver.findElement(By.name("lastName")).sendKeys("kumar sharnma");
+		
 		driver.findElement(By.name("phone")).sendKeys("87878787");
 		driver.findElement(By.name("userName")).sendKeys("xyz@gmail.com");
 
@@ -60,7 +66,15 @@ public class TestOpeartionsTour {
 		Select countryDropdown = new Select(driver.findElement(By.name("country")));
 		//countryDropdown.selectByIndex(1);
 		//countryDropdown.selectByValue("6");
+		
+		
 		countryDropdown.selectByVisibleText("ANGOLA ");;
+		
+		
+		
+		Thread.sleep(3000);
+		
+		driver.findElement(By.name("register")).click();
 		
 		Thread.sleep(3000);
 	}
