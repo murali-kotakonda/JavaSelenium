@@ -31,10 +31,11 @@ public class TestOpeartionsTour {
 
 		regLink.click();
 
+		
+		testVisibleAndEnable(
+				"firstName","lastName","phone","userName","address1");
+		
 		WebElement fName = driver.findElement(By.name("firstName"));
-		Assert.assertTrue("fName is expected for display", fName.isDisplayed());
-		Assert.assertTrue("fName to enable", fName.isEnabled());
-
 		fName.sendKeys("krishna"); // enter values to field
 
 		driver.findElement(By.name("lastName")).sendKeys("singamreddy");
@@ -77,6 +78,16 @@ public class TestOpeartionsTour {
 		driver.findElement(By.name("register")).click();
 		
 		Thread.sleep(3000);
+	}
+	
+	
+	private void testVisibleAndEnable(String... names){
+		for(String name: names){
+			WebElement fName = driver.findElement(By.name(name));
+			Assert.assertTrue(name+ " is expected for display", fName.isDisplayed());
+			Assert.assertTrue(name +" to enable", fName.isEnabled());
+	
+		}
 	}
 
 	@AfterClass
