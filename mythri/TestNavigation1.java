@@ -1,22 +1,10 @@
 package com.mythri;
 
-import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 
-import util.DriverUtils;
+public class TestNavigation1 extends BaseTest{
 
-public class TestNavigation1 {
-
-	
-	static WebDriver driver ;
-	@BeforeClass
-	public static void setup(){
-		 driver = DriverUtils.getDriver();
-	}
-	
 	@Test
 	public void test() throws InterruptedException {
 		
@@ -44,9 +32,5 @@ public class TestNavigation1 {
 		
 	}
 	
-	@AfterClass
-	public static void clean(){
-		driver.close();
-	}
 
 }

@@ -1,24 +1,12 @@
 package com.mythri;
 
-import org.junit.AfterClass;
 import org.junit.Assert;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import util.DriverUtils;
-
-public class TestOpeartionsTour {
-
-	static WebDriver driver;
-
-	@BeforeClass
-	public static void setup() {
-		driver = DriverUtils.getDriver();
-	}
+public class TestOpeartionsTour extends BaseTest{
 
 	@Test
 	public void test() throws InterruptedException {
@@ -90,9 +78,5 @@ public class TestOpeartionsTour {
 		}
 	}
 
-	@AfterClass
-	public static void clean() {
-		driver.close();
-	}
 
 }
