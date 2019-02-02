@@ -28,16 +28,17 @@ public class TestLinksAvailability {
 	        
 	        driver.get("");
 	        
+	        
+	        List<String> linkTexts = Arrays.asList("Employee,MyProfile,Department,Add New Employee");
+	        
 	        List<WebElement> links = driver.findElements(By.tagName("a"));
-	        List<String> linkText = Arrays.asList("");
 	        for(WebElement element: links){
-	        	String attribute = element.getAttribute("href");
+	        	//String attribute = element.getAttribute("href");
 	        	String text = element.getText();
-	        	Assert.assertTrue("misisng link "+text,linkText.contains(text));
+	        	Assert.assertTrue("misisng link "+text,linkTexts.contains(text));
 	       
 	        	testLinkWorking(element);
 	        }
-	        
 	        
 	        driver.quit();
 
@@ -50,15 +51,9 @@ public class TestLinksAvailability {
 	     
 		    System.out.println(url);
 		
-		    if(url == null || url.isEmpty()){
-		    	System.out.println("URL is either not configured for anchor tag or it is empty");
-		        return;
-		    }
+		    Assert.assertTrue("Link url is missing..",url != null && !url.isEmpty());
 		    
-		    if(!url.startsWith("baseurl")){
-		        System.out.println("URL belongs to another domain, skipping it.");
-		        return;
-		    }
+		    Assert.assertTrue("Link domain is wrong is missing..",url.startsWith("http://localhost:9090/Employee"));
 		    
 		    try {
 		        huc = (HttpURLConnection)(new URL(url).openConnection());
@@ -69,19 +64,10 @@ public class TestLinksAvailability {
 		        
 		        respCode = huc.getResponseCode();
 		        
-		        if(respCode >= 400){
-		            System.out.println(url+" is a broken link");
-		        }
-		        else{
-		            System.out.println(url+" is a valid link");
-		        }
-		            
+		        Assert.assertTrue("Link not working..",respCode==200);
+		        
 		    } catch (MalformedURLException e) {
-		        // TODO Auto-generated catch block
-		        e.printStackTrace();
 		    } catch (IOException e) {
-		        // TODO Auto-generated catch block
-		        e.printStackTrace();
 		    }
 	}
 }
