@@ -30,5 +30,8 @@ public class TestDragAndDrop {
 				.build();
 
 		dragAndDrop.perform();
+		
+		//Alternately u can also use Performing the drag and drop action  
+		action.dragAndDrop(From,To).build().perform();  
 	}
 }
