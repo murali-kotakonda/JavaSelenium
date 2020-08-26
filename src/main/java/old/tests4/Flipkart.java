@@ -1,4 +1,4 @@
-package tests4;
+package old.tests4;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
