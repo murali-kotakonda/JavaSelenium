@@ -1,0 +1,83 @@
+verification and validation:
+-----------------------------
+documnets , --> focus on are we going on right path.
+correctness and complteness of the docs.
+ex:unit testing
+final s/w not ready
+
+validation:
+what ever developed is working as per customer req.
+ex: system testing,
+
+
+Reviews:
+--------
+done by qa lead
+requirement reviews
+design reviews
+code reviews
+test plan reviews
+test cases reviews
+
+
+
+
+Min Levels of software testing:
+--------------------------
+Unit testing
+Integration
+System testing
+UAT
+
+
+UT:
+----
+Junits
+done by dev
+test singl unit using code
+white box testing(with knowing coding)
+
+system test:
+---------------
+test the integrated system , final product.
+done by testers
+black box(without knowing coding)
+->funtional
+db test,
+regression
+->non funtional (mostly on stability)
+per +load +stress+security +compatability+ installation +recovery +configuration
+-> GUI
+-> usability
+
+UAT:
+------
+done by customers/users at their env
+black box
+test on final system
+- tested at customer environment
+->Alpha (test with real time data)
+->Beta 
+
+
+integration
+-------------
+integrate all software and start testing
+o/p of a prog is input to another system.
+done by developer
+deal by the code 
+ex: web services
+done on coding
+white box testing
+
+
+
+
+
+
+
+
+
+
+
+

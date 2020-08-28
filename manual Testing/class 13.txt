@@ -1,0 +1,142 @@
+verification vs validation:
+-----------------------------
+
+Verification:
+before the applicatrion is ready.
+correctness and complteness of the documents.ex: test case doc
+before the application has been developed.
+check are we going on right track.
+are we planning to build the correct system??
+Test case preparation + Reviews 
+
+
+Validation:
+starts once the develop is completed and applcation is ready.
+testing will happen on final product.
+Validate what we build is correct.
+Is the system meets the customer requirements?
+
+
+
+
+
+
+
+
+
+
+Reviews:
+---------
+Requirement ( qa + PO)
+test cases (qa lead)
+test plan   (qa lead + architect)
+
+design  (dev + architect )
+code    (dev lead) 
+
+
+
+
+Minimum levels of software testing:
+-----------------------------------
+Testing phase requires to do different types of testing.
+
+1.Unit Testing    (white)  --> Dev
+2.Integration testing (white) --> Dev 
+3.System testing   (black) --> Tester
+4.User Acceptance testing (black) --> Customer
+
+
+
+1.Unit Testing:
+- Tested by Dev
+- Testing the single unit (smaller area) 
+- write code to test the code
+- Testing is done using the Code.
+- Testing is not on the product funtionalities; testing is only on the code written by the developer.
+- to be written by understanding the code.
+ex: if we have login requiremnets:
+we need write 4 funtions (dev).
+->input()   
+	-> test the input() funtion by writing test cases  
+->validate()
+   -> test the validate() funtion by writing test cases
+->process()
+	-> test the process() funtion by writing test cases
+->showResponse()
+	-> test the showResponse() funtion by writing test cases
+ex: Junits, Mockito, easyMock
+
+-> 
+
+
+
+
+
+
+
+
+Integration testing:
+-----------------------
+case1:
+When one app has to communicate with another app(or multiple modules), then we need both the app to be integrated.
+
+app1 conects with apps and sends the data.
+app2 that received the data will process and send the response back to app1.
+app1 has to understand the response from app2.
+  
+case2:
+Integration Testing becomes necessary after joining multiple modules.
+- Component1[application] has some features
+  Component2[application] has some diff features. 
+-output of one application is the input for other application.
+
+
+- done by developer.
+- may be optional depends on the systems involved.
+- testing is required only if there is an integration exits with 3rd party. 
+
+ex: webservices
+- application can have multiple modules.
+
+refer diagram topdown
+
+Approaches:
+-> its a white box testing modle.
+
+
+-> top down:
+a)testig takes from top to bottom. [higher module to low module]
+b)if Module A is ready and below Modules[lower modules]  are not avilable,then develper creates stubs.
+ 
+ 
+-> botton up
+a) testig takes from bottom to up. [low module to higher module]
+b) if Lower Module is ready and Higher Modules are not avilable,then develper creates driver.
+-Each module at the lower level is tested with high modules untill all modules are tested.
+
+-> hybrid: Mix of both TD and BU
+
+
+
+UserAcceptanceTesting:
+--------------------------
+- Done by the customers at their environment
+- Testing is done on the final system
+- Pre-production system.
+- If there is an issue, then client creates defects and assigns to amazon
+alpha : testing at developers site . system setup is done by amazon.
+beta : testing at customers site with his own test data.
+with realtime data.
+
+
+
+requirements-traceability-matrix document:
+-------------------------------------------
+- Document for mapping the requirement with test cases.
+- collets all requirements and for every reuirement what are the test cases ids's.
+- 
+
+
+
+

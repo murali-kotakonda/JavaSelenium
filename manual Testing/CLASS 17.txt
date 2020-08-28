@@ -1,0 +1,179 @@
+Funtional testing:
+------------------
+->Test New Features (using test cases)
+-> Test Defects  (ReTesting )
+-> Before Regression perform sanity + smoke
+-> Regression  [just before the delivery]
+-> Non Funtional Testing.
+-> User Acceptance Testing  (customer)
+
+coverage/gudelines under funtional testing:
+------------------------------------------
+a)Object Properties testing:
+->Every object has certain properties.
+ex: in a web page textbox , password field, state dropdown.
+
+textbox is an object -> enabled, disabled , size , displayed,onchange, focus
+
+
+password is object -> we type should not be visible + if we chose to show password should show
+
+state dropdown obj -> if we change state then city dropdown chnages...
+city dropdown obj ->
+
+
+
+b)Error handling/coverage testing:
+negative scenarios testing.
+-> tester has to provide  all possible invalid data and check how the application is behaving for every page.
+-> test the error message displayed to customer.
+-> Test the expected erorr message has to be displayed on the screen.
+-> test the app should give meaningful message.
+ex: 
+1."Please enter valid password"   
+--Not a meaning error message
+2."Password should be min 5 chars and max 10 chars".
+-- meaningfull message.
+
+[Provide invalid data and test how app responds  +   what is the message + is the message meaningful?]
+	
+	
+	
+c)calculation /manipulation testing:
+------------------------------------
+ex:
+1.debit + credit 
+check the final bal for both accounts.
+USER1 : 6000
+user2 : 9000
+user1 transfers 1000 to user2 
+USER1 : 5000
+user2 : 10000
+
+2. add products to cart
+in final bill the total amount to be paid = sum of prices of all products 
+
++ additionaly apply discount + taxes ===> final price.
+
+
+ex: financial , banking , ecommerce.
+
+
+d)Links coverage:
+------------------
+-applicable for the web applications.
+- check if the expected links are displayed on the page.
+- check if the links are displayed in the expcted layout/position.
+- check invalid links should not links.
+ex: on home we would expect login + register 
+
+- check if the links are working ? navigating to the target page as expected??
+- Links can be internal or external .
+app has links as agreed by business.
+
+
+
+e)Boundary Value analysis:[BVA]- LENGTH/range
+------------------------------
+ex: username should be between 6 chars and max 10 chars.
+BVA is used when the requirement ahs boundaries for testing.
+testcases:
+
+testcases are:
+min-1 , min , min+1
+max-1, max, max+1
+
+min =6
+max= 10
+  Username(6-10)    status
+  ---------        --------
+1. 5                  F   
+2. 6                  P
+3. 7                  P
+4. 9                  P
+5. 10                 P
+6. 11                 F 
+
+f)Equivalence class partitioning (ECP):- Value
+---------------------------------
+ex: 1.mobile num should be exactly 10 digits
+2.username allows only alphabets only capitals allowed.
+
+MobileNum
+---------
+10     - Valid  -> 9090909090
+9 , 11 - Invalid -> 999999999 & 90909090901
+
+Username
+---------
+only alphabets lower case - InValid  -> user
+only alphabets upper case - Valid  -> USER
+only digits  - Invalid -> 1213
+special chars - Invalid -> &&%$
+
+
+g)decision table based testing
+-------------------------------
+used when we have multi events/combinations in a requirement.
+-> ex: login page 
+Un has to be  10 chars
+pwd has to be 8 chars
+un & pwd if both are valid then login is success.
+
+SYNTAX CORRECT: 
+
+F - False   
+T - True   
+
+un          pwd        result
+------------------------------
+F(<10)      F(<8)        Fail
+F(<10)      T(=8)        Fail
+T(=10)      F(<8)        Fail
+T(=10)+V    T(=8)+I      FAIL
+T(=10)+I    T(=8)+V/I    FAIL
+T(=10)+V    T(=8)+V      PASS
+
+
+state transition:
+------------------
+-> in a single flow the state changes based on input/usertype.
+-> test the state changes as expected.
+
+ex: 
+1.user fail attempts to login has recahed 5, then his account is locked.
+ACTIVE ---> BLOCKED.
+
+2.LoggedinUser vs Loggedout user
+ex: ebay 
+acces product -> both
+add to cart -> both
+purchae -> only loggedin can purchse.
+
+
+3.privilaged customer vs normal customer.
+ex: featues
+
+
+Internationalization  testing:
+----------------------------
+-> app that supports multi languages.
+Test the application to support the page in diff language.
+-> currancy change based on nation
+-> date + local information has to be tested.
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+

@@ -1,0 +1,153 @@
+Requirement :
+
+BR#1
+
+-> Introduce new screen for Login.
+
+-> Provide app name in the top:  
+
+-> In the page body provide a form :
+
+a) Form to contain  username label + text field for filling username
+
+b) Form to contain  password label + text field for filling password
+
+c) Form to contain Login button
+
+-> For successfull login show message as "login success".
+
+-> For failure login show message as "login failure".
+
+
+
+
+Queries:
+1.Please share the wireframe/mockup screen for the login page.
+
+2.Should we show the message on the same screen or new screen?login success or login failure
+Ans2. Login success should come in a new screen and login failure should come on same screen.
+
+3.User name or password both or anyone are empty then what we should do?
+Ans3.If user name is empty then this screen should show a pop up menu asking "please enter user name". This is a client's side validation.
+
+Terms:
+
+1)Client's side validation (the check is done at client's side, but the call is not submittted to the back side eg: psw has to 8 digit, psw should not be empty, age can't be greater than 100, age should be a number, date of birth should be in numbers not alphabets, only syntax(use in proper format) related checks at client's side)
+
+2)Server's side validation (validation will happens only after submitting the data to the backend eg: check if username is correct, check if psw is correct)
+
+Test Case:
+
+1) Check for login success under valid credentials.(username correct, psw is correct)
+2) Check for login faliure under invalid credentials.(username correct, psw is wrong)
+3) Check for login faliure under invalid credentials.(username wrong, psw is wrong)
+4) Check for pop msg if User name is empty.
+5) Check for pop msg if password is empty
+6) Check for pop msg if password & user name both are empty.
+
+What is the testing common for all test cases:
+
+1) Provide app name on the top
+2) Form to contain username label + field for filling user name.
+3) Form to contain psw label + field for filling psw.
+4) Form to contain login button.
+
+
+
+
+
+
+
+
+
+BR#2
+
+
+--please add a new page for registration.
+--this new page should contain registration form.
+--the form should contain user name(login name), password, confirm password.
+-- first name
+-- last name
+-- gender  (radio button, male, female, other)
+-- date of birth (dd/mm/yy)
+-- department (HR, recruitment and finance)(drop down)
+-- mobile number
+-- email
+-- register button 
+
+Client side validations
+--------------------------------
+-- all fields are madatory
+   If any of the field is missing then display pop up msg.
+-- password has to be minimum  5 characters and max 10 characters, pop up msg to display.
+-- mobile number has to exactly 10 digits, display pop up if invalid.
+-- email has to be a valid format, display pop up if invalid.
+-- D.O.B has to be a valid format, display pop up if invalid.
+-- after reg
+
+
+
+Server side valdiations:
+----------------------------------------------------
+1. if e registration is success show registration success message on login  page.
+2.Login name have to be unique, if not display message on the 
+registraion page stating:
+login name alreday in use.
+3.Mobile numner have to be unique, if not display message on the 
+registraion page stating:
+login name alreday in use.
+4.Emaid id have to be unique, if not display message on the 
+registraion page stating:
+login name alreday in use.
+5. if registartion is success then use username and password on the login screen to login (Refer BR#1)\
+
+
+
+
+BR#2 Testcases:
+----------
+1.Popup msg to appear when username is empty
+2.Popup msg to appear when password is empty
+3.Popup msg to appear when password lengh < 5 chars
+4.Popup msg to appear when password lengh > 10 chars
+5.Popup msg to appear when confirm passord is empty.
+6.Popup msg to appear when password and confirm password are not equal.
+
+
+
+[‎4/‎4/‎2020 11:51 PM]  niloufer:  
+test case 1(screen content test)
+verify registration page contain the expected feilds.
+test case 2(screen behaviour)
+verify the registration failed and pop up is displayed when user name is missing.
+test case 3
+verify the registratin failed and pop up is displayed when password is missing.
+test case 4
+verify the registratin failed and pop up is displayed when confirm password is missing.
+test case 5
+verify the registratin failed and pop up is displayed when first name is missing.
+test case 6
+verify the registratin failed and pop up is displayed when last name is missing.
+test case 7
+verify the registratin failed and pop up is displayed when date of birth is missing.
+test case 8
+verify the registratin failed and pop up is displayed when mobile number is missing.
+test case 9
+verify the registratin failed and pop up is displayed when email is missing.
+test case 10
+verify registration success with valid form details.
+test case 11
+verify the registration failed when password and confirm password are different and popup message is display
+test case 12
+verify the registration failed if password is more than 10 characters a pop up message has to be displayed.
+test case 13
+verify registration failed if password is less than 5 character a pop up message has to be displayed.
+test case 14
+verify registration failed if mobile number is more than 10 digits pop up message has to be displayed.
+test case 15 
+verify registration failed if mobile number is less than 10 digits pop up message has to be displayed.
+test case 16
+verify registration failed if email is invalid formate pop up message has to be displayed.
+test case 17
+verify registration failed if date of birth is invalid formate pop up message has to be displayed. 
+ 

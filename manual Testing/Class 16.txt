@@ -1,0 +1,43 @@
+Regression is costly + time consuming.
+Perf testing follows after Regression.
+
+Order:
+--------
+-> Test New Features (using test cases)
+-> Test Defects  (ReTesting )
+-> Regression  ------> Heavy + costly + time consuming.
+-> Non Funtional Testing
+-> UAT (customer)
+
+Inroduce additional testing for Time saving:
+-> Test New Features (using test cases)
+-> Test Defects (ReTesting)
+-> Smoke + Sanity Testing 
+-> Regression  ------> Heavy + costly + time consuming.
+-> Non Funtional Testing
+-> UAT (customer)
+
+
+
+
+Smoke Testing and Sanity Testing:
+-------------------------------------
+
+Smoke:
+-------
+- mostly done using the tool.
+- Build verification testing.
+- check if the new build is stable.
+- verify the app lauched successfully or is the deployment success and check  installation is proper or check if the pages are responsive (in time/not at all).
+- verify critical funtionality.
+->Minor changes/fixes .
+->if Smoke fails , then no need to go for regresion and create HIGH defect.
+
+
+Sanity :
+-----------
+->UAT TESTING done by tester.
+->basic navigation, basic flow testing .
+->Minor changes/fixes .
+->if sanity fails , then no need to go for regresion and create defect.
+

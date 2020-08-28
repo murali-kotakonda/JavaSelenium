@@ -1,0 +1,50 @@
+Funtional Testing:
+----------------------
+-> done by tester.
+-> blackbox testing
+only on requirement based testing.
+check the behaviour of system.
+-> Testing the new features(Test cases) + existing features(regression) + Defects(retesting).
+
+
+-a) the new features(Test cases V-12 ) + ->Manual
+ b) Defects(retesting Issues till v-11).  -> Manual
+ c) existing features(regression v-11) +  ->manual/AUtomation . But preferred automation.
+
+Regression Testing:
+--------------------
+a)Testing the existing/already delievered features.
+b)Regression testing is required always:
+-> Defect fix
+-> New feature development
+-> Perf fixes.
+c) Adv: Avoids the side effects due to new features.
+New feature should not break the existing features.
+-> Regression is costly + time taking
+-> Regression should be before the release to the customer.
+-> Regression is per release.
+
+
+ReTesting:
+-----------
+Retesting is testing only the area where issue/defect exists.
+After Retesting we need to do the Regression Testing.
+
+-> a) Tester created defect for login scenario
+   b) Dev will fix the issue  and will assign defect back to tester for confirmation.
+   c)Tester will retest only the login scenario.
+   d) Tester closes the defect.
+   e) Perform Regression Testing before the delivery.
+
+   
+  Monkey Testing:
+  ----------------
+  -Test without testcase and without prior knowledge of the application.
+  -create defect for any flaw identified.
+  
+  
+  
+
+
+
+

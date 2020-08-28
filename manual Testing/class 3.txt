@@ -1,0 +1,122 @@
+Types of s/w companies:
+- Product based..
+- Service based..
+
+
+Product : 
+build their own product and sell to market.
+
+Target to developo s/w for multiple customers.
+[Req gathering + Requiremnets + impl + dev + testing]
+==>market analysis , predective analysis , study customers 
+undertand need of customer and they develop the apaplication.
+application is consumed by multi customers.
+ex: 
+win os , facebook , wats up, google , amazon...
+
+
+
+Service based:
+build product for other companies.
+
+enduser --> abc corp  -----> Amazon
+Requirement gather will be done by the abc corp and
+development/testing/support is taken care by the Amazon company.
+
+
+S/W company perform sdlc for a specific customer[business ].
+Requirement gather will be done by the customer and
+development is taken care by the s/w company.
+
+
+software testing:
+------------------
+- is a phase of sdlc.
+- aims at the capabilities of the application.
+- intended to identify problem areas/bugs/issues/defect.
+ex:
+correct creds + login failure --> critical defect.
+login buton has to be in blue , was in red : low defect.
+in fb , along with image upload , text msg is not added: medium
+
+Defect--> any scenario/ any test case which is not working
+as per customer specification.
+- check whethere application meets the customer requirements.
+- identify any gaps/miscommunication.
+- Tester is the 1st customer.
+
+Nov 11th:
+--------------
+v20--> consumed by customer.[ login , inbox ]
+V21---> 
+New requiremnts[draft] + 10 defects for login,inbox.
+Fix the defects first and then procced with new requirements.
+
+
+Testing:
+1.Manual testing - no tool/technology for testing
+- sql , sqldeveloper
+- process tools:  wiki , github ,svn , Jira, jenkins 
+
+2.automation testing. 
+-need tool/language for testing.
+- html
+- java
+- selenium
+- testng
+
+Requiremnt gap:
+-----------
+for success login -> show home page
+for all failure case -> show invalid credentials.
+for account locked --> show acocunt locked. 
+
+test case:
+1. login name is corect  + pwd correct ---> show home page
+2. login name is corect  + pwd wrong ---> show login page 
+                 with msg invalid credentials.
+3. login name is wrong  + pwd wrong ---> show login page 
+                 with msg invalid credentials.
+4. login name is corect  + pwd correct ,
+but account is locked
+ ---> show login page 
+                 with msg acocunt locked.
+				 
+				 
+				 
+Why Testing:
+-> fixing the issue after delivery is expensive.
+-> ensure the software is 100% bug free.
+-> ensure app meets the quality [perf + funtional+ non -functional], stable , security.
+-> ensure quality delivery.
+
+Quality:[from business view]
+---------
+-> Bug free
+-> funtional is as expected
+-> On time delivery ,[No extenstions...] 
+-> On budget.
+-> Performance [app should not slow]
+-> app should support future requirements.
+-> No crashes/ no conituous restarts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

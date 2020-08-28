@@ -1,0 +1,95 @@
+when do you created defect:
+--------------------
+when the expected and actual ae not matchin
+
+Every defect created by tester should contain:
+-----------------------------------------------------------
+- detailed steps to be followed for reproducing the issue 
+Additional information to reproduce the issue, e.g. server, browser version, operating system, ...
+- what is expected and what is the actual from application.
+- priority (high/medium/low/very high)
+- Log statements.
+- Enviroment(sandbox/commit/live).
+- which browser 
+- what is the request data used in the scenario.
+
+
+Where should we create defect or what is the defect tracking tool?
+JIRA
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+States:
+---------
+-> New (Defect created by tester with details...)
+
+-> Open :
+Scrum master assign the defect to any of the developer.
+Assigning to developer and start analysis. or atleast the RCA [Root cause analysis].
+if the defect is invalid then mark as Reject/Duplicate/Not Reproduable.
+
+-> Author action [clarification required]:
+info provided by tester is not sufficient.
+dev needs additional info .
+then defect falls under tester place 
+
+-> Inprogress :
+Defect is accepted and dev chages are in progress.
+
+  
+-> Dev close /Fixed : 
+ When developer makes necessary code changes and verifies the fix is addressed 
+ then he will make defect status as ‘Fixed’ and the defect is passed to testing team.
+developer need to inform when the new changes will be available.,
+  
+-> Retesting:
+Re-testing has to be done testers end.
+try to execute the same test case and check if the issue is addressed.
+try to run the regression and check the fix is not breaking other features.
+
+-> Reopen
+ If the defect still exists even after the bug is fixed by the developer, the tester changes
+the status to “reopened” and the defect is passed to dev team.
+
+-> Reject/Duplicate/Consultation/Not Reproduable
+
+
+-> Test completed/Verified
+Mark as Test completed when the testings are completed and successfull.
+check if the new test case has to be written or not.
+  
+  
+-> Closed
+Once the bug is fixed and it is tested by the tester.
+Closed  means that the bug is fixed, tested and approved.
+
+
+  
+  
+  

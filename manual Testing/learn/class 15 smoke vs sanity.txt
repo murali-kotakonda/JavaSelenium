@@ -1,0 +1,42 @@
+smoke:
+----------
+- test the basic functionalities before releasing build to next cycle.
+- also known as  build verification test.
+- practice is to conduct a Daily build and smoke test .
+- verify that the critical functionalities of the system are working fine.
+- It is executed "before" any detailed functional or regression tests are executed
+For Example, a typical smoke test would be - Verify that the application launches successfully, Check that the GUI is responsive ... etc.
+- purpose is to reject a badly broken application so that QA team does not waste time 
+
+Smoke Testing is a kind of Software Testing performed after software build to ascertain that the critical functionalities of the program are working fine. It is executed "before" any detailed functional or regression tests are executed on the software build. The so that the installing and testing the software application.
+
+In Smoke Testing, the test cases chose to cover the most important functionality or component of the system. The objective is not to perform exhaustive testing, but to verify that the critical functionalities of the system are working fine.
+
+
+
+
+sanity:
+---------
+tester uat
+test basic functionality when new build is received.
+test build is stable + basic naviations.
+test installation.0
+
+Sanity testing is a kind of Software Testing performed after receiving a software build, with minor changes in code, or functionality, to ascertain that the bugs have been fixed and no further issues are introduced due to these changes.
+The goal is to determine that the proposed functionality works roughly as expected.
+If sanity test fails, the build is rejected to save the time and costs involved in a more rigorous testing.
+
+
+
+
+Both sanity tests and smoke tests are ways to avoid wasting time and effort by quickly determining whether an application is too flawed to merit any rigorous testing. 
+Sanity Testing is also called tester acceptance testing.
+Smoke testing performed on a particular build is also known as a build verification test.
+One of the best industry practice is to conduct a Daily build and smoke test in software projects.
+Both smoke and sanity tests can be executed manually or using an automation tool.
+  When automated tools are used, the tests are often initiated by the same process that generates the build itself.
+
+As per the needs of testing, you may have to execute both Sanity and Smoke Tests in the software build. In such cases, you will first execute Smoke tests and then go ahead with Sanity Testing. In industry, test cases for Sanity Testing are commonly combined with that for smoke tests, to speed up test execution. Hence, it's a common that the terms are often confused and used interchangeably
+
+
+ 

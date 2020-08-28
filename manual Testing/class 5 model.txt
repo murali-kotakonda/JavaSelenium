@@ -1,0 +1,108 @@
+Testing systems/environments/spaces:
+-----------------------------------
+refer the diagram
+
+
+SDLC Models:
+-----------
+->phase/stages:
+
+
+1.Water fall model
+2.Incremental model
+3.Spiral model
+4.V model
+5.Agile
+
+
+waterfall:
+--------------
+
+Analyis + design + coding + unit testing+
+testing + deployment + maintainance..
+
+-> all reqs at a time.
+sequential stage by stage.
+-> Testers cannot start work untill dev compltes,
+dev compltion takes almost 75% of the estimation.
+No proper Resouce utilization.
+
+-> Testers with 0.5 month has created 500 defects.
+Can developer fix 500 issues with in 0.5 month???
+NO,
+This will lead to delay in delivery.
+
+-> not realistic /suit for the real time projects.
+-> risk invoved  ( timely delivery , quality ).
+-> small change/ gap idenfied the cycle will again starts
+from analysis.
+going back to previous stage is complex/time consuming.
+-> long term projects its not suitable.
+
+-> testing period comes very late.
+-> customer [abc ] will see the outcome only after 6 month.
+-> errors can be fixed only after 5 months.
+
+Agile:
+-------
+Analyis + design + coding + unit testing+
+testing + deployment + maintainance..
+
+- process model that contains continuous iteration of the 
+phases (coding / testing ) 
+-dev + testing will be happening at the same time.
+-Divide and rule policy .
+divide all requiremnets into indpendent pieces.
+and start life cycle for every individula requiremnet
+- few requirements at a time
+- parallel activities. 
+
+- cutsomer(ABC) will see the outcome mini for very month.
+- error can be fixed in between before 5 months.
+- for every two weeks we have delivery .[small requirements]
+
+- Agile allows the team to work together efficiently + effectively
+-Agile is a process using which team will manage the software dev into several stages with continuous iteration .
+- constant colloboration and communication with customers.
+---> fill the gaps / clarifications/ expectations/gains trust...
+--->We can get constant feeback from customers.
+- Agile starts with customer sharing the requiremnets 
+ + then perform stage by stage development in two weeks .
+- every two weeks customer gives new requirements.
+
+- Agile is set of principles that enables team to work 
+flexibily, adapt based on project situation.
+- Agile always best model for complex projects.
+
+adv:
+-----
+->developer its easy to fix issues , and they will be very responsive.
+->constant changes are allowed.
+->constant communication between stackholders, business deligates, end customers .....share the clear vision of status of the application so far.
+->errors can be fixed early or in middle.
+->analysis only for few requirements [to explore more].
+->every iteration has its own testing strategy.
+regression testing[ALL] every iteration.
+->every month we will have a release to customer.
+[satisfying few requirements...]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

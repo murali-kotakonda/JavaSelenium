@@ -1,0 +1,43 @@
+7+ years of experience as a Python Developer, pro cient coder in multiple languages and environments including Python, C, C++, JavaScript and SQL.
+Worked on several standard python packages like Numpy, Pickle, PySide, Scipy, wxPython, PyTables etc.
+Driven to architect Big Data solutions on multiple platforms using data analytics.
+Developed various Python scripts to generate reports, send FIX messages (FIX Simulator), SOAP requests, TCP/IP programming and multiprocessing jobs.
+Good experience in developing web applications and implementing Model View Control (MVC) architecture using server side applications like Django, Flask and Pyramid.
+Experience in working on BDPaaS (Big Data Platform as a Service).
+Expertise in working with different databases like Microsoft SQL Server, Oracle, MySQL, PostgreSQL and Good knowledge in using NoSQL databases MongoDB
+Proficient in developing complex SQL queries, Stored Procedures, Functions, Packages along with performing DDL and DML operations on the database.
+Hands on Experience in Data mining and Data warehousing using ETL Tools and Proficient in Building reports and dashboards in Pentaho (BI Tool).
+Excellent working knowledge in UNIX and Linux shell environments using command line utilities.
+Application Stress tester, created and stress tested stand - alone, web-applications and generated graph reports.
+Attentive to cyber security and data protection.
+Motivated, proactive, innovative problem solver with excellent analytical, organizational, interpersonal, communication and written skills. Excellent team player, quick learner, keens to learn and implement new IT technologies.
+Strong knowledge of Data Structures and Algorithms, Object Oriented Analysis, machine learning and software design patterns.
+Expertized in Implementing Spark using Scala and SparkSQL for faster testing and processing of data and Experience in NoSQL databases such as HBase and Cassandra.
+Hands on experience with Spark-Scala programming with good knowledge on Spark Architecture and its In-memory Processing and Experience with Unit testing/ Test driven Development (TDD), Load Testing.
+Hands on experience working in WAMP (Windows, Apache, MYSQL, and Python/PHP) and LAMP (Linux, Apache, MySQL, and Python/PHP) Architecture.
+Expertise in Production support. Provided first, second and third level support to different organizations. Used pdb, gdb and other debugging tools and deployed production hot fixes.
+Knowledge of deployment tools using Heroku, Jenkins, pylint, cppCheck and Coverity.
+Expert at version control systems like Git, GitHub, svn and cvs. Migrated repos from svn to GitHub.
+Experience with Agile, Scrum and Waterfall methodologies. Used ticketing systems like Jira, Bugzilla and other proprietary tools.
+Familiarity with development best practices such as code reviews, unit testing, system integration testing (SIT) and user acceptance testing(UAT).
+Highly motivated, quality minded developer, with proven ability to deliver applications against tight deadlines.
+Possess good interpersonal, analytical presentation Skills, ability to work in Self-managed and Team environments.
+Performed code reviews and implemented best Pythonic programming practices
+Experience in writing test scripts, test cases, test specifications and test coverage.
+Good experience in handling errors/exceptions and debugging the issues in large scale applications.
+
+
+
+• Knowledge of software development and testing cycles and processes.
+• Understanding of OOP principles
+• Understanding project management principles, techniques and tools
+• Experience in Testcase, Usecase and Requirements management.
+• Experience in Functional, Smoke, GUI and Regression testing.
+• Knowledge of Java, Python, SQL; basic knowledge of Bash.
+• Developing functional tests with Selenium, Serenity, Selenide; BDD with JBehave
+• Experience in testing web services with REST Assured, SoapUI, JAXB
+• Experience in configuring CI for running autotests
+• Experience in using PostgreSQL and MySQL with JDBC
+• Experience with basic tools such as bug tracking systems (YouTrack, Jira, PLM), test
+case management software (TestRail, TestLink), VCS (Git, Perforce), code review tools
+(Gerrit, GitLab, GitHub), CI system(TeamCity, Jenkins)

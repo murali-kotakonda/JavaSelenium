@@ -1,0 +1,50 @@
+Manual Testing class:
+----------------------
+  
+  
+  Software project:
+ -----------------------
+   
+   
+   C                                B                               B
+   EndCustomers ---------------->   ABC corp ---------------------> Amazon
+   
+   ABC Corp business company; to expand the business oppurtunities ,a software is required.
+   ABC Corp get in contract with any software company for developing the software.
+   
+   ABC Corp would opt for a bidding . 
+     
+  The company that gives the low budget and faster delivery + good past client experience + support.
+   
+   SOftware has to be developed by amazon..
+     
+    Requiremnets would be prepared by ABC Corp ;
+    development + testing  + support ====>Amazon
+    
+    Project:
+-----------
+  Manager     
+  Developers ( DB/JAVA/UI)
+     -DB Dev
+     -Java Dev
+     -UI Dev (web design)
+  dev Lead
+     - Approve the code or improve the code
+  Testers
+  lead tester
+    - review the test cases and would do planning for testing
+    - Guide how to test
+    
+  Dev Ops:
+    - Working for continuos deployments in all spaces
+    - Releases to the client
+    ex: jenkins, scripting , cloud 
+  Support 
+    - communicating with customers ;
+    - help and support the cutsoner in terms of fixes or consultation
+  Documentation
+     -Help docs for how to use the software
+  Architect:
+     - plan for the design of the application
+     - design the modules / models.
+       

@@ -1,0 +1,139 @@
+funtional testing:
+----------------------
+DATABASE TESTING
+funtional +  defect testing 
+regression testing 
+sanity + smoke before regression.
+
+
+testing techniques
+------------------------
+obj properties covearge
+input domain coverage (BVA, ECP)
+error handling/coverage
+calculation/manipulation testing
+links existance & links execution
+cookies and sessions -> NA
+I18N testing (currancy change)
+localization testing (testing particular location 
+ex: currancy change
+    chnage the date + time format
+	collect id (voter id or ssn)
+	
+
+
+Obj properties :
+---------------
+Every obj has certain properties
+ex: text box is an obj and it has enbale + disable + onchange+size + isdisplayed
+1. on page opened un + pwd is enabled.
+2.password should not be visible.
+3.on state change + city also changes.
+
+during  funtionmal testing teser has to validate the properies of object at run time.
+
+
+
+Input domain testing:
+----------------------
+during ID testing , tester validate the data provided to the application w.r.t. value and length.
+EX:
+uname allows only alphabets   [value ]
+uname size is 6 to 8       [lenth] , range 
+
+we should test both +ve and -ve.
+for +ve => app should allow
+for -ver => app shouldnot allow
+
+
+we have two techniques for testing above requirement.
+ = > Equalance class partition   - Value check
+ = > Boundary value analysis.    - Length check
+
+focus is on the coverage but on the number of test cases.
+
+
+
+BVA for username : refer the diagram
+ECP for username : refer the diagram
+
+
+
+BVA:
+--------
+Boundary value analysis is based on testing at the boundaries between partitions. It includes maximum, minimum, inside or outside boundaries, typical values and error values.
+
+Input condition is valid between 1 to 10
+
+Boundary values 0,1,2 and 9,10,11
+ 
+ECP:
+--------
+ Equivalent Class Partitioning allows you to divide set of test condition into a partition which should be considered the same. This software testing method divides the input domain of a program into classes of data from which test cases should be designed.
+ 
+ 
+Decision Table Based Testing:
+------------------------
+This software testing technique is used for functions which respond to a combination of inputs or events. For example, a submit button should be enabled if the user has entered all required fields.
+ 
+  If there are large input set of combinations, then divide it into smaller subsets which are helpful for managing a decision table.
+  
+  Following are steps to create a decision table:
+steps:"
+
+Enlist the inputs in rows
+Enter all the rules in the column
+Fill the table with the different combination of inputs
+In the last row, note down the output against the input combination.
+ 
+REFER DECISION
+
+
+State Transition
+--------------------
+In State Transition technique changes in input conditions change the state of the Application Under Test (AUT). This testing technique allows the tester to test the behavior of an AUT. 
+
+The tester can perform this action by entering various input conditions in a sequence. 
+
+In State transition technique, the testing team provides positive as well as negative input test values for evaluating the system behavior.
+
+ex: 1.one person can add only one product during flikart sale.
+2. loggedin user vs loggedout user 
+3. privilage customer vs normal customer.
+
+
+
+
+Example:
+
+In the following example, if the user enters a valid password in any of the first three attempts the user will be able to log in successfully. If the user enters the invalid password in the first or second try, the user will be prompted to re-enter the password. When the user enters password incorrectly 3rd time, the action has taken, and the account will be blocked.
+
+
+
+
+error handling/coverage:
+---------------------------
+validate he erorr message shown by the app is as expected
+error when db is down , when app is crashed.
+error with invalid input or input flow then app should throw meaningful messages.
+only for negative scenario.
+ex: instaed of message "invaid username " use "username has to be minium 6 ands max 8 chars".
+
+
+
+calculation/manipulation test:
+--------------------------------
+ex: 1.credit amount
+	2.DEBIT amount
+	3.calculating the final price using discount + taxes + 
+	+ coupons 
+	
+Links coverage:
+---------------
+check links exists and at correct place with valid text.
+check unnecessary links should not show on page
+check when clcking on links it navigates to respective pages but not to external pages.
+
+-> links of same app
+-> links to 3rd parties
+

@@ -1,0 +1,115 @@
+based on types of apps, testing appraches + plan  + tools will change.
+
+
+
+Types of applications:
+------------------
+1.standaAlone appliction/ desktop application(personal)
+  s/w that requires installtion on desktop.
+  installation and usage on same system.
+  
+  installation depends on the system configuration.
+
+  that on a single sytem based on system config.
+  installtion(compatability) + os 
+  ex: chrome, firefox , skype, ms word, excel, games
+
+  most of cases no internet required.
+  software install + acces will be in same system.
+  online/offline.
+  depended 	on client config.....
+
+  - desktop app is used for personal
+  - mostly single user.
+  - app that requires no internet will have data  reside in samew system
+  - app that requires internet will have data  reside in diff remote system.
+
+
+  
+2.web application  business [need internet]:
+ - to use anf to test we need browser
+- runs 24/7
+- runs in remote location
+- access app anytime , any where using internet + browser.
+- for accessing the app , we need the url.
+- test on chrome,firefox,ie.
+- we have static and dynamic web apps.
+
+3.web services application:
+[consumer na dprovide are involved.]
+one business app interacts with anothet business application.
+ex1:
+enduser ------->   southHold Travels   ------->   AirAsia 
+                      [Java]                      [Python]
+Heterogeneous apps can communicate with each other using webservcies.
+
+southHold Travels  ==> consumer of web service
+AirAsia  == provider of web service
+
+southHold Travels  is a web application
+AirAsia is a web services application so that any app can talk with airasia.
+
+ex2:
+endusers --- > justeat --> all restaurents
+
+ex3:
+endusers ----> bookmyshow -------> any city, any theatre
+
+ex4:
+- ATM machine [icici  bank].
+
+endusers[citi] ----->  ATM machine [icici  bank] --> citi 
+endusers[sbi] ----->   ATM machine [icici  bank] --> sbi
+endusers[hdfc] ----->   ATM machine [icici  bank] --> hdfc
+
+customer ------> Business ----> business 
+         standalone         webservices
+         web application 		 
+businss to business communication.
+ 
+C-B ===> We need web application
+B-B ===> WE NEDD Web services
+
+
+4.Mobile apps :
+- feature in web adn mobile pp might not b same.
+testing on play store and apple store
+android/ ios/ apple/ apps.
+- install in mobile using (apple store/ play store)
+- app runs on mobile.
+- app work on touch basis [only smart phoes].
+mobiles apps can be with or without internet
+internet: watsup, instagram , fb , tiktok
+w/o internet : photo editor , notepad ,calculator , music player , 
+video player 
+app testing is done via appium framework
+
+
+5.gaming apps:either standlaone or mobile app.
+testing tools and manual effort required.
+UI + gaming capabilities , event testings.
+- with internet and without internet
+
+6.embeded apps
+chip level + machine learning +iot [internet of things]
++  robotics..
+
+Tester:
+----------
+- know the mode of busniess of application.
+- what kind of application
+- what are the feature/funtionalitiues offered to customers.
+- reachability ( desktop/mobile/web)
+- domain of the application.
+ ecommerce,
+ finance,
+ banking,
+ health care,
+ insurance.
+-Subject matter expert[SME].  
+
+
+ 
+
+
+ 

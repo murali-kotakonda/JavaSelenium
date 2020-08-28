@@ -1,0 +1,96 @@
+Roles and responsinilities:
+---------------------------
+Wrote test automation scripts in Selenium Web Driver using Java, JUnit and TestNG. 
+Implemented Page Objects model (pom) , Apache POI in WebDriver Scripts, Data Driven , Keyword Driven and Hybrid Frameworks using   Selenium WebDriver , Junit , and Java .
+Involved in working on a project where we implemented BDD (behavior Driven development), TDD (Test Driven development) using Cucumber framework with Java, JUnit and Page Object Model. 
+Excellent experience with source version control tools such as Git, SourceTree.
+Expertise in Selenium Automation using Selenium WebDriver, Selenium Grid, Java, JavaScript, Protractor, AnjularJS, Junit, ANT & TestNG.
+Convert business requirements into Salesforce.com functional requirements 
+Developed test code in Java language using Eclipse, IDE framework.
+Responsible to maximize existing Salesforce applications and integrate them into an existing sales system. 
+Used DataDriven Framework to get data from Excel using Apache POI. 
+Implemented simulator for mobile app testing in IOS using Appium Tool. 
+Configuring the Appium for the Mobile Android Native App using selenium. 
+Designed Hybrid Appium Test automation framework, Page Object Model for Mobile application (Android/iOS apps). 
+Follow and contribute to Agile/SCRUM activities (e.g. daily stand-ups, retrospectives, iteration planning, estimate/reporting, acceptance criteria definition).
+Tested mapping for extracting, cleansing, transforming, integrating, and loading data using Informatica ETL Tool. 
+Coordinated with developers and record defects in JIRA to track until they are resolved.
+Prepared Test Cases and Test Plans for the ETL data movement developed through the Datastage tool. 
+Used Protractor which is an End-to-End Framework testing for AngularJS Web Applications. 
+Expertise in Selenium Automation using Selenium WebDriver, Selenium Grid, Java, JavaScript, Protractor, AnjularJS, Junit, ANT & TestNG.
+Involved in design and Implementation of   Protractor   Testing for Angular js code base.
+Used Soap UI and Restful services for testing Web Services and Protractor for testing Angular js.
+Involved in issue tracking with the help Mercury Quality Center/ALM.
+Entered issues, defects and enhancements into HP Quality Center ALM Repository.
+Developed BDD tests using Cucumber by writing behavior and step definitions & developed required Selenium support code in JAVA for Cucumber. 
+Gathered business process requirements and utilize SalesForce functionality to automate and achieve those objectives.
+Documented Salesforce fundamentals and reporting for easy understanding and navigation for business users 
+Worked on various Salesforce.com Standard objects like Accounts, Opportunities, Leads,  Campaign and Reports 
+Used BDD cucumber framework to analyze the user-story and writing acceptance criteria.
+Set up Jenkins, GIT, and Maven to work together and provide a smooth continuous integration.
+Excellent experience with source version control tools such as Git, SourceTree.
+Responsible for implementation of Keyword, DataDriven Frameworks, Page Object Model using Selenium WebDriver and Java. 
+Involved in testing both SOAP and REST services using Rest Assured and tested both XML and JSON formats. 
+Involved in testing of services using SOAP/REST services using SOAPUI, Groovy Script. 
+Used Python for dynamically generating property list for every application. Automated data movements using python scripts. Creating core python API which will be using among all modules. 
+Configured Maven for JAVA automation projects and developed Maven project object model (POM). 
+Configuration of Maven and Jenkin for automatic build execution.
+
+
+
+Prototyped web front-end to MDM
+Design database using Erwin and Python/Django for DB scheme scripting
+Design MDM integration facilities (SOA-style)
+Develop SOAP client for testing MDM to SAP R/3 interoperation
+Develop scheme- and data-level database testing tool
+Develop data cleansing, retrieval, migration tools (ETL)
+Analyzed client’s needs and developed software tools to assist dynamic site content creation (Python, wxPython)
+Written MapReduce code in Java and Python
+Writing Pig Latin scripts and Hive query language to process the data and also written UDF in Java and Python
+Mainframe access profiles, using a series of algorithms created access profiles securing company mainframe system and allowing for auditing purposes and easier acclimation of new hires.
+SQL Workflow System, using Python created an adapter allowing communication between SharePoint lists and SSIS packages. This system provides users the ability to create complex automation workflows
+Familiarity in working with TCP/IP, IPv4, and IPv6 protocols in an environment, which provides multithreading, multitenancy and high availability support at Network Layer.
+Managed, developed, and designed a dashboard control panel for customers and Administrators using Django, OracleDB, PostgreSQL, and VMWare API calls.
+Excel Batch uploader, software that quickly uploads large batches of Excel Workbooks into our SQL Databases, while providing sanitizing and validation services
+SQL Naming Conventions Enforcement, Using Python; Stored Procedures created a server job that enforces naming conventions for all SQL objects. Creating a more constant SQL environment
+Developed remote integration with third party platforms by using RESTful web services and Successful implementation of Apache Spark and Spark Streaming applications for large scale data.
+Creating data pipelines using Apache Spark, a big-data processing and computing framework and Updated and maintained Jenkins for automatic building jobs and deployment.
+Client Search Engine, Using Python and XLWings package created an excel interface to search for client info through our databases
+Integrated Opengrok into development environment for making source code visible across the organization.
+Used Agile Methodology and SCRUM Process.
+
+
+
+Developed application logic using Python, Java script, Java, C++
+Used JMS for updating Mailing plans and tracking them.
+Used Java Server Pages for content layout and presentation.
+Created Data layer in MYSQL.
+Extracted and loaded data using Python scripts and PL/SQL packages
+Supported Java application for Media portal management.
+Added Buy side and Sell side interfaces to route and receive orders over FIX as TCP/IP packets on a given port. Used FIX Simulator behind the scenes.
+Migrated C and C++ tasks to Python. Generated SWIG interfaces for tasks that are good to be left in C++. Interacted with Python using SWIG interfaces.
+Wrote python scripts to parse XML documents and load the data in database.
+Generated property list for every application dynamically using python.
+Creating unit test/regression test framework for working/new code
+Debugging and testing of the applications & fine tuning performance. Provided maintenance support in production environment.
+Developed exhaustive SQL Queries to find differences in datasets to find out whether rolled out software has fixed issues.
+Developed scripts to migrate data from proprietary database to MySQL.
+Followed Agile and Scrum Methodologies. Used Jira and other proprietary ticketing systems.
+
+
+Worked with the Stakeholders, gathered requirements developed High level design Detail design documents.
+Developed UI using HTML, AJAX, JavaScript and jQuery and jQueryUI.
+Re-engineered various modules for implementing changes and creating efficient system.
+Developed rich UI web application using JavaScript libraries like jQueryUI, data grid, jscolor, high charts.
+Designed and developed components using Python. Implemented code in python to retrieve and manipulate data.
+Implemented database access using Django ORM.
+Used MySQL as backend database and MySQL dB of python as database connector to interact with MySQL server.
+Used Restful APIs to access data from different suppliers.
+Support the scripts configuration, testing, execution, deployment and run monitoring and metering.
+Used Python and Django creating graphics, XML processing of documents, data exchange and business logic implementation between servers.
+Used Restful API's to gather network traffic data from Servers.
+Supported Apache Tomcat web server on Linux Platform.
+Developed and executed User Acceptance Testing portion of test plan.
+Debugging Software for Bugs
+
+

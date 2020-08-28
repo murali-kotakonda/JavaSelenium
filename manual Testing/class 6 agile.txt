@@ -1,0 +1,140 @@
+Agile:[process]
+--------
+-> SDLC
+-> Sprint [is process , part of agile , flavour of agile]
+->
+
+
+People:   
+----------
+Product Owner   --> Analyst
+Techincal owner --> Tech leads
+Quality owner  --> Testing leads 
+Developes (UI, JAVA,DB),
+Testers
+Scrum Master  ---> [gives tasks to entire team, certification on Agile + Excel + JIRA +JENKINS +Defect tool ]
+-manage work/ allocate work for the people.
+-decides priority of work [defect/task].
+-decide on the release of application.
+-representative from the team to speak to extrnal groups.
+-keep track of the tasks, work progress.
+-support the team + provide what team needs.
+-ensure meeting deadlines with quality.
+-support the team deliverables - continuos integration.
+-will do planning for the team.
+-educate and guide for best practices.
+-makes sure team follows agile practises.
+-track the work anybody is doing.
+- arranging meetings for the team.
+-communication + process + peple mgmt + ability to deal with people + arguments [positive]
+
+Manager -> manage people 
+
+
+For two weeks all the above people are occupied.
+
+
+Sprint -> two weeks work for the above people.
+
+Grooming[meeting]: 
+- To decide next Requirements and for every requiremnet find the estimation .
+-Requirements are finalized after grooming.
+-is a meeting only with leads and PO and customer to discuss and finalize requirements.
+-We will discuss only on backog items.
+
+
+BackLog: [taken care by product owner ]
+--------
+-Future Epics/User stories.
+- Yet to complete.
+-Product owner prepares the epic and user stories.
+- Not finalized requirements 
+
+If the requirements are finalized then backlog item is converted to EPIC.
+
+
+EPIC: [taken care by product owner ]
+-----------------------------------
+Group of multiple user stories.
+Ex: 1. Admin activities
+    2. customer activities.
+every epic has deadline
+
+UserStory [funtional or non-funtionl]:
+---------------------------------------
+[taken care by any one of team memebers ]
+small independent unit of requirement .
+Ex: 1. login 2.logout 3.profile update 
+
+Every member of team will be working for the userstories.
+Under epic we need create user stories.
+Every userstory has deadline
+- Every User story is also assigned to team member .
+
+Tasks:
+-----
+- type of Tasks [analysis, techincal , testing , review, write test cases ,db related, code, unit test ,]
+- We need to create task under every user story.
+-Every task has deadline
+- Every task has a assigned to team member.
+- Tasks are created by Leads[DEV/TEST] and some times team members.
+- Every task has a status [Open, Inprogress, Blocked, Complted].
+- team member will specify how many hours spent for the task.
+
+sprint:
+---------
+two weeks period .
+team will work on user stories.
+every sprint has a number.
+
+SCRUM:(work status update )
+--------
+daily meeting for 15 mints.
+every body has to attend.
+share their status of work [ work started/ work inprogess/
+work completed/work going to status /blocker].
+ever body has to speak.
+
+
+Planning (MEETING): scrum master, 1 per sprint
+-------------
+-meeting happens on day 1 of sprint.
+-scrum master will decide , assign the userstories.
+to all team memebers, to be complted in 2 weeks .
+
+M[planning]   T [scrum]   W [scrum]   TH[scrum]   F[scrum]
+M[scrum]   	  T [scrum]   W[scrum+dev close ]    TH[scrum]   F[scrum + review]
+
+
+Burn down chart: 
+----------------------
+Seen by scrum master using jira to check the over all status.
+WORK VS TIME chart.
+
+
+Retro:
+- meeting once in a month.
+- feedback from team based on previous sprint experiences.
+->What went good
+->What went wrong
+->What has to be improved.
+
+Review :
+Should be done by leads (Test/Dev).
+Review should complete by 2nd week of wednesday.
+Review points to be addressed by dev/testers by 2nd week of wednesday
+
+Demo:
+------
+-show the new features completed in last two weeks to the stackholders.
+-Demo is the presentation of the new features shown to the  client/product owner.
+Demo happens on Friday(last day of sprint).
+Demo feedback points to be addressed in next sprint.
+Demo should be given by Dev/Tester.
+
+
+Spillover(unfinished):
+----------
+Any uncompleted work in current sprint will carry over to next sprint.
+
+ 

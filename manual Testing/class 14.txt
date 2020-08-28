@@ -1,0 +1,186 @@
+White box testing:
+-------------------
+-test the internal working or code.
+-done by developers by understanding the coding.
+-test based on coding point of view.
+- test only for code coverage
+ex: unit testing + integration testing.
+dev has to write Junits test cases using code.
+
+
+
+Black Box testing:
+-------------------
+- test by understanding the requirements.
+- test based on the customer point of view.
+- test flows/funtional/behaviour of application. - scenario coverage
+- done by testers.
+ex: system testing + UAT +Usability + funtional + non funtional.
+
+
+Grey testing:
+--------------
+combination of whitebox + black box.
+ex: database testing
+
+install :
+oracle xe 11g download
+https://www.oracle.com/database/technologies/xe-downloads.html
+
+
+
+
+
+
+
+
+
+
+System testing:
+---------------
+-Test the entire application funtionality w.r.t the test cases.
+- done by testing team.
+
+
+different types of system testing:
+---------------------------------
+->Decided during the Test planning
+->Usability Testing
+->Funtional Testing: 
+only on requirement based testing.
+check the behaviour of system.
+->Non-Funtional Testing:
+Test the stability in terms of speed,security,recovery, handling load.
+   a)Perf  - Load + Stress (Tester)
+   b)Security
+   c)Compatability
+   d)Installation
+   e)Hardware/SOftware Testing
+   f)Recovery (Tester)
+   g)Migration (Tester)
+   h)Protocol/network/Mobile/Embedded device
+   I)configuration testing
+   j)sanitation testing
+->UAT
+
+sanitation testing:
+---------------------
+check if the app is providing any exra features beyond the customer requirements.
+
+
+
+Usability testing:
+------------------
+-> Test How comfortable is the customer in using the applcation & in accessing the features
+-> Test the ease in accessing the web pages.
+-> Focus on how end-users can understand and operate the app
+-> Test the flexibility in handling controls.
+-> check if any help or documentation is available or any FAQ's.
+ex: Orkut [dead] , Facebook , Google plus[dead] , myspace[dead].
+ex: watsup.
+ 
+
+
+Performance testing:
+--------------------
+We need seperate system for perf testing
+We need perf tools Like load runner, jmeters.
+Done by perf team.
+->Load Testing:
+a)Test the speed of the application.
+b)Test by increasing the no of users ex: 50, 100, 1000, 2000 users  + increase the load.
+min , max , average 
+c) goal is identify the Threshold.(max respon time) per page.
+ex: test based on the current usage.
+
+->Stress Testing :
+Test the app and check how the app is handling the stress.
+ex:
+Test with 1lakh records with 10 lakh customers .
+what is the memory occupany + cpu occupancy + res time + load on db + instances availability + load balancer.
+-> Test the app to saturation point considering future.
+
+
+Security Testing:
+-----------------------
+Done by security specialist.
+Should not expose cust data , privacy 
+Make sure app is away from frauds, hacking.
+Ex: 
+->Login authentication ; only successul login with valid creds can able to visit the home page.
+->Permissions ,privilages, roles set for the users.
+->data sent secured .
+->encrypt/decrpt the data for msg tarnsfer.
+
+
+Recovery Testing:
+-----------------
+->Test whether app is able to recover after crash.
+->Is the recovery helpful to customer ??
+-> is there any loss of data ?? any possibility for recover the data?? any possibility for previopus state before crash/ restore to earlier state.
+-> % of recovery will help to understand the realiability of the app.
+ex: mostly to applicable to GUI apps.
+
+Compatability:
+--------------
+-> mostly to applicable to GUI apps and some cases for web apps.
+compatability in terms of:
+a) Multi os
+b) 32/64 bit
+c) diff processor
+d) browsers  ( testers )
+e) is it backward compatabile??? (testers)
+ex:MS office supports .doc and .docx 
+
+Installation testing:
+---------------------
+-> applicable for GUI and web
+-> done by testers/ configuration team.
+Test:
+a)Test installation on diff platforms.
+b)Test if the install steps are clear 
+c)guidelines  for installation
+d)Test time taken + slowness + unsuccssfull installtion.
+e)Is it istalling in the path specified by customer?
+f)were the process added?? were reg entry made successfuly?
+g)If alredy istalled??  what will happen if We reinstall
+h)Test uninstallation.
+
+Migration Testing:
+-------------------
+-> it is very often that we do the migration.
+-> Testing required when we do the migration .
+-> Ex: 
+a) Migrate the db (oracle ---> Mysql)
+b) Migrate the data form one format to other format.
+ex: .avi , .mp4 , .VOB
+c) Migrate form older infrastruture to new infrastructure
+ex: from win 7 to mac.
+
+Test: 
+a) If the data still exists post migration .
+is there any loss of data??
+b) Were the features exists as before??
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

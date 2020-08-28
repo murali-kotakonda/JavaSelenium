@@ -1,0 +1,34 @@
+Retest All
+use automation tool
+
+Regression Testing is required when there is a
+
+-Change in requirements and code is modified according to the requirement
+-New feature is added to the software
+-Defect fixing
+-Performance issue fix.
+- avoid the side effects 
+
+
+Diff between retets and regression:
+-----------------------------------------
+Retesting means testing the functionality or bug again to ensure the code is fixed. If it is not fixed, Defect needs to be re-opened. If fixed, Defect is closed.
+- retest with multi diff input to confirm business validation
+
+
+Regression testing means testing your software application when it undergoes a code change to ensure that the new code has not affected other parts of the software.
+
+challenges:
+-------------------------------
+ 
+With successive regression runs, test suites become fairly large.  Due to time and budget constraints, the entire regression test suite cannot be executed
+Minimizing the test suite while achieving maximum Test coverage remains a challenge
+Determination of frequency of Regression Tests, i.e., after every modification or every build update or after a bunch of bug fixes, is a challenge.
+
+
+
+
+
+monkey testing:
+-------------------
+test the application without test cases and without knowledge of the application.

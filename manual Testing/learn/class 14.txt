@@ -1,0 +1,97 @@
+System testing:
+-----------------
+- Testing the entire application funtionality w.r.t the tets cases.
+- done by testing team
+
+- black box tetsing
+- white box testing 
+- gray 
+
+
+White box testing :
+test the internal workings or code of a software application. (with knowing the coding)
+test from dev point of view.
+ex: unit testing , integration test.
+
+Black Box Testing:
+Involves the external workings of the software from the customer's perspective. (without knowing code)
+ex: system + uat + usability + functional + non functional
+
+
+grey : combination of w + b.
+ex: db test
+
+
+
+
+Different Types of System Testing:
+------------------------------------
+Usability Testing:
+------------------
+- Test the ease in accesssing the web pages.
+- focus on how end users can understand and opearate the app
+- how comforable the customer is in accesssing app.
+- flexibility in handling controls.
+- any help documentation or faq's .
+ex: google+ , fb
+
+
+Functional Testing:
+------------------
+test behaviour of app w,r.t requirements.
+
+ Also known as functional completeness testing, Functional Testing involves trying to think of any possible missing functions. Testers might make a list of additional functionalities that a product could have to improve it during functional testing.
+Regression Testing- - Regression Testing involves testing done to make sure none of the changes made over the course of the development process have caused new bugs. It also makes sure no old bugs appear from the addition of new software modules over time.
+
+
+Non functional testing:
+------------------------
+once app is stable test speed,security,recovery,installation.
+
+1.perf test:
+
+perf tuning required post perf testing
+
+a)Load Testing - 
+test the speed while increasing the load to find the threshold.
+
+Load Testing is necessary to know that a software solution will perform under real-life loads.
+ex: load runner, junits.
+
+b) stress test
+test the speed while increasing the load to check when the app is breaking with increasing load + users.
+
+
+2.security testing
+dont expose secured data.
+done by specialist.
+types: verify 
+authentication(login) + access control (valid user permission/previlages) +  encryp/decrypt
+
+3.Recovery Testing - 
+Recovery testing is done to demonstrate a software solution is reliable, trustworthy and can successfully recoup from possible crashes.
+-Test whether system is recovring to normal condition.
+- any loss of data???recover data.
+
+4.compatability
+multi OS
+HARDWARE (Processor/32 bit/64)
+browser 
+backward/forward
+
+5.configuration
+
+6.installation
+test installation of app on diff platforms/os/processor.
+check inst steps + guidelines + navigations + time + slowness + registry entries + file paths + space occupied + ram occupied.
+also test un-installation
+Already installed?
+
+7.Migration Testing - Migration testing is done to ensure that the software can be moved from older system infrastructures to current system infrastructures without any issues.
+
+
+8.Hardware/Software Testing - IBM refers to Hardware/Software testing as "HW/SW Testing". This is when the tester focuses his/her attention on the interactions between the hardware and software during system testing.
+
+
+protocol/mobile testing: for mobile embedded.
+
