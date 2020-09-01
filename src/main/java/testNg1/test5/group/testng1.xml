@@ -1,0 +1,15 @@
+<suite name="Suite">
+    <test name="TestGrouping">
+        <groups>
+	    	 <run>
+ 				<include name="login" />
+ 				<!-- <exclude name="login" /> -->
+ 				<!-- <include name="register" /> -->
+	     	</run>
+		 </groups>
+ 
+		 <classes>
+		     <class name="test5.group.GroupTest" />
+		 </classes>
+	 </test>
+</suite>

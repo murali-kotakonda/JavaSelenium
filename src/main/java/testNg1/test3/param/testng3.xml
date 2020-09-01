@@ -1,0 +1,20 @@
+<suite name="Test1"> 
+<parameter name="url" value="http://loalhost:8091/fb"/>
+ 
+<test name="login">   
+<parameter name="P1" value="admin"/>  
+<parameter name="P2" value="agent"/>  
+<classes>  
+<class name= "test3.param.Test6"/>  
+</classes>  
+</test>
+  
+<test name="register">   
+<parameter name="P3" value="cutomer"/>  
+<parameter name="P4" value="retailer"/>  
+<classes>  
+<class name= "test3.param.Test7"/>  
+</classes>  
+</test>
+  
+</suite>

@@ -1,0 +1,32 @@
+Listener is defined as interface that modifies the 
+default TestNG's behavior. 
+As the name suggests Listeners 
+"listen" to the event defined in the 
+selenium script and behave accordingly. 
+It is used in selenium by implementing Listeners Interface. 
+It allows customizing TestNG reports or logs. 
+There are many types of TestNG listeners available.
+
+There are many types of listeners which allows you to change the TestNG's behavior.
+IAnnotationTransformer ,
+IAnnotationTransformer2 ,
+IConfigurable ,
+IConfigurationListener ,
+IExecutionListener,
+IHookable ,
+IInvokedMethodListener ,
+IInvokedMethodListener2 ,
+IMethodInterceptor ,
+IReporter,
+ISuiteListener,
+ITestListener .
+
+
+
+ITestListener has following methods
+OnStart- OnStart method is called when any Test starts.
+onTestSuccess- onTestSuccess method is called on the success of any Test.
+onTestFailure- onTestFailure method is called on the failure of any Test.
+onTestSkipped- onTestSkipped	method is called on skipped of any Test.
+onTestFailedButWithinSuccessPercentage- method is called each time Test fails but is within success percentage.
+onFinish- onFinish method is called after all Tests are executed.

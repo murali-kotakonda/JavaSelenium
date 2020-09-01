@@ -1,0 +1,13 @@
+<suite name = "empDemo" thread-count="2" parallel="tests">
+   <test name = "register">
+      <classes>
+         <class name = "test11.parallelTest.TestLogin" />
+      </classes>
+   </test>
+   
+   <test name = "register1">
+      <classes>
+         <class name = "test11.parallelTest.TestLogin2" />
+      </classes>
+   </test>
+</suite>  

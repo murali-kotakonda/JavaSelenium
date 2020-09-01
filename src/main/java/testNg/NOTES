@@ -1,0 +1,110 @@
+TestNG is a testing framework which has been inspired by JUnit. TestNG is a more powerful testing framework than Junit as it contains more powerful functionalities such as:
+
+TestNG annotations
+It supports multithreaded execution.
+It provides flexible test configuration.
+It also supports the parameters.
+It is supported by various tools and plug-ins such as Eclipse, Maven, IDEA, etc.
+It supports Data-driven testing with the help of @DataProvider.
+
+
+
+What is TestNG
+TestNG is a very important framework when you are actually developing the framework from scratch level.
+TestNG provides you full control over the test cases and the execution of the test cases. Due to this reason, TestNG is also known as a testing framework.
+Cedric Beust is the developer of a TestNG framework.
+If you want to run a test case A before that as a pre-request you need to run multiple test cases before you begin a test case A. You can set and map with the help of TestNG so that pre-request test cases run first and then only it will trigger a test case A. In such way, you can control the test cases.
+TestNG framework came after Junit, and TestNG framework adds more powerful functionality and easier to use.
+It is an open source automated TestNG framework. In TestNG, NG stands for "Next Generation".
+TestNG framework eliminates the limitations of the older framework by providing more powerful and flexible test cases with help of easy annotations, grouping, sequencing and parametrizing.
+
+Adv:
+In TestNG, annotations are easier to understand than Junit.
+It produces the HTML reports for implementation.
+It also generates the Logs.
+In TestNG, there is no constraint available such as @beforeclass and @afterclass which is present in Junit.
+TestNG enables you to group the test cases easily which is not possible in JUnit.
+TestNG supports three additional levels such as @Before/After suite, @Before/AfterTest, and Before/AfterGroup.
+TestNG does not extend any class. TestNG framework allows you to define the test cases where each test case is independent of other test cases.
+It allows you to run the test cases of a particular group. Let's consider a scenario where we have created two groups such as 'Smoke' and 'Regression'. If you want to execute the test cases in a 'Regression' group, then this can only be possible in the TestNG framework.
+Parallel execution of test cases, i.e., running multiple test cases is only possible in the TestNG framework.
+
+
+TestNG - http://beust.com/eclipse/
+TestNG - http://dl.bintray.com/testng-team/
+TestNG - http://dl.bintray.com/testng-team/testng-p2/6.10.0/
+TestNG - http://dl.bintray.com/testng-team/testng-p2/6.15.0/
+
+@BeforeSuite
+
+The annotated method will be run only once before all tests in this suite have run.
+
+2	
+@AfterSuite
+
+The annotated method will be run only once after all tests in this suite have run.
+
+3	
+@BeforeClass
+
+The annotated method will be run only once before the first test method in the current class is invoked.
+
+4	
+@AfterClass
+
+The annotated method will be run only once after all the test methods in the current class have run.
+
+5	
+@BeforeTest
+
+The annotated method will be run before any test method belonging to the classes inside the <test> tag is run.
+
+6	
+@AfterTest
+
+The annotated method will be run after all the test methods belonging to the classes inside the <test> tag have run.
+
+7	
+@BeforeGroups
+
+The list of groups that this configuration method will run before. This method is guaranteed to run shortly before the first test method that belongs to any of these groups is invoked.
+
+8	
+@AfterGroups
+
+The list of groups that this configuration method will run after. This method is guaranteed to run shortly after the last test method that belongs to any of these groups is invoked.
+
+9	
+@BeforeMethod
+
+The annotated method will be run before each test method.
+
+10	
+@AfterMethod
+
+The annotated method will be run after each test method.
+
+11	
+@DataProvider
+
+Marks a method as supplying data for a test method. The annotated method must return an Object[ ][ ], where each Object[ ] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.
+
+12	
+@Factory
+
+Marks a method as a factory that returns objects that will be used by TestNG as Test classes. The method must return Object[ ].
+
+13	
+@Listeners
+
+Defines listeners on a test class.
+
+14	
+@Parameters
+
+Describes how to pass parameters to a @Test method.
+
+15	
+@Test
+
+Marks a class or a method as a part of the test.

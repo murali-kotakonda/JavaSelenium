@@ -1,0 +1,12 @@
+<suite name = "Suite1">
+  <parameter name="url" value="localhost"/>  
+   <test name = "exampletest1">
+   <parameter name = "userName" value="admin"/> 
+   <parameter name = "password" value="admin123"/>
+      <classes>
+         <class name = "test3.param.Test2" />
+<!--          <class name = "test3.param.Test3" /> -->
+         <!-- <class name = "test3.param.Test4" /> -->
+      </classes>
+   </test>
+</suite>  

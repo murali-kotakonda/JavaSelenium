@@ -3,7 +3,7 @@ package old.googleTest;
 import org.junit.Before;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.cognigent.iot.admin.commons.BaseTest;
+import old.BaseTest;
 
 public class BaseTest2 extends BaseTest{
 	

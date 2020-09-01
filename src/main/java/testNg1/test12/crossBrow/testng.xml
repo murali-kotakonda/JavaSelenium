@@ -1,0 +1,16 @@
+<!-- <suite name = "empDemo" thread-count="2" parallel="tests"> -->
+<suite name = "empDemo">
+	<parameter name="browser" value="firefox"/> 
+  
+   <test name = "set1">
+      <classes>
+         <class name = "test12.crossBrow.TestLogin" />
+      </classes>
+   </test>
+   
+   <test name = "set2">
+      <classes>
+         <class name = "test12.crossBrow.TestLogin2" />
+      </classes>
+   </test>
+</suite>  

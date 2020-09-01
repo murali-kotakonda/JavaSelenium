@@ -164,7 +164,6 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		 */
 		
 	      
-	      
 	      /*Index
 	       
 	       <div class="col-sm-12 google-sign-form"><input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 "> <input type="text" placeholder="Full Name*" name="name" value="" class="form-control sign-up-input-2 "> <input type="email" placeholder="Work Email*" name="email" value="" class="form-control sign-up-input-2 ">

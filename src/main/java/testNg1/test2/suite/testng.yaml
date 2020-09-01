@@ -1,0 +1,12 @@
+name: empDemo
+configFailurePolicy: skip
+tests:
+  - name: register
+    classes:
+      - test.suite.Test1
+      - test.suite.Test3
+
+  - name: login
+    classes:
+      - test.suite.Test2
+

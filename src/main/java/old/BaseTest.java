@@ -2,14 +2,12 @@ package old;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
-
-import util.DriverUtils;
+import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 	
-	WebDriver driver;
+	public WebDriver driver;
 
 	@Before
 	public void setup() {

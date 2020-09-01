@@ -5,9 +5,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import com.cognigent.iot.admin.commons.BaseTest;
 
-public class WaySms1  extends BaseTest{
+public class WaySms1  extends old.BaseTest{
 
 	@Before
 	public void beforeEveryTime(){
