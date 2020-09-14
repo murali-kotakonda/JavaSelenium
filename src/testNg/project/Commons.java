@@ -1,4 +1,4 @@
-package util;
+package project;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,9 +7,7 @@ import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Commons {
-	public static final String URL ="http://localhost:8011/EmpDemo1/form.html";
-	public static final String ALERT_URL ="http://localhost:8011/EmpDemo1/alert.html";
-	
+	public static final String URL ="http://localhost:8011/EmpDemo1/";
 	public static WebDriver getDriver(){
 		
 		String exePath 
