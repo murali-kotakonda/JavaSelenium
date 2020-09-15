@@ -1,4 +1,4 @@
-package testNg1.test1;
+package test1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
