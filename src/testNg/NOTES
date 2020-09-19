@@ -30,9 +30,9 @@ It allows you to run the test cases of a particular group. Let's consider a scen
 Parallel execution of test cases, i.e., running multiple test cases is only possible in the TestNG framework.
 
 
-TestNG - http://beust.com/eclipse/
-http://dl.bintray.com/testng-team/
+TestNG - https://dl.bintray.com/testng-team/testng-eclipse-release/.
 
+  
 @BeforeSuite
 
 The annotated method will be run only once before all tests in this suite have run.

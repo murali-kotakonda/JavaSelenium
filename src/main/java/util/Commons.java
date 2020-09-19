@@ -1,9 +1,12 @@
 package util;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Options;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Commons {
@@ -29,4 +32,15 @@ public class Commons {
 		//manage.window().maximize();
 		return driver;
 	}
+	
+	public static WebDriver getChromeDriver(){
+		return getDriver();
+	}
+	
+	public static void checkEnabledAndDisplayed(WebElement... elements) {
+		for (WebElement element : elements) {
+			assertTrue(element.isDisplayed(), "element expeceted to display");
+			assertTrue(element.isEnabled(), "element expected to enable");
+		}
+}
 }

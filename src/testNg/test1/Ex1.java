@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Ex1 {
-	public String baseUrl = "https://www.fb.xom";
+	public String baseUrl = "https://www.fb.com";
 	public WebDriver driver;
 
 	@Test

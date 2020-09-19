@@ -38,7 +38,7 @@ public class Ex4 {
 	@BeforeTest
 	public void beforeTest() {
 		System.out.println("launching @BeforeTest browser");
-		System.setProperty("webdriver.firefox.marionette", driverPath);
+		System.setProperty("webdriver.firefox.marionette", "");
 		driver = Commons.getDriver();
 		driver.get(baseUrl);
 	}
