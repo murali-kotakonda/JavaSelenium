@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import old.utility.Commons;
-import old.utility.Headerutility;
+import utility.Commons;
+import utility.Headerutility;
 
 public class AddEmp extends Headerutility  {
 	WebDriver driver;
@@ -259,10 +259,3 @@ public class AddEmp extends Headerutility  {
 	//}
 
 }
-
-		
-		
-      
-		
-	
-

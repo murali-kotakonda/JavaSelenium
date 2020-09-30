@@ -11,11 +11,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import old.pages.AddDepartment;
-import old.pages.LoginPage;
-import old.utility.BrowserFactory;
-import old.utility.Commons;
-import old.utility.Headerutility;
+import pages.AddDepartment;
+import pages.LoginPage;
+import utility.BrowserFactory;
+import utility.Commons;
+import utility.Headerutility;
 
 public class TestAddDepartment extends Headerutility {
 	WebDriver driver;
@@ -59,6 +59,4 @@ public class TestAddDepartment extends Headerutility {
 	public void quit() {
 		BrowserFactory.quitBrowser(driver);
 	}
-
 }
-

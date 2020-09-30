@@ -7,10 +7,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import old.pages.LoginPage;
-import old.pages.Searchemploye;
-import old.utility.BrowserFactory;
-import old.utility.Headerutility;
+import pages.LoginPage;
+import pages.Searchemploye;
+import utility.BrowserFactory;
+import utility.Headerutility;
 
 public class Testserchemp {
 	WebDriver driver;
@@ -52,5 +52,4 @@ public class Testserchemp {
 		BrowserFactory.quitBrowser(driver);
 	}
 	
-
 }

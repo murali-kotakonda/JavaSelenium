@@ -6,10 +6,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import old.pages.LoginPage;
-import old.pages.Serchdepartment;
-import old.utility.BrowserFactory;
-import old.utility.Headerutility;
+import pages.LoginPage;
+import pages.Serchdepartment;
+import utility.BrowserFactory;
+import utility.Headerutility;
 
 public class Testserchdept extends Headerutility {
 	WebDriver driver;
@@ -44,5 +44,4 @@ public class Testserchdept extends Headerutility {
 	public void quit() {
 		BrowserFactory.quitBrowser(driver);
 	}
-
 }

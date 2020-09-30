@@ -5,10 +5,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import old.pages.Deleteprofile;
-import old.pages.LoginPage;
-import old.utility.BrowserFactory;
-import old.utility.Headerutility;
+import pages.Deleteprofile;
+import pages.LoginPage;
+import utility.BrowserFactory;
+import utility.Headerutility;
 
 public class TestDelete {
 	WebDriver driver;

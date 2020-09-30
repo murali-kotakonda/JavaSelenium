@@ -9,10 +9,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import old.pages.AddEmp;
-import old.pages.LoginPage;
-import old.utility.BrowserFactory;
-import old.utility.Headerutility;
+import pages.AddEmp;
+import pages.LoginPage;
+import utility.BrowserFactory;
+import utility.Headerutility;
 
 public class LoginTestEmp extends Headerutility {
 	WebDriver driver;

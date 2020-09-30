@@ -8,10 +8,33 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Commons {
 	public static final String URL ="http://localhost:8011/EmpDemo1/form.html";
 	public static final String ALERT_URL ="http://localhost:8011/EmpDemo1/alert.html";
+	
+	public static WebDriver getDriver(String browser) {
+		if("chrome".equals(browser)) {
+			return getChromeDriver();
+		}
+		
+		if("firefox".equals(browser)) {
+			return getFireFoxDriver();
+		}
+		
+		return null;
+	}
+	
+	public static WebDriver getFireFoxDriver(){
+        System.setProperty("webdriver.firefox.marionette","C:\\geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		Options manage = driver.manage();
+		manage.deleteAllCookies();
+		manage.timeouts().pageLoadTimeout(60, 
+				TimeUnit.SECONDS); //Identify performance issues
+		return driver;
+	}
 	
 	public static WebDriver getDriver(){
 		

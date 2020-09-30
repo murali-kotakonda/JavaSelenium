@@ -1,4 +1,4 @@
-package testNg1.util;
+package util;
 
 import static org.testng.Assert.assertTrue;
 

@@ -1,4 +1,4 @@
-package testNg1.test4.dataProvier;
+package  test4.dataProvier;
 
 public class Employee {
 	private int id;

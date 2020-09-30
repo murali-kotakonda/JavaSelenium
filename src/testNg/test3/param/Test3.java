@@ -1,4 +1,4 @@
-package testNg1.test3.param;
+package test3.param;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;

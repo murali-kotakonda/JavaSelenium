@@ -7,10 +7,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import old.pages.LoginPage;
-import old.pages.UpdateProfile;
-import old.utility.BrowserFactory;
-import old.utility.Headerutility;
+import pages.LoginPage;
+import pages.UpdateProfile;
+import utility.BrowserFactory;
+import utility.Headerutility;
 
 public class UpdateTest {
 	WebDriver driver;
@@ -42,5 +42,4 @@ public class UpdateTest {
 		BrowserFactory.quitBrowser(driver);
 		
 	}
-
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import old.utility.Commons;
+import utility.Commons;
 
 public class Changepassword {
 	WebDriver driver;
@@ -43,6 +43,5 @@ public void changepassword(String currentpassword,String newpassword,String conf
 public void logout() {
 	assertTrue(logout.getText().equals("Logout"));
 	logout.click();
-	
 }
 }
