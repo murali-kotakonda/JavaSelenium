@@ -24,6 +24,8 @@ public class LoginPage {
 	WebElement logbtn;
 	@FindBy(xpath = "/html/body/font")
 	WebElement invalidlogin;
+	@FindBy(id = "logoutLbl")
+	WebElement logout;
 
 	public void performLogin(String username, String password) {
 		enterUserName(username);
@@ -54,5 +56,19 @@ public class LoginPage {
 	public void invalidattempt() {
 		Commons.checkEnabledAndDisplayed(invalidlogin);
 		assertTrue(invalidlogin.getText().equals("Invalid Login."));
+	}
+	
+	public void logout() {
+		Commons.checkEnabledAndDisplayed(logout);
+		assertTrue(logout.getText().equals("Logout"));
+		logout.click();
+	}
+	
+	@FindBy(xpath = "/html/body/font")
+	WebElement maxattempt;
+
+	public void maxattempt() {
+		Commons.checkEnabledAndDisplayed(maxattempt);
+		assertTrue(maxattempt.getText().equals("You have exceded Maximum no of attempts.Please contact Admin"));
 	}
 }

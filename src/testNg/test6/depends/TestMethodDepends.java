@@ -1,4 +1,4 @@
-package testNg1.test6.depends;
+package test6.depends;
 
 import org.testng.annotations.Test;
 

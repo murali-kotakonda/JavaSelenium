@@ -1,4 +1,4 @@
-package testNg1.test8.parallel;
+package test8.parallel;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;

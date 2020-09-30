@@ -1,4 +1,4 @@
-package testNg1.test7.log;
+package test7.log;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;
