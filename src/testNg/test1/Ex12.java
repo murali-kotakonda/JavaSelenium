@@ -3,6 +3,8 @@ package test1;
 import org.testng.annotations.Test;
 
 // By default, methods annotated by @Test are executed alphabetically. 
+//In TestNg the method that has @Test is eligible for running.
+
 public class Ex12 {
 
 		@Test

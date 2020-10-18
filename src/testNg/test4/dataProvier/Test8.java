@@ -21,9 +21,6 @@ public class Test8 {
 	     
 	    @BeforeTest
 	    public void setup(){
-	    	System.setProperty("webdriver.firefox.marionette", driverPath);
-	    	driver = new FirefoxDriver();
-	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	        driver = Commons.getChromeDriver();
 	        driver.get("https://google.com");
 	    }

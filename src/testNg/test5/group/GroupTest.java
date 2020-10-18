@@ -2,6 +2,11 @@ package  test5.group;
 
 import org.testng.annotations.Test;
 
+/**
+  How to define the test group?
+  @Test(groups = { "login" })
+  @Test(groups = { "login","register" })
+ */
 public class GroupTest {
 
 	@Test(groups = { "login" })

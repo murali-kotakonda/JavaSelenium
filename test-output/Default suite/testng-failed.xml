@@ -3,11 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="test1.Ex1">
+      <class name="test1.Ex4">
         <methods>
-          <include name="verifyHomepageTitle"/>
+          <include name="T1"/>
+          <include name="beforeMethod"/>
+          <include name="testBeforeClass"/>
+          <include name="beforeTest"/>
+          <include name="T2"/>
         </methods>
-      </class> <!-- test1.Ex1 -->
+      </class> <!-- test1.Ex4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
