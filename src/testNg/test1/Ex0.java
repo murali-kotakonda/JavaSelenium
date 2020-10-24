@@ -3,7 +3,7 @@ package test1;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import util.Commons;
+import project.Commons;
 
 /**
   Req:

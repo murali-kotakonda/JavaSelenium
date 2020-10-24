@@ -22,6 +22,5 @@ public class TestCSS3 {
 
 		Thread.sleep(5000);
 		driver.close();
-
 	}
 }

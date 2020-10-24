@@ -28,13 +28,17 @@ public class Xpath {
      Xpath=	//label[@id='error']
      
     <input type="text" value="RESET"/>
+     <input type="text" value="ADD"/>
 		WebElement element = driver.findElement(By.xpath("//input[@value='RESET']"));
+		WebElement element = driver.findElement(By.xpath("//input[@value='ADD']"));
 		element.sendKeys("hello");
 		
 		 
 		 Xpath=//*[@class='show']
 		 Xpath=//a[@href='1.html']
-		 Xpath= //img[@src='//cdn.guru99.com/images/home/java.png']
+		 Xpath= //img[@src='//fb.com/java.png']
+		 
+		 <input type="text" name="name"/>
 		 driver.findElement(By.xpath("//input[@name='name']")).sendKeys("kumar");
 		
 		 Refer Xpath2.java
@@ -62,7 +66,8 @@ public class Xpath {
 		syntax: tag[contains(@attribute, ‘value‘)]  -> serach by tagname + attribute similar match
 		
 		EX: 
-		 <a href="gmail.com"> click here </a> 
+		 <a href="https://www.gmail.com"> click here </a> 
+driver.findElement(By.xpath("//a[@href='https://www.gmail.com']	")).click();
 driver.findElement(By.xpath("//a[contains(@href,'gmail')]	")).click();
 driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		 
@@ -76,9 +81,11 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		 Syntax: //tag[XPath Statement-1 or XPath Statement-2]
 				 
 		Ex:1
+		 
+		<input type="button" name="CLEAR">
 		<input type="submit" name="submit">
 		<input type="button" name="btnReset">
-		
+		 
 		//input[@type='submit' or @name='btnReset']
 		
 		
@@ -121,7 +128,9 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		  Xpath=//label[starts-with(@id,'message')]
 		  
 		  
-		  <a href="gmail.com">START here</a>
+		
+ <a href="gmail.com">Click here</a>
+ <a href="fb.com">submit here</a>
 		 
 		 */
 	      driver.findElement(By.xpath("//a[starts-with(text(), 'START')]")).click();

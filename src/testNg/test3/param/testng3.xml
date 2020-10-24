@@ -18,3 +18,8 @@
 	</test>
 
 </suite>
+
+
+<!--  url is available for all test cases-->
+<!--  P1,P2 is available to Test6-->
+ <!--  P3,P4 is available to Test7 -->

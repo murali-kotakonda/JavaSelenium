@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" parallel="methods" >
+   <test name = "register">
+      <classes>
+         <class name = "test8.parallel.Ex3" />
+      </classes>
+   </test>
+</suite>  

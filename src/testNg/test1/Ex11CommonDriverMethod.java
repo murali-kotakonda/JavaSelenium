@@ -9,7 +9,6 @@ import util.Commons;
 
  
 /**
-  understand @BeforeMethod , @AfterMethod , @Test.
  */
 public class Ex11CommonDriverMethod { 
 	

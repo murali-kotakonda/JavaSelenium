@@ -9,8 +9,7 @@ public class TestToolTip {
 	 public static void main(String[] args) {									
 	     
 	        String baseUrl = "http://demo.guru99.com/test/social-icon.html";					
-	        System.setProperty("webdriver.chrome.driver","G:\\chromedriver.exe");					
-	        WebDriver driver = new ChromeDriver();					
+	        WebDriver driver = Commons.getChromeDriver()	;		
 	        driver.get(baseUrl);					
 	        String expectedTooltip = "Github";	
 	        

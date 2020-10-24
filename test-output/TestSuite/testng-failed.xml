@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]" parallel="methods">
+  <test name="register(failed)" parallel="methods">
+    <classes>
+      <class name="test8.parallel.Ex3">
+        <methods>
+          <include name="setup"/>
+          <include name="amazon"/>
+          <include name="close"/>
+          <include name="fb"/>
+        </methods>
+      </class> <!-- test8.parallel.Ex3 -->
+    </classes>
+  </test> <!-- register(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

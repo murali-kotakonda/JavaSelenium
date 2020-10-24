@@ -2,48 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="60" started-at="2020-10-18T08:18:42Z" finished-at="2020-10-18T08:18:42Z">
+  <suite name="Default suite" duration-ms="23601" started-at="2020-10-24T16:12:24Z" finished-at="2020-10-24T16:12:47Z">
     <groups>
     </groups>
-    <test name="exampletest1" duration-ms="60" started-at="2020-10-18T08:18:42Z" finished-at="2020-10-18T08:18:42Z">
-      <class name="test3.suiteEx.Test4">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="beforeSuite" is-config="true" duration-ms="22" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
+    <test name="Default test" duration-ms="23601" started-at="2020-10-24T16:12:24Z" finished-at="2020-10-24T16:12:47Z">
+      <class name="test4.dataProvier.TestDataProvider4Google">
+        <test-method status="PASS" signature="setup()[pri:0, instance:test4.dataProvier.TestDataProvider4Google@e50a6f6]" name="setup" is-config="true" duration-ms="4892" started-at="2020-10-24T21:42:24Z" finished-at="2020-10-24T21:42:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="beforeTest" is-config="true" duration-ms="0" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testData2()[pri:0, instance:test4.dataProvier.TestDataProvider4Google@e50a6f6]" name="testData2" duration-ms="10205" started-at="2020-10-24T21:42:28Z" finished-at="2020-10-24T21:42:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="beforeClass" is-config="true" duration-ms="1" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
+        </test-method> <!-- testData2 -->
+        <test-method status="PASS" signature="close()[pri:0, instance:test4.dataProvier.TestDataProvider4Google@e50a6f6]" name="close" is-config="true" duration-ms="8482" started-at="2020-10-24T21:42:39Z" finished-at="2020-10-24T21:42:47Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="t4_2()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="t4_2" duration-ms="21" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t4_2 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-10-18T13:48:42Z" finished-at="2020-10-18T13:48:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:test3.suiteEx.Test4@29774679]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-10-18T13:48:43Z" finished-at="2020-10-18T13:48:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- test3.suiteEx.Test4 -->
-    </test> <!-- exampletest1 -->
-  </suite> <!-- Suite1 -->
+        </test-method> <!-- close -->
+      </class> <!-- test4.dataProvier.TestDataProvider4Google -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

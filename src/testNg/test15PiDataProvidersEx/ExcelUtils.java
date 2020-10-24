@@ -5,15 +5,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import test4.dataProvier.Employee;
 
 public class ExcelUtils {
 
@@ -46,7 +43,7 @@ public class ExcelUtils {
 
 	public static Object[][] getLoginObjs(String path, String sheetName) throws IOException {
 		FileInputStream inputStream = new FileInputStream(path);
-		List<Login> emps = new ArrayList<Login>();
+		List<Login> loginObjs = new ArrayList<Login>();
 
 		Workbook fileObj = new XSSFWorkbook(inputStream);
 		Sheet sheetObj = fileObj.getSheet(sheetName);
@@ -63,15 +60,15 @@ public class ExcelUtils {
 					emp.setPass(cell.getStringCellValue());
 				}
 			}
-			emps.add(emp);
+			loginObjs.add(emp);
 		}
 
-		Object[][] empArr = new Object[emps.size()][2];
+		Object[][] loginArr = new Object[loginObjs.size()][1];
 		int i = 0;
-		for (Login e : emps) {
-			empArr[i++][0] = e;
+		for (Login e : loginObjs) {
+			loginArr[i++][0] = e;
 		}
-		return empArr;
+		return loginArr;
 	}
 
 	public static void main(String[] args) throws IOException {

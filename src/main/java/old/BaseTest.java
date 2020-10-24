@@ -1,20 +1,20 @@
 package old;
 
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 	
 	public WebDriver driver;
 
-	@Before
+	@BeforeMethod
 	public void setup() {
 		driver = DriverUtils.getDriver();
 	}
 
-	@After
+	@AfterMethod
 	public  void clean() {
 		driver.close();
 	}

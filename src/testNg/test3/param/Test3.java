@@ -23,8 +23,13 @@ public class Test3 {
 	
 	@Test
 	@Parameters(value = {"userName", "password"})
-	public void parameterTest1(String myName,String password) {
-		System.out.println("Parameterized value is : " + myName);
-		System.out.println("Parameterized value is : " + password);
+	public void t1(String myName,String password) {
+		System.out.println("userName  : " + myName);
+		System.out.println("password   : " + password);
+	}
+	
+	@Test
+	public void t2() {
+		System.out.println("T2 running");
 	}
 }

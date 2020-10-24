@@ -27,7 +27,6 @@ public class Page {
 
 	public static void SendKeys(WebElement ele, String str) {
 		ele.sendKeys(str);
-
 	}
 
 	public static WebElement Element(String address, String type) {

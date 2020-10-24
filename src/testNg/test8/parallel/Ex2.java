@@ -1,15 +1,12 @@
 package test8.parallel;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import util.Commons;
+import util.BaseTest;
 
-public class Ex2 {
+public class Ex2 extends BaseTest{
 	  @Test
 	  public void verifyHomepageTitle2() {
-		  WebDriver driver  = Commons.getChromeDriver();
 	      driver.get("https://google.com");
-	      driver.close();
 	  }
 }

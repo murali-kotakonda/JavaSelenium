@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="test1.Ex4">
+      <class name="testFb.Test1">
         <methods>
-          <include name="T1"/>
-          <include name="beforeMethod"/>
-          <include name="testBeforeClass"/>
-          <include name="beforeTest"/>
-          <include name="T2"/>
+          <include name="testDropdown"/>
+          <include name="oneTime"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- test1.Ex4 -->
+      </class> <!-- testFb.Test1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

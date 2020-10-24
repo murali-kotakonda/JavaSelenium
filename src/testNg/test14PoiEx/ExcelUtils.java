@@ -3,6 +3,7 @@ package test14PoiEx;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -12,14 +13,92 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/**
+Excel:
+---------
+
+ .xls   -> Old excel
+ .xlsx  -> New Excel 
+ 
+ 
+ Order of objects:
+-------------------
+1.WorkBook Obj
+2.Sheet Obj
+3.Row
+4.Cell obj
+
+to get no of sheets
+--------------------------
+int numberOfSheets = fileObj.getNumberOfSheets();
+
+How to create workbook obj:
+----------------------------------
+1.for old excel .xls 
+WorkBook fileObj = new HSSFWorkbook(inputStream);
+
+2. New excel .xlsx
+WorkBook fileObj = new XSSFWorkbook(inputStream);
+
+
+create sheet object:
+---------------------------------
+fileObj.createSheet("data");
+
+
+get the 1st sheet
+--------------------------------------
+Sheet sheetObj = fileObj.getSheetAt(0);
+
+
+How to create  row object:
+--------------------------
+Row row= sheet.createRow(<row nunm>);
+
+
+How to get row object:
+--------------------------
+Row row = sheetObj.getRow(<row num>);
+
+
+How to create cell object:
+--------------------------
+row.createCell(<cell num>);
+
+How to get cell:
+---------------------------
+Cell cell = row.getCell(<cell num>);
+
+
+
+How to write data to cell?
+----------------------------
+cell.setCellValue(<data>);
+
+How to read cell value?
+-------------------------
+String d =cell.getStringCellValue();
+Date dateCellValue = cell.getDateCellValue();
+double numericCellValue = cell.getNumericCellValue();
+
+How to get all row nums?
+--------------------------
+//how to get all rows
+int rowCount = sheetObj.getLastRowNum() - sheetObj.getFirstRowNum();
+
+
+How to get all column nums?
+--------------------------
+int cells = row.getLastCellNum() - row.getFirstCellNum();
+*/
+
 public class ExcelUtils {
 
 	public static void main(String[] args) throws IOException {
-		ExcelUtils readObj = new ExcelUtils();
-		String filePath = "C:\\Project\\";
-		List<String> readExcel = readObj.getExcelColumns(filePath, "Inputdata.xlsx");
-		for(String s:readExcel) {
-			System.out.println(s);
+		List<String> excelColumns = ExcelUtils.getExcelColumns("C:\\test", "Inputdata.xlsx");
+		
+		for(String c: excelColumns) {
+			System.out.println(c);
 		}
 	}
 
@@ -34,12 +113,14 @@ public class ExcelUtils {
 		} else if (fileExtensionName.equals(".xls")) {
 			fileObj = new HSSFWorkbook(inputStream);
 		}
+		
 		Sheet sheetObj = fileObj.getSheetAt(0);
 		int rowCount = sheetObj.getLastRowNum() - sheetObj.getFirstRowNum();
 		for(int r=0;r<=rowCount;r++) {
 			Row row = sheetObj.getRow(r);
 			Cell cell = row.getCell(0);
 			columns.add(cell.getStringCellValue().toUpperCase());
+			
 		}
 		return columns;
 	}

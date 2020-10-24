@@ -1,16 +1,13 @@
 package test8.parallel;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import util.Commons;
+import util.BaseTest;
 
-public class Ex1 {
+public class Ex1 extends BaseTest{
 	  
 	  @Test
 	  public void verifyHomepageTitle2() {
-		  WebDriver driver  = Commons.getChromeDriver();
 	      driver.get("https://www.facebook.com");
-	      driver.close();
 	  }
 }

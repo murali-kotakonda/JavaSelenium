@@ -3,8 +3,6 @@ package test6.depends;
 import org.testng.annotations.Test;
 
 public class TestMethodDepends {
-	public class Dependent {
-
 		@Test(dependsOnMethods = { "login" })
 		public void createAccount() {
 			System.out.println("createAccount");
@@ -17,7 +15,6 @@ public class TestMethodDepends {
 
 		@Test(dependsOnMethods = { "createAccount" })
 		public void logout() {
-			System.out.println("createAccount");
+			System.out.println("logout");
 		}
-	}
 }
