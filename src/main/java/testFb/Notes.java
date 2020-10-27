@@ -71,6 +71,16 @@ Text Box:
  7.How to check if the web element is text box?
   item.getAttribute("type") value should be "text"
   
+     
+   	//<input type="text" name="uName1" readonly="readonly" value="kumar">
+   WebElement element = driver.findElement(By.name("uName1"));
+   
+    //how to get element attribute
+	 System.out.println(element.getAttribute("type"));
+	 System.out.println(element.getAttribute("name"));
+     System.out.println(element.getAttribute("readonly"));
+     System.out.println(element.getAttribute("value"));
+    
 */
 
 public class Notes {

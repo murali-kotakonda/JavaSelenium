@@ -5,8 +5,8 @@
     <classes>
       <class name="testFb.Test1">
         <methods>
-          <include name="testDropdown"/>
-          <include name="oneTime"/>
+          <include name="testLn2"/>
+          <include name="close"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testFb.Test1 -->

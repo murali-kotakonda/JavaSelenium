@@ -1,98 +1,69 @@
 package testFb;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+import util.BaseTest;
 import util.Commons;
 
-public class Test2 {
+public class Test2 extends BaseTest{
 
-	public static void main(String[] args) {
-		//<a href="Test1.html">open for Next page</a><br/>
-		//<a href="https://www.gmail.com">click here for next link</a>
-		WebDriver driver = Commons.getDriver();
-		driver.get(Commons.URL);
-
-		WebElement l1 = driver.findElement(By.linkText("open for Next page"));
-		WebElement l2 = driver.findElement(By.partialLinkText("click here"));
-		//Commons.checkEnabledanddisplayed("open for Next page", l1);
-		//Common.checkEnabledanddisplayed("click here for next link", l2);
-
-		if (!l1.getAttribute("href").endsWith("Test1.html")) {
-			System.out.println("invalid url/link for l1");
+	@BeforeMethod
+	public void setup() {
+		super.setup();
+		//driver.get("http://localhost:8081/myapp/form.html");
+		driver.get(Commons.BASE_URL+"form.html"); 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
-		if (!l2.getAttribute("href").endsWith("gmail.html")) {
-			System.out.println("invalid url/link for l2");
-		}
-
-		l2.click();
-
-		if (!driver.getTitle().equals("Google")) { // get the title
-			System.out.println("wrong page");
-		}
-		driver.navigate().back();
-		l2 = driver.findElement(By.linkText("click here for next link"));
-		l2.click();
-
-		if (!driver.getTitle().equals("page for 3.html")) { // get the title
-			System.out.println("wrong page");
-		}
-
-		driver.navigate().back();
-		
-		
-		
-        List<String> linkTexts = Arrays.asList("open for Next page","click here for next link");
-        
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-        if(links.size()!=2) {
-        	System.out.println("invalid no of links");
-        }
-        
-        for(WebElement element: links){
-        	String text = element.getText();
-        	Assert.assertTrue("misisng link "+text,linkTexts.contains(text));
-        	testLinkWorking(element);
-        }
-		driver.close();
-
 	}
 	
-	
-	private static void testLinkWorking(WebElement it) {
-		   String url = it.getAttribute("href");
-		   HttpURLConnection huc = null;
-	        int respCode = 200;
-	     
-		    System.out.println(url);
-		
-		    Assert.assertTrue("Link url is missing..",url != null && !url.isEmpty());
-		    
-		    Assert.assertTrue("Link domain is wrong is missing..",url.startsWith("http://localhost:9090/Employee"));
-		    
-		    try {
-		        huc = (HttpURLConnection)(new URL(url).openConnection());
-		        
-		        huc.setRequestMethod("HEAD");
-		        
-		        huc.connect();
-		        
-		        respCode = huc.getResponseCode();
-		        
-		        Assert.assertTrue("Link not working..",respCode==200);
-		        
-		    } catch (MalformedURLException e) {
-		    } catch (IOException e) {
-		    }
-	}
+	@Test
+	public void testCheckBox1() {
+        // fetch web elements based on attribute
+		List<WebElement> checks = driver.findElements(By.xpath("//input[@type='checkbox']"));
+		int size = checks.size();
+		assertEquals(size, 3, "invalid no of check boxes");
 
+		// content test
+		List<String> expectedChecks = Arrays.asList("voter", "pan", "passport");
+		for (WebElement element : checks) {
+			String checkValue = element.getAttribute("value");
+			assertTrue(expectedChecks.contains(checkValue));
+		}
+
+		WebElement passport = driver.findElement(By.name("proof1"));
+		WebElement voter = driver.findElement(By.name("proof2"));
+		WebElement pan = driver.findElement(By.name("proof3"));
+		
+		assertEquals(passport.getAttribute("type"),"checkbox");
+		assertEquals(voter.getAttribute("type"),"checkbox");
+		assertEquals(pan.getAttribute("type"),"checkbox");
+		
+		//checkEnabledAndDisplayed
+		assertTrue(passport.isEnabled(),"passport should  enabled");
+		assertTrue(voter.isEnabled(),"voter should  enabled");
+		assertTrue(pan.isEnabled(),"pan should be enabled");
+		
+		assertFalse(passport.isSelected(),"passport is not selected.");
+		assertFalse(voter.isSelected(),"voter is not selected.");
+		assertTrue(pan.isSelected(),"pan is  selected.");
+		
+		//unchek pan
+		pan.click();
+		
+		//select voter
+		voter.click();
+ 	}
 }
