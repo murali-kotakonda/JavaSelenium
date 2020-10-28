@@ -1,4 +1,4 @@
-package popup;
+package testFb;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import util.Commons;
 
-public class TestAlert1 {
+public class Test4Alert {
 
 	public static void main(String[] args) throws NoAlertPresentException,InterruptedException  {									
 		WebDriver driver = Commons.getDriver();
@@ -28,6 +28,5 @@ public class TestAlert1 {
      
        // Accepting alert		
         alert.accept();	
-        
     }	
 }

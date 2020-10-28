@@ -1,4 +1,4 @@
-package windows;
+package testFb;
 
 import java.util.Set;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import util.Commons;
 
-public class TestMultiWindows {
+public class Test3MultiWindows {
 	public static void main(String[] args) throws InterruptedException {
 
 		WebDriver driver = Commons.getDriver();

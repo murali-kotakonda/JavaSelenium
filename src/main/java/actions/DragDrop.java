@@ -11,7 +11,7 @@ public class DragDrop  {
 
 	public static void main(String[] args) throws InterruptedException {
 	WebDriver driver;
-		driver = Commons.getDriver();
+		driver = Commons.getChromeDriver();
 	
 		driver.get("http://jqueryui.com/droppable/");
 

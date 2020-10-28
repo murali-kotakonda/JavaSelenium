@@ -1,4 +1,4 @@
-package old;
+package com.mythri;
 
 import org.junit.Assert;
 import org.junit.Test;

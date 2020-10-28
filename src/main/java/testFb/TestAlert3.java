@@ -1,4 +1,4 @@
-package popup;
+package testFb;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

@@ -1,6 +1,6 @@
 package testFb;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
@@ -56,7 +56,6 @@ public class Test1 extends BaseTest{
 	  element.clear();
 	  Thread.sleep(5000);
 		 
-	 
   }
 	
 	@Test
@@ -94,7 +93,6 @@ public class Test1 extends BaseTest{
 		
 		//How to check if the text field is displayed
 		assertTrue(element.isDisplayed(),"uName2 should be displayed");
-	
 	}
 	
 	@Test
@@ -118,14 +116,12 @@ public class Test1 extends BaseTest{
 		 //assertEquals(element.getAttribute("width"),"30", "Invalid width.");
 			 
 		 //how to send data to the text field
-		 element.sendKeys("Sravanthi");
+		 element.sendKeys("Raju");
 		 
 		 //how to clear data from the text field
 		 // element.clear();
 		  Thread.sleep(5000);
 	}
-	
-	
 	
 	@Test
 	public void testPassword() throws InterruptedException {
@@ -142,11 +138,29 @@ public class Test1 extends BaseTest{
 		 assertEquals(element.getAttribute("type"),"password", "Invalid field type.Expected password");
 		 
 		 //how to send data to the password
-		 element.sendKeys("Sravanthi123456");
+		 element.sendKeys("Raju1234345");
 		 
 		 //how to clear data from the password
 		 // element.clear();
 		  Thread.sleep(5000);
+	}
+	
+	@Test
+	public void testHidden() {
+		//<input type="hidden" name="uType" value="agent"/><br><br>      
+		WebElement element = driver.findElement(By.name("uType"));
+
+		// How to check if the uType is enabled
+		assertTrue(element.isEnabled(), "uType should not be enabled");
+
+		// How to check if the uType is displayed
+		assertTrue(!element.isDisplayed(), "uType should not be displayed");
+
+		// How to check if the field is uType
+		assertEquals(element.getAttribute("type"), "hidden", "Invalid field type.Expected hidden");
+		
+		// How to check if the field is uType
+		assertEquals(element.getAttribute("value"), "agent", "Expected agent as value");
 	}
 	
 	/*
@@ -195,6 +209,8 @@ public class Test1 extends BaseTest{
 		//create select obj
 		Select select = new Select(cities);
 		
+		assertFalse(select.isMultiple(),"city is not multi dropdown");
+		
 		//How to get all the options
 		List<WebElement> options  = select.getOptions();
 		
@@ -230,40 +246,132 @@ public class Test1 extends BaseTest{
 		}
 	}
 	
+	/**
+		<select name="citizen" multiple>
+		  <option value="IN">India</option>
+		  <option value="PAK">Pakistan</option>
+		  <option value="US">AMERICA</option>
+		  <option value="AUS">AUSTRLIA</option>
+		</select>
+	 */
 	@Test
-	public void testLinks() {
-			//<a href="ex1.html">open for Next page</a><br/>
-			//<a href="https://www.gmail.com">click here for next link</a>
+	public void testMultiDropdown() throws InterruptedException {
+		WebElement citizen = driver.findElement(By.name("citizen"));
 		
-		    // get all links verify the no of links on page
-		    List<WebElement> links = driver.findElements(By.tagName("a"));
-	        assertEquals(links.size(), 2,"invalid no of links:");
-	        
-	        //verify link text
-	        List<String> linkTexts = Arrays.asList(
-	        		"open for Next page","click here for Next link");
-	        for(WebElement element: links){
-	        	String text = element.getText();
-	        	Assert.assertTrue("misisng link "+text,linkTexts.contains(text));
-	        	testLinkWorking(element);
-	        }
+		//create select obj
+		Select select = new Select(citizen);
+		
+		assertEquals(citizen.getAttribute("multiple"),"true","citizen is multi dropdown");
+		assertTrue(select.isMultiple(),"citizen is multi dropdown");
+		
+		//How to get all the options
+		List<WebElement> options  = select.getOptions();
+		
+		//validate the number of citizen
+		int size = options.size();
+		assertEquals(size, 4,"invalid no of citizen");
+		
+		List<String> expectedCitizen =Arrays.asList("India","Pakistan","AMERICA","AUSTRLIA");
+		List<String> expectedCitizenValues =Arrays.asList("IN","PAK","US","AUS");
+		
+		//content testing
+		int count= 0;
+		for(WebElement element :options){
+			String visible = element.getText();
+			String value= element.getAttribute("value");
+			//System.out.println(visible +" - "+value);
+			assertEquals(visible ,expectedCitizen.get(count) ,"invalid citizen text:");
+			assertEquals(value ,expectedCitizenValues.get(count) ,"invalid citizen value:");
+			count++;
+		}
+		
+		//select the values in dropdown
+		select.selectByVisibleText("India");
+		Thread.sleep(2000);
+		
+		select.selectByIndex(1);
+		Thread.sleep(2000);
+		
+		select.selectByValue("US");
+		Thread.sleep(2000);
+		
+		List<WebElement> allSelectedOptions = select.getAllSelectedOptions();
+		
+		//get the selected values
+		for(WebElement element :allSelectedOptions){
+			String visible = element.getText();
+			String value= element.getAttribute("value");
+			System.out.println(visible +" - "+value);
+		}
+		//deselect the values in dropdown
+		select.deselectByVisibleText("India");
+		Thread.sleep(2000);
+		
+		select.deselectByIndex(1);
+		Thread.sleep(2000);
+		
+		select.deselectByValue("US");
+		Thread.sleep(2000);
+		
+		//to deselect all
+		// select the values in dropdown
+		select.selectByVisibleText("India");
+		Thread.sleep(2000);
 
-	        //get specific link element
-	        WebElement l1 = driver.findElement(By.linkText("open for Next page"));
-	        l1.click();
-			//Commons.checkEnabledanddisplayed("open for Next page", l1);
-			//Common.checkEnabledanddisplayed("click here for next link", l2);
-			assertTrue(l1.getAttribute("href").endsWith("ex1.html"),"invalid url:");
-			assertEquals(driver.getTitle(), "Google","invalid title:");
+		select.selectByIndex(1);
+		Thread.sleep(2000);
+				
+		select.deselectAll();
+	}
+	
+	/**
+	//How to get web element usin tag name
+	use method driver.findElements(By.tagName("a"))
+	
+	
+	//How to get web element for link
+	<a href="https://www.gmail.com">click here for next link</a>
+	
+	Two approaches
+	approach 1:  WebElement l2 = driver.findElement(By.LinkText("click here for next link")) ; // Pass the entire link text
+	approach 2:  WebElement l2 = driver.findElement(By.partialLinkText("click here")) ; pass only the partial link
+	 
+	 */
+	@Test
+	public void testLinks() throws InterruptedException {
+		// <a href="ex1.html">open for Next page</a><br/>
+		// <a href="https://www.gmail.com">click here for next link</a>
 
-			
-			driver.navigate().back();
+		// verify the no of links on page
+		List<WebElement> links = driver.findElements(By.tagName("a")); // 'a' is the tag name for the link ; this method
+																		// fetches all links
+		assertEquals(links.size(), 2, "invalid no of links:");
 
-			WebElement l2 = driver.findElement(By.partialLinkText("click here"));
-			l2.click();
-			assertTrue(l2.getAttribute("href").endsWith("gmail.com/"),"invalid url:");
+		// verify link text
+		List<String> linkTexts = Arrays.asList("open for Next page", "click here for Next link");
+		for (WebElement element : links) {
+			String text = element.getText();
+			Assert.assertTrue("misisng link " + text, linkTexts.contains(text));
+			testLinkWorking(element);
+		}
 
-			assertEquals(driver.getTitle(), "page for 3.html","invalid title:");
-			driver.close();
+		// get specific link element
+		WebElement l1 = driver.findElement(By.linkText("open for Next page")); //get link obj using the link text
+		assertTrue(l1.getAttribute("href").endsWith("ex1.html"), "invalid url:");
+		
+		//how to click on link
+		l1.click();
+		// Commons.checkEnabledanddisplayed("open for Next page", l1);
+		// Common.checkEnabledanddisplayed("click here for next link", l2);
+	
+		assertEquals(driver.getTitle(), "Google", "invalid title:");
+		Thread.sleep(5000);
+		driver.navigate().back();
+
+		WebElement l2 = driver.findElement(By.partialLinkText("click here"));
+		assertTrue(l2.getAttribute("href").endsWith("gmail.com/"), "invalid url:");
+		l2.click();
+		
+		assertEquals(driver.getTitle(), "page for 3.html", "invalid title:");
 	}
 }

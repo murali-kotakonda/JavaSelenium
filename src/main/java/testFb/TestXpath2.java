@@ -1,4 +1,4 @@
-package project.xpath;
+package testFb;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import util.Commons;
 
-public class Xpath2 {
+public class TestXpath2 {
 public static void main(String[] args) {
 	/*
 	  <form method="POST" action="https://accounts.lambdatest.com/register">

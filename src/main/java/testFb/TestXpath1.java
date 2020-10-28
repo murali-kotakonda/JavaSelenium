@@ -1,4 +1,4 @@
-package project.xpath;
+package testFb;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import util.Commons;
 
-public class Xpath {
+public class TestXpath1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = Commons.getDriver();
@@ -18,8 +18,6 @@ public class Xpath {
 	WebElement element = driver.findElement(By.xpath("//a[@href='gmail.com']"));
 	element.click();	
 		 
-		  
-		  
 		<input type="text"/>
      WebElement element = driver.findElement(By.xpath("//input[@type='text']"));
 		element.sendKeys("hello");
@@ -158,12 +156,7 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 				Xpath= //button[text()=’ Signup for Free’]
 				Xpath=//button[contains(text(),’ Signup’ )]
 				Xpath= //button[@type='submit']
-
-				
-				
 		  */
-	      
-	      
 	      
 		
 		/* chain search
@@ -171,16 +164,12 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		  //div[@class=’form-group’]//input[@id=’user-message’]
 		 
 		 */
-		
-	  
 	      
 	      /*Index
-	       
 	       <div class="col-sm-12 google-sign-form"><input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 "> <input type="text" placeholder="Full Name*" name="name" value="" class="form-control sign-up-input-2 "> <input type="email" placeholder="Work Email*" name="email" value="" class="form-control sign-up-input-2 ">
 	       Xpath= //div[@class= ’ col-sm-12 google-sign-form’]/input[2]
 	        driver.findElement(By.xpath("//div[@class='col-sm-12 google-sign-form']/input[2]")).sendKeys("sadhvi singh");
 	       */
-
 	}
 }
 	

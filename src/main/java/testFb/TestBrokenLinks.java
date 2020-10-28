@@ -1,4 +1,4 @@
-package webelements;
+package testFb;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -31,8 +31,6 @@ public class TestBrokenLinks {
 	        
 	        driver.get(homePage);
 	        
-	        
-	       
 	        List<WebElement> links = driver.findElements(By.tagName("a"));
 	        if(links.size()!=2) {
 	        	System.out.println("invalid no of links");
@@ -98,7 +96,6 @@ public class TestBrokenLinks {
 	        }
 	        
 	        driver.quit();
-
 	    }
 	    
 	    

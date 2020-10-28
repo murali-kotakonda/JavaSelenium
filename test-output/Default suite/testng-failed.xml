@@ -5,9 +5,9 @@
     <classes>
       <class name="testFb.Test1">
         <methods>
-          <include name="testLn2"/>
           <include name="close"/>
           <include name="setup"/>
+          <include name="testHidden"/>
         </methods>
       </class> <!-- testFb.Test1 -->
     </classes>
