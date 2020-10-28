@@ -30,7 +30,7 @@ public class BaseTest {
 
 	@AfterMethod
 	public void close() {
-		driver.close();
+		driver.quit();
 		System.out.println("driver closed");
 	}
 

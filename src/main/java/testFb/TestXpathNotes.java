@@ -5,50 +5,69 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import util.Commons;
-
-public class TestXpath1 {
-
+public class TestXpathNotes {
+		/**
+		 xpath:
+		-----------
+		attribute search
+		
+		1:
+		<a href="https://www.gmail.com">click here</a>
+		<a href="https://www.fb.com">click here</a>
+		
+		xpath = //a[@href='https://www.google.com']
+		        // tagName[@attributename ='attributevalue']
+		
+		//get web element for link1
+		WebElement link1=driver.findElement(By.xpath("//a[@href='https://www.gmail.com']"));
+				
+		
+		//get web element for link2
+		WebElement link2=driver.findElement(By.xpath("//a[@href='https://www.fb.com']"));
+		
+		
+		2.
+		<label id='error'>Enter values here</label>
+		WebElement webElement =driver.findElement(By.xpath("//label[@id='error']"))
+		
+		
+		3:
+		<input type="text"/>
+		WebElement webElement =driver.findElement(By.xpath("//input[@type='text']"))
+		
+		
+		4.
+		  <input type="submit" value="RESET"/>
+		  <input type="submit" value="ADD"/>
+		
+		WebElement element1 =driver.findElement(By.xpath("//input[@value='RESET']"));
+		webElement element2 =driver.findElement(By.xpath("//input[@value='ADD']"));
+		
+		
+		5. <input type="text" name="age"/>
+		WebElement element3=driver.findElement(By.xpath("//input[@name='age']"));
+		
+		
+		6.
+		<img src="mypic.jpeg/>
+		 WebElement element3=driver.findElement(By.xpath("//img[@src='mypic.jpeg']"));
+		
+		7.
+		<p class="show"> test1 </p>
+		<p class="show"> test2 </p>
+		<p class="show"> test3 </p>
+		<p class="show"> test4 </p>
+		
+		 Xpath=//*[@class='show']
+		 
+		 
+		 */
+	
+	
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = Commons.getDriver();
 		
-		/* attribute search
-
-		<a href="gmail.com">click here</a>
-		<a href="google.com">click here</a>
-	WebElement element = driver.findElement(By.xpath("//a[@href='gmail.com']"));
-	element.click();	
-		 
-		<input type="text"/>
-     WebElement element = driver.findElement(By.xpath("//input[@type='text']"));
-		element.sendKeys("hello");
-		
-     <label id='error'>Enter values here</label> 
-     Xpath=	//label[@id='error']
-     
-    <input type="text" value="RESET"/>
-     <input type="text" value="ADD"/>
-		WebElement element = driver.findElement(By.xpath("//input[@value='RESET']"));
-		WebElement element = driver.findElement(By.xpath("//input[@value='ADD']"));
-		element.sendKeys("hello");
-		
-		 
-		 Xpath=//*[@class='show']
-		 Xpath=//a[@href='1.html']
-		 Xpath= //img[@src='//fb.com/java.png']
-		 
-		 <input type="text" name="name"/>
-		 driver.findElement(By.xpath("//input[@name='name']")).sendKeys("kumar");
-		
-		 Refer Xpath2.java
-		*/
-		
-		WebElement element = driver.findElement(By.xpath("//a[@href='gmail.com']"));
-		element.click();
-		    
-		 WebElement element1 = driver.findElement(By.xpath("//a[@href='google.com']"));
-		 element1.click();
 		/*Contains usage
- 		 
 		 
 		 Contains() is a method used in XPath expression. 
 		 It is used when the value of any attribute changes dynamically.
@@ -65,10 +84,10 @@ public class TestXpath1 {
 		
 		EX: 
 		 <a href="https://www.gmail.com"> click here </a> 
-driver.findElement(By.xpath("//a[@href='https://www.gmail.com']	")).click();
-driver.findElement(By.xpath("//a[contains(@href,'gmail')]	")).click();
-driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
-		 
+			driver.findElement(By.xpath("//a[@href='https://www.gmail.com']	")).click();
+			driver.findElement(By.xpath("//a[contains(@href,'gmail')]	")).click();
+			driver.findElement(By.xpath("//a[contains(text(),'click here')]")).click();
+					 
 		 */
 		 
 		//<input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 ">
@@ -77,7 +96,6 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		 
 		 /*  Or,and usage
 		 Syntax: //tag[XPath Statement-1 or XPath Statement-2]
-				 
 		Ex:1
 		 
 		<input type="button" name="CLEAR">
@@ -113,10 +131,6 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 	        
 	        //Finding the password field via xpath using AND, where only one of the attribute defined is correct whereas the other incorrect and does not match,this should NOT work as one of them does not meets the condition.
 	      driver.findElement(By.xpath("//input[@name='password' and @id='not present']")).sendKeys("Lambdatest");
-	 
-		
-		
-		
 	      
 	      
 	      /* Start-with function finds the element whose attribute value
@@ -125,10 +139,9 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		  <label id="message" > Hello</label>
 		  Xpath=//label[starts-with(@id,'message')]
 		  
-		  
 		
- <a href="gmail.com">Click here</a>
- <a href="fb.com">submit here</a>
+			 <a href="gmail.com">Click here</a>
+			 <a href="fb.com">submit here</a>
 		 
 		 */
 	      driver.findElement(By.xpath("//a[starts-with(text(), 'START')]")).click();
@@ -152,7 +165,7 @@ driver.findElement(By.xpath("//a[contains(text(),'here')]")).click();
 		
 		  /* 
 
-<button type="submit">Signup for Free</button>
+				<button type="submit">Signup for Free</button>
 				Xpath= //button[text()=’ Signup for Free’]
 				Xpath=//button[contains(text(),’ Signup’ )]
 				Xpath= //button[@type='submit']

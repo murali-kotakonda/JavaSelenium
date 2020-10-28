@@ -1,5 +1,6 @@
 package testFb;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
@@ -12,5 +13,6 @@ public class TestScroll {
 		driver.get("https://www.youtube.com");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("scrollBy(0, 4500)");
+		
 	}
 }

@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16831" started-at="2020-10-27T11:45:31Z" finished-at="2020-10-27T11:45:47Z">
+  <suite name="Default suite" duration-ms="19817" started-at="2020-10-28T16:31:40Z" finished-at="2020-10-28T16:32:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16831" started-at="2020-10-27T11:45:31Z" finished-at="2020-10-27T11:45:47Z">
-      <class name="testFb.Test1">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testFb.Test1@23282c25]" name="setup" is-config="true" duration-ms="12625" started-at="2020-10-27T17:15:31Z" finished-at="2020-10-27T17:15:43Z">
+    <test name="Default test" duration-ms="19817" started-at="2020-10-28T16:31:40Z" finished-at="2020-10-28T16:32:00Z">
+      <class name="testFb.Test5Xpath">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testFb.Test5Xpath@1a84f40f]" name="setup" is-config="true" duration-ms="12743" started-at="2020-10-28T22:01:40Z" finished-at="2020-10-28T22:01:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testHidden()[pri:0, instance:testFb.Test1@23282c25]" name="testHidden" duration-ms="92" started-at="2020-10-27T17:15:43Z" finished-at="2020-10-27T17:15:43Z">
+        <test-method status="PASS" signature="t5()[pri:0, instance:testFb.Test5Xpath@1a84f40f]" name="t5" duration-ms="5142" started-at="2020-10-28T22:01:53Z" finished-at="2020-10-28T22:01:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testHidden -->
-        <test-method status="PASS" signature="close()[pri:0, instance:testFb.Test1@23282c25]" name="close" is-config="true" duration-ms="4089" started-at="2020-10-27T17:15:43Z" finished-at="2020-10-27T17:15:47Z">
+        </test-method> <!-- t5 -->
+        <test-method status="PASS" signature="close()[pri:0, instance:testFb.Test5Xpath@1a84f40f]" name="close" is-config="true" duration-ms="1905" started-at="2020-10-28T22:01:58Z" finished-at="2020-10-28T22:02:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- testFb.Test1 -->
+      </class> <!-- testFb.Test5Xpath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

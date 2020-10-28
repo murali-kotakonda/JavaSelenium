@@ -1,19 +1,43 @@
 package testFb;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+import util.BaseTest;
 import util.Commons;
 
-public class Test4Alert {
+public class Test4Alert extends BaseTest{
 
-	public static void main(String[] args) throws NoAlertPresentException,InterruptedException  {									
-		WebDriver driver = Commons.getDriver();
-        // Alert Message handling
-        driver.get(Commons.ALERT_URL);			
-     	
+	@BeforeMethod
+	public void setup() {
+		super.setup();
+		driver.get(Commons.BASE_URL + "alert.html");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 How to switch to alert?
+	  Alert alert = driver.switchTo().alert();	
+	  
+	 How to get alert message?
+       String alertMessage= alert.getText();
+       
+      How to click ok on alert message?
+       alert.accept();	
+	 
+	 */
+	@Test
+	public void testAlert1() throws Exception  {									
         driver.findElement(By.name("submit")).click();			
         		
         // Switching to Alert        
@@ -21,12 +45,73 @@ public class Test4Alert {
         		
         // Capturing alert message.    
         String alertMessage= alert.getText();		
-        		
-        // Displaying alert message		
-        System.out.println(alertMessage);	
+        assertEquals(alertMessage , "Hello", "Invalid popup message");
+        
         Thread.sleep(5000);
-     
-       // Accepting alert		
+        // Accepting alert		
         alert.accept();	
-    }	
+        
+        Thread.sleep(4000);
+    }
+	
+	/**
+	 How to click on Ok/accept?
+	  alert.accept();	
+	  
+	 How to click on cancel/dismiss?
+	  alert.dismiss(); 
+	 */
+	
+	@Test
+	public void testAlert21() throws Exception  {									
+        Alert alert = clickOnAlert1();
+        // click ok		
+        alert.accept();	
+        Thread.sleep(5000);
+    }
+	
+	@Test
+	public void testAlert22() throws Exception  {									
+        Alert alert = clickOnAlert1();
+        // click cancel		
+        alert.dismiss();
+        Thread.sleep(5000);
+    }
+
+	private Alert clickOnAlert1() throws InterruptedException {
+		driver.findElement(By.name("alert1")).click();			
+        		
+        // Switching to Alert        
+        Alert alert = driver.switchTo().alert();		
+        		
+        // Capturing alert message.    
+        String alertMessage= alert.getText();		
+        assertEquals(alertMessage , "do you want to continue?", "Invalid popup message");		
+        
+        Thread.sleep(5000);
+		return alert;
+	}
+	
+	/**
+	How to send data to the popup?
+	  alert.sendKeys("<some text>");
+	 */
+	@Test
+	public void testAlert3() throws Exception {
+		driver.findElement(By.name("alert2")).click();
+
+		// Switching to Alert
+		Alert alert = driver.switchTo().alert();
+
+		// Capturing alert message.
+		String alertMessage = alert.getText();
+		assertEquals(alertMessage , "enter page", "Invalid popup message");
+		
+		Thread.sleep(5000);
+		alert.sendKeys("ex1.html");
+		
+		// click ok
+		alert.accept();
+		Thread.sleep(5000);
+	}
 }
