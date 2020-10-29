@@ -146,8 +146,6 @@ public class TestXpathNotes {
 		 */
 	      driver.findElement(By.xpath("//a[starts-with(text(), 'START')]")).click();
 		
-		
-	      
 	      /*text()
 		 
 		  Syntax: //tag[text()=’text value‘]

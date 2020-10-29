@@ -91,11 +91,23 @@ public class Test2 extends BaseTest {
 		Thread.sleep(2000);
 	}
 
+	/**
+	     How to know if the radio button is selected or not?
+    		use element.isSelected() -> returns true/false
+    
+    	How to know if the web element is radio button?
+     		element.getAttribute("type") should return "radio"
+     
+     	How to select a radio button
+     		element.click()
+	 * @throws InterruptedException 
+     
+	 */
 	@Test
-	public void testRadio() {
+	public void testRadio() throws InterruptedException {
 		// <input type="radio" name="gender" id="mRadio" value="male" checked> Male<br>
 	   //  <input type="radio" name="gender" id="fRadio" value="female"> Female<br>
-		//	  <input type="radio" name="gender" id="oRadio" value="other"> Other
+		// <input type="radio" name="gender" id="oRadio" value="other"> Other
 		List<WebElement> radios = driver.findElements(By.name("gender"));
 		int size = radios.size();
 		assertEquals(size, 3, "Invalid no of radios for gender");
@@ -106,7 +118,8 @@ public class Test2 extends BaseTest {
 			String genderValue = element.getAttribute("value");
 			assertTrue(expectedGenerValues.contains(genderValue));
 		}
-				
+		
+		//get specific
 		WebElement mRadio = driver.findElement(By.id("mRadio"));
 		WebElement fRadio = driver.findElement(By.id("fRadio"));
 		WebElement oRadio = driver.findElement(By.id("oRadio"));
@@ -127,9 +140,15 @@ public class Test2 extends BaseTest {
 		
 		// how to select radio button
 		oRadio.click();
-
+		Thread.sleep(2000);
+		
 		// how to select radio button
 		fRadio.click();
+		Thread.sleep(2000);
+		
+		// how to select radio button
+		mRadio.click();
+		Thread.sleep(2000);
 	}
 	
 	@Test
