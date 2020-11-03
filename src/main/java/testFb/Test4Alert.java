@@ -1,6 +1,6 @@
 package testFb;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -41,7 +41,7 @@ public class Test4Alert extends BaseTest{
         // Switching to Alert        
         Alert alert = driver.switchTo().alert();		
         		
-        // Capturing alert message.    
+        // Capturing and validate alert message.    
         String alertMessage= alert.getText();		
         assertEquals(alertMessage , "Hello", "Invalid popup message");
         
@@ -59,7 +59,7 @@ public class Test4Alert extends BaseTest{
 	 How to click on cancel/dismiss?
 	  alert.dismiss(); 
 	 */
-	
+	 // <input type="button" name="alert1" onclick="check2()" value="alert2">
 	@Test
 	public void testAlert21() throws Exception  {									
         Alert alert = clickOnAlert1();
@@ -79,6 +79,7 @@ public class Test4Alert extends BaseTest{
 	private Alert clickOnAlert1() throws InterruptedException {
 		driver.findElement(By.name("alert1")).click();			
         		
+		
         // Switching to Alert        
         Alert alert = driver.switchTo().alert();		
         		
@@ -94,6 +95,8 @@ public class Test4Alert extends BaseTest{
 	How to send data to the popup?
 	  alert.sendKeys("<some text>");
 	 */
+	 
+	//<input type="button" name="alert2" onclick="check3()" value="alert3">
 	@Test
 	public void testAlert3() throws Exception {
 		driver.findElement(By.name("alert2")).click();

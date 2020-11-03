@@ -13,6 +13,5 @@ public class TestScroll {
 		driver.get("https://www.youtube.com");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("scrollBy(0, 4500)");
-		
 	}
 }

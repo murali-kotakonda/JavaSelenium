@@ -2,11 +2,11 @@ package testFb;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import util.Commons;
 public class TestXpathNotes {
-		/**
+	
+	  /**
 		 xpath:
 		-----------
 		attribute search
@@ -58,32 +58,50 @@ public class TestXpathNotes {
 		<p class="show"> test3 </p>
 		<p class="show"> test4 </p>
 		
-		 Xpath=//*[@class='show']
-		 
-		 
+		 Xpath=//p[@class='show']
 		 */
 	
 	
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = Commons.getDriver();
 		
-		/*Contains usage
-		 
+		/*
+		 Contains usage
 		 Contains() is a method used in XPath expression. 
 		 It is used when the value of any attribute changes dynamically.
 		 The contain feature has an ability to find the element with partial text 
 		 
 		 syntax: tag[contains(@attribute, ‘value‘)]
-		 Xpath= //img[contains(@src,’Profile’)]
-		 Xpath=//*[contains(@type,'sub')]  -- if the attribute type has partial value 'sub'
-		 Xpath=//*[contains(@name,'btn')]  -- if the attribute type has partial value 'btn'
+		  
+		  Ex1:
+		  <img src='ProfilePic123445.jpg'/>
+   		  Xpath= //img[contains(@src,’Profile’)]
 		 
+		  
+  		Ex2:
+		 <input type= 'subContractor' />
+		 <input type= 'subRegister' />
+     	  <p type= 'subAgent' />
+     
+	      Xpath=//*[contains(@type,'sub')]  -- Get all elements if the attribute type has partial value 'sub'
+	      Xpath=//input[contains(@type,'sub')]  -- Get only input tag elements if the attribute type has partial value 'sub'
+	      Xpath=//p[contains(@type,'sub')]  -- Get only p tag elements if the attribute type has partial value 'sub'
+			 
+	  Ex3: 
+		 <input name= 'btnUser1' />
+		 <input name= 'btnUser2' />
+		 Xpath=//*[contains(@name,'btn')]  -- all elements if the attribute type has partial value 'btn'
+		 Xpath=//input[contains(@name,'btn')]  -- inout elements if the attribute type has partial value 'btn'
+		 
+     
 		
 		syntax: *[contains(@attribute, ‘value‘)]  -> serach for any tagname + attribute similar match
 		syntax: tag[contains(@attribute, ‘value‘)]  -> serach by tagname + attribute similar match
 		
-		EX: 
-		 <a href="https://www.gmail.com"> click here </a> 
+		EX4: 
+		    <a href="https://www.gmail.com"> click here </a> 
+		     driver.findElement(By.linkText("https://www.gmail.com")).click();
+		     driver.findElement(By.partialLinkText("gmail")).click();
 			driver.findElement(By.xpath("//a[@href='https://www.gmail.com']	")).click();
 			driver.findElement(By.xpath("//a[contains(@href,'gmail')]	")).click();
 			driver.findElement(By.xpath("//a[contains(text(),'click here')]")).click();
@@ -94,30 +112,35 @@ public class TestXpathNotes {
 		 driver.findElement(By.xpath("//a[contains(text(), 'TESTING')]")).click();
 		
 		 
-		 /*  Or,and usage
-		 Syntax: //tag[XPath Statement-1 or XPath Statement-2]
-		Ex:1
+		 /*  
 		 
+		 Or,and usage
+		 Syntax: //tag[XPath Statement-1 or XPath Statement-2]
+		 Syntax: //tag[XPath Statement-1 and XPath Statement-2]
+		
+		Ex:1
 		<input type="button" name="CLEAR">
 		<input type="submit" name="submit">
 		<input type="button" name="btnReset">
 		 
-		//input[@type='submit' or @name='btnReset']
-		
+		 Req: click on submit button or Reset buton
+		solution:
+		 //input[@type='submit' or @name='btnReset']
 		
 		Ex:2
 		<input type="submit" name="btnLogin">
 		<input type="button" name="btnLogin">
 		<input type="submit" name="btnReset">
 		 
+		 click on submit button and with name as btnLogin
 		//input[@type='submit' and @name='btnLogin']
 		  
-		  
-		 2.//*[@id=’user-message’ or @class=’form-control’]
-		 3.//input[@type='submit' and @name='btnLogin']
+		 Ex:3 
+		 <input type="user-message1" class="form-control1">
+		 <input type="user-message2" class="form-control1">
+		 <input type="user-message1" class="form-control3">
 		 
-		 Syntax: //tag[XPath Statement-1 and XPath Statement-2]
-		 1.//*[@id=’user-message’ and @class=’form-control’]
+		 //*[@id=’user-message1’ or @class=’form-control’]
 		 
 		 */
 		 //< input type="email" placeholder="Work Email" name="email" value="" class="form-control sign-up-input-2 " >
@@ -133,42 +156,54 @@ public class TestXpathNotes {
 	      driver.findElement(By.xpath("//input[@name='password' and @id='not present']")).sendKeys("Lambdatest");
 	      
 	      
-	      /* Start-with function finds the element whose attribute value
+	      /*
+	      
+	      Start-with function finds the element whose attribute value
 
 		  Syntax: //tag[starts-with(@attribute, ‘value‘)]
-		  <label id="message" > Hello</label>
-		  Xpath=//label[starts-with(@id,'message')]
 		  
-		
-			 <a href="gmail.com">Click here</a>
-			 <a href="fb.com">submit here</a>
+   		  Ex1:
+    	    <label id="message1234" > Hello</label>
+		    Xpath=//label[starts-with(@id,'message')]   //get the label that has id starting with message
+      
+			 <a href="gmail.com">START here</a>
+			 <a href="fb.com">Click here</a>
 		 
+		 click on gmail
+     	 driver.findElement(By.xpath("//a[starts-with(text(), 'START')]")).click();
+		 driver.findElement(By.xpath("//a[starts-with(href, 'gmail')]")).click();
 		 */
-	      driver.findElement(By.xpath("//a[starts-with(text(), 'START')]")).click();
+	     
 		
-	      /*text()
-		 
+	      /*
+	      text()
+
 		  Syntax: //tag[text()=’text value‘]
-		  Example: .//label[text()=’Enter message’]
+		           //*[text()='Search Google or type a URL']
 		 
-		 1.<td>UserID</td>
-		  Xpath=//td[text()='UserID']
+		 Ex1:
+		 <label>Enter message<label>
+		 Xpath = //label[text()='Enter message']
+		 Xpath = //label[contains(text() ,'Enter message')]
+		 
+		 Ex2:
+		   <td>UserID</td>
+		   Xpath=//td[text()='UserID']
 		  
-		 2.//*[text()='Search Google or type a URL']
-		 
+		 Ex3:
+		   <a href="https://www.gmail.com"> click here </a> 
+			driver.findElement(By.xpath("//a[contains(text(),'click')]")).click();
+			driver.findElement(By.xpath("//a[text()='click here')]")).click();
+			
+		Ex4:	
+			<button type="submit">Signup for Free</button>
+				Xpath= //button[text()=’ Signup for Free’]
+				Xpath=//button[contains(text(),’ Signup’ )]
+				Xpath= //button[@type='submit']
 		 */
 	      
 	      //<div class="col-sm-12 google-sign-form"><input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 "> <input type="text" placeholder="Full Name*" name="name" value="" class="form-control sign-up-input-2 "> <input type="email" placeholder="Work Email*" name="email" value="" class="form-control sign-up-input-2 ">
 	      driver.findElement(By.xpath("//a[text()='Complete Guide On TestNG Annotations For Selenium WebDriver']")).click();
-		
-		  /* 
-
-				<button type="submit">Signup for Free</button>
-				Xpath= //button[text()=’ Signup for Free’]
-				Xpath=//button[contains(text(),’ Signup’ )]
-				Xpath= //button[@type='submit']
-		  */
-	      
 		
 		/* chain search
 		  //<outer>//<inner>  

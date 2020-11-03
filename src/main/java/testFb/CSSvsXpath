@@ -1,3 +1,66 @@
+When to use XPath ID's:
+------------------------------------
+Cases where you only want to support one selector type
+Your browser does not fully support CSS or all the CSS selectors you need (older browsers such as IE, for example, doesn't support all CSS selectors)
+You need to do a task that only an XPath would support (finding an element by moving back up the DOM)
+
+<ul>
+    <li><a href="maps.google.com"> Google Maps Sub-domain </a></li>
+    <li><a href="mail.icloud.com"> Link to iCloud Mail Services</a></li>
+    <li><a href="mail.opera.com"> Opera Mail </a></li>
+    <li><a href="mail.google.com"> Gmail Services </a></li>
+</ul>
+	
+a[href^="some value here"]
+
+CSS:
+--------
+
+1.Find element whose tag is input and class "attribute" name as login 
+driver.findElement (By.cssSelector ("input.login"));
+
+2.Get all elements that has  class "attribute" name as login 
+driver.findElement (By.cssSelector (".login"));
+
+
+CSS Selector :
+------------------------------------------------------------------------
+CSS stands for cascading style sheet
+CSS Selector is used to find the element in the HTML DOM using style sheet language.
+The success rate of finding an element using CSS Selector is less compare to Xpath.
+Older browsers do not support all CSS features.
+CSS Selector is a combination of an element selector and a value which identifies the web element within a web page.
+Faster in all browsers
+Can not locate by element by text
+Locates elements only in forward direction
+Locator looks neat and clean
+Some CSS selectors will not work all browsers
+CSS selectors are better to use when dealing with classes, IDs and tag names.
+
+Advantages of Using CSS Selector
+--------------------------------------------------
+It’s faster than XPath.
+You have a high chance of finding your elements.
+It’s compatible with most browsers to date.
+Easier to learn/understand syntax - they are more readable
+Heavily used in development (JQuery is heavily reliant on CSS)
+Generally, CSS selectors can do almost everything an XPath ID can do
+
+
+Xpath :
+--------------------------------------------------------------------------------------------------------------
+XPath stands for XML Path
+XPath is used to find the element in the HTML DOM
+The success rate of finding an element using Xpath is too high
+XPath is used where element has no other way of locating
+XPath provider plugins are available but encouraged to use only to validate the user written XPath
+Slower in IE
+Can locate element by text
+Can locate parent elements
+Starts with / or //
+More flexible
+
 XPath we can traverse both forward and backward whereas CSS selector only moves forward.
 Although CSS selectors perform far better than Xpath
-
+Xpath tend to become complex and hence make hard to read
+Xpath engines are different in each browser, hence make them inconsistent.

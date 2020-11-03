@@ -3,6 +3,8 @@ package old;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
+import util.BaseTest;
+
 public class TestGmail extends BaseTest{
 	
 	@Test
@@ -11,7 +13,8 @@ public class TestGmail extends BaseTest{
 		
 		driver.findElement(
 				By.xpath("//input[@aria-label='Email or phone']"))
-		.sendKeys("mythritechsolutions@gmail.com");
+		.sendKeys("mythritechs"
+				+ "olutions@gmail.com");
 		Thread.sleep(3000);
 		driver.findElement(
 				By.xpath("//span[text()='Next']"))

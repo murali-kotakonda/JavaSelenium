@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="testFb.Test5Xpath">
+      <class name="testFb.Test10Frames">
         <methods>
-          <include name="t3"/>
-          <include name="close"/>
           <include name="setup"/>
+          <include name="t1"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- testFb.Test5Xpath -->
+      </class> <!-- testFb.Test10Frames -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

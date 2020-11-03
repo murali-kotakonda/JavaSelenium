@@ -1,4 +1,4 @@
-package project.com.mythri;
+package real;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

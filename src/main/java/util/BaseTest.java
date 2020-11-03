@@ -83,4 +83,17 @@ public class BaseTest {
 		} catch (IOException e) {
 		}
 	}
+	
+	public WebElement getByLinkText(String text) {
+		WebElement element = driver.findElement(By.linkText(text));
+		return element;
+	}
+	
+	public void sleep(int seconds) {
+		try {
+			Thread.sleep(seconds * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
 }
