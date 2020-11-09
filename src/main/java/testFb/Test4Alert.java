@@ -78,8 +78,6 @@ public class Test4Alert extends BaseTest{
 
 	private Alert clickOnAlert1() throws InterruptedException {
 		driver.findElement(By.name("alert1")).click();			
-        		
-		
         // Switching to Alert        
         Alert alert = driver.switchTo().alert();		
         		

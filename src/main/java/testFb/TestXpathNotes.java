@@ -11,12 +11,17 @@ public class TestXpathNotes {
 		-----------
 		attribute search
 		
-		1:
-		<a href="https://www.gmail.com">click here</a>
-		<a href="https://www.fb.com">click here</a>
+		//tagName     --> all elements with that tag name
+		// tagName[@attributename ='attributevalue']     --> all elements with that tag name and attrbute name 
 		
-		xpath = //a[@href='https://www.google.com']
-		        // tagName[@attributename ='attributevalue']
+		ex:
+		<a href="https://www.gmail.com">click here</a>
+		xpath = //a[@href='https://www.gmail.com']    -> get element that has 'a' as tag name and href as 'https://www.gmail.com'
+		
+		
+		<a href="https://www.fb.com">click here</a>
+		xpath = //a[@href='https://www.fb.com']		  -> get element that has 'a' as tag name and href as 'https://www.fb.com'
+		   	
 		
 		//get web element for link1
 		WebElement link1=driver.findElement(By.xpath("//a[@href='https://www.gmail.com']"));
@@ -29,15 +34,14 @@ public class TestXpathNotes {
 		2.
 		<label id='error'>Enter values here</label>
 		WebElement webElement =driver.findElement(By.xpath("//label[@id='error']"))
+		-> get element that has 'label' as tag name and id as 'error'
 		
-		
-		3:
-		<input type="text"/>
+		3.<input type="text"/>
+		-> get element that has 'input' as tag name and type as 'text'
 		WebElement webElement =driver.findElement(By.xpath("//input[@type='text']"))
 		
 		
-		4.
-		  <input type="submit" value="RESET"/>
+		4.<input type="submit" value="RESET"/>
 		  <input type="submit" value="ADD"/>
 		
 		WebElement element1 =driver.findElement(By.xpath("//input[@value='RESET']"));
@@ -48,8 +52,7 @@ public class TestXpathNotes {
 		WebElement element3=driver.findElement(By.xpath("//input[@name='age']"));
 		
 		
-		6.
-		<img src="mypic.jpeg/>
+		6.<img src="mypic.jpeg/>
 		 WebElement element3=driver.findElement(By.xpath("//img[@src='mypic.jpeg']"));
 		
 		7.

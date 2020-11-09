@@ -95,6 +95,20 @@ public class Test5Xpath extends BaseTest{
 	 */
 	@Test
 	public void t4() throws Exception {
+			WebElement element1 = driver.findElement(By.xpath("<pass xpath here>"));
+			List<WebElement> elements1 = driver.findElements(By.xpath("<pass xapth here>"));
+
+			WebElement element2 = driver.findElement(By.cssSelector("<pass css path here>"));
+			List<WebElement> elements2 = driver.findElements(By.cssSelector("<pass css path here>"));
+			    
+			/*
+						test
+						--------
+						enabled
+						displayed
+						count test
+			*/
+		
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("hello");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("hello123");

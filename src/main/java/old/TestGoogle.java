@@ -1,10 +1,10 @@
 package old;
 
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
 public class TestGoogle extends BaseTest{
 	
@@ -28,5 +28,4 @@ public class TestGoogle extends BaseTest{
 		Thread.sleep(3000);
 	}
 
-	 
 }

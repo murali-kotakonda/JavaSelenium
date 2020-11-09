@@ -15,6 +15,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -89,11 +91,25 @@ public class BaseTest {
 		return element;
 	}
 	
+	public WebElement getByName(String name) {
+		WebElement element = driver.findElement(By.name(name));
+		checkEnabledAndDisplayed(element);
+		return element;
+	}
+	
 	public void sleep(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public void setDriver() {
+		//Download the web driver executable
+	  //ChromeDriverManager.getInstance().setup();
+	  driver = new ChromeDriver();
+	  //FirefoxDriverManager.getInstance().setup();
+	  driver = new FirefoxDriver();
 	}
 }
