@@ -37,7 +37,7 @@ public class Test5Xpath extends BaseTest{
 	/**
 	 Click on both links
 	 <a href="https://www.gmail.com">click here</a>  <br/>
-	<a href="https://www.fb.com">click here</a>  <br/>
+	  <a href="https://www.fb.com">click here</a>  <br/>
 
 	 */
 	@Test
@@ -45,7 +45,7 @@ public class Test5Xpath extends BaseTest{
 		//get web element for link1 and click
 		driver.findElement(By.xpath("//a[@href='https://www.gmail.com']")).click();
 
-		Thread.sleep(5000);
+		sleep(5);
 		driver.navigate().back();
 		
 		//get web element for link2 and click
@@ -68,24 +68,25 @@ public class Test5Xpath extends BaseTest{
 		WebElement label =driver.findElement(By.xpath("//label[@id='error']"));
 		assertEquals( label.getText(),"Enter values here" ,"invalid label value");
 		
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("testuser1");
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("testuser2");
+		sleep(4);
 		//driver.findElement(By.xpath("//input[@id='error']")).sendKeys("testuser1");
-		Thread.sleep(5000);
 	}
 
 	/**
 	 click on RESET and ADD button
 	  <input type="button" value="RESET" onclick="f1()"/><br/><br/>
       <input type="button" value="ADD" onclick="f2()"/><br/>
+        <p id="dynamicData"></p>
 	 */
 	@Test
 	public void t3() throws Exception {
 		driver.findElement(By.xpath("//input[@value='RESET']")).click();
-		Thread.sleep(5000);
+		sleep(3);
 		assertEquals( driver.findElement(By.id("dynamicData")).getText(),"RESET selected" ,"Invalid value");
 		
 		driver.findElement(By.xpath("//input[@value='ADD']")).click();
-		Thread.sleep(5000);
+		sleep(3);
 		assertEquals( driver.findElement(By.id("dynamicData")).getText(),"ADD selected" ,"Invalid value");
 	}
 	
@@ -110,11 +111,11 @@ public class Test5Xpath extends BaseTest{
 			*/
 		
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("hello");
-		Thread.sleep(3000);
+		sleep(3);
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("hello123");
-		Thread.sleep(3000);
+		sleep(3);
 		driver.findElement(By.name("password")).sendKeys("hello1234");
-		Thread.sleep(3000);
+		sleep(3);
 	}
 	
 	/**
@@ -133,6 +134,6 @@ public class Test5Xpath extends BaseTest{
 		for(WebElement  e1: elements) {
 			assertTrue(e1.getText().contains("Hello"),"Expected Hello");
 		}
-		Thread.sleep(5000);
+		sleep(5);
 	}
 }

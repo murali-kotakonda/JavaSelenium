@@ -64,3 +64,20 @@ XPath we can traverse both forward and backward whereas CSS selector only moves 
 Although CSS selectors perform far better than Xpath
 Xpath tend to become complex and hence make hard to read
 Xpath engines are different in each browser, hence make them inconsistent.
+
+
+css:
+-----------
+Locating by CSS Selector -  
+[tag = the HTML tag of the element being accessed
+# = the hash sign. This should always be present when using a CSS Selector with ID
+id = the ID of the element being accessed
+
+]
+Tag and ID :  css=tag#id
+Tag and Class-  css=tag.class
+Tag and Attribute css=tag[attribute=value]
+Tag, class, and attribute = css=tag.class[attribute=value]
+ inner text css=tag:contains("inner text")
+
+
