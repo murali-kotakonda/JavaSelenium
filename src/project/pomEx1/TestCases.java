@@ -1,8 +1,8 @@
-package inheritanceByExtends;
+package pomEx1;
 
 import org.testng.annotations.Test;
 
-public class TestCases extends ReusableComponents
+public class TestCases extends EmailServices
 {
 	protected void launchApplication()
 	{

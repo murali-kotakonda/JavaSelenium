@@ -7,8 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import utility.Commons;
-import utility.Headerutility;
+import utils.BaseTest;
+import utils.Commons;
+import utils.Headerutility;
 
 public class AddEmp extends Headerutility  {
 	WebDriver driver;
@@ -50,12 +51,13 @@ public class AddEmp extends Headerutility  {
 	@FindBy(id="accept") WebElement accept;
 	@FindBy(id="submit") WebElement submit;
 	
-	public void addEmpolyee(String loginName,String password1,String FName,String LName,String birth,String salary,String string) throws Exception
-	{
+	public void addEmpolyee(String loginName, String password1, String FName, String LName, String birth, String salary,
+			String mobileNum) throws Exception {
 		assertTrue(form.getAttribute("action").endsWith("empCreate"));
-		Commons.checkEnabledAndDisplayed(empdata,emploginlabel,logname,emppwdlabel,pass,empfnamelabel,fname,emplnanelabel,lname
-				,designationlabel,design,genderlabel,sex,dateofbirthlabel,dob,statuslabel,status,departmentlabel,deptid,managerlabel
-				,managerid,employesallabel,sal,mobilenolabel,cellNo,maritalstatuslabel,matrialstatus,acceptlabel,accept,submit);
+		BaseTest.checkEnabledAndDisplayed(empdata, emploginlabel, logname, emppwdlabel, pass, empfnamelabel, fname,
+				emplnanelabel, lname, designationlabel, design, genderlabel, sex, dateofbirthlabel, dob, statuslabel,
+				status, departmentlabel, deptid, managerlabel, managerid, employesallabel, sal, mobilenolabel, cellNo,
+				maritalstatuslabel, matrialstatus, acceptlabel, accept, submit);
 		assertTrue(empdata.getText().equals("Add Employee Data"));
 		assertTrue(emploginlabel.getText().equals("Employee login Name:"));
 		assertTrue(logname.getAttribute("type").equals("text"));
@@ -78,10 +80,10 @@ public class AddEmp extends Headerutility  {
 		assertTrue(dateofbirthlabel.getText().equals("Date of Birth:"));
 		assertTrue(dob.getAttribute("type").equals("text"));
 		dob.sendKeys(birth);
-		assertTrue( statuslabel.getText().equals("Status:"));
+		assertTrue(statuslabel.getText().equals("Status:"));
 		assertTrue(status.getAttribute("name").equals("login.status"));
 		status.sendKeys("Active");
-		assertTrue( departmentlabel.getText().equals("Department:"));
+		assertTrue(departmentlabel.getText().equals("Department:"));
 		assertTrue(deptid.getAttribute("name").equals("department.id"));
 		deptid.sendKeys("IT");
 		assertTrue(managerlabel.getText().equals("Manager :"));
@@ -92,17 +94,17 @@ public class AddEmp extends Headerutility  {
 		sal.sendKeys(salary);
 		assertTrue(mobilenolabel.getText().equals("Mobile No:"));
 		assertTrue(cellNo.getAttribute("type").equals("text"));
-		cellNo.sendKeys(string);
-		assertTrue( maritalstatuslabel.getText().equals("Marital Status:"));
+		cellNo.sendKeys(mobileNum);
+		assertTrue(maritalstatuslabel.getText().equals("Marital Status:"));
 		assertTrue(matrialstatus.getAttribute("name").equals("maritalStatus"));
 		matrialstatus.sendKeys("single");
 		assertTrue(acceptlabel.getText().equals("I accept"));
 		assertTrue(accept.getAttribute("value").equals("Accept"));
 		accept.click();
 		assertTrue(submit.getAttribute("value").equals("Submit"));
-        submit.click();
-	    
-			}
+		submit.click();
+
+	}
 	@FindBy(id="searchEmpIdFormLbl") WebElement serchidlabel;
 	@FindBy(xpath="/html/body/font") WebElement empcreatelabel;
 	@FindBy(xpath="/html/body/font") WebElement redlabel;
@@ -140,7 +142,7 @@ public class AddEmp extends Headerutility  {
 	@FindBy(xpath="/html/body/table/tbody/tr[13]/td[2]") WebElement statu;
 
 	public  void aftercreateemp(String loginName,String password1,String FName,String LName,String birth,String salary,String string) {
-		Commons.checkEnabledAndDisplayed(serchidlabel,empcreatelabel,serchemplabel,serchbynamelabel,serchbyidlabel,serchresultlabel
+		BaseTest.checkEnabledAndDisplayed(serchidlabel,empcreatelabel,serchemplabel,serchbynamelabel,serchbyidlabel,serchresultlabel
 				,updateprofilelabel,deleteprofilelabel,idlabel,designationlabel1,fnamelabel,lnamelabel,lnamelabel,deptnamelabel,managerlabel1
 				,loginlabel,dateblabel,dateofjlabel,mobilelabel,maritalstatuslabel1,statuslabel1);
 		assertTrue(serchidlabel.getText().equals("Search Employee ID Form"));

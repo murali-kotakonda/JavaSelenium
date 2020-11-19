@@ -1,4 +1,4 @@
-package util;
+package utils;
 
 import static org.testng.Assert.assertTrue;
 
@@ -17,27 +17,27 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
-import utils.Commons;
+import util.Commons;
 
 public class BaseTest {
 
 	public WebDriver driver;
 
-	@BeforeMethod
+	@BeforeTest
 	public void setup() {
 		System.out.println("in setup");
 		driver = Commons.getChromeDriver();
+		driver.get("http://localhost:8081/EmpDemo/");
 	}
 
-	@AfterMethod
-	public void close() {
+	@AfterTest
+	public void quit() {
 		driver.quit();
-		System.out.println("driver closed");
 	}
-
+	
 	public WebElement getElement(String address, String type) {
 		WebElement ele = driver.findElement(By.id(""));
 		if (type.equalsIgnoreCase("xpath")) {

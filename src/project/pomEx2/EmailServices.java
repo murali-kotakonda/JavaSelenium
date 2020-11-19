@@ -1,15 +1,16 @@
-package inheritanceByExtends;
+package pomEx2;
 
-public class ReusableComponents
+public class EmailServices
 {
-	public ReusableComponents()
+	/*public ReusableComponents()
 	{
-		System.out.println("Default Constructor in ReusableComponents");
-	}
-	public ReusableComponents(String browser)
+		System.out.println("Tests will run on default Browser chrome");
+	}*/
+	public EmailServices(String browser)
 	{
-		System.out.println("Default Constructor in ReusableComponents");
+		System.out.println("Tests Will run on browser :" + browser);
 	}
+	
 	//*************Reusable Components***********************
 	protected void launchApplication()
 	{

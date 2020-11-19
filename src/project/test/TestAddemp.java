@@ -13,9 +13,9 @@ import org.testng.annotations.Test;
 import pages.AddEmp;
 import pages.LoginPage;
 import pages.LogoutPage;
-import utility.BrowserFactory;
-import utility.Commons;
-import utility.Headerutility;
+import utils.BrowserFactory;
+import utils.Commons;
+import utils.Headerutility;
 
 public class TestAddemp extends Headerutility {
 	WebDriver driver;

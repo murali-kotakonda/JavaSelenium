@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Navigation;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import util.Commons;
+import utils.Commons;
 
 /**
  

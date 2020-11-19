@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import pages.Changepassword;
 import pages.LoginPage;
-import utility.BrowserFactory;
+import utils.BrowserFactory;
 
 public class Testchangepassword {
 	WebDriver driver;

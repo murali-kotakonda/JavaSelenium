@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import util.Commons;
+import utils.Commons;
 
 public class Test8 {
 

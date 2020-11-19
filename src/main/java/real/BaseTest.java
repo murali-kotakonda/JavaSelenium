@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 
-import util.DriverUtils;
+import utils.DriverUtils;
 
 public class BaseTest {
 	

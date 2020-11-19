@@ -13,9 +13,8 @@ import org.testng.annotations.Test;
 
 import pages.AddDepartment;
 import pages.LoginPage;
-import utility.BrowserFactory;
-import utility.Commons;
-import utility.Headerutility;
+import utils.BrowserFactory;
+import utils.Headerutility;
 
 public class TestAddDepartment extends Headerutility {
 	WebDriver driver;

@@ -1,10 +1,10 @@
-package inheritanceByObject;
+package pomEx2;
 
 import org.testng.annotations.Test;
 
 public class TestCases
 {
-	ReusableComponents myRc = new ReusableComponents("firefox");
+	EmailServices myRc = new EmailServices("firefox");
 	/*protected void launchApplication()
 	{
 		System.out.println("RC :Launch Application from TC ");

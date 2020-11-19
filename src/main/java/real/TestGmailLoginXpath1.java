@@ -3,7 +3,7 @@ package real;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import util.Commons;
+import utils.Commons;
 
 public class TestGmailLoginXpath1 {
 

@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import util.Commons;
+import utils.Commons;
 
 public class TestLogin2 { 
 	static WebDriver driver;

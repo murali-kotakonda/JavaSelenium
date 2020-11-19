@@ -1,4 +1,4 @@
-package util;
+package utils;
 
 import static org.testng.Assert.assertTrue;
 
@@ -32,6 +32,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Commons {
 	public static final String BASE_URL ="http://localhost:8081/myapp/";
+	public static final String URL ="http://localhost:8011/EmpDemo1/";
+	public static final String LOGIN = "login";
+	public static final String PASSWORD = "password";
+	public static final String LOGIN_NAME = "loginName";
 	
 	public static WebDriver getDriver(){
 		String browser ="chrome";

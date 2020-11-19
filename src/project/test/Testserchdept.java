@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.Serchdepartment;
-import utility.BrowserFactory;
-import utility.Headerutility;
+import utils.BrowserFactory;
+import utils.Headerutility;
 
 public class Testserchdept extends Headerutility {
 	WebDriver driver;

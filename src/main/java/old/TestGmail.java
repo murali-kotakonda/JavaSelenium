@@ -3,7 +3,7 @@ package old;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import util.BaseTest;
+import utils.BaseTest;
 
 public class TestGmail extends BaseTest{
 	

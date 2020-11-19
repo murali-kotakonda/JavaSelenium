@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 
 import pages.Advanceserch;
 import pages.LoginPage;
-import utility.BrowserFactory;
-import utility.Headerutility;
+import utils.BrowserFactory;
+import utils.Headerutility;
 
 public class TestAdvanceserch {
 	WebDriver driver;

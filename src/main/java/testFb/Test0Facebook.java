@@ -10,8 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-//import io.github.bonigarcia.wdm.ChromeDriverManager;
-import util.Commons;
+import utils.Commons;
 
 public class Test0Facebook {
   private WebDriver driver;

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import utility.Commons;
+import utils.Commons;
 
 public class LoginPage {
 
@@ -70,5 +70,4 @@ public class LoginPage {
 		Commons.checkEnabledAndDisplayed(maxattempt);
 		assertTrue(maxattempt.getText().equals("You have exceded Maximum no of attempts.Please contact Admin"));
 	}
-
 }

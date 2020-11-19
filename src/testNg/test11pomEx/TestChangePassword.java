@@ -6,7 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import util.Commons;
+import utils.Commons;
 
 public class TestChangePassword  {
 	WebDriver driver;

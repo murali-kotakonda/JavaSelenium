@@ -14,8 +14,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import util.BaseTest;
-import util.Commons;
+import utils.BaseTest;
+import utils.Commons;
 
 public class Test1 extends BaseTest{
 

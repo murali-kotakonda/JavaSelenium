@@ -1,4 +1,4 @@
-package inheritanceByObject;
+package pomEx2;
 
 import org.testng.annotations.Test;
 

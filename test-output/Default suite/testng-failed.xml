@@ -3,13 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="testFb.Test7_2Keys">
+      <class name="WithoutPom.TestAddemp">
         <methods>
-          <include name="keyActions"/>
-          <include name="close"/>
+          <include name="salary"/>
+          <include name="emp"/>
+          <include name="nodata"/>
+          <include name="date"/>
+          <include name="mobile"/>
+          <include name="invali"/>
           <include name="setup"/>
+          <include name="login"/>
+          <include name="firstname"/>
+          <include name="password"/>
         </methods>
-      </class> <!-- testFb.Test7_2Keys -->
+      </class> <!-- WithoutPom.TestAddemp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

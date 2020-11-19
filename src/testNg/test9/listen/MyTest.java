@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import util.Commons;
+import utils.Commons;
 
 @Listeners(MyListener.class)	
 public class MyTest {

@@ -1,10 +1,12 @@
-package utility;
+package utils;
 
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import util.Commons;
 
 public class Headerutility {
 	WebDriver driver;

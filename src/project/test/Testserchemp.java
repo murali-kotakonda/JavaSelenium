@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.Searchemploye;
-import utility.BrowserFactory;
-import utility.Headerutility;
+import utils.BrowserFactory;
+import utils.Headerutility;
 
 public class Testserchemp {
 	WebDriver driver;

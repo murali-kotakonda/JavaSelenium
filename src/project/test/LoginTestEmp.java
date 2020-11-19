@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 
 import pages.AddEmp;
 import pages.LoginPage;
-import utility.BrowserFactory;
-import utility.Headerutility;
+import utils.BrowserFactory;
+import utils.Headerutility;
 
 public class LoginTestEmp extends Headerutility {
 	WebDriver driver;
