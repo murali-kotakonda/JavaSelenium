@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import utils.BaseTest;
+import common.BaseTest;
 
 public class TestAddemp extends BaseTest {
 
@@ -20,7 +20,7 @@ public class TestAddemp extends BaseTest {
 		//login
 		login("admin", "admin");
 		
-		sleep(4);
+		sleep(3);
 		
 		//click on "Add New Employee" link
 		WebElement emplabel = driver.findElement(By.id("EmployeeLbl"));;
@@ -31,81 +31,146 @@ public class TestAddemp extends BaseTest {
 		addemp.click();
 	}
 
-	@Test(priority = 0)
-	public void nodata() throws Exception {
-		addEmpolyee("", "", "", "", "", "", "");
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "Please provide loginName!");
-		a.accept();
-	}
-
-	@Test(priority = 1)
-	public void password() throws Exception {
-		addEmpolyee("thirupathi", "vaddempudi", "thirupathi", "vaddempudi", "03/31/1992", "30000", "8899445577");
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "password has to be minimum 5 chars and max 10 chars!");
-		a.accept();
-	}
-
-	@Test(priority = 2)
-	public void firstname() throws Exception {
-		addEmpolyee("thirupathi", "vaddem", "", "vaddempudi", "03/31/1992", "30000", "8899445577");
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "Please provide first Name!");
-		a.accept();
-	}
-
-	@Test(priority = 3)
-	public void mobile() throws Exception {
-		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "03/31/1992", "30000", "889944557766");
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "mobileNo has to be minimum 10 digits!");
-		a.accept();
-	}
-
-	@Test(priority = 4)
-	public void date() throws Exception {
-		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "", "30000", "8899445577");
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "Invalid date format!");
-		a.accept();
-	}
-
-	@Test(priority = 5)
-	public void salary() throws Exception {
-		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "04/09/1994", "", "8899445577");
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "Please provide Salary!");
-		a.accept();
-	}
-
-	@Test(priority = 6)
-	public void emp() throws Exception {
-		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "03/31/1992", "30000", "8899445577");
-//		emp.aftercreateemp(null, null, null, null, null, null, null);
-		// TODO check data created
-
-	}
-
-	@Test(priority = 7)
-	public void invali() throws Exception {
-		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "03/31/1992", "30000", "8899445577");
-		//emp.invalid("thirupathi", "", "thirupathi", "vaddempudi", "03/31/1992", "3000", "8899445577");
-		// TODO : CHECK DATA
-	}
-
+	
 	@AfterMethod
 	public void logout() {
 		// emp.Deleteprofile();
 		WebElement logout = driver.findElement(By.id("logoutLbl"));
 		assertTrue(logout.getText().equals("Logout"));
 		logout.click();
+		sleep(2);
+	}
+	
+	@Test
+	public void noLoginName() throws Exception {
+		addEmpolyee("", "", "", "", "", "", "");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "Please provide loginName!");
+		sleep(3);
+		a.accept();
+		sleep(3);
+	}
+	
+	@Test
+	public void noPassword() throws Exception {
+		addEmpolyee("kumar", "", "", "", "", "", "");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "Please provide Password!");
+		sleep(3);
+		a.accept();
+		sleep(3);
+	}
+	
+	@Test 
+	public void passLessThan5() throws Exception {
+		addEmpolyee("kumar", "abc", "", "", "", "", "");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "password has to be minimum 5 chars and max 10 chars!");
+		sleep(3);
+		a.accept();
+		sleep(3);
+	}
+	
+	@Test 
+	public void passGreaterThan10() throws Exception {
+		addEmpolyee("kumar", "ahahahahahahahahaaj", "", "", "", "", "");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "password has to be minimum 5 chars and max 10 chars!");
+		sleep(3);
+		a.accept();
+		sleep(3);
+	}
+	
+	@Test 
+	public void noFirstName() throws Exception {
+		addEmpolyee("kumar", "kumar123", "", "", "", "", "");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "Please provide first Name!");
+		sleep(3);
+		a.accept();
+		sleep(3);
+	}
+
+	
+	@Test 
+	public void noMobileNo() throws Exception {
+		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "03/31/1992", "30000", "");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "Please provide mobile Number!");
+		sleep(3);
+		a.accept();
+		sleep(3);
+	}
+	
+	@Test 
+	public void mobileNot10Digits() throws Exception {
+		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "03/31/1992", "30000", "123");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "mobileNo has to be minimum 10 digits!");
+		sleep(3);
+		a.accept();
+		sleep(3);
+	}
+
+	@Test
+	public void noDate() throws Exception {
+		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "", "30000", "8899445577");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "Invalid date format!");
+		sleep(3);
+		a.accept();
+	}
+	
+	
+	@Test
+	public void inValidDate() throws Exception {
+		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "20/20/1994", "30000", "8899445577");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "Invalid date format!");
+		sleep(3);
+		a.accept();
+	}
+
+	@Test 
+	public void noSalary() throws Exception {
+		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "04/09/1994", "", "8899445577");
+		Alert a = driver.switchTo().alert();
+		Reporter.log(a.getText());
+		Assert.assertEquals(a.getText(), "Please provide Salary!");
+		sleep(3);
+		a.accept();
+	}
+
+	@Test
+	public void addEmpSuccess() throws Exception {
+		addEmpolyee("raju", "raju@1234", "rajvardhan", "kumar", "03/31/1992", "30000", "8899445577");
+		WebElement errorMsg = driver.findElement(By.id("errorMsg"));
+		Assert.assertEquals(errorMsg.getText(), "Employee Created!");
+		sleep(100);
+	}
+	
+	@Test(dependsOnMethods ="addEmpSuccess" )
+	public void addEmpDuplicate() throws Exception {
+		addEmpolyee("raju", "raju@1234", "rajvardhan", "kumar", "03/31/1992", "30000", "8899445577");
+		WebElement errorMsg = driver.findElement(By.id("errorMsg"));
+		Assert.assertEquals(errorMsg.getText(), "LoginName already exists.");
+		sleep(3);
+	}
+
+	//@Test(priority = 7)
+	public void invali() throws Exception {
+		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "03/31/1992", "30000", "8899445577");
+		//emp.invalid("thirupathi", "", "thirupathi", "vaddempudi", "03/31/1992", "3000", "8899445577");
+		// TODO : CHECK DATA
 	}
 
 	public void addEmpolyee(String loginName, String password1, String FName, String LName, String birth, String salary,
@@ -159,56 +224,71 @@ public class TestAddemp extends BaseTest {
 		WebElement submit = driver.findElement(By.id("submit"));
 
 		assertTrue(form.getAttribute("action").endsWith("empCreate"));
-		BaseTest.checkEnabledAndDisplayed(empdata, emploginlabel, logname, emppwdlabel, pass, empfnamelabel, fname,
+		checkEnabledAndDisplayed(empdata, emploginlabel, logname, emppwdlabel, pass, empfnamelabel, fname,
 				emplnanelabel, lname, designationlabel, design, genderlabel, sex, dateofbirthlabel, dob, statuslabel,
 				status, departmentlabel, deptid, managerlabel, managerid, employesallabel, sal, mobilenolabel, cellNo,
 				maritalstatuslabel, matrialstatus, acceptlabel, accept, submit);
+		
 		assertTrue(empdata.getText().equals("Add Employee Data"));
+		
 		assertTrue(emploginlabel.getText().equals("Employee login Name:"));
 		assertTrue(logname.getAttribute("type").equals("text"));
 		logname.sendKeys(loginName);
+		
 		assertTrue(emppwdlabel.getText().equals("Employee Password:"));
 		assertTrue(pass.getAttribute("type").equals("password"));
 		pass.sendKeys(password1);
+		
 		assertTrue(empfnamelabel.getText().equals("Employee First Name:"));
 		assertTrue(fname.getAttribute("type").equals("text"));
 		fname.sendKeys(FName);
+		
 		assertTrue(emplnanelabel.getText().equals("Employee Last Name:"));
 		assertTrue(lname.getAttribute("type").equals("text"));
 		lname.sendKeys(LName);
+		
 		assertTrue(designationlabel.getText().equals("Designation:"));
 		assertTrue(design.getAttribute("name").equals("designation"));
 		design.sendKeys("Analyst");
+		
 		assertTrue(genderlabel.getText().equals("Gender:"));
 		assertTrue(sex.getAttribute("value").equals("male"));
 		sex.click();
+		
 		assertTrue(dateofbirthlabel.getText().equals("Date of Birth:"));
 		assertTrue(dob.getAttribute("type").equals("text"));
 		dob.sendKeys(birth);
+		
 		assertTrue(statuslabel.getText().equals("Status:"));
 		assertTrue(status.getAttribute("name").equals("login.status"));
 		status.sendKeys("Active");
+		
 		assertTrue(departmentlabel.getText().equals("Department:"));
 		assertTrue(deptid.getAttribute("name").equals("department.id"));
 		deptid.sendKeys("IT");
+		
 		assertTrue(managerlabel.getText().equals("Manager :"));
 		assertTrue(managerid.getAttribute("name").equals("manager.id"));
 		managerid.sendKeys("112");
+		
 		assertTrue(employesallabel.getText().equals("Employee Salary:"));
 		assertTrue(sal.getAttribute("type").equals("text"));
 		sal.sendKeys(salary);
+		
 		assertTrue(mobilenolabel.getText().equals("Mobile No:"));
 		assertTrue(cellNo.getAttribute("type").equals("text"));
 		cellNo.sendKeys(mobileNum);
+		
 		assertTrue(maritalstatuslabel.getText().equals("Marital Status:"));
 		assertTrue(matrialstatus.getAttribute("name").equals("maritalStatus"));
 		matrialstatus.sendKeys("single");
+		
 		assertTrue(acceptlabel.getText().equals("I accept"));
 		assertTrue(accept.getAttribute("value").equals("Accept"));
 		accept.click();
+		
 		assertTrue(submit.getAttribute("value").equals("Submit"));
 		submit.click();
-
 	}
 	
 	private void login(String un, String pwd) {
@@ -244,6 +324,6 @@ public class TestAddemp extends BaseTest {
 		password.sendKeys(pwd);
 		loginBtn.click();
 
-		sleep(5);
+		sleep(3);
 	}
 }

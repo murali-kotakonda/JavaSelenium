@@ -12,8 +12,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import utils.BaseTest;
-import utils.Commons;
+import common.BaseTest;
+import common.Commons;
 
 public class Test2 extends BaseTest {
 

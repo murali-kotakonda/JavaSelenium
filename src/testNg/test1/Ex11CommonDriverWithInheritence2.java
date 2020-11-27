@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
   - open google
   - open amazon
  */
-public class Ex11CommonDriverWithInheritence2 extends utils.BaseTest{ 
+public class Ex11CommonDriverWithInheritence2 extends common.BaseTest{ 
 	
 	@Test
 	public void verifyYah() {

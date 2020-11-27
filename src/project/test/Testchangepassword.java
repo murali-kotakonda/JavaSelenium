@@ -8,19 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import common.Commons;
 import pages.Changepassword;
 import pages.LoginPage;
-import utils.BrowserFactory;
 
-public class Testchangepassword {
+public class Testchangepassword extends Headerutility{
 	WebDriver driver;
 	LoginPage login;
 	Changepassword change;
 
-	public Testchangepassword() {
-		driver = BrowserFactory.startApplication(driver, "Chrome");
+	@BeforeTest
+	public void start() {
+		driver = Commons.startApplication(driver, "Chrome");
 		login = PageFactory.initElements(driver, LoginPage.class);
 		change = PageFactory.initElements(driver, Changepassword.class);
 	}
@@ -71,12 +73,5 @@ public class Testchangepassword {
 	public void loginchangepassword() {
 		login.loginToEmp("thirupathi", "venkatv");
 		change.logout();
-	}
-
-	@AfterClass
-	public void quit() {
-		BrowserFactory.quitBrowser(driver);
-		driver.quit();
-
 	}
 }

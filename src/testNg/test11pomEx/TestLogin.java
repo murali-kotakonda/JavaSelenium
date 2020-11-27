@@ -9,8 +9,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import utils.BrowserFactory;
-import utils.Commons;
+import common.BrowserFactory;
+import common.Commons;
 
 public class TestLogin  {
 	WebDriver driver;

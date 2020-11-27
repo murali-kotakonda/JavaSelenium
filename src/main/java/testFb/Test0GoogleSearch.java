@@ -15,8 +15,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import common.Commons;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-import utils.Commons;
 
 public class Test0GoogleSearch {
   private WebDriver driver;

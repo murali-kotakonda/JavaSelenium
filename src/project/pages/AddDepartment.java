@@ -6,10 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import utils.Commons;
+import common.Commons;
 
 public class AddDepartment {
 	WebDriver driver;
+	
 	@FindBy(id="command") WebElement form;
 	@FindBy(id="DepartmentLbl") WebElement dept;
 	@FindBy(id="addDeptLbl") WebElement addnew;

@@ -1,41 +1,37 @@
 package test;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import common.Commons;
 import pages.AddEmp;
 import pages.LoginPage;
 import pages.LogoutPage;
-import utils.BrowserFactory;
-import utils.Commons;
-import utils.Headerutility;
 
 public class TestAddemp extends Headerutility {
-	WebDriver driver;
 	LoginPage login;
 	AddEmp emp;
 	Headerutility header;
 	LogoutPage logout;
 
-	public TestAddemp() {
-		driver = BrowserFactory.startApplication(driver, "Chrome");
+	@BeforeTest
+	public void start() {
+		driver = Commons.startApplication(driver, "Chrome");
 		login = PageFactory.initElements(driver, LoginPage.class);
 		header = PageFactory.initElements(driver, Headerutility.class);
 		emp = PageFactory.initElements(driver, AddEmp.class);
 	}
-
+	
 	@BeforeMethod
 	public void login() {
 		login.loginToEmp("admin", "admin");
 		header.clickAddNewEmployee();
-
 	}
 
 	@Test(priority = 0)
@@ -113,10 +109,5 @@ public class TestAddemp extends Headerutility {
 		// emp.Deleteprofile();
 		emp.logout();
 
-	}
-
-	@AfterClass
-	public void quit() {
-		BrowserFactory.quitBrowser(driver);
 	}
 }

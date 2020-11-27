@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import utils.Commons;
+import common.Commons;
 
 public class Ex5ImplicitWait {
 

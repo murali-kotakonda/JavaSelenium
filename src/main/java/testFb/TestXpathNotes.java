@@ -3,7 +3,7 @@ package testFb;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import utils.Commons;
+import common.Commons;
 public class TestXpathNotes {
 	
 	  /**

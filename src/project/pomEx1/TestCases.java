@@ -6,7 +6,7 @@ public class TestCases extends EmailServices
 {
 	protected void launchApplication()
 	{
-		System.out.println("RC :Launch Application from TC ");
+		System.out.println("Launch Application from TC ");
 	}
 	//******************Test Cases****************
 	@Test

@@ -1,4 +1,4 @@
-package utils;
+package common;
 
 import static org.testng.Assert.assertTrue;
 
@@ -31,11 +31,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  */
 
 public class Commons {
-	public static final String BASE_URL ="http://localhost:8081/myapp/";
-	public static final String URL ="http://localhost:8011/EmpDemo1/";
-	public static final String LOGIN = "login";
-	public static final String PASSWORD = "password";
-	public static final String LOGIN_NAME = "loginName";
+	public static final String BASE_URL ="http://localhost:8012/EmpDemo/";
 	
 	public static WebDriver getDriver(){
 		String browser ="chrome";
@@ -94,5 +90,26 @@ public class Commons {
 		assertTrue(element.isDisplayed(), "element expeceted to display");
 			assertTrue(element.isEnabled(), "element expected to enable");
 		}
+	}
+	
+	public static WebDriver startApplication(WebDriver driver, String browserName) {
+		if (browserName.equalsIgnoreCase("Chrome")) {
+			driver = Commons.getChromeDriver();
+		} else if (browserName.equalsIgnoreCase("firefox")) {
+			driver = Commons.getFireFoxDriver();
+		}
+		driver.get(BASE_URL);
+		driver.manage().window().maximize();
+		// driver.get(appURL);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		return driver;
+	}
+
+	public static void quitBrowser(WebDriver driver) {
+		driver.quit();
+	}
+
+	public static WebDriver crossBrowsing(WebDriver driver, String browsername, String url) {
+		return null;
 	}
 }

@@ -2,7 +2,7 @@ package test8.parallel;
 
 import org.testng.annotations.Test;
 
-import utils.BaseTest;
+import common.BaseTest;
 
 public class Ex3 extends BaseTest{
 	  @Test

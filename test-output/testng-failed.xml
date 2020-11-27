@@ -3,20 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="WithoutPom.TestAddemp">
+      <class name="test.TestLogin">
         <methods>
-          <include name="salary"/>
+          <include name="withoutusernamepassword"/>
           <include name="emp"/>
-          <include name="nodata"/>
-          <include name="date"/>
-          <include name="mobile"/>
-          <include name="invali"/>
-          <include name="setup"/>
-          <include name="login"/>
-          <include name="firstname"/>
-          <include name="password"/>
+          <include name="start"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- WithoutPom.TestAddemp -->
+      </class> <!-- test.TestLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,35 +6,43 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import utils.Commons;
+import common.Commons;
 
 public class LoginPage {
 
 	WebDriver driver;
 
-	public LoginPage(WebDriver idriver) {
-		this.driver = idriver;
-	}
-
 	@FindBy(tagName = "form")
 	WebElement form;
+	
 	@FindBy(tagName = "h1")
 	WebElement tag;
+	
 	@FindBy(id = "userNameLbl")
 	WebElement usernamelab;
+	
 	@FindBy(name = "loginName")
 	WebElement uname;
+	
 	@FindBy(id = "passwordLbl")
 	WebElement passwordlab;
+	
 	@FindBy(name = "password")
 	WebElement pwd;
+	
 	@FindBy(xpath = "//input[@value='Login']")
 	WebElement logbtn;
+	
 	@FindBy(id = "logoutLbl")
 	WebElement logout;
+	
 	@FindBy(xpath = "/html/body/font")
 	WebElement invalidlogin;
 
+	
+	public LoginPage(WebDriver idriver) {
+		this.driver = idriver;
+	}
 	
 	public void loginToEmp(String username, String password) {
 		assertTrue(form.getAttribute("action").endsWith("login"));
@@ -50,13 +58,11 @@ public class LoginPage {
 		logbtn.click();
 	}
 	
-
 	public void logout() {
 		Commons.checkEnabledAndDisplayed(logout);
 		assertTrue(logout.getText().equals("Logout"));
 		logout.click();
 	}
-
 	
 	public void invalidattempt() {
 		Commons.checkEnabledAndDisplayed(invalidlogin);

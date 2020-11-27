@@ -3,7 +3,7 @@ package basics;
 
 import org.openqa.selenium.WebDriver;
 
-import utils.Commons;
+import common.Commons;
 
 /**
 

@@ -1,16 +1,13 @@
-package utils;
+package test;
 
 import static org.testng.Assert.assertTrue;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import util.Commons;
 
-public class Headerutility {
-	WebDriver driver;
-
+public class Headerutility extends EmpBaseTest{
 	@FindBy(id = "myProfileLbl")
 	WebElement mylabel;
 	@FindBy(id = "mySubLbl")

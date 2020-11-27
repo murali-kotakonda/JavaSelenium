@@ -1,29 +1,28 @@
 package test;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import common.Commons;
 import pages.LoginPage;
 import pages.UpdateProfile;
-import utils.BrowserFactory;
-import utils.Headerutility;
 
-public class UpdateTest {
-	WebDriver driver;
+public class UpdateTest extends Headerutility{
 	LoginPage login;
 	Headerutility header;
 	UpdateProfile update;
-	public UpdateTest() {
-		driver=BrowserFactory.startApplication(driver, "Chrome");
+	
+	@BeforeTest
+	public void start() {
+		driver = Commons.startApplication(driver, "Chrome");
 		login=PageFactory.initElements(driver, LoginPage.class);
 		header=PageFactory.initElements(driver, Headerutility.class);
 		update=PageFactory.initElements(driver, UpdateProfile.class);
-		
 	}
+
 	@BeforeMethod
 	public void login() {
 		login.loginToEmp("venkat", "vaddem");
@@ -36,10 +35,5 @@ public class UpdateTest {
 	@AfterMethod
 	public void logout() {
 		header.logout();
-	}
-	@AfterClass
-	public void quit() {
-		BrowserFactory.quitBrowser(driver);
-		
 	}
 }

@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import utils.BaseTest;
-import utils.Commons;
+import common.BaseTest;
+import common.Commons;
 
 public class Test4Alert extends BaseTest{
 

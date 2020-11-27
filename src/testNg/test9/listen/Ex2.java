@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import utils.Commons;
+import common.Commons;
 
 public class Ex2 {
 	   public String baseUrl = "https://google.com";

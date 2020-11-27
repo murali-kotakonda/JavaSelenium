@@ -3,27 +3,23 @@ package test;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import common.Commons;
 import pages.AddDepartment;
 import pages.LoginPage;
-import utils.BrowserFactory;
-import utils.Headerutility;
 
 public class TestAddDepartment extends Headerutility {
-	WebDriver driver;
 	LoginPage login;
 	AddDepartment addDept;
 	Headerutility header;
 	
 	public TestAddDepartment() {
-		driver=BrowserFactory.startApplication(driver, "Chrome");
+		driver=Commons.startApplication(driver, "Chrome");
 		login=PageFactory.initElements(driver, LoginPage.class);
 		addDept=PageFactory.initElements(driver, AddDepartment.class);
 		header=PageFactory.initElements(driver,Headerutility.class);
@@ -53,9 +49,5 @@ public class TestAddDepartment extends Headerutility {
 	public void logout() {
 		header.logout();
 		
-	}
-	@AfterClass
-	public void quit() {
-		BrowserFactory.quitBrowser(driver);
 	}
 }

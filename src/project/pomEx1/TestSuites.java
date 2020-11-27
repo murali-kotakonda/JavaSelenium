@@ -8,7 +8,7 @@ public class TestSuites extends TestCases
 	protected void launchApplication()
 	{
 		int num=22;
-		System.out.println("RC :Launch Application from TS ");
+		System.out.println("Launch Application from TS ");
 	}
 	//*****************Test SUites************
 	//That should not be static, should return only void,no arguments to the test

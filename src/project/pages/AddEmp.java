@@ -2,14 +2,17 @@ package pages;
 
 import static org.testng.Assert.assertTrue;
 
+import java.time.LocalDate;
+import java.time.YearMonth;
+import java.time.temporal.ChronoUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
-import utils.BaseTest;
-import utils.Commons;
-import utils.Headerutility;
+import common.BaseTest;
+import test.Headerutility;
 
 public class AddEmp extends Headerutility  {
 	WebDriver driver;
@@ -18,6 +21,13 @@ public class AddEmp extends Headerutility  {
 	public AddEmp(WebDriver idriver)
 	{                                                         
 		this.driver=idriver;
+		
+		long monthsBetween = ChronoUnit.MONTHS.between(
+			     YearMonth.from(LocalDate.parse("2016-08-31")), 
+			     YearMonth.from(LocalDate.parse("2016-11-30"))
+			);
+			System.out.println(monthsBetween); //3
+		//DateTimeFormatter java.time.format.DateTimeFormatter.ISO_LOCAL_DATE
 		}
 	@FindBy(id="command") WebElement form;
 	@FindBy(tagName="h2") WebElement empdata;

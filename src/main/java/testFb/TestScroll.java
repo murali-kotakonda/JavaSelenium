@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import utils.Commons;
+import common.Commons;
 
 public class TestScroll {
 	public static void main(String[] args) {

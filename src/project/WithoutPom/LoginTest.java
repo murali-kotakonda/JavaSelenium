@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import utils.BaseTest;
+import common.BaseTest;
 
 /**
   1.login with correct un and correct pwd [admin , admin 
@@ -20,6 +20,7 @@ import utils.BaseTest;
   6.username not empty and pwd is empty 
   7.pass < 4 
   8. pass> 10
+  9. enter correct un and wrng pwd for 5 times
  */
 public class LoginTest extends BaseTest {
 
@@ -59,6 +60,7 @@ public class LoginTest extends BaseTest {
 
 		sleep(5);
 		
+		//logout
 		WebElement logout = driver.findElement(By.id("logoutLbl"));;
 		checkEnabledAndDisplayed(logout);
 		assertTrue(logout.getText().equals("Logout"));

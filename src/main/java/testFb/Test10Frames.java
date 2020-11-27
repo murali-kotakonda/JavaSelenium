@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import utils.BaseTest;
-import utils.Commons;
+import common.BaseTest;
+import common.Commons;
 
 /**
  	How to switch to a frame?

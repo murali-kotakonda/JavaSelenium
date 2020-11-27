@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import utils.BaseTest;
+import common.BaseTest;
 
 /**
 Actions:
