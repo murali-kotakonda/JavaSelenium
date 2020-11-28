@@ -34,7 +34,7 @@ public class TestAddemp extends Headerutility {
 		header.clickAddNewEmployee();
 	}
 
-	@Test(priority = 0)
+	@Test 
 	public void nodata() throws Exception {
 		emp.addEmpolyee("", "", "", "", "", "", "");
 		Alert a = driver.switchTo().alert();

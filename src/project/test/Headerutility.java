@@ -13,17 +13,17 @@ public class Headerutility extends EmpBaseTest{
 	@FindBy(id = "mySubLbl")
 	WebElement mysublab;
 
-	public void validatelables() throws Exception {
-		Commons.checkEnabledAndDisplayed(mylabel, emplabel, mysublab, deptlab, logoutlab);
-		assertTrue(mylabel.getText().equals("My Profile"));
-		assertTrue(mysublab.getText().equals("My Subordinates"));
-	}
-
 	@FindBy(id = "EmployeeLbl")
 	WebElement emplabel;
 	@FindBy(xpath = "//*[@id=\"addEmpLbl\"]")
 	WebElement addemp;
 
+	public void validatelables() throws Exception {
+		Commons.checkEnabledAndDisplayed(mylabel, emplabel, mysublab, deptlab, logoutlab);
+		assertTrue(mylabel.getText().equals("My Profile"));
+		assertTrue(mysublab.getText().equals("My Subordinates"));
+	}
+	
 	public void clickAddNewEmployee() {
 		assertTrue(emplabel.getText().equals("Employee"));
 		emplabel.click();
