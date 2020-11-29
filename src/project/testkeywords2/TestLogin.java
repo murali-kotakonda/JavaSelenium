@@ -1,4 +1,4 @@
-package testkeywords;
+package testkeywords2;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import common.Commons;
+import testkeywords.Action;
+import testkeywords.ExcelUtils;
 
-public class Login {
+public class TestLogin {
 
 	KeyWordUtil keyword;
 	ExcelUtils utils ;
-	private String excelFilePath = "C:\\test\\keywords.xlsx";
+	private String excelFilePath = "C:\\test\\keywords2.xlsx";
 	
 	@BeforeTest
 	public void setup() {
@@ -28,12 +30,12 @@ public class Login {
 	
 	@Test
 	public void performLogin() throws IOException, InterruptedException {
-		List<Action> testcases = utils.getTestCases();
+		List<Action> testcases = utils.getActions();
 		for(Action testCase : testcases) {
-			if(!testCase.getTestStep().contains("TEST_CASE#")) {
+			if(!testCase.getKeyword().contains("TEST_CASE#")) {
 				keyword.perform(testCase);
 			}else {
-				System.out.println(testCase.getTestStep() +" started");
+				System.out.println(testCase.getKeyword() +" started");
 			}
 		}
 	}

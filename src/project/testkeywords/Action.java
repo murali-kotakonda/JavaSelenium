@@ -2,41 +2,41 @@ package testkeywords;
 
 public class Action {
 
-	String testStep ;
+	String keyword ;
 	String description;
 	String locatorType ;
-	String objectName ;
+	String locatorValue ;
 	
 	String testdata ;
 	String assertionType ;
 	String expectedValue ;
 	
-	public Action(String testStep, String description,String locatorType, String objectName,  String testdata, String assertionType,
+	public Action(String keyword, String description,String locatorType, String objectName,  String testdata, String assertionType,
 			String expectedValue) {
 		super();
 		this.description = description;
-		this.testStep = testStep;
-		this.objectName = objectName;
+		this.keyword = keyword;
+		this.locatorValue = objectName;
 		this.locatorType = locatorType;
 		this.testdata = testdata;
 		this.assertionType = assertionType;
 		this.expectedValue = expectedValue;
 	}
 
-	public String getTestStep() {
-		return testStep;
+	public String getKeyword() {
+		return keyword;
 	}
 
-	public void setTestStep(String testStep) {
-		this.testStep = testStep;
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
 	}
 
 	public String getObjectName() {
-		return objectName;
+		return locatorValue;
 	}
 
 	public void setObjectName(String objectName) {
-		this.objectName = objectName;
+		this.locatorValue = objectName;
 	}
 
 	public String getLocatorType() {
@@ -73,7 +73,7 @@ public class Action {
 
 	@Override
 	public String toString() {
-		return  testStep + " " +description ;
+		return  keyword + " " +description ;
 	}
 
 	public String getDescription() {

@@ -13,10 +13,18 @@ import testkeywords.Action;
 import testkeywords.ExcelUtils;
 import testkeywords2.KeyWordUtil;
 
-public class Login {
+/**
+  Hybrid framework : DataDriven + Keyword Driven
+  
+  using the getDataFromDataprovider() fetch the Object[][] , each entry has one action object
+  
+ */
+public class TestLogin {
 
-	KeyWordUtil keyword;
-	ExcelUtils utils ;
+	private KeyWordUtil keyword;
+	
+	private ExcelUtils utils ;
+	
 	private String excelFilePath = "C:\\test\\keywords2.xlsx";
 	
 	@BeforeTest
@@ -30,9 +38,9 @@ public class Login {
 		keyword.close();
 	}
 	
-	@DataProvider(name="hybridData")
+	@DataProvider(name="testData")
 	public Object[][] getDataFromDataprovider() throws IOException{
-    	List<Action> testcases = utils.getTestCases();
+    	List<Action> testcases = utils.getActions();
     	Object[][] objects = new Object[testcases.size()][1];
 		int i = 0;
 		for (Action action : testcases) {
@@ -41,9 +49,9 @@ public class Login {
 		return objects;
 	}
 	
-	@Test(dataProvider = "hybridData")
-	public void performLogin(Action testCase) throws IOException, InterruptedException {
-		if(!testCase.getTestStep().contains("TEST_CASE"))
-		keyword.perform(testCase);
+	@Test(dataProvider = "testData")
+	public void performLogin(Action action) throws IOException, InterruptedException {
+		if(!action.getKeyword().contains("TEST_CASE"))
+			keyword.perform(action);
 	}
 }

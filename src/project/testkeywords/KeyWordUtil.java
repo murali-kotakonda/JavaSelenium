@@ -1,5 +1,7 @@
 package testkeywords;
 
+import static org.testng.Assert.assertTrue;
+
 import java.io.IOException;
 
 import org.openqa.selenium.Alert;
@@ -13,6 +15,13 @@ import org.testng.Reporter;
 
 import common.Commons;
 
+/**
+ - For every row create action obj
+- keep all action objects inside the list
+- every action has to be performed using KeyWordUtil.java
+- in the KeyWordUtil.java for every keyword create a method.
+- call the method based on the keyword configured in the excel.
+ */
 public class KeyWordUtil {
 	WebDriver driver;
 	
@@ -48,7 +57,81 @@ public class KeyWordUtil {
 		return driver.getCurrentUrl();
 	}
 
-	By getObject(String expression, String locatorType) throws IOException {
+	
+	
+	public void perform(Action action) throws IOException, InterruptedException {
+		String keyword = action.getKeyword();
+		String objectName = action.getObjectName();
+		String  locatorType = action.getLocatorType();
+		String data = action.getTestdata();
+		String assertionType = action.getAssertionType();
+		String expectedValue = action.getExpectedValue();
+		
+		switch (keyword) {
+		case "URL":
+			//Perform click
+			 enter_URL(driver, data);
+			break;
+
+		case "get_currentURL":
+			//Set text on control
+			get_currentURL(driver);
+			break;
+
+		case "TYPE":
+			 type(driver, objectName, locatorType, data);
+			 break;
+
+		case "CLICK":
+			 click(driver, objectName, locatorType);
+			 break;
+			/*
+			 * case "wait": keyword.wait(driver, objectName, locatorType);
+			 */
+		case "implicitWait":
+			Thread.sleep(8000);
+			break;
+
+		default:
+			break;
+		}
+
+		switch (assertionType) {
+		case "contains":
+			// Assert.assertTrue(get_currentURL(driver).contains("login"));
+			break;
+		case "equals":
+			// Assert.assertEquals(get_currentURL(driver),"http://localhost:8012/EmpDemo/login");
+			break;
+		case "homeTitle":
+			Assert.assertTrue(get_currentURL(driver).contains("login"));
+			Assert.assertEquals(driver.getTitle(), expectedValue);
+			break;
+		case "invaldiLogin" :
+			WebElement invalidlogin = driver.findElement(this.getObject(objectName, locatorType));
+			Assert.assertEquals(invalidlogin.getText(), expectedValue);
+			break;
+		case "loginTitle":
+			Assert.assertEquals(driver.getTitle(), expectedValue);
+			break;
+		case "alert":
+			Alert a = driver.switchTo().alert();
+			Reporter.log(a.getText());
+			Assert.assertEquals(a.getText(), expectedValue);
+			a.accept();
+			break;
+		}
+
+		if (keyword.contains("AssertElement")) {
+			// assertion.AssertElement(driver, assertionType, objectName, locatorType);
+		}
+	}
+
+	public void close() {
+		driver.quit();
+	}
+	
+	public By getObject(String expression, String locatorType) throws IOException {
 		// find by xpath
 		if (locatorType.equalsIgnoreCase("XPATH")) {
 			return By.xpath(expression);
@@ -77,73 +160,5 @@ public class KeyWordUtil {
 			return By.partialLinkText(expression);
 		}
 		return null;
-	}
-	
-	
-	public void perform(Action testcase) throws IOException, InterruptedException {
-		String operation = testcase.getTestStep();
-		String objectName = testcase.getObjectName();
-		String  locatorType = testcase.getLocatorType();
-		String data = testcase.getTestdata();
-		String assertionType = testcase.getAssertionType();
-		String expectedValue = testcase.getExpectedValue();
-		
-		switch (operation) {
-		case "URL":
-			//Perform click
-			 enter_URL(driver, data);
-			break;
-
-		case "get_currentURL":
-//Set text on control
-			get_currentURL(driver);
-			break;
-
-		case "type":
-			 type(driver, objectName, locatorType, data);
-			 break;
-
-		case "click":
-			 click(driver, objectName, locatorType);
-			 break;
-
-			/*
-			 * case "wait": keyword.wait(driver, objectName, locatorType);
-			 */
-
-		case "implicitWait":
-			Thread.sleep(8000);
-			break;
-
-		default:
-			break;
-		}
-
-		switch (assertionType) {
-		case "contains":
-			// Assert.assertTrue(get_currentURL(driver).contains("login"));
-			break;
-		case "equals":
-			// Assert.assertEquals(get_currentURL(driver),"http://localhost:8012/EmpDemo/login");
-			break;
-		case "homeTitle":
-			Assert.assertTrue(get_currentURL(driver).contains("login"));
-			Assert.assertEquals(driver.getTitle(), expectedValue);
-			break;
-		case "alert":
-			Alert a = driver.switchTo().alert();
-			Reporter.log(a.getText());
-			Assert.assertEquals(a.getText(), expectedValue);
-			a.accept();
-			break;
-		}
-
-		if (operation.contains("AssertElement")) {
-			// assertion.AssertElement(driver, assertionType, objectName, locatorType);
-		}
-	}
-
-	public void close() {
-		driver.quit();
 	}
 }

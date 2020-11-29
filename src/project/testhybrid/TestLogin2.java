@@ -10,12 +10,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import common.Commons;
-import test15PiDataProvidersEx.Login;
 import testkeywords.Action;
 import testkeywords.ExcelUtils;
 import testkeywords2.KeyWordUtil;
 
-public class Login2 {
+public class TestLogin2 {
 
 	KeyWordUtil keyword;
 	ExcelUtils utils ;
@@ -44,12 +43,12 @@ public class Login2 {
 	}
 
 	private List<TestCase>  getTestCases() {
-		List<Action> actions = utils.getTestCases();
+		List<Action> actions = utils.getActions();
 		int i = 0;
 		List<TestCase> testcases = new ArrayList<>();
 		TestCase testCase= null;
 		for (Action action : actions) {
-			if(action.getTestStep().contains("TEST_CASE")) {
+			if(action.getKeyword().contains("TEST_CASE")) {
 				testCase = new TestCase();
 				testcases.add(testCase);
 			}

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="hybrid2.Login2">
+      <class name="testkeywords2.TestLogin">
         <methods>
           <include name="setup"/>
-          <include name="performLogin" invocation-numbers="0 1 2 3"/>
           <include name="close"/>
+          <include name="performLogin"/>
         </methods>
-      </class> <!-- hybrid2.Login2 -->
+      </class> <!-- testkeywords2.TestLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

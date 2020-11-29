@@ -30,8 +30,8 @@ public class ExcelUtils {
 		return workbook.getSheetAt(sheetNo);	
 	}
 	
-	public Action getRow(XSSFSheet worksheet, int columns, int i) {
-		List<String> testExcutions = new ArrayList<>();
+	public Action getAction(XSSFSheet worksheet, int columns, int i) {
+		List<String> steps = new ArrayList<>();
 		for (int j = 0; j <=columns - 1; j++) {
 			Cell cell = worksheet.getRow(i).getCell(j);
 			String text;
@@ -40,33 +40,33 @@ public class ExcelUtils {
 			} else {
 				text = cell.getStringCellValue();
 			}
-			testExcutions.add(text);
+			steps.add(text);
 		}
 		
-		Action testcase = new Action(
-				testExcutions.get(0), 
-				testExcutions.get(1), 
-				testExcutions.get(2),
-				testExcutions.get(3),
-				testExcutions.get(4), 
-				testExcutions.get(5),
-				testExcutions.get(6));
-		return testcase;
+		Action action = new Action(
+				steps.get(0), 
+				steps.get(1), 
+				steps.get(2),
+				steps.get(3),
+				steps.get(4), 
+				steps.get(5),
+				steps.get(6));
+		return action;
 	}
 	
-	public List<Action> getTestCases() {
-		List<Action>  testcases = new ArrayList<>();
+	public List<Action> getActions() {
+		List<Action>  actions = new ArrayList<>();
 		int testcasescount = getSheets();
 		for (int count = 0; count < testcasescount; count++) {
 			XSSFSheet worksheet = getSheet(count);
 			int row = worksheet.getLastRowNum();
 			int columns = worksheet.getRow(0).getLastCellNum();
 			for (int i = 1; i <= row; i++) {
-				Action testcase = getRow(worksheet, columns, i);
-				testcases.add(testcase);
+				Action action = getAction(worksheet, columns, i);
+				actions.add(action);
 			}
 		}
-		return testcases;
+		return actions;
 	}
 
 }
