@@ -9,7 +9,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import common.BrowserFactory;
 import common.Commons;
 
 public class TestLogin  {
@@ -106,7 +105,6 @@ public class TestLogin  {
 
 	@AfterClass
 	public void quit() {
-		BrowserFactory.quitBrowser(driver);
 		driver.quit();
 	}
 }
