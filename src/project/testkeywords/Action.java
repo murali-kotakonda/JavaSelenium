@@ -3,6 +3,7 @@ package testkeywords;
 public class Action {
 
 	String testStep ;
+	String description;
 	String locatorType ;
 	String objectName ;
 	
@@ -10,9 +11,10 @@ public class Action {
 	String assertionType ;
 	String expectedValue ;
 	
-	public Action(String testStep, String locatorType, String objectName,  String testdata, String assertionType,
+	public Action(String testStep, String description,String locatorType, String objectName,  String testdata, String assertionType,
 			String expectedValue) {
 		super();
+		this.description = description;
 		this.testStep = testStep;
 		this.objectName = objectName;
 		this.locatorType = locatorType;
@@ -71,7 +73,15 @@ public class Action {
 
 	@Override
 	public String toString() {
-		return  testStep ;
+		return  testStep + " " +description ;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

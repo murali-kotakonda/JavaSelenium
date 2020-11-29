@@ -49,7 +49,8 @@ public class ExcelUtils {
 				testExcutions.get(2),
 				testExcutions.get(3),
 				testExcutions.get(4), 
-				testExcutions.get(5));
+				testExcutions.get(5),
+				testExcutions.get(6));
 		return testcase;
 	}
 	

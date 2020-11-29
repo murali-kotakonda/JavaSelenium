@@ -8,42 +8,42 @@
       <![CDATA[Please provide Password!]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24818" started-at="2020-11-28T23:53:56Z" finished-at="2020-11-28T23:54:21Z">
+  <suite name="Default suite" duration-ms="13004" started-at="2020-11-29T00:07:13Z" finished-at="2020-11-29T00:07:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24818" started-at="2020-11-28T23:53:56Z" finished-at="2020-11-28T23:54:21Z">
-      <class name="hybrid2.Login2">
-        <test-method status="PASS" signature="setup()[pri:0, instance:hybrid2.Login2@48524010]" name="setup" is-config="true" duration-ms="9618" started-at="2020-11-29T05:23:56Z" finished-at="2020-11-29T05:24:06Z">
+    <test name="Default test" duration-ms="13004" started-at="2020-11-29T00:07:13Z" finished-at="2020-11-29T00:07:26Z">
+      <class name="testhybrid.Login2">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testhybrid.Login2@7920ba90]" name="setup" is-config="true" duration-ms="7623" started-at="2020-11-29T05:37:13Z" finished-at="2020-11-29T05:37:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="performLogin(hybrid2.TestCase)[pri:0, instance:hybrid2.Login2@48524010]" name="performLogin" duration-ms="11755" started-at="2020-11-29T05:24:06Z" data-provider="hybridData" finished-at="2020-11-29T05:24:17Z">
+        <test-method status="PASS" signature="performLogin(testhybrid.TestCase)[pri:0, instance:testhybrid.Login2@7920ba90]" name="performLogin" duration-ms="1055" started-at="2020-11-29T05:37:21Z" data-provider="hybridData" finished-at="2020-11-29T05:37:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TestCase [actions=[TEST_CASE#1, URL, type, type, click, click]]]]>
+                <![CDATA[TestCase [Valid credentials]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="performLogin(hybrid2.TestCase)[pri:0, instance:hybrid2.Login2@48524010]" name="performLogin" duration-ms="636" started-at="2020-11-29T05:24:17Z" data-provider="hybridData" finished-at="2020-11-29T05:24:18Z">
+        <test-method status="PASS" signature="performLogin(testhybrid.TestCase)[pri:0, instance:testhybrid.Login2@7920ba90]" name="performLogin" duration-ms="513" started-at="2020-11-29T05:37:22Z" data-provider="hybridData" finished-at="2020-11-29T05:37:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TestCase [actions=[TEST_CASE#2, URL, type, type, click]]]]>
+                <![CDATA[TestCase [invalid Login]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="performLogin(hybrid2.TestCase)[pri:0, instance:hybrid2.Login2@48524010]" name="performLogin" duration-ms="385" started-at="2020-11-29T05:24:18Z" data-provider="hybridData" finished-at="2020-11-29T05:24:19Z">
+        <test-method status="PASS" signature="performLogin(testhybrid.TestCase)[pri:0, instance:testhybrid.Login2@7920ba90]" name="performLogin" duration-ms="404" started-at="2020-11-29T05:37:23Z" data-provider="hybridData" finished-at="2020-11-29T05:37:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TestCase [actions=[TEST_CASE#3, URL, type, type, click]]]]>
+                <![CDATA[TestCase [no LoginName]]]>
               </value>
             </param>
           </params>
@@ -53,11 +53,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="performLogin(hybrid2.TestCase)[pri:0, instance:hybrid2.Login2@48524010]" name="performLogin" duration-ms="354" started-at="2020-11-29T05:24:19Z" data-provider="hybridData" finished-at="2020-11-29T05:24:19Z">
+        <test-method status="PASS" signature="performLogin(testhybrid.TestCase)[pri:0, instance:testhybrid.Login2@7920ba90]" name="performLogin" duration-ms="464" started-at="2020-11-29T05:37:23Z" data-provider="hybridData" finished-at="2020-11-29T05:37:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[TestCase [actions=[TEST_CASE#4, URL, type, type, click]]]]>
+                <![CDATA[TestCase [no Password]]]>
               </value>
             </param>
           </params>
@@ -67,11 +67,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- performLogin -->
-        <test-method status="PASS" signature="close()[pri:0, instance:hybrid2.Login2@48524010]" name="close" is-config="true" duration-ms="2011" started-at="2020-11-29T05:24:19Z" finished-at="2020-11-29T05:24:21Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:testhybrid.Login2@7920ba90]" name="close" is-config="true" duration-ms="2904" started-at="2020-11-29T05:37:23Z" finished-at="2020-11-29T05:37:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- hybrid2.Login2 -->
+      </class> <!-- testhybrid.Login2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

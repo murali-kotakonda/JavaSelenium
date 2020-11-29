@@ -26,6 +26,6 @@ public class TestCase {
 
 	@Override
 	public String toString() {
-		return "TestCase [actions=" + actions + "]";
+		return "TestCase ["+ actions.get(0).getDescription() + "]";
 	}
 }
