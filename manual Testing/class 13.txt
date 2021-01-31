@@ -2,27 +2,24 @@ verification vs validation:
 -----------------------------
 
 Verification:
-before the applicatrion is ready.
-correctness and complteness of the documents.ex: test case doc
+------------------
+before the application is ready.
+correctness and completenes of the documents.ex: test case doc
 before the application has been developed.
 check are we going on right track.
 are we planning to build the correct system??
 Test case preparation + Reviews 
+ex:unit testing
 
 
 Validation:
-starts once the develop is completed and applcation is ready.
+------------------------
+starts once the develop is completed and application is ready.
 testing will happen on final product.
 Validate what we build is correct.
 Is the system meets the customer requirements?
-
-
-
-
-
-
-
-
+what ever developed is working as per customer req.
+ex: system testing,
 
 
 Reviews:
@@ -30,11 +27,8 @@ Reviews:
 Requirement ( qa + PO)
 test cases (qa lead)
 test plan   (qa lead + architect)
-
 design  (dev + architect )
 code    (dev lead) 
-
-
 
 
 Minimum levels of software testing:
@@ -44,7 +38,8 @@ Testing phase requires to do different types of testing.
 1.Unit Testing    (white)  --> Dev
 2.Integration testing (white) --> Dev 
 3.System testing   (black) --> Tester
-4.User Acceptance testing (black) --> Customer
+4.UAT User Acceptance testing (black) --> Customer
+
 
 
 
@@ -53,10 +48,11 @@ Testing phase requires to do different types of testing.
 - Testing the single unit (smaller area) 
 - write code to test the code
 - Testing is done using the Code.
-- Testing is not on the product funtionalities; testing is only on the code written by the developer.
+- Testing is not on the product functionality or on application ; 
+testing is only on the code written by the developer.
 - to be written by understanding the code.
 ex: if we have login requiremnets:
-we need write 4 funtions (dev).
+we need write 4 functions (dev).
 ->input()   
 	-> test the input() funtion by writing test cases  
 ->validate()
@@ -65,58 +61,66 @@ we need write 4 funtions (dev).
 	-> test the process() funtion by writing test cases
 ->showResponse()
 	-> test the showResponse() funtion by writing test cases
+	
+Frameworks used by developer for unitTesting:
+---------------------------------------
 ex: Junits, Mockito, easyMock
 
 -> 
 
 
 
-
-
-
-
-
-Integration testing:
+Integration testing: white box testing
 -----------------------
-case1:
-When one app has to communicate with another app(or multiple modules), then we need both the app to be integrated.
+-> its a white box testing module.
+- done by developer.
+- may be optional depends on the systems involved.
+- testing is required only if there is an integration exits with 3rd party. 
+integrate all software and start testing
 
-app1 conects with apps and sends the data.
+
+case1:
+-------
+
+When one app has to communicate with another app(or multiple modules), 
+then we need both the app to be integrated.
+
+app1 connects with apps and sends the data.
 app2 that received the data will process and send the response back to app1.
 app1 has to understand the response from app2.
   
 case2:
+-----
 Integration Testing becomes necessary after joining multiple modules.
 - Component1[application] has some features
   Component2[application] has some diff features. 
 -output of one application is the input for other application.
 
+ex:
+Component1 1: customer application 
+Component1 2: Ticketing application 
 
-- done by developer.
-- may be optional depends on the systems involved.
-- testing is required only if there is an integration exits with 3rd party. 
+Ticketing application  has to fetch the customer infom from the  "customer application"
 
 ex: webservices
 - application can have multiple modules.
 
-refer diagram topdown
-
 Approaches:
--> its a white box testing modle.
+-> top down:
+-> bottom up
 
 
 -> top down:
-a)testig takes from top to bottom. [higher module to low module]
-b)if Module A is ready and below Modules[lower modules]  are not avilable,then develper creates stubs.
+a)testing takes from top to bottom. [higher module to low module]
+b)if Module A is ready and below Modules[lower modules]  are not available,then developer creates stubs.
+ refer diagram topdown
  
- 
--> botton up
-a) testig takes from bottom to up. [low module to higher module]
-b) if Lower Module is ready and Higher Modules are not avilable,then develper creates driver.
--Each module at the lower level is tested with high modules untill all modules are tested.
+-> bottom up
+a) testing takes from bottom to up. [low module to higher module]
+b) if Lower Module is ready and Higher Modules are not available,then developer creates driver.
+-Each module at the lower level is tested with high modules until all modules are tested.
 
--> hybrid: Mix of both TD and BU
-
+-> hybrid: Mix of both Top-Down and BottonUp
 
 
 UserAcceptanceTesting:
@@ -128,15 +132,6 @@ UserAcceptanceTesting:
 alpha : testing at developers site . system setup is done by amazon.
 beta : testing at customers site with his own test data.
 with realtime data.
-
-
-
-requirements-traceability-matrix document:
--------------------------------------------
-- Document for mapping the requirement with test cases.
-- collets all requirements and for every reuirement what are the test cases ids's.
-- 
-
-
+-Acceptance criteria should be met for testing to be passed and that is validated by customer 
 
 

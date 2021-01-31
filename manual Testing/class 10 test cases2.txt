@@ -14,9 +14,8 @@ b) Form to contain  password label + text field for filling password
 
 c) Form to contain Login button
 
--> For successfull login show message as "login success".
-
--> For failure login show message as "login failure".
+-> For successfull login show message as "login success" , show in home page
+-> For failure login show message as "login failure" , show in login page
 
 
 
@@ -29,6 +28,8 @@ Ans2. Login success should come in a new screen and login failure should come on
 
 3.User name or password both or anyone are empty then what we should do?
 Ans3.If user name is empty then this screen should show a pop up menu asking "please enter user name". This is a client's side validation.
+If password is empty then this screen should show a pop up menu asking "please enter password". This is a client's side validation.
+
 
 Terms:
 
@@ -36,7 +37,7 @@ Terms:
 
 2)Server's side validation (validation will happens only after submitting the data to the backend eg: check if username is correct, check if psw is correct)
 
-Test Case:
+Test Cases:
 
 1) Check for login success under valid credentials.(username correct, psw is correct)
 2) Check for login faliure under invalid credentials.(username correct, psw is wrong)
@@ -54,15 +55,25 @@ What is the testing common for all test cases:
 
 
 
+BR1.1:
+--------------
+IF UN is correct and pwd is worng for 5 times lock the account.
 
+	 There is a user with "Kumar" as loginname , "Kumar" as password:
+ case1:
+		1. enter "Kumar" + "Kumar1" --> invalid login
+ 2. enter "Kumar" + "Kumar1" --> invalid login + update "attempts" column value to 2.
+        3. enter "Kumar" + "Kumar1" --> invalid login 
+        4. enter "Kumar" + "Kumar1" --> invalid login 
+        5. enter "Kumar" + "Kumar1" --> "your account is locked.Please conact admin"
+ 6. enter "Kumar" + "Kumar" -->   "your account is locked.Please conact admin"
 
+Refer Test cases un and pwd.jfif
 
 
 
 
 BR#2
-
-
 --please add a new page for registration.
 --this new page should contain registration form.
 --the form should contain user name(login name), password, confirm password.
@@ -82,23 +93,24 @@ Client side validations
 -- password has to be minimum  5 characters and max 10 characters, pop up msg to display.
 -- mobile number has to exactly 10 digits, display pop up if invalid.
 -- email has to be a valid format, display pop up if invalid.
--- D.O.B has to be a valid format, display pop up if invalid.
+-- D.O.B has to be a valid format, display pop up if invalid. dd/mm/yyyy
 -- after reg
 
 
 
 Server side valdiations:
 ----------------------------------------------------
-1. if e registration is success show registration success message on login  page.
+1. if e registration is success show registration success message on login  page. and 
+verify user should able to login 
 2.Login name have to be unique, if not display message on the 
 registraion page stating:
 login name alreday in use.
-3.Mobile numner have to be unique, if not display message on the 
+3.Mobile number have to be unique, if not display message on the 
 registraion page stating:
-login name alreday in use.
+mobile number already in use.
 4.Emaid id have to be unique, if not display message on the 
 registraion page stating:
-login name alreday in use.
+email alreday in use.
 5. if registartion is success then use username and password on the login screen to login (Refer BR#1)\
 
 
@@ -106,16 +118,33 @@ login name alreday in use.
 
 BR#2 Testcases:
 ----------
+
+BR#2 Testcases:
+----------
 1.Popup msg to appear when username is empty
 2.Popup msg to appear when password is empty
-3.Popup msg to appear when password lengh < 5 chars
-4.Popup msg to appear when password lengh > 10 chars
-5.Popup msg to appear when confirm passord is empty.
-6.Popup msg to appear when password and confirm password are not equal.
+3.Popup msg to appear when confirm password  is empty
+4.Popup msg to appear when FN is empty
+5.Popup msg to appear when LN is empty
+6.Popup msg to appear when DOB is empty
+7.Popup msg to appear when MOBILE is empty
+8.Popup msg to appear when email is empty
+9.Popup msg to appear when pwd<5
+10.Popup msg to appear when pwd>10
+11.Popup msg to appear when pwd != confir pwd 
+12.Popup msg to appear when mobil<10
+13.Popup msg to appear when mobil>10
+14.Popup msg to appear when mobil is a character 
+15.Popup msg to appear when email invalid  format  
+16.Verify Registration success with valid Data 
+17.verify Registration failure with existing username 
+18.verify Registration failure with existing mobile 
+19.verify Registration failure with existing email  
+20.verify login success with the registered use @ testcase#16
 
 
 
-[‎4/‎4/‎2020 11:51 PM]  niloufer:  
+
 test case 1(screen content test)
 verify registration page contain the expected feilds.
 test case 2(screen behaviour)

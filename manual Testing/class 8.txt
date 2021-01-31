@@ -1,16 +1,21 @@
 Role of Tester in SDLC:
 ---------------------------
+
 -->Analysis:
 -Understand requirements/Feasiability.
 -detail study of Risk analysis.
 -identify loop holes,gaps 
--establish the environment requirements.
 -identify the type of testing to be done .[load testing]
 - Document the requirements.
+-establish the environment requirements.
+
 
 Design:
 -to understand non-funtional requirements(security,hacking,load,perf,).
 -prepare the low-level test plan document
+ a) when testting starts
+ b) on which env
+ c) typoes of testing
 (risk,tools,env,security,scope, assumptions,).
 -write the test cases covering all postive and negative for the requirement ,followed by review with devs and qa lead.
 -share the test cases/use cases document to developers  followed by review. 
@@ -20,11 +25,23 @@ Design:
 
 
 
-testing:(execute the test cases)
---------
-1. Use the Line 15 (test cases ) for testing.
-2.verify if the application is behaving as metioned in the test document.
-3.create defect as applictionn failed to behave as metioned in the test cases.
+
+
+Testing:
+------------------------------------
+Start testing the application using the test case document.
+Testing can be manual or automation.
+
+Manual:
+------------
+- For New Requirements
+- Test the scenarios that cannot be covered through the automation
+Automation:
+-------------
+- All the existing test cases
+
+2.verify if the application is behaving as mentioned in the test document.
+3.create defect if app failed to behave as mentioned in the test cases.
 4.Identify all possible bugs are document the defects(jira) and report to the team.
 5.Every defect created by tester should contain:
 - detailed steps to be followed for reproducing the issue.

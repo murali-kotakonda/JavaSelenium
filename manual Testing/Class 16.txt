@@ -9,14 +9,13 @@ Order:
 -> Non Funtional Testing
 -> UAT (customer)
 
-Inroduce additional testing for Time saving:
+Introduce additional testing for Time saving:
 -> Test New Features (using test cases)
 -> Test Defects (ReTesting)
 -> Smoke + Sanity Testing 
 -> Regression  ------> Heavy + costly + time consuming.
--> Non Funtional Testing
+-> Non Functional Testing
 -> UAT (customer)
-
 
 
 

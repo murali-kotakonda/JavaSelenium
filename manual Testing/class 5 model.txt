@@ -21,87 +21,132 @@ waterfall:
 Analyis + design + coding + unit testing+
 testing + deployment + maintainance..
 
--> all reqs at a time.
-sequential stage by stage.
--> Testers cannot start work untill dev compltes,
 dev compltion takes almost 75% of the estimation.
-No proper Resouce utilization.
 
--> Testers with 0.5 month has created 500 defects.
-Can developer fix 500 issues with in 0.5 month???
-NO,
-This will lead to delay in delivery.
+Problems:
+----------------------------
+-> Testers cannot start work until dev completes , but dev completion takes 5 months .
+till 5 months testers are not utilized.
+ No proper utilization of Team mates. 
 
--> not realistic /suit for the real time projects.
--> risk invoved  ( timely delivery , quality ).
--> small change/ gap idenfied the cycle will again starts
-from analysis.
+->after the 5.5 months ,  tester created 500 defects ,
+  Is it poissible to fix the 500 defects in remaining 15 days??
+  No
+  This leads to 
+   a) postponing the delivery 
+   b) Deliver bad product .
+
+-> not realistic /suit for the real time/large  projects.   
+-> risk involved  ( timely delivery , quality ).
+-> small change/ gap identified the cycle will again starts from analysis.
 going back to previous stage is complex/time consuming.
 -> long term projects its not suitable.
-
--> testing period comes very late.
+-> testing starts  very late.
+-> Defect fixing also starts very late .
+  (errors can be fixed only after 5 months.)
 -> customer [abc ] will see the outcome only after 6 month.
--> errors can be fixed only after 5 months.
+-> defect fixing happens before the delivery
+
 
 Agile:
 -------
 Analyis + design + coding + unit testing+
 testing + deployment + maintainance..
 
+- testing starts early
+- defect fixing starts early
+- all resources are properly utilized.
+
 - process model that contains continuous iteration of the 
 phases (coding / testing ) 
 -dev + testing will be happening at the same time.
 -Divide and rule policy .
-divide all requiremnets into indpendent pieces.
-and start life cycle for every individula requiremnet
+  - divide all requirements into Independent pieces. 
+  - start life cycle for every Independent requirement.
 - few requirements at a time
 - parallel activities. 
 
-- cutsomer(ABC) will see the outcome mini for very month.
-- error can be fixed in between before 5 months.
+
+  
+50 Requirements :
+--------------------
+Divide all requirements into 5 sets :
+
+  A         B        C         D        E 
+10 Req + 10 Req  + 10 Req  + 10 Req  + 10 Req 
+
+-> Complete the following life cycle for "A" within 2 weeks :
+  1.Analysis  
+  2.Design    
+  3.Development 
+  4.UnitTesting 
+  5.Testing ( funtional/Regression/Perf..etc...)  ON "A", CREATE defects 
+
+-> Complete the following life cycle for "B" within 2 weeks :
+  1.Analysis  
+  2.Design    
+  3.Development 
+  4.UnitTesting 
+  5.Testing ( funtional/Regression/Perf..etc...) ON "A" , "B"
+  6.Defect Fixing for "A"
+
+
+-> Complete the following life cycle for "C" within 2 weeks :
+  1.Analysis  
+  2.Design    
+  3.Development 
+  4.UnitTesting 
+  5.Testing ( funtional/Regression/Perf..etc...) ON "A" , "B" ,"C"
+  6.Defect Fixing for "A" , "B"
+
+
+-> Complete the following life cycle for "D" within 2 weeks :
+  1.Analysis  
+  2.Design    
+  3.Development 
+  4.UnitTesting 
+  5.Testing ( funtional/Regression/Perf..etc...) ON "A" , "B" ,"C" ,"D"
+  6.Defect Fixing for "A" , "B"  , "C"
+
+-> Complete the following life cycle for "E" within 2 weeks :
+  1.Analysis  
+  2.Design    
+  3.Development 
+  4.UnitTesting 
+  5.Testing ( funtional/Regression/Perf..etc...) ON "A" , "B" ,"C" ,"D" ,"E"
+  6.Defect Fixing for "A" , "B"  , "C" , "E"
+
+
+- customer(ABC) will see the outcome minimum for very month.
+- error can be fixed much early , starts from 1st months.
 - for every two weeks we have delivery .[small requirements]
+- UAT testing starts early within 3 weeks.
 
-- Agile allows the team to work together efficiently + effectively
--Agile is a process using which team will manage the software dev into several stages with continuous iteration .
-- constant colloboration and communication with customers.
----> fill the gaps / clarifications/ expectations/gains trust...
---->We can get constant feeback from customers.
-- Agile starts with customer sharing the requiremnets 
- + then perform stage by stage development in two weeks .
-- every two weeks customer gives new requirements.
 
-- Agile is set of principles that enables team to work 
-flexibily, adapt based on project situation.
 - Agile always best model for complex projects.
+-Agile is a process using which team will manage the software dev into several stages with continuous iteration .
+- Agile starts with customer sharing the requiremnets + then perform stage by stage development in two weeks .
+- every two weeks customer gives new requirements.
+- Agile is set of principles that enables team to work flexibily, adapt based on project situation.
+- Agile allows the team to work together efficiently + effectively
+- constant colloboration and communication with customers.
+- fill the gaps / clarifications/ expectations/gains trust...
+-We can get constant feedback from customers.
 
-adv:
+
+
+Adv:
 -----
-->developer its easy to fix issues , and they will be very responsive.
+->For developer its easy to fix issues , and they will be very responsive.
 ->constant changes are allowed.
-->constant communication between stackholders, business deligates, end customers .....share the clear vision of status of the application so far.
+->constant communication between stackholders, business deligates, end customers .....
+share the clear vision of status of the application so far.
 ->errors can be fixed early or in middle.
 ->analysis only for few requirements [to explore more].
 ->every iteration has its own testing strategy.
 regression testing[ALL] every iteration.
 ->every month we will have a release to customer.
 [satisfying few requirements...]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -12,7 +12,11 @@ Techincal owner --> Tech leads
 Quality owner  --> Testing leads 
 Developes (UI, JAVA,DB),
 Testers
-Scrum Master  ---> [gives tasks to entire team, certification on Agile + Excel + JIRA +JENKINS +Defect tool ]
+Scrum Master
+---------------------
+-certified in agile 
+- excellent skills in Agile + Excel + JIRA +JENKINS +Defect tool
+- gives tasks to entire team
 -manage work/ allocate work for the people.
 -decides priority of work [defect/task].
 -decide on the release of application.
@@ -34,23 +38,63 @@ Manager -> manage people
 For two weeks all the above people are occupied.
 
 
-Sprint -> two weeks work for the above people.
+Sprint -> 
+two weeks window or period where all team mates are occupied for the delivery of selected requirements .
 
-Grooming[meeting]: 
-- To decide next Requirements and for every requiremnet find the estimation .
--Requirements are finalized after grooming.
--is a meeting only with leads and PO and customer to discuss and finalize requirements.
--We will discuss only on backog items.
+sprint:
+---------
+two weeks period .
+team will work on user stories.
+every sprint has a number.
 
 
-BackLog: [taken care by product owner ]
---------
--Future Epics/User stories.
-- Yet to complete.
--Product owner prepares the epic and user stories.
-- Not finalized requirements 
+50 Requirements :
+--------------------
+Divide all requirements into 5 sets :
 
-If the requirements are finalized then backlog item is converted to EPIC.
+  211a           211b        212a            212b             213a 
+  Sprint-1      Sprint-2     Sprint-3       Sprint-4         Sprint-5
+  10 Req      +  10 Req     + 10 Req        + 10 Req         + 10 Req 
+  
+  
+Sprint:
+---------------
+
+- two weeks window or period where all team mates are occupied for the delivery of selected requirements .
+- flavour of agile
+- every sprint has a number.
+
+50 Requirements :
+--------------------
+Divide all requirements into 5 sets :
+
+  211a           211b        212a            212b             213a 
+  Sprint-1      Sprint-2     Sprint-3       Sprint-4         Sprint-5
+  10 Req      +  10 Req     + 10 Req        + 10 Req         + 10 Req 
+  
+
+211a - 1st 10 requirements 
+211b - next 10 requirements + defects from previous
+
+212a - next 10 requirements  + defects from previous
+212b - next 10 requirements + defects from previous
+
+213a - next 10 requirements + defects from previous
+213b - next 10 requirements + defects from previous
+
+214a - next 10 requirements  + defects from previous
+214b - next 10 requirements + defects from previous
+
+
+Requirements is didvided into EPIC
+Every Epic has multiple User Stories
+Every user story has multiple tasks 
+
+Terms:
+---------
+EPIC
+USER STORY
+TASK 
 
 
 EPIC: [taken care by product owner ]
@@ -58,6 +102,8 @@ EPIC: [taken care by product owner ]
 Group of multiple user stories.
 Ex: 1. Admin activities
     2. customer activities.
+	3.security
+	4.performance
 every epic has deadline
 
 UserStory [funtional or non-funtionl]:
@@ -66,72 +112,110 @@ UserStory [funtional or non-funtionl]:
 small independent unit of requirement .
 Ex: 1. login 2.logout 3.profile update 
 
-Every member of team will be working for the userstories.
-Under epic we need create user stories.
-Every userstory has deadline
+-Under epic we need create user stories.
+-Every userstory has deadline
 - Every User story is also assigned to team member .
 
 Tasks:
 -----
-- type of Tasks [analysis, techincal , testing , review, write test cases ,db related, code, unit test ,]
-- We need to create task under every user story.
+- Under the userstory we need to create a task
 -Every task has deadline
 - Every task has a assigned to team member.
 - Tasks are created by Leads[DEV/TEST] and some times team members.
-- Every task has a status [Open, Inprogress, Blocked, Complted].
+- type of Tasks [analysis, techincal , testing , review, write test cases ,db related, code, unit test ,]
+- Every task has a status [Open, Inprogress, Blocked, Completed].
 - team member will specify how many hours spent for the task.
 
-sprint:
----------
-two weeks period .
-team will work on user stories.
-every sprint has a number.
+
+
+
+Meetings:
+------------------------------------------------------------------------
+-Groming
+-SCRUM 
+-Planning 
+-Retro
+-Review
+-Demo 
+
+Grooming[meeting]: 
+--------------------
+- weekly once 
+-is a meeting only with leads and PO and customer to discuss and finalize requirements.
+- To decide next Requirements and for every requiremnet find the estimation .
+-Requirements are finalized after grooming.
+-We will discuss only on backog items.
+
+
 
 SCRUM:(work status update )
 --------
-daily meeting for 15 mints.
-every body has to attend.
-share their status of work [ work started/ work inprogess/
-work completed/work going to status /blocker].
-ever body has to speak.
+- It is a daily meeting for 15 mints.
+- every body has to attend.
+- ever body has to speak.
+-share their status of work [ work started/ work inprogess/
+ work completed/work going to status /blocker].
 
 
-Planning (MEETING): scrum master, 1 per sprint
+
+Planning (MEETING): 
 -------------
+- once in 2 weeks or one meeting for one sprint . 
+- every body will attend.
 -meeting happens on day 1 of sprint.
+-conducted by scrum master
 -scrum master will decide , assign the userstories.
-to all team memebers, to be complted in 2 weeks .
-
-M[planning]   T [scrum]   W [scrum]   TH[scrum]   F[scrum]
-M[scrum]   	  T [scrum]   W[scrum+dev close ]    TH[scrum]   F[scrum + review]
-
-
-Burn down chart: 
-----------------------
-Seen by scrum master using jira to check the over all status.
-WORK VS TIME chart.
-
-
-Retro:
-- meeting once in a month.
-- feedback from team based on previous sprint experiences.
-->What went good
-->What went wrong
-->What has to be improved.
+to all team memebers, to be completed in 2 weeks .
+ 
 
 Review :
-Should be done by leads (Test/Dev).
-Review should complete by 2nd week of wednesday.
-Review points to be addressed by dev/testers by 2nd week of wednesday
+-----------------
+-Should be done by leads (Test/Dev) WITH the individual contributor.
+-Review should complete by 2nd week of wednesday.
+-Review points to be addressed by dev/testers by 2nd week of wednesday
 
 Demo:
 ------
+-Once in the sprint
+- everyone will attend 
 -show the new features completed in last two weeks to the stackholders.
 -Demo is the presentation of the new features shown to the  client/product owner.
 Demo happens on Friday(last day of sprint).
 Demo feedback points to be addressed in next sprint.
 Demo should be given by Dev/Tester.
 
+
+Retro:
+---------------
+- meeting once in a month.
+- entire team will attend .
+- share feedback based on previous sprint experiences.
+  a)What went good
+  b)What went wrong
+  c)What has to be improved.
+
+
+meeting summary:
+--------------------
+sprint is a 2 weeks window
+
+1st week :M[planning]   T [scrum]   W [scrum]   TH[scrum + grooming]   F[scrum]
+2nd week :M[scrum]   	T [scrum]   W[scrum+review +dev close + grooming ]    TH[scrum]   F[scrum + demo ]
+
+
+BackLog: [taken care by product owner ]
+---------------------------------------------------------------
+-Future Epics/User stories.
+- Yet to complete.
+-Product owner prepares the epic and user stories.
+- Not finalized requirements 
+
+If the requirements are finalized then backlog item is converted to EPIC.
+
+Burn down chart: 
+----------------------
+Seen by scrum master using jira to check the over all status.
+WORK VS TIME chart.
 
 Spillover(unfinished):
 ----------

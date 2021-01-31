@@ -1,5 +1,3 @@
-
-
 Manual Testing:
 -----------------
 -Test cases are executed manually by tester , without using any tool.
@@ -9,22 +7,22 @@ Manual Testing:
 - checks the quality of the system and delivers bug-free product to the customers.
 - we will check every inch of the application; 
 - No tool , no code , no script 
-- reporting we will use excel sheet
-- Not a virtual testing , its more like visualy testing + real/live testing.
 - less investment
 - user experience + human observation.
 - tester needs to be very patient, creative &  open minded.
 - testing is repetitive and boring.
+- Not a virtual testing , its more like visualy testing + real/live testing.
+- reporting we will use excel sheet
 
   
 when should we do manual testing:
 -----------------------------------
 - use when automation testing is not applicable.
-- GUI application 
 - short term projects (low invest + time constraint)
 - long term project (initial stages till the app is stable)
-- adhoc testing.
 - Test Cases for which the requirements are frequently  changing.
+- adhoc testing.
+- GUI application 
 - defect tracking and analysis 
 
 
@@ -32,10 +30,10 @@ when should we do manual testing:
 How to perform Manual Testing:
 ------------------------------------
 - Understand Requirements
-- Prepare test plan and test cases document
+- Prepare test plan and test cases document and RTM document.
 - Review the test cases  ( QA lead) and correct the test cases. 
 - Prepare the environment.ex: creating test data,db data etc....
-- Excute the test cases manually on the application.
+- Excute the test cases manually on the application and update the test case document
 - Create defects if the app fails to meet the requirements ; using JIRA or any defect tracking tool.
 - Retest once the defect is fixed.
 - Update the test status in the excel [for status column mark as "success" or "fail"]
@@ -47,8 +45,8 @@ Automation testing:
 --------------------
 - Execute the test cases using the automation tool/software.
 - saves time, effort 
-- convert every test case into a script uisng code/tool.
-and generate reporting tool.
+- convert every test case into a script using code/tool.
+and generate reporting using tool.
 - no human intervention required. We can record and play the test cases .
 
 
@@ -57,7 +55,8 @@ Why automation?
 - Manual is time and money consuming
 - testing the multilingual[multi lang] is easy
 - completes the test execution early.
-- does not require Human intervention. We can schedule the test case to run at any time (using jenkins).
+- does not require Human intervention.
+ We can schedule the test case to run at any time (using jenkins).
 - helps increase Test Coverage
 - helps reporting the test results.
 - perf , load testing ,security .
@@ -65,17 +64,14 @@ Why automation?
 - good for long term projects.
 - test cases repeatedly executed/time-consuming.
 - multi browser testing is simpified  and tested at the same time.
-
-
-
-
+-  regression testing can be completed in short time. 
 
 
 how to do automation testing:
 ------------------------------
 - Select the automation tool suitable for the project and the type of testing.
 - Understand Requirements
-- Prepare test plan and test cases document.
+- Prepare test plan and test cases document and RTM doc
 - Review the test cases ( QA lead) and correct the test cases. 
 - Prepare the environment.ex: creating test data,db data etc....
 - for every test case in excel write the respective code/script accordingly 

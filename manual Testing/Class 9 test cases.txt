@@ -83,6 +83,10 @@ Tasks:
 
 
 
+requirements-traceability-matrix document:
+-------------------------------------------
+- Document for mapping the requirement with test cases.
+- collets all requirements and for every reuirement what are the test cases ids's.
 
  
 
