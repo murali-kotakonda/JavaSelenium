@@ -1,18 +1,17 @@
 package project;
 
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import common.Commons;
+import common.BaseTest;
 
-public class TestOpeartionsTour  {
+public class TestOpeartionsTour extends BaseTest{
 
-	static WebDriver driver = Commons.getDriver();
-	
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void test() throws InterruptedException {
 
 		driver.get("http://www.newtours.demoaut.com/");
 
@@ -22,18 +21,20 @@ public class TestOpeartionsTour  {
 
 		regLink.click();
 
-		testVisibleAndEnable("firstName", "lastName", "phone", "userName", "address1");
-
+		
+		testVisibleAndEnable(
+				"firstName","lastName","phone","userName","address1");
+		
 		WebElement fName = driver.findElement(By.name("firstName"));
 		fName.sendKeys("krishna"); // enter values to field
 
 		driver.findElement(By.name("lastName")).sendKeys("singamreddy");
-
+		
 		Thread.sleep(3000);
 		driver.findElement(By.name("lastName")).clear();
-
+		
 		driver.findElement(By.name("lastName")).sendKeys("kumar sharnma");
-
+		
 		driver.findElement(By.name("phone")).sendKeys("87878787");
 		driver.findElement(By.name("userName")).sendKeys("xyz@gmail.com");
 
@@ -52,27 +53,32 @@ public class TestOpeartionsTour  {
 
 		driver.findElement(By.name("confirmPassword")).sendKeys("test1234");
 
+		
 		Select countryDropdown = new Select(driver.findElement(By.name("country")));
-		// countryDropdown.selectByIndex(1);
-		// countryDropdown.selectByValue("6");
-
-		countryDropdown.selectByVisibleText("ANGOLA ");
-		;
-
+		//countryDropdown.selectByIndex(1);
+		//countryDropdown.selectByValue("6");
+		
+		
+		countryDropdown.selectByVisibleText("ANGOLA ");;
+		
+		
+		
 		Thread.sleep(3000);
-
+		
 		driver.findElement(By.name("register")).click();
-
+		
 		Thread.sleep(3000);
 	}
-
-	private static void testVisibleAndEnable(String... names) {
-		for (String name : names) {
+	
+	
+	private void testVisibleAndEnable(String... names){
+		for(String name: names){
 			WebElement fName = driver.findElement(By.name(name));
-			Assert.assertTrue(name + " is expected for display", fName.isDisplayed());
-			Assert.assertTrue(name + " to enable", fName.isEnabled());
-
+			Assert.assertTrue(name+ " is expected for display", fName.isDisplayed());
+			Assert.assertTrue(name +" to enable", fName.isEnabled());
+	
 		}
 	}
+
 
 }

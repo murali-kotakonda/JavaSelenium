@@ -1,30 +1,77 @@
-Funtional testing:
+Functional testing:
 ------------------
 ->Test New Features (using test cases)
+-> Database testing
 -> Test Defects  (ReTesting )
 -> Before Regression perform sanity + smoke
 -> Regression  [just before the delivery]
 -> Non Funtional Testing.
 -> User Acceptance Testing  (customer)
 
-coverage/gudelines under funtional testing:
+
+
+coverage/guidelines/testing techniques under functional testing:
 ------------------------------------------
 a)Object Properties testing:
-->Every object has certain properties.
-ex: in a web page textbox , password field, state dropdown.
+b)Error handling/coverage testing:
+c)calculation /manipulation testing:
+d)Links coverage:
+e)Boundary Value analysis:[BVA]
+f)Equivalence class partitioning (ECP)
+g)decision table based testing
+h)Internationalization  testing
+i)state transition
 
-textbox is an object -> enabled, disabled , size , displayed,onchange, focus
+input domain coverage (BVA, ECP)
+cookies and sessions -> NA
+I18N testing (currancy change)
+localization testing (testing particular location 
+ex: currancy change
+    chnage the date + time format
+	collect id (voter id or ssn)
+	
+	
+	
+coverage/guidelines under functional testing:
+------------------------------------------
+a)Object Properties testing:
+In web page everything is an object
+And every object has properties and behaviour
+Every obj has certain properties
+ex:
+in a Registration page 
+username textbox , 
+password field, 
+state dropdown.
 
-
-password is object -> we type should not be visible + if we chose to show password should show
-
-state dropdown obj -> if we change state then city dropdown chnages...
+ text box is an obj.
+ properties of textbox: enable + disable + onchange +size + isdisplayed
+ password is object
+ we type should not be visible + if we chose to show password should showsize + isdisplayed +onchange
+  
+1.on page open un + pwd is enabled.
+state dropdown obj -> if we change state then city dropdown changes...
 city dropdown obj ->
 
+2.password should not be visible.
+3.on state change + city also changes.
 
+During  functional testing tester has to validate the properties of every object at run time.
 
 b)Error handling/coverage testing:
-negative scenarios testing.
+applicable for only for negative scenario.
+validate he error message shown by the app is as expected
+
+ERRORS:
+->when db is down , 
+->when app is crashed.
+->When 3rd party app is down
+-> error with invalid input  like (age<18)
+or non existence data
+
+In all these cases the app should throw meaningful messages.
+
+Rules for tester
 -> tester has to provide  all possible invalid data and check how the application is behaving for every page.
 -> test the error message displayed to customer.
 -> Test the expected erorr message has to be displayed on the screen.
@@ -33,52 +80,115 @@ ex:
 1."Please enter valid password"   
 --Not a meaning error message
 2."Password should be min 5 chars and max 10 chars".
--- meaningfull message.
+-- meaning full message.
+3. Instead of message "LoginName Not accepted."
+ use "LoginName is already in use".
 
-[Provide invalid data and test how app responds  +   what is the message + is the message meaningful?]
-	
+Approach:
+[Provide invalid data +
+ test how app responds  +  
+ what is the message + 
+ is the message meaningful?]
 	
 	
 c)calculation /manipulation testing:
 ------------------------------------
-ex:
-1.debit + credit 
-check the final bal for both accounts.
+Used mostly in the cases where mathematical calculations are applicable.
+
+Approach:
+1.provide some vaues to the page
+2.Process the activity
+3.compare the output from the page with the expected value.
+
+CASE#1:
+CLOTHING - 50%
+Groceries - 0%
+
+
+c1 - 100
+c2 - 200
+c3 - 300
+
+g1 - 400
+g2 - 500
+g3 - 600
+
+expected :1800
+
+CASE#2:
+Transaction (debit + credit) 
+check the final balance for both accounts before and after the transaction
+Assume user1 transfer 1000 to user2
+
+BEFORE:
 USER1 : 6000
-user2 : 9000
-user1 transfers 1000 to user2 
+USER2 : 9000
+
+AFTER:
 USER1 : 5000
-user2 : 10000
+USER2 : 10000
 
-2. add products to cart
-in final bill the total amount to be paid = sum of prices of all products 
-
-+ additionaly apply discount + taxes ===> final price.
-
-
+CASE#3:
+Add products to cart.
+In final bill the total amount to be paid = sum of prices of all products 
++ additionally apply any discount + coupons + taxes ===> final price.
 ex: financial , banking , ecommerce.
-
 
 d)Links coverage:
 ------------------
 -applicable for the web applications.
+-application has links as agreed by business.
+
+what should be covered:
+Test link , button or any navigations to backend
+
+Tests to cover:
 - check if the expected links are displayed on the page.
-- check if the links are displayed in the expcted layout/position.
-- check invalid links should not links.
+- check if the links are displayed at correct place(layout/position) with valid text.
+- check unnecessary links should not show on page
 ex: on home we would expect login + register 
+- check if the links are working ? 
+- navigating to the target page as expected , but not to external pages.
 
-- check if the links are working ? navigating to the target page as expected??
 - Links can be internal or external .
-app has links as agreed by business.
+-> links of same app
+-> links to 3rd parties
 
 
+Input domain testing:
+----------------------
+For a given input field tester has to validate the data provided to the field
+w.r.t. value and length.
+
+EX:
+user name allows only alphabets   [value ]
+user name size is 6 to 8       [lenth] , range 
+
+we should test both +ve and -ve cases
+for +ve data => app should allow
+for -ve data => app should not allow
+
+we have two techniques for testing above requirement.
+ = > Equivalence class partition   - Value check
+ = > Boundary value analysis.    - Length check
+
+focus is on the coverage but on the number of test cases.
+
+BVA for username : refer the diagram
+ECP for username : refer the diagram
 
 e)Boundary Value analysis:[BVA]- LENGTH/range
 ------------------------------
-ex: username should be between 6 chars and max 10 chars.
-BVA is used when the requirement ahs boundaries for testing.
-testcases:
+Boundary value analysis is based on testing at the boundaries between partitions. 
+It includes maximum, minimum, inside or outside boundaries, typical values and error values.
+BVA is used when the requirement has boundaries for testing.
+Ex1:
+Input condition is valid between 1 to 10
+Boundary values 0,1,2 and 9,10,11
 
+
+Ex2: 
+UserName should be between 6 chars and max 10 chars.
 testcases are:
 min-1 , min , min+1
 max-1, max, max+1
@@ -96,29 +206,95 @@ max= 10
 
 f)Equivalence class partitioning (ECP):- Value
 ---------------------------------
-ex: 1.mobile num should be exactly 10 digits
-2.username allows only alphabets only capitals allowed.
+Equivalent Class Partitioning allows you to divide set of test condition into a partition which should be considered the testing. 
+This software testing method divides the input domain of a program into classes of data from which test cases should be designed.
+ 
+Case#1:
+username filed allows only lower case.
 
-MobileNum
----------
-10     - Valid  -> 9090909090
-9 , 11 - Invalid -> 999999999 & 90909090901
+VALID : [a-z]  
+        ex:kumar
+Invalid : 1. [A-Z] capitals
+                ex:KUMAR   
+          2. [0-9] digits
+                ex: 123445
+          3. [.!@#$%^&*()_+...etc] special characters
+               ex:*&*&*&:>?<{}+
+          4.alphanumeric
+               ex: aAbHJhjhflbg!@#$%123434     
+               
 
-Username
----------
+Case#2:
+username allows only alphabets only capitals allowed.  
+
 only alphabets lower case - InValid  -> user
 only alphabets upper case - Valid  -> USER
 only digits  - Invalid -> 1213
 special chars - Invalid -> &&%$
+alpha numeric
+
+
+Case#3:
+There are 4 types of users :
+ADMIN ,AGENT, CUSTOMER, RETAILER.
+
+-For account page only admin has access.
+
+test cases:
+1.Access as ADMIN
+2.Access as AGENT
+3.Access as CUSTOMER
+4.Access as RETAILER
+5.Access as invalid user
+
+
+summary:
+
+1.MobileNum should be exactly 10 digits -> USE BVA + ECP
+2.username allows 6 - 8 Characters-> USE BVA
+3.username allows only alphabets and only . and _ are allowed  -> USE ECP
 
 
 g)decision table based testing
 -------------------------------
+-This technique is used for functions which respond to a combination of inputs or events.
+If there are large input set of combinations, then divide it into smaller subsets which are helpful for managing a decision table.
+
+For example, a submit button should be enabled if the user has entered all required fields.
+
+Case#1:
+In a registration page 
+name, email and message are the text fields
+Registration will proceed with valid data for name, email and message.
+
+Refer diagram
+
+CASE#2:
+Req: 
+- Get transaction with in 30 days
+- From Time and toTime are optional
+
+
+       NoInput   Input <30   Input>30
+D<30    T          T           F
+D>30    F          F           F
+
+
+  
+steps:
+Enlist the inputs in rows
+Enter all the rules in the column
+Fill the table with the different combination of inputs
+In the last row, note down the output against the input combination.
+
 used when we have multi events/combinations in a requirement.
--> ex: login page 
-Un has to be  10 chars
-pwd has to be 8 chars
-un & pwd if both are valid then login is success.
+
+CASE#3: 
+In a login page 
+- Username has to be  10 chars,only alphabets
+- password has to be 8 chars, only alphabets
+- if UserName & password both are valid then login is success.
+Use BVA + ECP + Decision tree
 
 SYNTAX CORRECT: 
 
@@ -127,9 +303,9 @@ T - True
 
 un          pwd        result
 ------------------------------
-F(<10)      F(<8)        Fail
-F(<10)      T(=8)        Fail
-T(=10)      F(<8)        Fail
+F(<10)      F(<8)        FAIL
+F(<10)      T(=8)        FAIL
+T(=10)      F(<8)        FAIL
 T(=10)+V    T(=8)+I      FAIL
 T(=10)+I    T(=8)+V/I    FAIL
 T(=10)+V    T(=8)+V      PASS
@@ -140,19 +316,62 @@ state transition:
 -> in a single flow the state changes based on input/usertype.
 -> test the state changes as expected.
 
-ex: 
-1.user fail attempts to login has recahed 5, then his account is locked.
+In State Transition technique changes in input conditions change the state of the Application Under Test (AUT). 
+This testing technique allows the tester to test the behavior of an AUT. 
+
+The tester can perform this action by entering various input conditions in a sequence. 
+
+In State transition technique, 
+the testing team provides positive as well as negative input test values for evaluating the system behavior.
+
+ex:
+1. one person can add only one product during Flipkart sale.
+	Test cases:
+	1.Add product when nothing in cart.
+	   state changes to not eligible
+	2.Add product when one product in cart in cart
+    Before adding: Eligible
+	After adding : Not eligible
+
+2.After 30 days dont access the features as Licence expired.
+
+States:
+Not Expired
+Expired
+
+Test cases:
+1.Test all the features within 30 days
+2.Test all the features after 30 days
+
+
+3.LoggedinUser vs Loggedout user
+Ex purcahse product in amazon 
+access product -> both
+add to cart -> both
+purchase -> only loggedin user can purchase.
+
+
+4. privilege customer vs normal customer.
+-Access amazon prime content without subscription.
+-same user make payment for subscription.
+and Access amazon prime content withsubscription.
+
+
+Example:
+if the user enters a valid password in any of the first three attempts 
+the user will be able to log in successfully. 
+If the user enters valid username but  invalid password in the first or second try, 
+the user will be prompted to re-enter the password. When the user enters password incorrectly 5th time, 
+the action has taken, and the account will be blocked.
 ACTIVE ---> BLOCKED.
 
-2.LoggedinUser vs Loggedout user
-ex: ebay 
-acces product -> both
-add to cart -> both
-purchae -> only loggedin can purchse.
-
-
-3.privilaged customer vs normal customer.
-ex: featues
+S.No	Action	Username	Password	Status
+1	Attempt#1	T	          F         ACTIVE
+2	Attempt#2	T	          F	        ACTIVE
+3	Attempt#3	T	          F	        ACTIVE
+4	Attempt#4	T	          F	        ACTIVE
+5	Attempt#5	T	          F	        BLOCKED
+6	Attempt#5	T	          T        LOGIN FAILS
 
 
 Internationalization  testing:
@@ -161,14 +380,19 @@ Internationalization  testing:
 Test the application to support the page in diff language.
 -> currancy change based on nation
 -> date + local information has to be tested.
+-> locality testing
+localization testing 
+(testing particular location )
+ex: 
+1.currancy change
+2.change the date + time format
+3.collect voter id for indians
+collect ssn for us
+	
 
 
 
 
-
-
-
- 
 
 
 

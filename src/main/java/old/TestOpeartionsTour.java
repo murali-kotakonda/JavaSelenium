@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import common.BaseTest;
+
 public class TestOpeartionsTour extends BaseTest{
 
 	@Test

@@ -1,12 +1,14 @@
-package old.tests2;
+package project;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import common.BaseTest;
 
-public class WaySms1  extends old.BaseTest{
+
+public class WaySms1  extends  BaseTest{
 
 	@Before
 	public void beforeEveryTime(){

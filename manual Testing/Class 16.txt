@@ -1,15 +1,17 @@
-Regression is costly + time consuming.
-Perf testing follows after Regression.
-
-Order:
---------
+Order of testing :
+-------------------------------
 -> Test New Features (using test cases)
 -> Test Defects  (ReTesting )
 -> Regression  ------> Heavy + costly + time consuming.
 -> Non Funtional Testing
 -> UAT (customer)
 
-Introduce additional testing for Time saving:
+
+Regression is costly + time consuming.
+Perf testing follows after Regression.
+
+Introduce additional testing(Smoke Testing and Sanity Testing) for Time saving:
+---------------------------------------------------------------------------------------
 -> Test New Features (using test cases)
 -> Test Defects (ReTesting)
 -> Smoke + Sanity Testing 
@@ -21,7 +23,6 @@ Introduce additional testing for Time saving:
 
 Smoke Testing and Sanity Testing:
 -------------------------------------
-
 Smoke:
 -------
 - mostly done using the tool.
@@ -32,11 +33,11 @@ Smoke:
 ->Minor changes/fixes .
 ->if Smoke fails , then no need to go for regresion and create HIGH defect.
 
-
 Sanity :
 -----------
 ->UAT TESTING done by tester.
-->basic navigation, basic flow testing .
+->new functionalities , bug fixes.
+-> basic navigation, basic flow testing , 
 ->Minor changes/fixes .
-->if sanity fails , then no need to go for regresion and create defect.
+->if sanity fails , then no need to go for regression and create defect.
 

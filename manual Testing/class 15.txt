@@ -4,8 +4,8 @@ Functional Testing:
 -> blackbox testing
 only on requirement based testing.
 check the behaviour of system.
--> Testing the new features(Test cases) + existing features(regression) + Defects(retesting).
-db test,
+-> Testing the new features(Test cases) + existing features(regression) + Defects(reTesting).
+db testing,
 regression
 
 
@@ -35,7 +35,7 @@ After Retesting we need to do the Regression Testing.
 -> a) Tester created defect for login scenario
    b) Dev will fix the issue  and will assign defect back to tester for confirmation.
    c)Tester will retest only the login scenario.
-   d) Tester closes the defect.
+   d) Tester closes the defect and repeat the same for all defects
    e) Perform Regression Testing before the delivery.
 
    
