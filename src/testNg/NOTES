@@ -1,4 +1,7 @@
-TestNG is a testing framework which has been inspired by JUnit. 
+- TestNG is a testing framework which has been inspired by JUnit. 
+-is a test engine using which we will run the test cases.
+- use annotations for writing the test cases.
+
 TestNG is a more powerful testing framework than Junit as it contains more powerful functionalities such as:
 
 TestNG annotations:
@@ -35,9 +38,17 @@ Parallel execution of test cases, i.e., running multiple test cases is only poss
 
 Eclipse TestNg integration:
 --------------------------------
-install software
-TestNG - https://dl.bintray.com/testng-team/testng-eclipse-release/
+Help>install new software
+1.
+Name: TestNG 
+Url: https://dl.bintray.com/testng-team/testng-eclipse-release/
+2.
+TestNG P2 - https://dl.bintray.com/testng-team/testng-p2-release
+3.
+Name: TestNG (depends on the user)
+Location: https://dl.bintray.com/testng-team/testng-eclipse-release/6.14.3/
 
+https://marketplace.eclipse.org/content/testng-eclipse
 
 TestNG Annotation:
 -------------  
@@ -90,17 +101,12 @@ Marks a class or a method as a part of the test.
 Class setup:
 --------------------------------
 Create Test class
-The test class contain test method for every test case
-
-
-
-
-How to run the test cases:
--------------------------------------
-Write a test class
 write one method for one test case -[test method]
 every test method has @Test annotation.
-[Every test method has @Test annotation before the method delaration.]
+[Every test method has @Test annotation before the method declaration.]
+
+ 
+
 
 
 syntax of Test class:

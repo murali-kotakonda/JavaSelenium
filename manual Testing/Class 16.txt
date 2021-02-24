@@ -3,7 +3,7 @@ Order of testing :
 -> Test New Features (using test cases)
 -> Test Defects  (ReTesting )
 -> Regression  ------> Heavy + costly + time consuming.
--> Non Funtional Testing
+-> Non Funtional Testing like perf , load , stress 
 -> UAT (customer)
 
 

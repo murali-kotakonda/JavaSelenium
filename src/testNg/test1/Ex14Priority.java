@@ -4,7 +4,7 @@ package test1;
 By default, methods annotated by @Test are executed alphabetically . 
 
 if priority is specified for every test method then the methods are executed in the order of the priority.
-if two methods has the same priority then methods are executed in the order of the method name.
+- if two methods has the same priority then methods are executed in the alphabetical order of the method name.
 
 */
 import org.testng.annotations.Test;

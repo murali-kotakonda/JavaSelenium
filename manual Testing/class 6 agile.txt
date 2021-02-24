@@ -12,6 +12,8 @@ Techincal owner --> Tech leads
 Quality owner  --> Testing leads 
 Developes (UI, JAVA,DB),
 Testers
+Dev Ops
+
 Scrum Master
 ---------------------
 -certified in agile 
@@ -127,6 +129,26 @@ Tasks:
 - team member will specify how many hours spent for the task.
 
 
+BackLog: [taken care by product owner ]
+---------------------------------------------------------------
+-Future Epics/User stories.
+- Yet to complete.
+-Product owner prepares the epic and user stories.
+- Not finalized requirements 
+
+If the requirements are finalized then backlog item is converted to EPIC.
+
+
+Burn down chart: 
+----------------------
+Seen by scrum master using jira to check the over all status.
+WORK VS TIME chart.
+
+Spillover(unfinished):
+----------
+Any uncompleted work in current sprint will carry over to next sprint.
+
+ 
 
 
 Meetings:
@@ -203,22 +225,6 @@ sprint is a 2 weeks window
 2nd week :M[scrum]   	T [scrum]   W[scrum+review +dev close + grooming ]    TH[scrum]   F[scrum + demo ]
 
 
-BackLog: [taken care by product owner ]
----------------------------------------------------------------
--Future Epics/User stories.
-- Yet to complete.
--Product owner prepares the epic and user stories.
-- Not finalized requirements 
 
-If the requirements are finalized then backlog item is converted to EPIC.
 
-Burn down chart: 
-----------------------
-Seen by scrum master using jira to check the over all status.
-WORK VS TIME chart.
 
-Spillover(unfinished):
-----------
-Any uncompleted work in current sprint will carry over to next sprint.
-
- 

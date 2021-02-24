@@ -26,7 +26,7 @@ driver.navigate().forward();
 Req:
 1.Open gmail.com
 2.wait for 5 seconds
-3.perfrom refresh
+3.perform refresh
 4.Open youtube.com
 5.wait for 5 seconds
 6.Perform back operation  ====> it will go to gmail.com

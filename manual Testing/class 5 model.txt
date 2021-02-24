@@ -56,6 +56,7 @@ testing + deployment + maintainance..
 - testing starts early
 - defect fixing starts early
 - all resources are properly utilized.
+- any change in requiremnet can be adjusted.
 
 - process model that contains continuous iteration of the 
 phases (coding / testing ) 

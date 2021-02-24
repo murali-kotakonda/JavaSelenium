@@ -36,21 +36,21 @@ Types of applications:
 - we have static and dynamic web apps.
 
 3.web services application:
-[consumer na dprovide are involved.]
+[consumer and provider are involved.]
 one business app interacts with anothet business application.
 ex1:
-enduser ------->   southHold Travels   ------->   AirAsia 
+enduser ------->   Red Bus Travels   ------->   Orange 
                       [Java]                      [Python]
 Heterogeneous apps can communicate with each other using webservcies.
 
-southHold Travels  ==> consumer of web service
-AirAsia  == provider of web service
+Red Bus Travels  ==> consumer of web service
+Orange  == provider of web service
 
-southHold Travels  is a web application
-AirAsia is a web services application so that any app can talk with airasia.
+Red Bus Travels  is a web application
+Orange is a web services application so that any app can talk with Red Bus Travels .
 
 ex2:
-endusers --- > justeat --> all restaurents
+endusers --- > Swiggy/Zomato --> all restaurents
 
 ex3:
 endusers ----> bookmyshow -------> any city, any theatre
@@ -72,7 +72,7 @@ B-B ===> WE NEDD Web services
 
 
 4.Mobile apps :
-- feature in web adn mobile pp might not b same.
+- feature in web and mobile pp might not b same.
 testing on play store and apple store
 android/ ios/ apple/ apps.
 - install in mobile using (apple store/ play store)

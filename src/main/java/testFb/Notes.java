@@ -5,7 +5,7 @@ package testFb;
 Using selenium we need to work on web page elements.
 Steps:
 ------------
-1.get the web element object for the page element usiing driver.
+1.get the web element object for the page element using driver.
 
 How to get web element objects:
 -----------------------------------------
@@ -21,13 +21,14 @@ in selenium locating the web element we have following Options:
 6.By css
 7.By class name
 
-findElement() – finds a single web element and returns as a WebElement object.
-findElements() – returns a list of WebElement objects matching the locator criteria.
+findElement() 
+– finds a single web element and returns as a WebElement object.
+- Find Element command throws NoSuchElementException if it does not find the element matching the criteria.
+- Find Element command returns the web element that matches the first most element within the web page
 
-Find Element command returns the web element that matches the first most element within the web page
-Find Elements command returns a list of web elements that match the criteria.
-Find Element command throws NoSuchElementException if it does not find the element matching the criteria.
-Find Elements command returns an empty list if there are no elements matching the criteria
+findElements() – returns a list of WebElement objects matching the locator criteria.
+- Find Elements command returns a list of web elements that match the criteria.
+- Find Elements command returns an empty list if there are no elements matching the criteria
 
 
 
@@ -52,35 +53,70 @@ Text Box:
   <input type="text" id="myname" name="uName" />
    WebElement item = driver.findElement(By.name("uName"));  
  
- 2.How to get the web element for the text field using name?
+ 2.How to get the web element for the text field using id?
   <input type="text" id="myname" name="uName" />
    WebElement item = driver.findElement(By.id("myname"));  
  
  3.How to check if the  web element is displayed?
-  item.isDisplayed()
+ use "item.isDisplayed()"  
+   -returns true if element is displayed
+   -returns false if element is not displayed
   
  4.How to check if the  web element is enabled?
- item.isEnabled()
+ use "item.isEnabled()"
+   -returns true if element is Enabled
+   -returns false if element is not Enabled
  
- 5.How to enter the text to the text field?
+ 5.How to enter the text to the text-field/password/text area/popup?
  	item.sendKeys("kumar");
  	
  6.How to clear the text for the text field?
  item.clear();
  
- 7.How to check if the web element is text box?
-  item.getAttribute("type") value should be "text"
-  
-     
-   	//<input type="text" name="uName1" readonly="readonly" value="kumar">
-   WebElement element = driver.findElement(By.name("uName1"));
+ 7.How to check if the web element is text box?  
+    <input type="text" id="myname" name="uName" />
+   call   item.getAttribute("type") method
    
-    //how to get element attribute
-	 System.out.println(element.getAttribute("type"));
-	 System.out.println(element.getAttribute("name"));
-     System.out.println(element.getAttribute("readonly"));
-     System.out.println(element.getAttribute("value"));
+   ex:
+    String type = item.getAttribute("type") ;
+    // type should be "text"
+  
+  8.How to check if the web element is password?  
+    <input type="password" id="myname" name="uName" />
+      String type = item.getAttribute("type") ;
+    // type should be "password"
+  
+  9.How to check if the web element is hidden?  
+     <input type="hidden" id="myname" name="uName" />
+        String type = item.getAttribute("type") ;
+    // type should be "hidden"
+  
+  10.How to check if the web element is radio?
+   <input type="radio" id="myname" name="uName" />
+        String type = item.getAttribute("type") ;
+    // type should be "radio"
+   
+  11.How to check if the web element is checkbox?
+    <input type="checkbox" id="myname" name="uName" />
+       String type = item.getAttribute("type") ;
+    // type should be "checkbox"
     
+  
+  
+ <input type="text" name="uName1" readonly="readonly" value="kumar" class="text-class" id="uNameID">
+ 12. How to get all the attributes of the web element?
+  
+  WebElement element = driver.findElement(By.name("uName1"));
+  
+  
+   System.out.println(element.getAttribute("type")); // text
+   System.out.println(element.getAttribute("name"));  //uName1
+   System.out.println(element.getAttribute("readonly")); //true
+   System.out.println(element.getAttribute("value"));  //kumar
+   System.out.println(element.getAttribute("class"));   //text-class
+   System.out.println(element.getAttribute("id")); //uNameID
+  
+  
 */
 
 public class Notes {

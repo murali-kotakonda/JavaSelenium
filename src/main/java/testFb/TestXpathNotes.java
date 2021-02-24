@@ -48,6 +48,15 @@ public class TestXpathNotes {
 		webElement element2 =driver.findElement(By.xpath("//input[@value='ADD']"));
 		
 		
+		
+<input type="text" name="username"  id ="myName"/>
+ we1 = self.driver.find_element_by_name("username")
+ we2 = self.driver.find_element_by_id("myName")
+ we3 = self.driver.find_element_by_xpath("//input[@name='username']")
+ we4 = self.driver.find_element_by_xpath("//input[@id='myName']")
+ we5 = self.driver.find_element_by_tag("input")
+
+		
 		5. <input type="text" name="age"/>
 		WebElement element3=driver.findElement(By.xpath("//input[@name='age']"));
 		
@@ -234,4 +243,35 @@ public class TestXpathNotes {
 	       */
 	}
 }
+
+/* 
+ 
+
+
+similar match:
+-----------------------------------------------
+
+syntax: tag[contains(@attribute, ‘value‘)]  -> serach by tagname + attribute similar match
+
+<a href="https://www.gmail.com"> click here for gmail page </a>
+
+we1 =  driver.find_element_by_tag("a")
+we3 =  driver.find_element_by_link_text(" click here for gmail page ") # exact match
+we4 =  driver.find_element_by_partial_link_text("gmail page") #similar match
+we2 =  driver.find_element_by_xpath("//a[@href='https://www.gmail.com']") #exact attribute match
+we5 =  driver.find_element_by_xpath("//a[contains(@href,'gmail')]") #similar attribute match
+
+
+'and; 'or' usage:
+---------------------------------------------------
+<input type="submit" name="submit">
+<input type="button" name="CLEAR">
+<input type="button" name="btnReset">
+
+
+
+webelements =driver.find_element_by_xpath("//input[@type='submit' or @name='btnReset']") # using or fetches two buttons
+webelements =driver.find_element_by_xpath("//input[@type='button' and @name='CLEAR']") # using and
+
+ */
 	

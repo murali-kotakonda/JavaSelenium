@@ -15,6 +15,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
    driver.manage().deleteAllCookies();
   
   
+-  How to maximize the window?
+	Options manage = driver.manage();
+	manage.window().maximize();
+		  
+-   How to define the pageTimeout?
+    manage.timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
+
+-   How to specify the implicit timeout for page elements?
+    manage.timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+  
  - How to get the page cookies?
    Set<Cookie> cookies = driver.manage().getCookies();
 		for(Cookie cookie:cookies) {
