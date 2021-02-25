@@ -16,6 +16,17 @@ a[href^="some value here"]
 CSS:
 --------
 
+<p class="show"> Hello1 </p>
+<p class="show"> Hello2 </p>
+<p class="show"> Hello3  </p>
+<p class="show"> Hello4  </p>
+
+
+
+css selector: $$("p.show")
+-search by tag + class name
+
+
 1.Find element whose tag is input and class "attribute" name as login 
 driver.findElement (By.cssSelector ("input.login"));
 

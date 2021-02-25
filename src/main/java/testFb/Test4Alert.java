@@ -24,8 +24,9 @@ public class Test4Alert extends BaseTest{
 	}
 	
 	/**
-	 How to switch to alert?
+	 How to switch to alert and get alert obj?
 	  Alert alert = driver.switchTo().alert();	
+
 	  
 	 How to get alert message?
        String alertMessage= alert.getText();

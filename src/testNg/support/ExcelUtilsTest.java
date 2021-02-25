@@ -32,12 +32,10 @@ public class ExcelUtilsTest {
 			entity.setUmlId("testUma"+i);
 			list.add(entity);
 		}
-		
 		MillsListResponse response = new MillsListResponse();
 		response.setTotalCount(500);
 		response.setMillListEntities(list);
 		File file = ExcelUtils.getFile(response);
-		
 		
 	}
 
