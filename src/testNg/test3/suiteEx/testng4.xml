@@ -2,7 +2,7 @@
    <test name = "register">
       <classes>
          <class name = "test2.suite.Test4" />
-         <class name = "test2.suite.Test41" />
+         <class name = "test2.suite.Test5" />
       </classes>
    </test>
 </suite>
