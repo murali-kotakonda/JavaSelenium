@@ -14,23 +14,22 @@ public class TestXpathNotes {
 		//tagName     --> all elements with that tag name
 		// tagName[@attributename ='attributevalue']     --> all elements with that tag name and attrbute name 
 		
-		ex:
+		 
+		Ex1:
 		<a href="https://www.gmail.com">click here</a>
-		xpath = //a[@href='https://www.gmail.com']    -> get element that has 'a' as tag name and href as 'https://www.gmail.com'
-		
-		
 		<a href="https://www.fb.com">click here</a>
-		xpath = //a[@href='https://www.fb.com']		  -> get element that has 'a' as tag name and href as 'https://www.fb.com'
-		   	
-		
-		//get web element for link1
-		WebElement link1=driver.findElement(By.xpath("//a[@href='https://www.gmail.com']"));
-				
-		
-		//get web element for link2
-		WebElement link2=driver.findElement(By.xpath("//a[@href='https://www.fb.com']"));
-		
-		
+
+		solution)
+		 -> get element that has 'a' as tag name and href as 'https://www.gmail.com'
+		 	WebElement element1 = driver.findElement(By.xpath("//a[@href='https://www.gmail.com']"));
+		    WebElement element2 = driver.findElement(By.cssSelector("a[href='https://www.gmail.com']"));
+
+		 -> get element that has 'a' as tag name and href as 'https://www.fb.com'
+		    WebElement element3 = driver.findElement(By.xpath("//a[@href='https://www.fb.com']"));
+		    WebElement element4 = driver.findElement(By.xpath("a[href='https://www.fb.com']"));
+
+
+		  
 		2.
 		<label id='error'>Enter values here</label>
 		WebElement webElement =driver.findElement(By.xpath("//label[@id='error']"))
@@ -50,11 +49,13 @@ public class TestXpathNotes {
 		
 		
 <input type="text" name="username"  id ="myName"/>
- we1 = self.driver.find_element_by_name("username")
- we2 = self.driver.find_element_by_id("myName")
- we3 = self.driver.find_element_by_xpath("//input[@name='username']")
- we4 = self.driver.find_element_by_xpath("//input[@id='myName']")
- we5 = self.driver.find_element_by_tag("input")
+WebElement  we1 = driver.findElement(By.name("username"))
+ WebElement we2 = driver.findElement(By.id("myName")
+WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
+ WebElement we4 = driver.findElement(By.xpath("//input[@id='myName']"))
+  WebElement element2 = driver.findElement(By.cssSelector("//input[@name='username']"))
+  WebElement element2 = driver.findElement(By.cssSelector("//input[@id='myName']"))
+ WebElement we5 = WebElement element2 = driver.findElement(By.tagName("input"))
 
 		
 		5. <input type="text" name="age"/>
@@ -135,6 +136,8 @@ public class TestXpathNotes {
 		 here label is tag
 		 'Enter message' is the text
 		 
+		
+
 		  <label id="xyz">Enter message<label>
 		  here label is tag
 		  id is the attribute , 'xyz' is attribute value
@@ -143,6 +146,14 @@ public class TestXpathNotes {
 		 Xpath = //label[text()='Enter message']   -> exact match
 		 Xpath = //label[contains(text() ,'message')]-> similar match
 		 
+		 Ex1.1:
+		  <label id="abc">Enter Id<label> 
+		  <label id="abc">Enter Name<label> 
+		   
+		  WebElement we1 =driver.findElement(By.xpath("//input[text()='Enter Id']"));
+		  WebElement we2 =driver.findElement(By.xpath("//input[text()='Enter Name']"));
+		   
+
 		 Ex2:
 		   <td>UserID</td>
 		   Xpath=//td[text()='UserID']
@@ -152,12 +163,12 @@ public class TestXpathNotes {
 		    driver.findElement(By.xpath("//a[text()='click here')]")).click();
 			driver.findElement(By.xpath("//a[contains(text(),'click')]")).click();
 			
-		Ex4:	
+		 Ex4:	
 			<button type="submit">Signup for Free</button>
 				Xpath= //button[text()=’ Signup for Free’]
 				Xpath=//button[contains(text(),’ Signup’ )]
 				Xpath= //button[@type='submit']
-		 */
+  		 */
 	      
 	      //<div class="col-sm-12 google-sign-form"><input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 "> <input type="text" placeholder="Full Name*" name="name" value="" class="form-control sign-up-input-2 "> <input type="email" placeholder="Work Email*" name="email" value="" class="form-control sign-up-input-2 ">
 	      driver.findElement(By.xpath("//a[text()='Complete Guide On TestNG Annotations For Selenium WebDriver']")).click();

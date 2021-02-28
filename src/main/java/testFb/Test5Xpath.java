@@ -26,7 +26,7 @@ public class Test5Xpath extends BaseTest{
 	@BeforeMethod
 	public void setup() {
 		super.setup();
-		driver.get(Commons.BASE_URL + "xpath1.html");
+		driver.get(Commons.BASE_URL + "xpath2.html");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

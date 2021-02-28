@@ -13,7 +13,8 @@ import common.BaseTest;
 Actions:
 ----------
  Action Class in Selenium is a built-in feature provided by the selenium for
- handling keyboard and mouse events. It includes various operations 
+ handling keyboard and mouse events. 
+ It includes various operations 
  such as multiple events clicking by control key, drag and drop events
  
  
@@ -53,6 +54,31 @@ public class Test7_1KeysGoogle extends BaseTest{
 		sleep(3);
 	}
 	
+
+	@Test // WORKING
+	public void test1() {
+		//create action object
+		Actions actions = new Actions(driver);
+		WebElement textField = getTextFieldByName("q");
+		textField.sendKeys("selenium");
+		sleep(3);
+		
+		actions.moveToElement(textField).click().build().perform();
+		sleep(3);
+		
+		actions.sendKeys(Keys.DOWN).build().perform();
+		sleep(3);
+		
+		actions.sendKeys(Keys.DOWN).build().perform();
+		sleep(3);
+		
+		actions.sendKeys( Keys.DOWN).build().perform();
+		sleep(3);
+		
+		actions.sendKeys( Keys.ENTER).build().perform();
+		sleep(3);
+	}
+
 	/**
 	Open Google.com
 	 search selenium

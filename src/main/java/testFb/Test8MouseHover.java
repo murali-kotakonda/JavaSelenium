@@ -21,7 +21,23 @@ public class Test8MouseHover extends BaseTest {
 		driver.get(Commons.BASE_URL + "hover.html");
 		sleep(5);
 	}
+
+	@Test
+	public void test1() {
+		//create action object
+		Actions actions = new Actions(driver);
+		
+		//get web element
+		WebElement link = getByLinkText("Click here");
+		
+		//move to element
+		Actions move = actions.moveToElement(link);
+		
+		move.build().perform();
+		sleep(3);
+	}
 	
+
 	/**
 		Notes:
 		For mouse hover
@@ -116,6 +132,107 @@ public class Test8MouseHover extends BaseTest {
 		sleep(3);
 		System.out.println("After hover: " + bgColor);
 	}
+
+	//Enter FirstName : <input type="text" id="myname" name="uName" /> <br>
+	@Test
+	public void testText_1() {
+		Actions action = new Actions(driver);
+		
+		//move to text field and click
+		WebElement element = getTextFieldByName("uName");
+		
+		action.moveToElement(element).click().build().perform();
+		sleep(3);
+		
+		action.sendKeys(element, "selenium").build().perform();
+		sleep(3);
+	}
+
+//use shift key
+	@Test
+	public void testText_2() {
+		Actions action = new Actions(driver);
+		
+		//move to text field and click
+		WebElement element = getTextFieldByName("uName");
+		
+		action.moveToElement(element).click().build().perform();
+		sleep(3);
+		
+		action
+		.keyDown(Keys.SHIFT)
+		.sendKeys(element, "selenium")
+		.keyUp(Keys.SHIFT)
+		.build().perform();
+		
+		sleep(3);
+	}
+	
+
+	//double click + right click
+	@Test
+	public void testText_3() {
+		Actions action = new Actions(driver);
+		
+		//move to text field and click
+		WebElement element = getTextFieldByName("uName");
+		
+		action.moveToElement(element).click().build().perform();
+		sleep(3);
+		
+		action
+		.sendKeys(element, "selenium")
+		.build().perform();
+
+		// Double click
+		action.doubleClick(element).build().perform();
+		sleep(3);
+		
+		// Right click
+		action.contextClick(element).build().perform();
+		sleep(3);
+		
+	}
+
+	@Test
+	public void testText_4() {
+		Actions action = new Actions(driver);
+		
+		//move to text field and click
+		WebElement element = getTextFieldByName("uName");
+		
+		action.moveToElement(element).click() 
+		.sendKeys(element, "selenium")
+		.doubleClick(element)
+		.contextClick(element)
+		.build().perform();
+		
+		sleep(3);
+	}
+
+	/**
+	  Type Hello in caps using SHIFT
+	  Double click
+	  Right click
+      Enter FirstName : <input type="text" id="myname" name="uName" /> <br>
+	 */
+	@Test
+	public void keysTest1() throws InterruptedException {
+		Actions action = new Actions(driver);
+		WebElement txtUsername = driver.findElement(By.id("myname"));
+		
+		//move to element
+		action.moveToElement(txtUsername).click().build().perform();
+		sleep(3);
+		
+		//Type Hello in caps using SHIFT
+		action.keyDown(txtUsername, Keys.SHIFT)
+		.sendKeys(txtUsername, "selenium")
+		.keyUp(txtUsername, Keys.SHIFT)
+		.build().perform();
+		sleep(3);
+
+	}
 	
 	/**
 	  Type Hello in caps using SHIFT
@@ -124,7 +241,7 @@ public class Test8MouseHover extends BaseTest {
       Enter FirstName : <input type="text" id="myname" name="uName" /> <br>
 	 */
 	@Test
-	public void keyActions() throws InterruptedException {
+	public void keysTest2() throws InterruptedException {
 		Actions action = new Actions(driver);
 		WebElement txtUsername = driver.findElement(By.id("myname"));
 		
