@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Test41 {
-	public class TestngAnnotation {
+	
 		// test case 1
 		@Test
 		public void testCase41() {
@@ -69,5 +69,5 @@ public class Test41 {
 		public void afterSuite41() {
 			System.out.println("in afterSuite");
 		}
-	}
+	
 }
