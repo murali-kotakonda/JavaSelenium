@@ -1,18 +1,14 @@
-package test3.param;
-
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+package parameter;
 
 /**
- How to pass values from testng xml to test class?
+   How to pass values from testng xml to test class?
    
     1.changes in the testng.xml:
         Write parameter with name and value in xml. 
     	<parameter name = "userName" value="admin"/> 
         
         -Where can we write the parameter Tag?
-    	 A)  Global level (it is avilable to all the tests)
+    	 A)  Global level (it is available to all the tests)
 	    	write <parameter>  tag inside the <suite> 
 	    	ex:
 	    	<suite name="Test1">
@@ -25,10 +21,9 @@ import org.testng.annotations.Test;
    						<test name = "register">
 								<parameter name = "userName" value="admin"/> 
 						</test>
-						
 			</suite>
-
-  2.changes in the Test class
+    	
+    2.changes in the Test class
         Write @Parameters(value = {"userName"}) 
        
        -Where can we write the @Parameters annotations?
@@ -36,21 +31,28 @@ import org.testng.annotations.Test;
         1.Along with @BeforeMethod, 
         2.Along with @BeforeTest
         3.Along with @Test
- 
+
  */
-public class Test2 {
 
-	@Test
-	@Parameters(value = {"userName", "password"})
-	public void test1(@Optional("NA") String myName,String password) {
-		System.out.println("test1::username value is : " + myName);
-		System.out.println("test1::password value is : " + password);
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+public class Test1 {
+	
+	@BeforeMethod
+	@Parameters(value = {"userName"})
+	public void before(String name) {
+		System.out.println(name);
 	}
 	
 	@Test
-	public void test2() {
-		System.out.println("test2");
+	public void t1() {
+		System.out.println("In t1");
 	}
 
-	
+	@Test
+	public void t2() {
+		System.out.println("In t2");
+	}
+
 }

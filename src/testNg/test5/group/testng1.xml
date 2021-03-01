@@ -1,15 +1,14 @@
-<suite name="Suite">
-    <test name="TestGrouping">
-        <groups>
+<suite name = "empDemo">
+  
+  <!--  run only the login group -->
+   <test name = "app">
+    <groups>
 	    	 <run>
  				<include name="login" />
- 				<!-- <exclude name="login" /> -->
- 				<!-- <include name="register" /> -->
-	     	</run>
-		 </groups>
- 
-		 <classes>
-		     <class name="test5.group.GroupTest" />
-		 </classes>
-	 </test>
-</suite>
+ 				</run>
+ 		</groups>
+      <classes>
+      <class name="groups.Test1"/>
+      </classes>
+    </test>
+ </suite>     

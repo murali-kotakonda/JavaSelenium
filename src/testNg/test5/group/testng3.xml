@@ -1,11 +1,10 @@
 <suite name = "empDemo">
   
-  <!--  run only the login, "register" group -->
+  <!--  run  all except login group -->
    <test name = "app">
     <groups>
 	    	 <run>
- 				<include name="login" />
- 				<include name="register" />
+ 				<exclude name="login" />
  				</run>
  		</groups>
       <classes>

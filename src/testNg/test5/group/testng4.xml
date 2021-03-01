@@ -1,0 +1,19 @@
+<suite name="empDemo">
+	<test name="testGrouping">
+		<groups>
+			<define name="All">
+				<include name="login" />
+				<include name="register" />
+			</define>
+			<run>
+				<include name="All" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="test5.group.GroupTest" />
+		</classes>
+
+	</test>
+
+</suite>
