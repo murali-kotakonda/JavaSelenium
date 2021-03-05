@@ -5,7 +5,8 @@ Role of Tester in SDLC:
 -Understand requirements/Feasiability.
 -detail study of Risk analysis.
 -identify loop holes,gaps 
--identify the type of testing to be done .[load testing]
+-identify the type of testing to be done .
+[EX:load testing,security testing]
 - Document the requirements.
 -establish the environment requirements.
 
@@ -23,26 +24,63 @@ Design:
 1.create 1lakh records in db for testing
 2.create types of users for the applciation.
 
+ 
+load testing:
+-----------------
+Test 
+login with single user admin and admin
+-> with 100 users
+-> with 200 users
+-> with 500 users
+-> with 1000 users
+-> with 1 lakh users
+
+login with 100 users  at the same time
+-> with 100 users
+-> with 200 users
+-> with 500 users
+-> with 1000 users
+-> with 1 lakh users
+
+login with 1000 users  at the same time
+-> with 100 users
+-> with 200 users
+-> with 500 users
+-> with 1000 users
+-> with 1 lakh users
+
+login with 5000 users  at the same time
+-> with 100 users
+-> with 200 users
+-> with 500 users
+-> with 1000 users
+-> with 1 lakh users
 
 
-
+login with 1 lakh users  at the same time
+-> with 100 users
+-> with 200 users
+-> with 500 users
+-> with 1000 users
+-> with 1 lakh users
 
 Testing:
 ------------------------------------
-Start testing the application using the test case document.
-Testing can be manual or automation.
+1.Start testing the application using the test case document.
+	Testing can be manual or automation.
 
-Manual:
-------------
-- For New Requirements
-- Test the scenarios that cannot be covered through the automation
-Automation:
--------------
-- All the existing test cases
+	Manual:
+	------------
+	- For New Requirements/features.
+	- Test the scenarios that cannot be covered through the automation
+
+	Automation:
+	-------------
+	- All the existing test cases
 
 2.verify if the application is behaving as mentioned in the test document.
 3.create defect if app failed to behave as mentioned in the test cases.
-4.Identify all possible bugs are document the defects(jira) and report to the team.
+4.Identify all possible bugs are document the defects in the defcet tracking tool (ex:jira) and report to the team.
 5.Every defect created by tester should contain:
 - detailed steps to be followed for reproducing the issue.
 - what is expected and what is the actual from application.
@@ -50,18 +88,18 @@ Automation:
 - Log statements.
 - Enviroment(sandbox/commit/live).
 - which browser 
-- what is the request data used in the scenario.
+- what is the test data or request data used in the scenario.
 - screenshots
-
+7.conduct all different types of testing and check for defects.
+8. make sure all the defects are addressed before the release.
+9.generate the test report and share with team.
 [
 JIRA tool requires below info:
 ->Problem description:
 ->Steps to reproduce the issue(incl. used data and/or business documents numbers):
 ->Additional information to reproduce the issue, e.g. server, browser version, operating system, ...
 ]
-7.conduct all different types of testing and check for defects.
-8. make sure all the defects are addressed before the release.
-9.generate the test report and share with team.
+
 
 
 

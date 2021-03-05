@@ -1,8 +1,5 @@
-Listener is defined as interface that modifies the 
-default TestNG's behavior. 
-As the name suggests Listeners 
-"listen" to the event defined in the 
-selenium script and behave accordingly. 
+Listener is defined as interface that modifies the  default TestNG's behavior. 
+Listeners "listen" to the event defined in the selenium script and behave accordingly. 
 It is used in selenium by implementing Listeners Interface. 
 It allows customizing TestNG reports or logs. 
 There are many types of TestNG listeners available.
@@ -30,3 +27,18 @@ onTestFailure- onTestFailure method is called on the failure of any Test.
 onTestSkipped- onTestSkipped	method is called on skipped of any Test.
 onTestFailedButWithinSuccessPercentage- method is called each time Test fails but is within success percentage.
 onFinish- onFinish method is called after all Tests are executed.
+
+
+ How to register the listener?
+ solution)
+ in testmg.xml write:
+	 <listeners>
+			<listener class-name="test.MyListener"/>
+	</listeners>
+
+steps:
+1.create the listener class that implements any listener interface
+2.override the methods
+3.register the listener with the testng.xml
+4.apply the listener to the tets class
+@Listeners(MyListener.class)	

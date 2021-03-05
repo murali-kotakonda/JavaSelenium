@@ -1,0 +1,12 @@
+<suite name = "empDemo">
+  
+  <parameter name = "url" value="https://www.google.com"/> 
+  
+   <test name = "google">
+      <classes>
+     	 <class name="parameter.TestGoogle"/>
+      </classes>
+    </test>
+    
+    
+ </suite>     

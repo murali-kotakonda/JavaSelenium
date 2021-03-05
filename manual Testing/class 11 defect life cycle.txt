@@ -18,6 +18,7 @@ JIRA
 
   
 
+- Every defect has a state
 
 States:
 ---------

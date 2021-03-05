@@ -8,7 +8,7 @@ PROCESS/FRAMEWORK DEFINES DIFF ACTIVITIES DURIG THE SOFTWARE DEVELOPMENT.
 - SEQUNCE OF STEPS TO BE FOLLOWED FOR S/W DEV.
 
 
-Activities:
+Activities/Phases:
 -------------
 1.Analysis
 2.Design
@@ -19,11 +19,10 @@ Activities:
 7.maintainance + support
 
 
-
 ACTIVITIES:
 -----------
 1.Analysis   (Req gathering):[WHAT TO DO] [DISCUSS FUNTIONALLY]
- Abc corp shares requirement to Amazon
+ Abc corp shares requirement to Accenture
 Every team has a Analyst , knows the domain and knowledge on the app.
   ( senior tester/lead) + SCOPE
 -> -scope,feasiabilty,impact
@@ -32,13 +31,13 @@ ex: wiki
 freeze all requiremnets.
 
 
-
 2.Planning / designing  [HOW TO DO] [DISCUSS TECHNICALLY]
 --> artitechts, tech leads(java,qa lead,ui lead , db lead)
 collecting ingradients for feature devlopement.
 
+outcome:
 time estimation  + how many people + what are tasks +
-HLL DESIGN
+High-Level DESIGN
 + technical challenges + impact on existing.
 + scope 
 FEASIABILITY
@@ -56,8 +55,8 @@ ABC CORP IS USING V.12
 3.Coding/Implemntation  --> Developer + UI dev + DB Dev
 4.Unit Testing --> only v.13 features UI dev/Developer(change password)
 5.Testing --> 
-from v.1 to v.13 
-- testing on different systems
+from v.12 to v.13 
+ - testing on different systems
  - testing on different browsers
  - Funtional , Nonfuntional , security , performance , integration , Regression, Load testing , stress testing.
 6.Build + Deployment + Documentation(Release notes)
@@ -76,8 +75,11 @@ defects from abc corp
 
 Sep 30 --> V.11 is used by ABC corp ( login feature )
 Oct 30 --> V.12 is used by ABC corp  ( update feature )
-fROM Nov 7 Till Nov 30   --> amazon will be working for v.13 (change pwd) 
-Nov 30 --> abc corp will se V.13 (change password) 
+From Nov 1 Till Nov 30  
+       --> Accenture will be working for v.13 (change pwd)
+       --> Accenture will go for analysis + design + implementation + unit testing + testing for v13 feature(change pwd)
+
+Nov 30 --> after build and deployment abc corp will se V.13 (change password) 
 
  						
 

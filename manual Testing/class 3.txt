@@ -34,16 +34,20 @@ software testing:
 - is a phase of sdlc.
 - aims at the capabilities of the application.
 - intended to identify problem areas/bugs/issues/defect.
-ex:
-correct creds + login failure --> critical defect.
-login buton has to be in blue , was in red : low defect.
-in fb , along with image upload , text msg is not added: medium
 
 Defect--> any scenario/ any test case which is not working
 as per customer specification.
 - check whethere application meets the customer requirements.
 - identify any gaps/miscommunication.
 - Tester is the 1st customer.
+
+ex for defects:
+correct creds + login failure --> critical defect.
+login buton has to be in blue , was in red : low defect.
+in fb , along with image upload , text msg is not added: medium
+
+
+- based on impact to the application/flow/users testers has to decide the severity.
 
 Nov 11th:
 --------------
@@ -55,7 +59,7 @@ Fix the defects first and then procced with new requirements.
 
 Testing:
 1.Manual testing - no tool/technology for testing
-- sql , sqldeveloper
+- sql , sqldeveloper + any database
 - process tools:  wiki , github ,svn , Jira, jenkins 
 
 2.automation testing. 
@@ -64,23 +68,32 @@ Testing:
 - java
 - selenium
 - testng
+- Maven
+- Apache POI
+- cucumber
+- SQL
 
 Requiremnt gap:
 -----------
-for success login -> show home page
-for all failure case -> show invalid credentials.
-for account locked --> show acocunt locked. 
+There is login page with username + password + login button.
 
-test case:
+for success login -> show home page
+for all failure case -> shoow login page with error message  "invalid credentials."
+
+test cases:
 1. login name is corect  + pwd correct ---> show home page
 2. login name is corect  + pwd wrong ---> show login page 
                  with msg invalid credentials.
 3. login name is wrong  + pwd wrong ---> show login page 
                  with msg invalid credentials.
-4. login name is corect  + pwd correct ,
-but account is locked
+
+
+4. login name is corect  + pwd correct ,but account is locked
+currently it is showing as:
+"showing login page with msg invalid credentials."
  ---> show login page 
                  with msg acocunt locked.
+--> show login page with error message "show acocunt locked."  [MISISNG TEST CASE]
 				 
 				 
 				 

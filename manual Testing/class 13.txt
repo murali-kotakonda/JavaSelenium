@@ -123,15 +123,34 @@ b) if Lower Module is ready and Higher Modules are not available,then developer 
 -> hybrid: Mix of both Top-Down and BottonUp
 
 
+
+Myntra : owning the software
+accenture : developing the  software
+
+accenture has to complete:
+- unit testing
+- integration testing
+- system testing
+
+
+Myntra  has to do UAT testing
+
+
+
 UserAcceptanceTesting:
 --------------------------
 - Done by the customers at their environment
 - Testing is done on the final system
 - Pre-production system.
 - If there is an issue, then client creates defects and assigns to amazon
-alpha : testing at developers site . system setup is done by amazon.
+
+alpha : testing at developers site . system setup is done by accenture.
+[mynta and accenture will participate with mock data]
+
 beta : testing at customers site with his own test data.
 with realtime data.
+[only myntra will participate as real time data is invovled]
+
 -Acceptance criteria should be met for testing to be passed and that is validated by customer 
 
 

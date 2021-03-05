@@ -8,8 +8,10 @@ import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -105,8 +107,16 @@ public class ExcelUtils {
             cell.setCellValue((String) column);
         } else if (column instanceof Integer) {
             Workbook workbook = newRow.getSheet().getWorkbook();
+            
+            
+            
     		CellStyle cellStyle = workbook.createCellStyle();
     	    cellStyle.setAlignment(HorizontalAlignment.LEFT);
+    	    
+    	    // fill foreground color ...
+    	    cellStyle.setFillForegroundColor(IndexedColors.RED.index);
+            // and solid fill pattern produces solid grey cell fill
+    	    cellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
     	    
     	    cell.setCellValue((Integer) column);
         	cell.setCellStyle(cellStyle);

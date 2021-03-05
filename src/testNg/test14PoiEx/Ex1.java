@@ -27,8 +27,11 @@ public static void main(String[] args) throws FileNotFoundException, IOException
 	Workbook fileObj = new XSSFWorkbook(new FileInputStream("C:\\test\\Inputdata.xlsx"));
 	
 	Sheet sheetObj = fileObj.getSheetAt(0);
+
+	//get sheet
+	//Sheet sheet = workObj.getSheet("output");	
 	
-	//how to get all rows
+	//how to get  row count
 	int rowCount = sheetObj.getLastRowNum() - sheetObj.getFirstRowNum();
 	
 	for(int r=0;r<=rowCount;r++) {

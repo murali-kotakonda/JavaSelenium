@@ -21,15 +21,15 @@ Types of applications:
 
   - desktop app is used for personal
   - mostly single user.
-  - app that requires no internet will have data  reside in samew system
+  - app that requires no internet will have data  reside in samee system
   - app that requires internet will have data  reside in diff remote system.
 
 
   
 2.web application  business [need internet]:
- - to use anf to test we need browser
 - runs 24/7
 - runs in remote location
+- to use and test to test we need browser
 - access app anytime , any where using internet + browser.
 - for accessing the app , we need the url.
 - test on chrome,firefox,ie.
@@ -37,7 +37,7 @@ Types of applications:
 
 3.web services application:
 [consumer and provider are involved.]
-one business app interacts with anothet business application.
+one business app interacts with another business application.
 ex1:
 enduser ------->   Red Bus Travels   ------->   Orange 
                       [Java]                      [Python]
@@ -96,16 +96,16 @@ chip level + machine learning +iot [internet of things]
 
 Tester:
 ----------
-- know the mode of busniess of application.
+- know the mode of business of application.
 - what kind of application
 - what are the feature/funtionalitiues offered to customers.
 - reachability ( desktop/mobile/web)
 - domain of the application.
- ecommerce,
- finance,
- banking,
- health care,
- insurance.
+   ecommerce,
+   finance,
+   banking,
+   health care,
+   insurance.
 -Subject matter expert[SME].  
 
 

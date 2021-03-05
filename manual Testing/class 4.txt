@@ -1,33 +1,36 @@
 Why do we have bugs/defects:
 ----------------------------
 -> Req gap
--> Missing scenario [ignorance].
+-> Missing scenario/ missing test case [ignorance].
 -> edge scenario [unexpected].
+
 ex: 
 every department has multi employees.
-requirement : show department , if we click on department 
-show the employees.
+requirement : show department 
+->if customer clicks on department  then show department details and all the employees.
 
 tester way :
--> create department and add employees immdeiately.
-[department should be shown]
+1.create department 
+2.Add employees under department
+3.click on the "show  Department"
+[department + employees  are shown]
 
--> edge sceraio create department without employees. 
+-> customer way
+1.create department without employees. 
+2.click on the "show  Department"
 [department should not shown]
 
 business case:
 -> create department today.
 -> and add employees after next week.
-
-
--> missing test case
+ 
 -> Bad coding practises.- [developers]
 -> change in requirement in between 
 -> faster delivery , [testing is not done 100%]
- - lack of time
+   lack of time
 -> load/perf test is not appropiate.
 -> testing is not done well by testers.- lack of intent
-
+-> as customers increaes , the no of requests increases that leads to performance.
 
 testing steps:
 --------------
@@ -35,6 +38,8 @@ testing steps:
 -> test executions   , login success, login failure, 
 -> for every test execution validate.
 -> test data cleanup [clean data used for registration].
+->reporting the test results
+-> for failed test cases create defects
 
 SKills for tester:
 -------------------
@@ -57,7 +62,6 @@ SKills for tester:
  health care,
  insurance.
 -Subject matter expert[SME].  
-
 
 
 

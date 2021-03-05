@@ -8,6 +8,8 @@ White box testing: -Developer
 ex: unit testing + integration testing.
 dev has to write Junits test cases using code.
 
+tech: junits, mockito , easymock , RestEasy
+
 
 Black Box testing:Tester
 -------------------

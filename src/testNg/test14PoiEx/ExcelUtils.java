@@ -16,6 +16,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 /**
 Excel:
 ---------
+For working with excel we need the "apache poi" dependency in the pom.xml
+
+
 
  .xls   -> Old excel
  .xlsx  -> New Excel 
@@ -28,32 +31,45 @@ Excel:
 3.Row
 4.Cell obj
 
-to get no of sheets
---------------------------
-int numberOfSheets = fileObj.getNumberOfSheets();
 
 How to create workbook obj:
 ----------------------------------
 1.for old excel .xls 
-WorkBook fileObj = new HSSFWorkbook(inputStream);
+WorkBook fileObj = new HSSFWorkbook();
 
 2. New excel .xlsx
-WorkBook fileObj = new XSSFWorkbook(inputStream);
+WorkBook fileObj = new XSSFWorkbook();
+
+How to get workbook obj for existing excel file?
+----------------------------------------------------
+Workbook fileObj = new XSSFWorkbook(new FileInputStream("<path>//Inputdata.xlsx"));
+	
+
+to get no of sheets
+--------------------------
+int numberOfSheets = fileObj.getNumberOfSheets();
+
+
 
 
 create sheet object:
 ---------------------------------
-fileObj.createSheet("data");
-
+Sheet sheetObj = fileObj.createSheet("data");
 
 get the 1st sheet
 --------------------------------------
 Sheet sheetObj = fileObj.getSheetAt(0);
 
 
+get the sheet by name
+--------------------------------------
+Sheet sheetObj = fileObj.getSheet("output");
+
+
+
 How to create  row object:
 --------------------------
-Row row= sheet.createRow(<row nunm>);
+Row row= sheetObj.createRow(<row nunm>);
 
 
 How to get row object:

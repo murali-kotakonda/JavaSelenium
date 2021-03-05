@@ -21,7 +21,7 @@ Manual Testing class:
     Requiremnets would be prepared by ABC Corp ;
     development + testing  + support ====>Amazon
     
-    Project:
+Project:
 -----------
   Manager     
   Developers ( DB/JAVA/UI)
@@ -47,4 +47,5 @@ Manual Testing class:
   Architect:
      - plan for the design of the application
      - design the modules / models.
+  Analyst
        

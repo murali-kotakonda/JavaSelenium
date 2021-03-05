@@ -1,6 +1,6 @@
 Order of testing :
 -------------------------------
--> Test New Features (using test cases)
+-> Funtional Testing for   New Features (using test cases)
 -> Test Defects  (ReTesting )
 -> Regression  ------> Heavy + costly + time consuming.
 -> Non Funtional Testing like perf , load , stress 
@@ -12,7 +12,7 @@ Perf testing follows after Regression.
 
 Introduce additional testing(Smoke Testing and Sanity Testing) for Time saving:
 ---------------------------------------------------------------------------------------
--> Test New Features (using test cases)
+-> Funtional Testing for  New Features (using test cases)
 -> Test Defects (ReTesting)
 -> Smoke + Sanity Testing 
 -> Regression  ------> Heavy + costly + time consuming.
