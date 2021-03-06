@@ -7,9 +7,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import testkeywords.Action;
 import testkeywords.ExcelUtils;
+import util.Commons;
 
 public class TestLogin {
 

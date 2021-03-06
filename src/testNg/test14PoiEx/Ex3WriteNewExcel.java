@@ -1,6 +1,4 @@
-package excelEx;
-
-
+package test14PoiEx;
 
 /**
  Write to excel from java:

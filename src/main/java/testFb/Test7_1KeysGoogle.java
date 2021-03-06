@@ -7,7 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
+import util.BaseTest;
 
 /**
 Actions:
@@ -59,7 +59,7 @@ public class Test7_1KeysGoogle extends BaseTest{
 	public void test1() {
 		//create action object
 		Actions actions = new Actions(driver);
-		WebElement textField = getTextFieldByName("q");
+		WebElement textField = getByName("q");
 		textField.sendKeys("selenium");
 		sleep(3);
 		

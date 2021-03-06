@@ -9,10 +9,10 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
+import util.BaseTest;
 
 /**
-  1.login with correct un and correct pwd [admin , admin 
+  1.login with correct un and correct pwd [admin , admin ]
   2.login with correct  un and wrong pwd [ admin , admin1]
   3.login with wrong un and wrong pwd [  admin2, admin3] 
   4.user name empty and pwd empty 

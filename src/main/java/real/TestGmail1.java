@@ -1,11 +1,11 @@
-package project;
+package real;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-import common.BaseTest;
+import util.BaseTest;
 
-public class TestGmail extends BaseTest{
+public class TestGmail1 extends BaseTest{
 	
 	@Test
  	public void testGmailSuccees() throws InterruptedException{
@@ -30,7 +30,6 @@ public class TestGmail extends BaseTest{
 				By.xpath("//span[text()='Next']"))
 				  .click();
 		Thread.sleep(3000);
-		
 	}
 
 }

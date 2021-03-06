@@ -1,24 +1,20 @@
 package testFb;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
-
-import java.util.Arrays;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
-import common.Commons;
+import util.BaseTest;
+import util.Commons;
 
 public class Test2 extends BaseTest {
 
 	@BeforeMethod
-	public void setup() {
+	public void	 setup() {
 		super.setup();
 		// driver.get("http://localhost:8081/myapp/form.html");
 		driver.get(Commons.BASE_URL + "form.html");

@@ -1,4 +1,4 @@
-package groups;
+package test5.group;
 
 import org.testng.annotations.Test;
 

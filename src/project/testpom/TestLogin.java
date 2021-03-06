@@ -7,8 +7,8 @@ import org.testng.Reporter;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import pages.LoginPage;
+import util.Commons;
 
 public class TestLogin extends EmpBaseTest  {
 	LoginPage login;

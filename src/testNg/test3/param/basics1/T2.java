@@ -1,16 +1,15 @@
-package parameter;
+package test3.param.basics1;
  
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-public class T3 {
+public class T2 {
 	
 	@BeforeMethod
-	@Parameters(value = {"userName","password"})
-	public void before(String name,String password) {
+	@Parameters(value = {"userName"})
+	public void before(String name) {
 		System.out.println(name);
-		System.out.println(password);
 	}
 	
 	@Test

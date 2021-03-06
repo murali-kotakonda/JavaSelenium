@@ -5,9 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import old.BaseTest;
-
-public class GmailRegTest extends BaseTest {
+public class GmailRegTest extends MyBaseTest {
 	@Test
 	public void regestration() throws InterruptedException {
 		

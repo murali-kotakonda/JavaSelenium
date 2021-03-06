@@ -1,4 +1,4 @@
-package parameter;
+package test3.param.basics1;
  
 
 import org.testng.annotations.Parameters;

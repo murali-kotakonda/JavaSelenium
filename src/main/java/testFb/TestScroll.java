@@ -1,10 +1,9 @@
 package testFb;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import common.Commons;
+import util.Commons;
 
 
 /**
@@ -20,7 +19,7 @@ import common.Commons;
  */
 
 public class TestScroll {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// Scroll down the webpage by 4500 pixels
 		WebDriver driver = Commons.getDriver();
 		driver.get("https://www.youtube.com");
@@ -28,11 +27,9 @@ public class TestScroll {
 		js.executeScript("scrollBy(0, 4500)");
 
 		 js.executeScript("scrollBy(0, 4500)");
-		 sleep(3);
+		 Thread.sleep(3);
 		 
 		 js.executeScript("scrollBy(0, 4500)");
-		 sleep(3);
-
-		 
+		 Thread.sleep(3);
 	}
 }

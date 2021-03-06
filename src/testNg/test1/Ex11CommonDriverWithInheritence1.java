@@ -2,7 +2,7 @@ package test1;
 
 import org.testng.annotations.Test;
 
-import common.BaseTest;
+import util.BaseTest;
 
 
 /**

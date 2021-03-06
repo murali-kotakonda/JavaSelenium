@@ -9,9 +9,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import pages.AddDepartment;
 import pages.LoginPage;
+import util.Commons;
 
 public class TestAddDepartment extends Headerutility {
 	LoginPage login;

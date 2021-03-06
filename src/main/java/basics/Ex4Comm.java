@@ -3,7 +3,7 @@ package basics;
 
 import org.openqa.selenium.WebDriver;
 
-import common.Commons;
+import util.Commons;
 
 /**
 
@@ -27,10 +27,8 @@ Steps:
 */
 public class Ex4Comm {
 	
-
-	
 	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = Commons.getDriver();
+		WebDriver driver = Commons.getChromeDriver();
 		
 		//open the url
 		driver.get("http://www.google.com");

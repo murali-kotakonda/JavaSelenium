@@ -1,9 +1,10 @@
-package com.mythri;
+package real;
+
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestNavigation1 extends BaseTest{
+public class TestNavigation1 extends MyBaseTest{
 
 	@Test
 	public void test() throws InterruptedException {

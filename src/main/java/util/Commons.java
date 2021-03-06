@@ -38,20 +38,29 @@ import org.openqa.selenium.firefox.FirefoxDriver;
     System.setProperty("webdriver.firefox.marionette","C:\\geckodriver.exe");
 	WebDriver driver = new FirefoxDriver();
 		
+
+-  How to delete the page cookies?
+   driver.manage().deleteAllCookies();
+  
+  
+ - How to get the page cookies?
+   Set<Cookie> cookies = driver.manage().getCookies();
+		for(Cookie cookie:cookies) {
+			System.out.println(cookie.getPath() + " - " + cookie.getValue());
+		}
+  
+ - How to maximize the window?
+  driver.manage().window().maximize();
+  
+-  How to get driver obj for firefox?
+    System.setProperty("webdriver.firefox.marionette","C:\\geckodriver.exe");
+	WebDriver driver = new FirefoxDriver();
+		
  */
 
 public class Commons {
 	public static final String BASE_URL ="http://localhost:8081/myapp/";
-	
-	public static WebDriver getDriver(){
-		String browser ="chrome";
-		if ("chrome".equals(browser)){
-			return getChromeDriver();
-		}else {
-			return getChromeDriver();
-		}
-	}
-	
+
 	public static WebDriver getDriver(String browser) {
 		if("chrome".equals(browser)) {
 			return getChromeDriver();
@@ -100,5 +109,26 @@ public class Commons {
 		assertTrue(element.isDisplayed(), "element expeceted to display");
 			assertTrue(element.isEnabled(), "element expected to enable");
 		}
+	}
+	
+	public static WebDriver startApplication(WebDriver driver, String browserName) {
+		if (browserName.equalsIgnoreCase("Chrome")) {
+			driver = Commons.getChromeDriver();
+		} else if (browserName.equalsIgnoreCase("firefox")) {
+			driver = Commons.getFireFoxDriver();
+		}
+		driver.get(BASE_URL);
+		driver.manage().window().maximize();
+		// driver.get(appURL);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		return driver;
+	}
+
+	public static void quitBrowser(WebDriver driver) {
+		driver.quit();
+	}
+
+	public static WebDriver getDriver() {
+		return getChromeDriver();
 	}
 }

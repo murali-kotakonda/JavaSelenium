@@ -13,8 +13,8 @@ import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
 import test15PiDataProvidersEx.ExcelUtils;
+import util.BaseTest;
 
 public class LoginTestWithoutPOM extends BaseTest {
 	
@@ -136,8 +136,5 @@ public void Registration_data(String name, String pass,String status ) throws Ex
 		a.accept();
 		sleep(5);
 	}
-
 }
-
-
 

@@ -1,4 +1,4 @@
-package parameter;
+package test3.param.basics1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

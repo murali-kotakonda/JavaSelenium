@@ -9,10 +9,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import pages.AddEmp;
 import pages.LoginPage;
 import pages.LogoutPage;
+import util.Commons;
 
 public class TestAddemp extends Headerutility {
 	LoginPage login;
@@ -108,6 +108,5 @@ public class TestAddemp extends Headerutility {
 	public void logout() {
 		// emp.Deleteprofile();
 		emp.logout();
-
 	}
 }

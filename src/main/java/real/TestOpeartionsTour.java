@@ -1,4 +1,4 @@
-package com.mythri;
+package real;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-public class TestOpeartionsTour extends BaseTest{
+public class TestOpeartionsTour extends MyBaseTest{
 
 	@Test
 	public void test() throws InterruptedException {

@@ -4,14 +4,17 @@ Functional Testing:
 -> blackbox testing
 only on requirement based testing.
 check the behaviour of system.
--> Testing the new features(Test cases) + existing features(regression) + Defects(reTesting).
-db testing,
-regression
+-> Testing the 
+a)new features(Test cases) + 
+b)existing features(regression) + 
+c)Defects(reTesting).
+d)db testing,
 
-
--a) the new features(Test cases V-12 ) + ->Manual
+Test strategy:
+---------------------------
+ a) the new features(Test cases V-12 ) + ->Manual
  b) Defects(retesting Issues till v-11).  -> Manual
- c) existing features(regression v-11) +  ->manual/AUtomation . But preferred automation.
+ c) existing features(regression v-11)  ->manual/AUtomation . But preferred automation.
 
 Regression Testing:
 --------------------
@@ -19,7 +22,7 @@ a)Testing the existing/already delievered features.
 b)Regression testing is required always:
 -> Defect fix
 -> New feature development
--> Perf fixes.
+-> Performance fixes.
 c) Adv: Avoids the side effects due to new features.
 New feature should not break the existing features.
 -> Regression is costly + time taking

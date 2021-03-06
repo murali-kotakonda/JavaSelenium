@@ -8,10 +8,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import testkeywords.Action;
 import testkeywords.ExcelUtils;
 import testkeywords2.KeyWordUtil;
+import util.Commons;
 
 /**
   Hybrid framework : DataDriven + Keyword Driven

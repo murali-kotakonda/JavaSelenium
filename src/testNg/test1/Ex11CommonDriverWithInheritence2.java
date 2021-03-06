@@ -2,13 +2,15 @@ package test1;
 
 import org.testng.annotations.Test;
 
+import util.BaseTest;
+
 /**
   Open browser 
   - open  yahoo
   - open google
   - open amazon
  */
-public class Ex11CommonDriverWithInheritence2 extends common.BaseTest{ 
+public class Ex11CommonDriverWithInheritence2 extends BaseTest{ 
 	
 	@Test
 	public void verifyYah() {

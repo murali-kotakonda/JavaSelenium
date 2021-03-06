@@ -3,8 +3,6 @@ package basics;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import common.Commons;
-
 /**
  How to get the page title:
 -----------------------------

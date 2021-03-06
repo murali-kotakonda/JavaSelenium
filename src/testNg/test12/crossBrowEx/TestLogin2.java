@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import common.Commons;
+import util.Commons;
 
 public class TestLogin2 { 
 	WebDriver driver = null;

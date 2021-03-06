@@ -1,4 +1,5 @@
-package com.mythri;
+package real;
+
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -6,7 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class TestGoogle extends BaseTest{
+public class TestGoogle extends MyBaseTest{
 	
 	@Test
 	public void testGoogle() throws InterruptedException{

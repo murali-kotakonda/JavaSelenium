@@ -3,7 +3,7 @@ package testpom;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 
-import common.Commons;
+import util.Commons;
 
 public class EmpBaseTest {
 	public WebDriver driver;

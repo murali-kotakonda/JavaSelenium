@@ -4,7 +4,7 @@ package basics;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import common.Commons;
+import util.Commons;
 
 /**
 
@@ -45,7 +45,7 @@ public class Ex1 {
 	
 	
 public static void main1(String[] args) {
-	WebDriver driver = Commons.getDriver();
+	WebDriver driver = Commons.getChromeDriver();
 	driver.get("http://www.google.com");
 	driver.close();
 }

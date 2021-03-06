@@ -1,13 +1,11 @@
-package old.tests4;
+package real;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 
-public class Flipkart extends BaseTest4{
+public class Flipkart extends MyBaseTest{
 	@Test
 	public void search() throws InterruptedException{
 		

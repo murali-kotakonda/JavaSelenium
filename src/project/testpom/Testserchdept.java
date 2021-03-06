@@ -6,9 +6,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import pages.LoginPage;
 import pages.Serchdepartment;
+import util.Commons;
 
 public class Testserchdept extends Headerutility {
 	WebDriver driver;

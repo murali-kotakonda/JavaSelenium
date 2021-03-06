@@ -5,15 +5,14 @@ import static org.testng.Assert.assertTrue;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import pages.Changepassword;
 import pages.LoginPage;
+import util.Commons;
 
 public class Testchangepassword extends Headerutility{
 	WebDriver driver;

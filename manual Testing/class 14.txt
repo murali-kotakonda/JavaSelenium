@@ -82,15 +82,16 @@ Test the stability in terms of speed,security,recovery, handling load.
 sanitation testing:
 ---------------------
 check if the app is providing any extra features beyond the customer requirements.
-
+aplication has to provide the features as decided in the analysis; any extra features should not be added.
 
 
 Performance testing:
 --------------------
 We need seperate system for perf testing
 We need perf tools Like load runner, jmeters.
-Done by perf team.
-->Load Testing:
+Done by testing + perf team.
+-
+>Load Testing:
 a)Test the speed of the application.
 b)Test by increasing the no of users ex: 50, 100, 1000, 2000 users  + increase the load.
 find min , max , average  response times
@@ -117,7 +118,7 @@ Ex:
 ->Login authentication ; only successul login with valid creds can able to visit the home page.
 ->Permissions ,privilages, roles set for the users.
 ->data sent secured .
-->encrypt/decrpt the data for msg tarnsfer.
+->encrypt/decrpt the data for msg transfer.
 
 
 Recovery Testing:
@@ -125,7 +126,7 @@ Recovery Testing:
 ->Test whether app is able to recover after crash.
 ->Is the recovery helpful to customer ??
 -> is there any loss of data ?? any possibility for recover the data?? 
-->any possibility for previopus state before crash/ restore to earlier state.
+->any possibility for previous state before crash/ restore to earlier state.
 -> % of recovery will help to understand the realiability of the app.
 ex: mostly to applicable to GUI apps.
 
@@ -159,7 +160,7 @@ Migration Testing:
 -------------------
 -> it is very often that we do the migration.
 -> Testing required when we do the migration .
--> Ex: 
+Ex: 
 a) Migrate the db (oracle ---> Mysql)
 b) Migrate the data form one format to other format.
 ex: .avi , .mp4 , .VOB

@@ -5,9 +5,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import pages.Deleteprofile;
 import pages.LoginPage;
+import util.Commons;
 
 public class TestDelete extends Headerutility {
 	LoginPage login;

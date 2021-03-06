@@ -3,7 +3,7 @@ package real;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
-public class TestGmail extends BaseTest{
+public class TestGmail extends MyBaseTest{
 	
 	@Test
  	public void testGmailSuccees() throws InterruptedException{

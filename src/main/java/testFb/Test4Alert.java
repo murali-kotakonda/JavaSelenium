@@ -1,14 +1,14 @@
 package testFb;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
-import common.Commons;
+import util.BaseTest;
+import util.Commons;
 
 public class Test4Alert extends BaseTest{
 

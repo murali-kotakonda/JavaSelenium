@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
+import util.BaseTest;
  
 public class TestDataProvider4Google extends BaseTest{
 

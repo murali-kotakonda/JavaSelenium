@@ -13,8 +13,8 @@ import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
 import test15PiDataProvidersEx.ExcelUtils;
+import util.BaseTest;
 
 public class LoginTestWithPOM extends BaseTest {
 	

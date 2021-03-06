@@ -3,9 +3,7 @@ package real;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import old.BaseTest;
-
-public class GmailLoginTest extends BaseTest {
+public class GmailLoginTest extends MyBaseTest {
 
 	@Test
 	public void loginSuccess() throws InterruptedException {

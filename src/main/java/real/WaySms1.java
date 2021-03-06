@@ -1,11 +1,11 @@
-package project;
+package real;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import common.BaseTest;
+import util.BaseTest;
 
 
 public class WaySms1  extends  BaseTest{

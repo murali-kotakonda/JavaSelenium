@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
+import util.BaseTest;
 
 /**
   1.login with correct un and correct pwd [admin , admin 

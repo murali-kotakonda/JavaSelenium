@@ -1,4 +1,5 @@
-package excelEx;
+package test15PiDataProvidersEx;
+
 
 import java.io.IOException;
 
@@ -9,7 +10,7 @@ import org.testng.annotations.Test;
 
 import util.BaseTest;
  
-public class TestDataProvider4Google extends BaseTest{
+public class Ex5readExcelGoogle_working extends BaseTest{
 
 	@DataProvider(name = "test1")
 	public static Object[][] data() throws IOException {
@@ -19,8 +20,6 @@ public class TestDataProvider4Google extends BaseTest{
 	@Test(dataProvider = "test1")
 	public void testData(String searchKey) throws InterruptedException {
 		driver.get("https://www.google.com");
-		
-		
 		WebElement searchText = driver.findElement(By.name("q"));
 		searchText.sendKeys(searchKey);
         searchText.submit();

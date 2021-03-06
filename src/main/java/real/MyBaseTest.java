@@ -1,13 +1,13 @@
-package com.mythri;
+package real;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 
-import common.DriverUtils;
+import old.DriverUtils;
 
-public class BaseTest {
+public class MyBaseTest {
 	
 	WebDriver driver;
 

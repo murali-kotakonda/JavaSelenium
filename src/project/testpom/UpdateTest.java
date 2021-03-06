@@ -6,9 +6,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.Commons;
 import pages.LoginPage;
 import pages.UpdateProfile;
+import util.Commons;
 
 public class UpdateTest extends Headerutility{
 	LoginPage login;

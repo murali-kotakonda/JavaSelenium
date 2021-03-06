@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import common.Commons;
 import testkeywords.Action;
+import util.Commons;
 
 public class KeyWordUtil {
 	

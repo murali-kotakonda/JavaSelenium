@@ -1,7 +1,5 @@
 package testkeywords;
 
-import static org.testng.Assert.assertTrue;
-
 import java.io.IOException;
 
 import org.openqa.selenium.Alert;
@@ -13,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-import common.Commons;
+import util.Commons;
 
 /**
  - For every row create action obj

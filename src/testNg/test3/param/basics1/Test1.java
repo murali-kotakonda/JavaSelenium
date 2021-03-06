@@ -1,4 +1,4 @@
-package parameter;
+package test3.param.basics1;
 
 /**
    How to pass values from testng xml to test class?

@@ -1,4 +1,4 @@
-package project;
+package real;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import common.BaseTest;
+import util.BaseTest;
 
-public class TestGoogle extends BaseTest{
+public class TestGoogle1 extends BaseTest{
 	
 	@Test
 	public void testGoogle() throws InterruptedException{

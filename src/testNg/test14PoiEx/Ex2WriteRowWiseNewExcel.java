@@ -1,4 +1,4 @@
-package excelEx;
+package test14PoiEx;
 
 import java.io.File;
 import java.io.FileOutputStream;
