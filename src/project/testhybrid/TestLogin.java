@@ -8,9 +8,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import testkeywords.Action;
-import testkeywords.ExcelUtils;
-import testkeywords2.KeyWordUtil;
+import keyword.ex1.Action;
+import keyword.ex1.ExcelUtils;
+import keyword.ex2.KeyWordUtil;
 import util.Commons;
 
 /**

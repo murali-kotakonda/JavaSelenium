@@ -121,4 +121,40 @@ public class BaseTest {
 	  //FirefoxDriverManager.getInstance().setup();
 	  driver = new FirefoxDriver();
 	}
+	
+	public void login(String un, String pwd) {
+		WebElement form = driver.findElement(By.tagName("form"));
+		WebElement formTitle = driver.findElement(By.tagName("h1"));
+		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
+		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
+		WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
+		WebElement name = driver.findElement(By.name("loginName"));
+		WebElement password = driver.findElement(By.name("password"));
+
+		checkEnabledAndDisplayed(usernamelab, name, passwordlab, password, loginBtn);
+
+		// test the form name
+		assertTrue(formTitle.getText().equals("Login Page"));
+
+		// test label for username
+		assertTrue(usernamelab.getText().equals("User Name:"));
+
+		// test label for Password
+		assertTrue(passwordlab.getText().equals("Password:"));
+
+		// test label for button
+		assertTrue(loginBtn.getAttribute("value").equals("Login"));
+
+		// test type for username
+		assertTrue(name.getAttribute("type").equals("text"));
+
+		// test type for password
+		assertTrue(password.getAttribute("type").equals("password"));
+
+		name.sendKeys(un);
+		password.sendKeys(pwd);
+		loginBtn.click();
+
+		sleep(3);
+	}
 }

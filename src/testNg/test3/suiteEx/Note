@@ -1,3 +1,11 @@
+suite:
+---------
+- collection of test classes.
+- enables the tester to run the selected test classes.
+ - suite is written using the xml file
+ 
+ 
+
 A test suite is a collection of test cases intended to test a behavior or a set of behaviors of software program. 
 In TestNG, we cannot define a suite in testing source code, but it is represented by one XML file,
 	

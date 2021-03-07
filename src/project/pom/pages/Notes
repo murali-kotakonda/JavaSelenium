@@ -1,0 +1,45 @@
+page object model:
+------------------------
+
+There are two types of classes:
+- page class  [for every web page]
+- test classes [for every web page]
+
+
+
+
+1.for every page there is a page class
+2.the page class contains
+   - instance variables 
+      [web element objects]
+   - methods
+      [every operation on the page ]
+      - verifictaion
+      - any action 
+      
+page class should contain the logic for :
+ A> identifying the webelements
+ B> any action on web element
+ 
+   so far the A & B is writteen in test class.
+    if we write in test class it is diffcult for reusabilty.
+    that why we are moving the logic to the page class.
+     
+Steps:
+----------------
+1.create the page class
+   -> write all webelements
+   -> write all the methods
+2.Create the test class
+  -> create the object for page class
+  -> call the methods using the pafe object
+  
+  
+
+ create two packages:
+-> pages
+-> tests
+
+ 
+ 
+      

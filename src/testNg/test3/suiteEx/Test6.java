@@ -10,6 +10,13 @@ import org.testng.annotations.Test;
       <methods>  
 			<include name="test.*"/>  
 		</methods> 
+
+How to exclude selected test methods?
+ solution)
+ write the following tags in testng.xml
+      <methods>  
+			<exclude name="test.*"/>  
+		</methods> 
  */
 public class Test6 {
 		// test case 1

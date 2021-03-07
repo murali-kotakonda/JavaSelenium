@@ -30,14 +30,14 @@ Steps:
 */
 public class Ex1 {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		//create driver obj
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
 		//open the url
 		driver.get("http://www.google.com");
-		
+		Thread.sleep(5000);
 		//	close the browser
 		driver.quit();
 	}

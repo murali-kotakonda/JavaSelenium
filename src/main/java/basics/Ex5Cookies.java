@@ -28,11 +28,8 @@ public class Ex5Cookies {
 
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = Commons.getChromeDriver();
-
 		driver.get("https://www.youtube.com");
 		Set<Cookie> cookies = driver.manage().getCookies();
-		
-		
 		for(Cookie cookie : cookies) {
 			System.out.println(cookie.getName());
 			System.out.println(cookie.getValue());
