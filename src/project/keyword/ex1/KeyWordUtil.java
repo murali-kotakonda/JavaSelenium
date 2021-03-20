@@ -13,13 +13,7 @@ import org.testng.Reporter;
 
 import util.Commons;
 
-/**
- - For every row create action obj
-- keep all action objects inside the list
-- every action has to be performed using KeyWordUtil.java
-- in the KeyWordUtil.java for every keyword create a method.
-- call the method based on the keyword configured in the excel.
- */
+
 public class KeyWordUtil {
 	WebDriver driver;
 	
@@ -28,33 +22,16 @@ public class KeyWordUtil {
 		this.driver = driver;
 	}
 
+	/**
+	 method for keyword "URL"
+	 */
 	public void enter_URL(WebDriver driver, String data) throws IOException {
 		if(data.equals("BASE_URL")) {
 			data = Commons.BASE_URL;
 		}
 		driver.get(data);
 	}
-
-	public void type(WebDriver driver, String expression, String locatorType, String testdata) throws IOException {
-		WebElement field = driver.findElement(this.getObject(expression, locatorType));
-		field.clear();
-		field.sendKeys(testdata);
-		// driver.findElement(By.xpath("//")).sendKeys(testdata);
-	}
-
-	public void wait(WebDriver driver, String expression, String locatorType) throws IOException {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(this.getObject(expression, locatorType))));
-	}
-
-	public void click(WebDriver driver, String expression, String locatorType) throws IOException {
-		driver.findElement(this.getObject(expression, locatorType)).click();
-	}
-
-	public String get_currentURL(WebDriver driver) {
-		return driver.getCurrentUrl();
-	}
-
+	
 	public void perform(Action action) throws IOException, InterruptedException {
 		String keyword = action.getKeyword();
 		String objectName = action.getObjectName();
@@ -123,6 +100,36 @@ public class KeyWordUtil {
 		}
 	}
 
+	/**
+	 method for keyword "TYPE"
+	 */
+	public void type(WebDriver driver, String expression, String locatorType, String testdata) throws IOException {
+		WebElement field = driver.findElement(this.getObject(expression, locatorType));
+		field.clear();
+		field.sendKeys(testdata);
+		// driver.findElement(By.xpath("//")).sendKeys(testdata);
+	}
+
+	/**
+	 method for keyword "WAIT"
+	 */
+	public void wait(WebDriver driver, String expression, String locatorType) throws IOException {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(this.getObject(expression, locatorType))));
+	}
+
+	/**
+	 method for keyword "CLICK"
+	 */
+	public void click(WebDriver driver, String expression, String locatorType) throws IOException {
+		driver.findElement(this.getObject(expression, locatorType)).click();
+	}
+
+	public String get_currentURL(WebDriver driver) {
+		return driver.getCurrentUrl();
+	}
+
+	
 	public void close() {
 		driver.quit();
 	}

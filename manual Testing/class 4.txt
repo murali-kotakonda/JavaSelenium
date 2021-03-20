@@ -34,6 +34,7 @@ business case:
 
 testing steps:
 --------------
+-> write test cases
 -> test data creation.  [ex: registration , signup, create account] 
 -> test executions   , login success, login failure, 
 -> for every test execution validate.

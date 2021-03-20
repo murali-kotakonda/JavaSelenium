@@ -16,6 +16,20 @@ import org.testng.annotations.Test;
 import test15PiDataProvidersEx.ExcelUtils;
 import util.BaseTest;
 
+/**
+ Data provider for login page
+
+excel:
+------------------
+<username> , <password> , <asserType>
+
+/*
+	 if asserType = A (login success) then perform Logout
+	 if asserType = B then Test for Alert (Please provide LoginName!)
+	 if asserType = C then Test for Alert (Please provide Password!)
+	 if asserType = D then Test for TextMessage (Invalid Login)
+ */
+ 
 public class LoginTestWithoutPOM extends BaseTest {
 	
 	@DataProvider(name = "excelData")
@@ -24,63 +38,29 @@ public class LoginTestWithoutPOM extends BaseTest {
 	}
 
 	/*
-	 if Status = A (login success) then perform Logout
-	 if Status = B then Test for Alert (Please provide LoginName!)
-	 if Status = C then Test for Alert (Please provide Password!)
-	 if Status = D then Test for TextMessage (Invalid Login)
-	 
+	 if asserType = A (login success) then perform Logout
+	 if asserType = B then Test for Alert (Please provide LoginName!)
+	 if asserType = C then Test for Alert (Please provide Password!)
+	 if asserType = D then Test for TextMessage (Invalid Login)
+  	if asserType = E then Test for PASSWORD LENGTH (password has to be minimum 5 chars and max 10 chars!)
 	 */
-@Test(dataProvider = "excelData")
-public void Registration_data(String name, String pass,String status ) throws Exception {
-		//this method is written in LoginPage
-		login(name,pass);
-		if( status.equals("A"))	{testValidCreds();}
-		else if( status.equals("B")) {testAlertLoginName();}
-		else if( status.equals("C")) {testAlertPasswordName ();}
-		else if( status.equals("D")) {testInvalidLogin();}
-		else if( status.equals("E")) {testAlertPassword();}
-}
-	
 
-	private void login(String un, String pwd) {
-		WebElement form = driver.findElement(By.tagName("form"));
-		WebElement formTitle = driver.findElement(By.tagName("h1"));
-		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
-		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
-		WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
-		WebElement name = driver.findElement(By.name("loginName"));
-		WebElement password = driver.findElement(By.name("password"));
-
-		checkEnabledAndDisplayed(usernamelab, name, passwordlab, password, loginBtn);
-
-		// test the form name
-		assertTrue(formTitle.getText().equals("Login Page"));
-
-		// test label for username
-		assertTrue(usernamelab.getText().equals("User Name:"));
-
-		// test label for Password
-		assertTrue(passwordlab.getText().equals("Password:"));
-
-		// test label for button
-		assertTrue(loginBtn.getAttribute("value").equals("Login"));
-
-		// test type for username
-		assertTrue(name.getAttribute("type").equals("text"));
-
-		// test type for password
-		assertTrue(password.getAttribute("type").equals("password"));
-
-		name.clear();
-		password.clear();
-		name.sendKeys(un);
-		password.sendKeys(pwd);
-		loginBtn.click();
-
-		sleep(5);
+	@Test(dataProvider = "excelData")
+	public void Registration_data(String name, String pass, String assertType) throws Exception {
+		// this method is written in LoginPage
+		login(name, pass);
+		if (assertType.equals("A")) {
+			testValidCreds();
+		} else if (assertType.equals("B")) {
+			testAlertLoginName();
+		} else if (assertType.equals("C")) {
+			testAlertPasswordName();
+		} else if (assertType.equals("D")) {
+			testInvalidLogin();
+		} else if (assertType.equals("E")) {
+			testAlertPasswordlength();
+		}
 	}
-	
-
 	public void testValidCreds() {
 		WebElement logout = driver.findElement(By.id("logoutLbl"));;
 		checkEnabledAndDisplayed(logout);
@@ -89,12 +69,7 @@ public void Registration_data(String name, String pass,String status ) throws Ex
 		sleep(5);
 	}
 
-
-
-
 	public void testInvalidLogin() {
-
-
 		//TEST for invalid error message
 		WebElement invalidlogin = driver.findElement(By.xpath("/html/body/font"));
 		checkEnabledAndDisplayed(invalidlogin);
@@ -103,8 +78,6 @@ public void Registration_data(String name, String pass,String status ) throws Ex
 
 
 	public void testAlertLoginName() {
-
-		
 		//test for alert message
 		Alert a = driver.switchTo().alert();
 		Reporter.log(a.getText());
@@ -127,7 +100,7 @@ public void Registration_data(String name, String pass,String status ) throws Ex
 	}
 	
 
-	public void testAlertPassword() {
+	public void testAlertPasswordlength() {
 		
 		//test for alert message
 		Alert a = driver.switchTo().alert();

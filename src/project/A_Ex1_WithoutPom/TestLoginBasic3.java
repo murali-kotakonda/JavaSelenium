@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import util.BaseTest;
 
-public class TestLoginBasic3 extends BaseTest{
+public class TestLoginBasic3 extends EmpBaseTest{
 		
 	// login with correct un and correct pwd
 	@Test
@@ -39,41 +39,5 @@ public class TestLoginBasic3 extends BaseTest{
 		assertTrue(invalidlogin.getText().equals("Invalid Login."));
 	}
 	
-	//method to perform login
-	private void login(String userNameValue,String passwordValue) {
-
-		// get the web element objects
-		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
-		WebElement name = driver.findElement(By.name("loginName"));
-
-		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
-		WebElement password = driver.findElement(By.name("password"));
-
-		WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
-		WebElement formTitle = driver.findElement(By.tagName("h1"));
-
-		checkEnabledAndDisplayed(usernamelab,passwordlab,loginBtn,password,name);
-
-		// test the form name
-		assertTrue(formTitle.getText().equals("Login Page"));
-
-		// test label for username
-		assertTrue(usernamelab.getText().equals("User Name:"));
-
-		// test label for Password
-		assertTrue(passwordlab.getText().equals("Password:"));
-
-		// test label for button
-		assertTrue(loginBtn.getAttribute("value").equals("Login"));
-
-		// test type for username
-		assertTrue(name.getAttribute("type").equals("text"));
-
-		// test type for password
-		assertTrue(password.getAttribute("type").equals("password"));
-
-		name.sendKeys(userNameValue);
-		password.sendKeys(passwordValue);
-		loginBtn.click();
-	}
+	 
 }

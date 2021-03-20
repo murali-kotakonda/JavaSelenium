@@ -1,0 +1,25 @@
+In keyword driven:
+every row is a instuction 
+every row has to perform certain action..
+convert every row to action obj.
+
+
+
+
+For running test case we need multiple action objects.
+One test case requires list of action objects.
+Excel contains
+-> multiple test cases
+-> every test case contains multiple actions
+
+
+
+/**
+ - For every row create action obj
+- keep all action objects inside the list
+- every action has to be performed using KeyWordUtil.java
+- in the KeyWordUtil.java for every keyword create a method.
+- call the method based on the keyword configured in the excel.
+ */
+ 
+ 

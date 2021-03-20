@@ -20,7 +20,7 @@ public class LoginTestWithPOM extends BaseTest {
 	
 	@DataProvider(name = "excelData")
 	public static Object[][] Authentication() throws Exception {
-		return ExcelUtils.getTableArray("C://test1//DataProvider.xlsx", "Sheet2");
+		return ExcelUtils.getTableArray("C://test1//DataProvider.xlsx", "");
 	}
 
 	/*
@@ -33,6 +33,8 @@ public class LoginTestWithPOM extends BaseTest {
 @Test(dataProvider = "excelData")
 public void Registration_data(String name, String pass,String status ) throws Exception {
 		//this method is written in LoginPage
+		name = name==null?"": name;
+		pass =pass==null? "":pass;
 		login(name,pass);
 		if( status.equals("A"))	{testValidCreds();}
 		else if( status.equals("B")) {testAlertLoginName();}

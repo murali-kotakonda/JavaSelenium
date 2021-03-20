@@ -9,11 +9,11 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelUtils {
+public class KeyDrivenExcelUtils {
 	private FileInputStream fileInputStream;
 	private XSSFWorkbook workbook;
 
-	public ExcelUtils(String excelFilePath) {
+	public KeyDrivenExcelUtils(String excelFilePath) {
 		try {
 			fileInputStream = new FileInputStream(excelFilePath);
 			workbook = new XSSFWorkbook(fileInputStream);

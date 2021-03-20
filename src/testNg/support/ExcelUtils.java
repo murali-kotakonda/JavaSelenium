@@ -15,6 +15,10 @@ import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFColor;
+import org.apache.poi.xssf.usermodel.XSSFFont;
+import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
@@ -32,6 +36,14 @@ public class ExcelUtils {
 	static int[] columnWidths = { 7,25,12,12,12,12,12,12,12,12 };
 	
 	public static File getFile(MillsListResponse response) throws IOException, FileNotFoundException {
+		
+		 
+	  
+
+
+	      
+	      
+	      
 		List<MillListEntity> list = response.getMillListEntities();
 
 		// create workbook
@@ -104,23 +116,41 @@ public class ExcelUtils {
 	private static void writeData(Row newRow, Object column, int columnCount) {
 		Cell cell = createCell(newRow, columnCount);
 		if (column instanceof String) {
-            cell.setCellValue((String) column);
+           // cell.setCellValue((String) column);
         } else if (column instanceof Integer) {
             Workbook workbook = newRow.getSheet().getWorkbook();
-            
-            
-            
-    		CellStyle cellStyle = workbook.createCellStyle();
-    	    cellStyle.setAlignment(HorizontalAlignment.LEFT);
-    	    
-    	    // fill foreground color ...
-    	    cellStyle.setFillForegroundColor(IndexedColors.RED.index);
-            // and solid fill pattern produces solid grey cell fill
-    	    cellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
-    	    
-    	    cell.setCellValue((Integer) column);
-        	cell.setCellStyle(cellStyle);
+    		//setCellStyle(column, cell, workbook);
+    		  setDiffFont(newRow, workbook,"Hello");
         }
+	}
+
+	private static void setDiffFont(Row newRow,Workbook workbook,String text) {
+		Cell cell = createCell(newRow, 0);
+		
+		XSSFCell cell1 = (XSSFCell) cell;
+		XSSFRichTextString rt = new XSSFRichTextString("*");
+
+		XSSFFont font1 = (XSSFFont) workbook.createFont();
+		font1.setColor(new XSSFColor(new java.awt.Color(255, 0, 0)));
+		rt.applyFont(0, 1, font1);
+
+		XSSFFont font3 = (XSSFFont) workbook.createFont();
+		font3.setColor(new XSSFColor(new java.awt.Color(0, 0, 255)));
+		rt.append(text, font3);
+		cell1.setCellValue(rt);
+	}
+
+	private static void setCellStyle(Object column, Cell cell, Workbook workbook) {
+		CellStyle cellStyle = workbook.createCellStyle();
+		cellStyle.setAlignment(HorizontalAlignment.LEFT);
+		
+		// fill foreground color ...
+		cellStyle.setFillForegroundColor(IndexedColors.RED.index);
+		// and solid fill pattern produces solid grey cell fill
+		cellStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+		
+		cell.setCellValue((Integer) column);
+		cell.setCellStyle(cellStyle);
 	}
 	
 	private static void writeBoldData(Row newRow, String column, int columnCount) {

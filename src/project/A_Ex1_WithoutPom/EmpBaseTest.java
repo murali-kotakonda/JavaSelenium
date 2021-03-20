@@ -1,4 +1,4 @@
-package util;
+package A_Ex1_WithoutPom;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -20,7 +20,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class BaseTest {
+public class EmpBaseTest {
 
 	public WebDriver driver;
 
@@ -151,8 +151,6 @@ public class BaseTest {
 		// test type for password
 		assertTrue(password.getAttribute("type").equals("password"));
 
-		name.clear();
-		password.clear();
 		name.sendKeys(un);
 		password.sendKeys(pwd);
 		loginBtn.click();

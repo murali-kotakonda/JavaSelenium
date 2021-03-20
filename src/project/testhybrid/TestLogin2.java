@@ -10,20 +10,20 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import keyword.ex1.Action;
-import keyword.ex1.ExcelUtils;
+import keyword.ex1.KeyDrivenExcelUtils;
 import keyword.ex2.KeyWordUtil;
 import util.Commons;
 
 public class TestLogin2 {
 
 	KeyWordUtil keyword;
-	ExcelUtils utils ;
+	KeyDrivenExcelUtils utils ;
 	private String excelFilePath = "C:\\test\\keywords2.xlsx";
 	
 	@BeforeTest
 	public void setup() {
 		keyword = new KeyWordUtil(Commons.getDriver());
-		utils = new ExcelUtils(excelFilePath);
+		utils = new KeyDrivenExcelUtils(excelFilePath);
 	}
 
 	@AfterTest

@@ -12,13 +12,13 @@ import util.Commons;
 public class TestLogin {
 
 	KeyWordUtil keywordUtil;
-	ExcelUtils utils ;
+	KeyDrivenExcelUtils utils ;
 	private String excelFilePath = "C:\\test\\keywords.xlsx";
 	
 	@BeforeTest
 	public void setup() {
-		keywordUtil = new KeyWordUtil(Commons.getDriver());
-		utils = new ExcelUtils(excelFilePath);
+		keywordUtil = new KeyWordUtil(Commons.getChromeDriver());
+		utils = new KeyDrivenExcelUtils(excelFilePath);
 	}
 
 	@AfterTest
