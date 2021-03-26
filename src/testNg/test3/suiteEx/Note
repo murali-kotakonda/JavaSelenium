@@ -2,7 +2,7 @@ suite:
 ---------
 - collection of test classes.
 - enables the tester to run the selected test classes.
- - suite is written using the xml file
+- suite is written using the xml file
  
  
 

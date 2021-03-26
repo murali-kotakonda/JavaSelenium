@@ -36,9 +36,6 @@ public class Test1 extends BaseTest{
 	   -> assertions
 	 * @throws InterruptedException 
 	 */
-
-	   
-	
 	@Test
 	public void testLName() throws InterruptedException {
 		//<input type="text" name="LName" size="30" width="30">

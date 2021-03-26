@@ -21,10 +21,11 @@ waterfall:
 Analyis + design + coding + unit testing+
 testing + deployment + maintainance..
 
-dev compltion takes almost 75% of the estimation.
-
 Problems:
 ----------------------------
+
+->dev compltion takes almost 75% of the estimation.
+
 -> Testers cannot start work until dev completes , but dev completion takes 5 months .
 till 5 months testers are not utilized.
  No proper utilization of Team mates. 
@@ -49,7 +50,11 @@ going back to previous stage is complex/time consuming.
 
 
 Agile:
--------
+-----------------------------------------------
+
+- process model that contains continuous iteration of the 
+phases (coding / testing ) 
+
 Analyis + design + coding + unit testing+
 testing + deployment + maintainance..
 
@@ -58,8 +63,6 @@ testing + deployment + maintainance..
 - all resources are properly utilized.
 - any change in requiremnet can be adjusted.
 
-- process model that contains continuous iteration of the 
-phases (coding / testing ) 
 -dev + testing will be happening at the same time.
 -Divide and rule policy .
   - divide all requirements into Independent pieces. 
@@ -138,6 +141,7 @@ Divide all requirements into 5 sets :
 
 Adv:
 -----
+-> test early + defect fix early
 ->For developer its easy to fix issues , and they will be very responsive.
 ->constant changes are allowed.
 ->constant communication between stackholders, business deligates, end customers .....

@@ -13,11 +13,11 @@ Quality owner  --> Testing leads
 Developes (UI, JAVA,DB),
 Testers
 Dev Ops
-
+Manager -> manage people 
+Architect 
 Scrum Master
 ---------------------
 -certified in agile 
-- excellent skills in Agile + Excel + JIRA +JENKINS +Defect tool
 - gives tasks to entire team
 -manage work/ allocate work for the people.
 -decides priority of work [defect/task].
@@ -28,13 +28,12 @@ Scrum Master
 -ensure meeting deadlines with quality.
 -support the team deliverables - continuos integration.
 -will do planning for the team.
+- track the work anybody is doing.
+- arranging meetings for the team.
 -educate and guide for best practices.
 -makes sure team follows agile practises.
--track the work anybody is doing.
-- arranging meetings for the team.
 -communication + process + peple mgmt + ability to deal with people + arguments [positive]
-
-Manager -> manage people 
+- excellent skills in Agile + Excel + JIRA +JENKINS +Defect tool
 
 
 For two weeks all the above people are occupied.
@@ -59,22 +58,6 @@ Divide all requirements into 5 sets :
   10 Req      +  10 Req     + 10 Req        + 10 Req         + 10 Req 
   
   
-Sprint:
----------------
-
-- two weeks window or period where all team mates are occupied for the delivery of selected requirements .
-- flavour of agile
-- every sprint has a number.
-
-50 Requirements :
---------------------
-Divide all requirements into 5 sets :
-
-  211a           211b        212a            212b             213a 
-  Sprint-1      Sprint-2     Sprint-3       Sprint-4         Sprint-5
-  10 Req      +  10 Req     + 10 Req        + 10 Req         + 10 Req 
-  
-
 211a - 1st 10 requirements 
 211b - next 10 requirements + defects from previous
 
@@ -88,15 +71,17 @@ Divide all requirements into 5 sets :
 214b - next 10 requirements + defects from previous
 
 
-Requirements is didvided into EPIC
-Every Epic has multiple User Stories
-Every user story has multiple tasks 
-
 Terms:
 ---------
 EPIC
 USER STORY
 TASK 
+
+
+Requirements is didvided into EPIC
+Every Epic has multiple User Stories
+Every user story has multiple tasks 
+
 
 
 EPIC: [taken care by product owner ]
@@ -147,37 +132,18 @@ WORK VS TIME chart.
 Spillover(unfinished):
 ----------
 Any uncompleted work in current sprint will carry over to next sprint.
-
  
-
 
 Meetings:
 ------------------------------------------------------------------------
--Groming
--SCRUM 
 -Planning 
--Retro
+-SCRUM
 -Review
--Demo 
+-Demo
+-Retro 
+-Groming
 
-Grooming[meeting]: 
---------------------
-- weekly once 
--is a meeting only with leads and PO and customer to discuss and finalize requirements.
-- To decide next Requirements and for every requiremnet find the estimation .
--Requirements are finalized after grooming.
--We will discuss only on backog items.
-
-
-
-SCRUM:(work status update )
---------
-- It is a daily meeting for 15 mints.
-- every body has to attend.
-- ever body has to speak.
--share their status of work [ work started/ work inprogess/
- work completed/work going to status /blocker].
-
+ 
 
 
 Planning (MEETING): 
@@ -189,6 +155,18 @@ Planning (MEETING):
 -scrum master will decide , assign the userstories.
 to all team memebers, to be completed in 2 weeks .
  
+
+
+SCRUM:(work status update )
+--------
+- It is a daily meeting for 15 mints.
+- every body has to attend.
+- ever body has to speak.
+-share their status of work [ work started/ work inprogess/
+ work completed/work going to status /blocker].
+
+ 
+
 
 Review :
 -----------------
@@ -207,6 +185,7 @@ Demo feedback points to be addressed in next sprint.
 Demo should be given by Dev/Tester.
 
 
+
 Retro:
 ---------------
 - meeting once in a month.
@@ -215,6 +194,17 @@ Retro:
   a)What went good
   b)What went wrong
   c)What has to be improved.
+
+
+
+Grooming[meeting]: 
+--------------------
+- weekly once 
+-is a meeting only with leads and PO and customer to discuss and finalize requirements.
+- To decide next Requirements and for every requiremnet find the estimation .
+-Requirements are finalized after grooming.
+-We will discuss only on backog items.
+ 
 
 
 meeting summary:

@@ -1,0 +1,16 @@
+<suite name = "empDemo">
+  
+  <!--  run only the login group -->
+   <test name = "app">
+    <groups>
+	    	 <run>
+ 				<include name="login" />
+ 				</run>
+ 		</groups>
+     
+      <classes>
+      <class name="groups.Test1"/>
+      </classes>
+    
+    </test>
+ </suite>     

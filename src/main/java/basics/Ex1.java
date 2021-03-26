@@ -14,9 +14,9 @@ open the browser and Hit the URL "https://gmail.com" using the Java
 Steps:
 -------
 
-1.Provide the driver software location ""C:\\chromedriver.exe" to the System.
-     Create the web driver Object using the driver software.
-    System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+1.Create the web driver Object using the driver software.
+Provide the driver software location ""C:\\chromedriver.exe" to the System.
+         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
     
 2.Open the URL

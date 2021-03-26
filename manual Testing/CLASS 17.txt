@@ -12,15 +12,17 @@ Functional testing:
 
 coverage/guidelines/testing techniques under functional testing:
 ------------------------------------------
-a)Object Properties testing:
-b)Error handling/coverage testing:
-c)calculation /manipulation testing:
-d)Links coverage:
-e)Boundary Value analysis:[BVA]
-f)Equivalence class partitioning (ECP)
-g)decision table based testing
-h)Internationalization  testing
-i)state transition
+a)Boundary Value analysis:[BVA]
+b)Equivalence class partitioning (ECP)
+c)decision table based testing
+d)state transition
+
+e)Object Properties testing:
+f)Error handling/coverage testing:
+g)calculation /manipulation testing:
+h)Links coverage:
+i)Internationalization  testing
+
 
 input domain coverage (BVA, ECP)
 cookies and sessions -> NA
@@ -43,20 +45,31 @@ in a Registration page
 username textbox , 
 password field, 
 state dropdown.
+city dropdown
+ 
 
- text box is an obj.
- properties of textbox: enable + disable + onchange +size + isdisplayed
+text box is an obj.
+properties of textbox: enable + disable + size + isdisplayed
+behaviour : onchange , onclick  
+
+
  password is object
  we type should not be visible + if we chose to show password should showsize + isdisplayed +onchange
-  
+  behaviour : onchange , onclick  
+
 1.on page open un + pwd is enabled.
+
+
 state dropdown obj -> if we change state then city dropdown changes...
-city dropdown obj ->
+city dropdown obj ->  shows cities based on state selected
 
 2.password should not be visible.
 3.on state change + city also changes.
 
 During  functional testing tester has to validate the properties of every object at run time.
+
+age is a number and app should not even allow to enter any other chars except digits
+
 
 b)Error handling/coverage testing:
 applicable for only for negative scenario.
@@ -186,12 +199,14 @@ Ex1:
 Input condition is valid between 1 to 10
 Boundary values 0,1,2 and 9,10,11
 
-
-Ex2: 
-UserName should be between 6 chars and max 10 chars.
 testcases are:
 min-1 , min , min+1
 max-1, max, max+1
+
+
+Ex2: 
+UserName should be between 6 chars and max 10 chars.
+
 
 min =6
 max= 10
@@ -210,7 +225,7 @@ Equivalent Class Partitioning allows you to divide set of test condition into a 
 This software testing method divides the input domain of a program into classes of data from which test cases should be designed.
  
 Case#1:
-username filed allows only lower case.
+username field allows only lower case.
 
 VALID : [a-z]  
         ex:kumar
@@ -227,8 +242,8 @@ Invalid : 1. [A-Z] capitals
 Case#2:
 username allows only alphabets only capitals allowed.  
 
-only alphabets lower case - InValid  -> user
-only alphabets upper case - Valid  -> USER
+only alphabets + lower case - InValid  -> user
+only alphabets + upper case - Valid  -> USER
 only digits  - Invalid -> 1213
 special chars - Invalid -> &&%$
 alpha numeric
@@ -258,14 +273,16 @@ summary:
 g)decision table based testing
 -------------------------------
 -This technique is used for functions which respond to a combination of inputs or events.
-If there are large input set of combinations, then divide it into smaller subsets which are helpful for managing a decision table.
+- If there are large input set of combinations, then divide it into smaller subsets which are helpful for managing a decision table.
 
-For example, a submit button should be enabled if the user has entered all required fields.
 
 Case#1:
 In a registration page 
 name, email and message are the text fields
 Registration will proceed with valid data for name, email and message.
+
+For example, a submit button should be enabled if the user has entered all required fields.
+
 
 Refer diagram
 
@@ -273,11 +290,11 @@ CASE#2:
 Req: 
 - Get transaction with in 30 days
 - From Time and toTime are optional
+- From Time and toTime should be within 30 days
 
-
-       NoInput   Input <30   Input>30
-D<30    T          T           F
-D>30    F          F           F
+       NoInput   From Time <30   toTime>30
+Data<30    T          T           F
+Data>30    F          F           F
 
 
   
@@ -301,14 +318,18 @@ SYNTAX CORRECT:
 F - False   
 T - True   
 
+v= Valid
+I = Invalid
+
+
 un          pwd        result
 ------------------------------
-F(<10)      F(<8)        FAIL
-F(<10)      T(=8)        FAIL
-T(=10)      F(<8)        FAIL
-T(=10)+V    T(=8)+I      FAIL
-T(=10)+I    T(=8)+V/I    FAIL
-T(=10)+V    T(=8)+V      PASS
+(<10)      (<8)        FAIL
+(<10)      (=8)        FAIL
+(=10)      (<8)        FAIL
+(=10)+V    (=8)+I      FAIL
+(=10)+I    (=8)+V/I    FAIL
+(=10)+V    (=8)+V      PASS
 
 
 state transition:
@@ -326,13 +347,20 @@ the testing team provides positive as well as negative input test values for eva
 
 ex:
 1. one person can add only one product during Flipkart sale.
-	Test cases:
-	1.Add product when nothing in cart.
-	   state changes to not eligible
-	2.Add product when one product in cart in cart
-    Before adding: Eligible
-	After adding : Not eligible
 
+Before adding: Eligible
+After adding : Not eligible
+
+ Test cases:
+  1.Add product when nothing in cart.     -> Pass
+     state changes from 'Eligible' to 'Not Eligible'
+  2.Try to Add product when one product in cart   -> Fail
+  3.Remove the product from cart
+       state changes from 'Not Eligible' to 'Eligible'
+  4.Try to Add product when one product in cart   -> pass
+   state changes from 'Eligible' to 'Not Eligible'
+
+  
 2.After 30 days dont access the features as Licence expired.
 
 States:
@@ -340,8 +368,8 @@ Not Expired
 Expired
 
 Test cases:
-1.Test all the features within 30 days
-2.Test all the features after 30 days
+1.Test all the features within 30 days [curr stet is Not Expired ]  -> Pass
+2.Test all the features after 30 days  [curr stet is  Expired ]  -> Fail
 
 
 3.LoggedinUser vs Loggedout user

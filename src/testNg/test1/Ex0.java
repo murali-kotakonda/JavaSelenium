@@ -15,23 +15,26 @@ import util.Commons;
 public class Ex0 {
 
 	@Test
-	public void verifyFb() {
+	public void verifyFb() throws InterruptedException {
 		WebDriver  driver = Commons.getChromeDriver();
 		driver.get("https://www.fb.com");
+		Thread.sleep(3000);
 		driver.close();
 	}
 	
 	@Test
-	public void verifyYT() {
+	public void verifyYT() throws InterruptedException {
 		WebDriver driver = Commons.getChromeDriver();
 		driver.get("https://www.youtube.com");
+		Thread.sleep(3000);
 		driver.close();
 	}
 	
 	@Test
-	public void verifyGmail() {
+	public void verifyGmail() throws InterruptedException {
 		WebDriver driver = Commons.getChromeDriver();
 		driver.get("https://www.gmail.com");
+		Thread.sleep(3000);
 		driver.close();
 	}
 	

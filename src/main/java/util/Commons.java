@@ -11,7 +11,24 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
--  How to delete the page cookies?
+
+How to close the driver?
+driver.quit(); -> will close all the opened window
+driver.close(); -> will close only the current window
+
+ WebDriver driver = new ChromeDriver();
+ points:
+ 1. WebDriver is a interface
+ 2. ChromeDriver is the child class for the 'WebDriver'
+ 3. we are creating child obj and refer by paremt class
+ 4. we can perform the same for other browser .
+ every browser has driverClass.
+ every driver class is child class for WebDriver
+ 5. for firefox:
+ WebDriver driver = new FireFoxDriver();
+
+
+   How to delete the page cookies?
    driver.manage().deleteAllCookies();
   
   
@@ -83,9 +100,11 @@ public class Commons {
 		Options manage = driver.manage();
 		manage.deleteAllCookies();
 		manage.window().maximize();
+		
 		manage.timeouts().pageLoadTimeout(60, 
 				TimeUnit.SECONDS); //Identify performance issues
 		// the time that the script allots for a web page to be displayed. 
+	
 		//If the page loads within the time then the script continues. 
 		//If the page does not load within the timeout the script will be stopped by a TimeoutException.
 		manage.timeouts().implicitlyWait(20, TimeUnit.SECONDS);

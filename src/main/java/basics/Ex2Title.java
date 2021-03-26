@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 Req:
 open the browser and Hit the URL "https://gmail.com" using the Java and fetch the title 
-open the browser and Hit the URL "https://youtube.com" using the Java and fetch the title  
+ 
   
   
  */
@@ -29,13 +29,7 @@ public class Ex2Title {
 		String title = driver.getTitle();
 		System.out.println(title);
 
-		// open the url
-		driver.get("http://www.youtube.com");
-
-		// get the title for youtube
-		title = driver.getTitle();
-		System.out.println(title);
-
+		 
 		// close the browser
 		driver.quit();
 	}

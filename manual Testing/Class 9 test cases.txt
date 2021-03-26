@@ -16,8 +16,9 @@ Every test case has :
 ------------------------
 1.Test case#number FC3.6_620_B_T1
 2.Test case description -> what is the test case abt (one liner)
-1.login success with valid creds.
-2.login faillure with valid creds.  
+	ex
+	1.login success with valid creds.
+	2.login faillure with valid creds.  
 3.Screen Name/funtion: on which page/module the test case has to be executed.
 Login screen
 4.Assumptions: 
@@ -28,6 +29,7 @@ valid url
 login screen to open.
 login screen should show login name + pwd with submit button.
 6.Test steps: 
+setp by step actions to be performed on the page.
 ->open www.fb.com
 ->under username enter "admin"
 ->under password enter "admin123"
@@ -80,8 +82,7 @@ Tasks:
 ->Review the test cases .
 ->Perform testing.
 
-
-
+ 
 
 requirements-traceability-matrix document:
 -------------------------------------------

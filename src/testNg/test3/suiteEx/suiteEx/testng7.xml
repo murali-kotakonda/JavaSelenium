@@ -1,0 +1,15 @@
+<suite name = "Suite1">
+   <test name = "exampletest1">
+      <classes>
+         <class name = "suiteEx.Test6" >
+      
+         <methods>  
+			<exclude name="test.*"/> 
+			<!-- <include name="m.*"/>  -->
+		</methods> 
+		
+         </class>
+      </classes>
+   </test>
+</suite>
+

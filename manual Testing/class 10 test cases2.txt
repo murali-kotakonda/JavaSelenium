@@ -54,37 +54,85 @@ What is the testing common for all test cases:
 4) Form to contain login button.
 
 
+Queries)
+
+1.What if the username is empty?
+ans) please show the popup message "Please enter username"
+
+2.What if the password is empty?
+ans) please show the popup message "Please enter password"
+
+
+
 
 BR1.1:
 --------------
 IF UN is correct and pwd is worng for 5 times lock the account.
 
-	 There is a user with "Kumar" as loginname , "Kumar" as password:
- case1:
-		1. enter "Kumar" + "Kumar1" --> invalid login
- 2. enter "Kumar" + "Kumar1" --> invalid login + update "attempts" column value to 2.
-        3. enter "Kumar" + "Kumar1" --> invalid login 
-        4. enter "Kumar" + "Kumar1" --> invalid login 
-        5. enter "Kumar" + "Kumar1" --> "your account is locked.Please conact admin"
- 6. enter "Kumar" + "Kumar" -->   "your account is locked.Please conact admin"
+Queries)
+once account is loacked the show error message "Your account is locked.Please contact Admin."
+
+should we also show message how many attempts are left over  - Not required.
+
+
+There is a user with "Kumar" as loginname , "Kumar" as password:
+
+case1:
+1. enter "Kumar" + "Kumar1" --> invalid login
+2. enter "Kumar" + "Kumar1" --> invalid login + update "attempts" column value to 2.
+3. enter "Kumar" + "Kumar1" --> invalid login 
+4. enter "Kumar" + "Kumar1" --> invalid login 
+5. enter "Kumar" + "Kumar1" --> "your account is locked.Please conact admin"
+6. enter "Kumar" + "Kumar" -->   "your account is locked.Please conact admin"
 
 Refer Test cases un and pwd.jfif
 
-
-
+TestCases:
+--------------
+1.verify account locked with valid un + invalid pwd for 5 times
+2.verify login failure for locked account
+3.verify login success in 5th attempt
+4.verify account is not locked  in 6th attempt  of invalid creds
 
 BR#2
 --please add a new page for registration.
 --this new page should contain registration form.
---the form should contain user name(login name), password, confirm password.
--- first name
--- last name
--- gender  (radio button, male, female, other)
--- date of birth (dd/mm/yy)
--- department (HR, recruitment and finance)(drop down)
--- mobile number
--- email
--- register button 
+--the form should contain
+ -user name(login name),
+- password, 
+- confirm password.
+- first name
+- last name
+- gender  (radio button, male, female, other)
+- date of birth (dd/mm/yy)
+- department (HR, recruitment and finance)(drop down)
+- mobile number
+- email
+- register button 
+
+Queries)
+1.If reg is succes which poage do we navigate to?
+ans) Logn page with message  "Registration Success".
+
+2.Any limitation of age
+ans) yes , min 18 
+
+3.Any limitation in the no fo digits for mobil
+ans) mobil no has to be exactly 10 digits, if not show popup message "mobile number has to exactly 10 digits"
+
+4.Any limitation in the no of charc for 1st name and last name
+ans) min 5 chars and max 15 chars
+
+5)default value for gender
+ans) By default  Male is selected
+
+6)default value for department
+ans) By default  HR is selected
+
+7) Please provide a wireframe doc or mock screen for registration page
+
+8) is the mno , email unique??? Yes
+
 
 Client side validations
 --------------------------------
@@ -112,13 +160,8 @@ mobile number already in use.
 registraion page stating:
 email alreday in use.
 5. if registartion is success then use username and password on the login screen to login (Refer BR#1)\
-
-
-
-
-BR#2 Testcases:
-----------
-
+ 
+ 
 BR#2 Testcases:
 ----------
 1.Popup msg to appear when username is empty

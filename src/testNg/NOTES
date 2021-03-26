@@ -4,14 +4,6 @@
 
 TestNG is a more powerful testing framework than Junit as it contains more powerful functionalities such as:
 
-TestNG annotations:
--------------------------------
-It supports multithreaded execution.
-It provides flexible test configuration.
-It also supports the parameters.
-It is supported by various tools and plug-ins such as Eclipse, Maven, IDEA, etc.
-It supports Data-driven testing with the help of @DataProvider.
-
 
 What is TestNG:
 ---------------------
@@ -23,6 +15,17 @@ If you want to run a test case A before that as a pre-request you need to run mu
 TestNG framework came after Junit, and TestNG framework adds more powerful functionality and easier to use.
 It is an open source automated TestNG framework. In TestNG, NG stands for "Next Generation".
 TestNG framework eliminates the limitations of the older framework by providing more powerful and flexible test cases with help of easy annotations, grouping, sequencing and parametrizing.
+
+
+
+TestNG annotations:
+-------------------------------
+It supports multithreaded execution.
+It provides flexible test configuration.
+It also supports the parameters.
+It is supported by various tools and plug-ins such as Eclipse, Maven, IDEA, etc.
+It supports Data-driven testing with the help of @DataProvider.
+
 
 
 Adv:
@@ -42,6 +45,7 @@ Help>install new software
 1.
 Name: TestNG 
 Url: https://dl.bintray.com/testng-team/testng-eclipse-release/
+
 2.
 TestNG P2 - https://dl.bintray.com/testng-team/testng-p2-release
 3.
@@ -85,17 +89,19 @@ The annotated method will be run after each test method.
 @DataProvider
 Marks a method as supplying data for a test method. The annotated method must return an Object[ ][ ], where each Object[ ] can be assigned the parameter list of the test method. The @Test method that wants to receive data from this DataProvider needs to use a dataProvider name equals to the name of this annotation.
 
-@Factory
-Marks a method as a factory that returns objects that will be used by TestNG as Test classes. The method must return Object[ ].
-
-@Listeners
-Defines listeners on a test class.
-
+ 
 @Parameters
 Describes how to pass parameters to a @Test method.
 
 @Test
 Marks a class or a method as a part of the test.
+
+@Factory
+Marks a method as a factory that returns objects that will be used by TestNG as Test classes. The method must return Object[ ].
+
+
+@Listeners
+Defines listeners on a test class.
 
 
 Class setup:
@@ -105,10 +111,7 @@ write one method for one test case -[test method]
 every test method has @Test annotation.
 [Every test method has @Test annotation before the method declaration.]
 
- 
-
-
-
+  
 syntax of Test class:
 -----------------------
 
@@ -136,3 +139,4 @@ public class MyTest {
 
 
 }
+run the test classes using test ng
