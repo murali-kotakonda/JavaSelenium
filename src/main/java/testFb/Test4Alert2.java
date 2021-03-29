@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import util.BaseTest;
 import util.Commons;
 
-public class Test4Alert extends BaseTest{
+public class Test4Alert2 extends BaseTest{
 
 	@BeforeMethod
 	public void setup() {
@@ -33,11 +33,19 @@ public class Test4Alert extends BaseTest{
        
       How to click ok on alert message?
        alert.accept();	
+       
+      How to click on cancel/dismiss?
+	  alert.dismiss(); 
+	  
+	  How to send data to the popup?
+	  alert.sendKeys("<some text>");
 	 
 	 */
+	
+	//<input type="button" name="alert1" onclick="check1()" value="alert1"><br><br>
 	@Test
 	public void testAlert1() throws Exception  {									
-        driver.findElement(By.name("submit")).click();			
+        driver.findElement(By.name("alert1")).click();			
         		
         // Switching to Alert        
         Alert alert = driver.switchTo().alert();		

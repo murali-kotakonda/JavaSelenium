@@ -1,4 +1,4 @@
-package testFb.myapp;
+package testFb;
 
 import java.util.Arrays;
 import java.util.List;

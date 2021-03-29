@@ -60,7 +60,7 @@ public class Ex1 extends BaseTest{
 	
 	
 	@Test
-	public void testSn() {
+	public void testSurName() {
 		//<input type="text" name="uName2" disabled="disabled">
 		
 		WebElement element = driver.findElement(By.name("uName2"));
@@ -74,6 +74,7 @@ public class Ex1 extends BaseTest{
 		//How to check if the text field is displayed
 		Assert.assertTrue(element.isDisplayed(),"uName2 should be displayed");
 	}
+	
 	//<input type="text" name="LName" size="30" width="30">
 	@Test
 	public void testLastName() throws InterruptedException {
@@ -88,6 +89,13 @@ public class Ex1 extends BaseTest{
 		 
 		 //How to check if the field is text field
 		 Assert.assertEquals(element.getAttribute("type") , "text");
+
+		 	//How to check width
+		 Assert.assertEquals(element.getAttribute("width") , "30");
+		 
+		 //How to check size
+		 Assert.assertEquals(element.getAttribute("size") , "30");
+
 		 
 		//How to check if the field is text field has WIDTH as 30
 		 //assertEquals(element.getAttribute("width"),"30", "Invalid width.");
@@ -125,9 +133,10 @@ public class Ex1 extends BaseTest{
 	}
 	
 	
+	//<input type="password" name="password">
 	@Test
 	public void testPassword() throws InterruptedException {
-		//<input type="password" name="password">
+		
 		 WebElement element = driver.findElement(By.name("password"));
 		 
 		//How to check if the password is enabled
@@ -263,9 +272,9 @@ public class Ex1 extends BaseTest{
 		WebElement fRadio = driver.findElement(By.id("fRadio"));
 		WebElement oRadio = driver.findElement(By.id("oRadio"));
 		
-		assertEquals(mRadio.getAttribute("type"), "radio");
-		assertEquals(fRadio.getAttribute("type"), "radio");
-		assertEquals(oRadio.getAttribute("type"), "radio");
+		Assert.assertEquals(mRadio.getAttribute("type"), "radio");
+		Assert.assertEquals(fRadio.getAttribute("type"), "radio");
+		Assert.assertEquals(oRadio.getAttribute("type"), "radio");
 
 		// checkEnabledAndDisplayed
 		assertTrue(mRadio.isEnabled() && mRadio.isDisplayed(), "mRadio should be enabled and displayed");
@@ -273,9 +282,9 @@ public class Ex1 extends BaseTest{
 		assertTrue(oRadio.isEnabled() && oRadio.isDisplayed(), "oRadio should be enabled and displayed");
 		
 
-		assertTrue(mRadio.isSelected(), "mRadio is selected.");
-		assertFalse(fRadio.isSelected(), "fRadio is not selected.");
-		assertFalse(oRadio.isSelected(), "oRadio is not selected.");
+		Assert.assertTrue(mRadio.isSelected(), "mRadio is selected.");
+		Assert.assertFalse(fRadio.isSelected(), "fRadio is not selected.");
+		Assert.assertFalse(oRadio.isSelected(), "oRadio is not selected.");
 		
 		// how to select radio button
 		oRadio.click();
@@ -328,28 +337,43 @@ public class Ex1 extends BaseTest{
 	  
 	  3.select by value . ex: hyd , bang, chen , mum
 	  select.selectByValue("mum");
+
+
+	  How to check if the dropdown is single/multiple?
+	  select.isMultiple()
+
     
 	*/
 	
 	@Test
 	public void testDropdown() throws InterruptedException {
 		WebElement cities = driver.findElement(By.name("city"));
+
+
+		// How to check if the password is enabled
+		Assert.assertTrue(cities.isEnabled(), "cities should be enabled");
+
+		// How to check if the password is displayed
+		Assert.assertTrue(cities.isDisplayed(), "cities should be displayed");
+		
+
+
 		//create select obj
 		Select select = new Select(cities);
 		
-		assertFalse(select.isMultiple(),"city is not multi dropdown");
+		Assert.assertFalse(select.isMultiple(),"city is not multi dropdown");
 		
 		//How to get all the options
 		List<WebElement> options  = select.getOptions();
 		
 		//validate the number of cities
 		int size = options.size();
-		assertEquals(size, 4,"invalid no of cities");
+		Assert.assertEquals(size, 4,"invalid no of cities");
 		
 		//validate the default value in dropdown
 		WebElement selectedCity = select.getFirstSelectedOption();
 		
-		assertEquals(selectedCity.getText(), "Bangalore","invalid default value");
+		Assert.assertEquals(selectedCity.getText(), "Bangalore","invalid default value");
 		
 		select.selectByVisibleText("Chennai");
 		Thread.sleep(2000);
@@ -368,8 +392,8 @@ public class Ex1 extends BaseTest{
 			String visible = element.getText();
 			String value= element.getAttribute("value");
 			//System.out.println(visible +" - "+value);
-			assertEquals(visible ,expectedCities.get(count) ,"invalid city:");
-			assertEquals(value ,expectedCitiesValues.get(count) ,"invalid city:");
+			Assert.assertEquals(visible ,expectedCities.get(count) ,"invalid city:");
+			Assert.assertEquals(value ,expectedCitiesValues.get(count) ,"invalid city:");
 			count++;
 		}
 	}
@@ -407,29 +431,13 @@ public class Ex1 extends BaseTest{
 		//create select obj
 		Select select = new Select(citizen);
 		
-		assertEquals(citizen.getAttribute("multiple"),"true","citizen is multi dropdown");
-		assertTrue(select.isMultiple(),"citizen is multi dropdown");
+		Assert.assertEquals(citizen.getAttribute("multiple"),"true","citizen is multi dropdown");
+		Assert.assertTrue(select.isMultiple(),"citizen is multi dropdown");
 		
 		//How to get all the options
 		List<WebElement> options  = select.getOptions();
 		
-		//validate the number of citizen
-		int size = options.size();
-		assertEquals(size, 4,"invalid no of citizen");
-		
-		List<String> expectedCitizen =Arrays.asList("India","Pakistan","America","Australia");
-		List<String> expectedCitizenValues =Arrays.asList("IN","PAK","US","AUS");
-		
-		//content testing
-		int count= 0;
-		for(WebElement element :options){
-			String visible = element.getText();
-			String value= element.getAttribute("value");
-			//System.out.println(visible +" - "+value);
-			assertEquals(visible ,expectedCitizen.get(count) ,"invalid citizen text:");
-			assertEquals(value ,expectedCitizenValues.get(count) ,"invalid citizen value:");
-			count++;
-		}
+	
 		
 		//select the values in dropdown
 		select.selectByVisibleText("India");
@@ -468,6 +476,25 @@ public class Ex1 extends BaseTest{
 		Thread.sleep(2000);
 				
 		select.deselectAll();
+
+
+			//validate the number of citizen
+		int size = options.size();
+		assertEquals(size, 4,"invalid no of citizen");
+		
+		List<String> expectedCitizen =Arrays.asList("India","Pakistan","America","Australia");
+		List<String> expectedCitizenValues =Arrays.asList("IN","PAK","US","AUS");
+		
+		//content testing
+		int count= 0;
+		for(WebElement element :options){
+			String visible = element.getText();
+			String value= element.getAttribute("value");
+			//System.out.println(visible +" - "+value);
+			assertEquals(visible ,expectedCitizen.get(count) ,"invalid citizen text:");
+			assertEquals(value ,expectedCitizenValues.get(count) ,"invalid citizen value:");
+			count++;
+		}
 	}
 
 }

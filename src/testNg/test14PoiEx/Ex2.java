@@ -12,8 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
   Read data from all the sheets
-  
-  
+    
  */
 public class Ex2 {
 	public static void main(String[] args) throws FileNotFoundException, IOException {

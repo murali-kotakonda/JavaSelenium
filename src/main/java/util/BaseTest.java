@@ -106,6 +106,15 @@ public class BaseTest {
 		return element;
 	}
 	
+	public WebElement getPasswordByName(String name) {
+		WebElement element = driver.findElement(By.name(name));
+		checkEnabledAndDisplayed(element);
+		
+		assertEquals("password", element.getAttribute("type"), "element expeceted to display");
+		return element;
+	}
+	
+	
 	public void sleep(int seconds) {
 		try {
 			Thread.sleep(seconds * 1000);

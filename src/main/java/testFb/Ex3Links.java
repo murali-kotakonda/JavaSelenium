@@ -1,43 +1,27 @@
-package testFb.myapp;
+package testFb;
 
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import util.BaseTest;
-import util.Commons;
-
-public class Ex3Links {
-	
-	protected WebDriver driver;
+public class Ex3Links extends MyAppBaseTest{
 	
 	@BeforeMethod
 	public void openForm() {
-		driver = Commons.getChromeDriver();
 		//open the form.html
-		driver.get(Commons.BASE_URL + "links.html");
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-		}
+		driver.get(URL + "links.html");
+		sleep(2);
 	}
 	
-	
-	@AfterMethod
-	public void afterMethod() {
-		driver.quit();
-	}
 	
 	//test the page contains only 4 links
 	/*
-	 How to get the elemnt using the tag name
+	 How to get the element using the tag name
 	 solution)
 	 use  driver.findElements(By.tagName("<tag name>"));
 	 
@@ -47,9 +31,18 @@ public class Ex3Links {
 		 List<WebElement> links = driver.findElements(By.tagName("a"));//multiple web elements
 		 
 		 //test no of links
-		 Assert.assertEquals(links.size() , 4,"expected 4 links.");
+		 Assert.assertEquals(links.size() , 8 ,"expected 8 links.");
 	}
 	
+
+	//<a href="https://www.youtube.com" id="ytUrl">Click here for Youtube</a>
+	@Test
+	public void testYt() {
+		WebElement link = driver.findElement(By.id("ytUrl"));
+		checkEnabledAndDisplayed(link);
+		link.click();
+		sleep(3);
+	}
 	
 	/*  
 	<a href="https://www.google.com">Click Here for Google</a>
@@ -70,19 +63,31 @@ public class Ex3Links {
 		plink/click();
 	   */
 	@Test
-	public void testLink1_LinkText() throws InterruptedException {
-		WebElement link = driver.findElement(By.linkText("Click Here for Google"));
+	public void Google1() throws InterruptedException {
+		WebElement link = driver.findElement(By.linkText("Click here for Google"));
 		checkEnabledAndDisplayed(link);
 		link.click();
 		Thread.sleep(3000);
 	}
 	
 	@Test
-	public void testLink1_PartialText() throws InterruptedException {
+	public void Google2() throws InterruptedException {
 		WebElement link = driver.findElement(By.partialLinkText("Google"));
 		checkEnabledAndDisplayed(link);
 		link.click();
 		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void testGoogle3() {
+		getLinkText("Click here for Google").click();
+		sleep(3);
+	}
+	
+	@Test
+	public void testGoogle4() {
+		getPartialText("Google").click();
+		sleep(3);
 	}
 	
 	//  <a href="Ex2.html">Click Here for Ex2</a>
@@ -113,13 +118,4 @@ public class Ex3Links {
 		Thread.sleep(3000);
 	}
 	
-	public void checkEnabledAndDisplayed(WebElement ... elements ) {
-		for(WebElement element : elements) {
-			// How to check if the text field is enabled
-			Assert.assertTrue(element.isEnabled(), "Field should be enabled");
-
-			// How to check if the text field is displayed
-			Assert.assertTrue(element.isDisplayed(), "Field should be Displayed");
-		}
-	}
 }

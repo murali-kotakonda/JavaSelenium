@@ -22,6 +22,22 @@ public class Test8MouseHover extends BaseTest {
 		sleep(5);
 	}
 
+
+	@Test
+	public void testTextF() throws InterruptedException {
+		WebElement txtUsername = driver.findElement(By.id("myname"));
+		txtUsername.sendKeys("kumar");
+		
+		// or
+		sleep(5);
+		new Actions(driver).moveToElement(txtUsername)
+				.click()
+				.sendKeys(txtUsername, "shyam")
+				.build().perform();
+
+	}
+
+
 	@Test
 	public void test1() {
 		//create action object
@@ -44,7 +60,7 @@ public class Test8MouseHover extends BaseTest {
 		use moveToElement() on actions
 	 */
 	@Test
-	public void t1() throws InterruptedException {
+	public void t2() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		
 		/* 
@@ -76,7 +92,7 @@ public class Test8MouseHover extends BaseTest {
 		use moveToElement()  and click() on actions
 	 */
 	@Test
-	public void t2() throws InterruptedException {
+	public void t3() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		
 	    actions.moveToElement(getByLinkText("Click here")).click().build().perform();
@@ -113,7 +129,7 @@ public class Test8MouseHover extends BaseTest {
    use link_Home.getCssValue("color") to get the color.
 	*/
 	@Test
-	public  void t3() throws InterruptedException {
+	public  void t4() throws InterruptedException {
 		
 		//get web element
 		WebElement link_Home = getByLinkText("Click here");

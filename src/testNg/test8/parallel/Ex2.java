@@ -1,12 +1,29 @@
-package test8.parallel;
+package parallel;
 
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import util.BaseTest;
+import util.Commons;
 
-public class Ex2 extends BaseTest{
+public class Ex2 {
+	  
+	public WebDriver driver;
+
+	@BeforeTest
+	public void setup() {
+		System.out.println("in setup");
+		driver = Commons.getChromeDriver();
+	}
+	
+	@AfterTest
+	public void close() {
+		driver.quit();
+	}
+	
 	  @Test
-	  public void verifyHomepageTitle2() {
-	      driver.get("https://google.com");
+	  public void google() {
+	      driver.get("https://www.google.com");
 	  }
 }

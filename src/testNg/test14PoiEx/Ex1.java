@@ -11,7 +11,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
-  Read excel that has following data
+  Read from existing excel that has following data: 
+  excel location : "C:\\test\\Inputdata.xlsx"
   
   un
 admin1

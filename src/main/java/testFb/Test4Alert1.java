@@ -1,4 +1,4 @@
-package testFb.myapp;
+package testFb;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -9,12 +9,12 @@ import org.testng.annotations.Test;
 import util.BaseTest;
 import util.Commons;
 
-public class Ex5Alert extends BaseTest{
+public class Test4Alert1 extends BaseTest{
 	
 	@BeforeMethod
 	public void openForm() {
 		//open the form.html
-		driver.get(Commons.BASE_URL + "alert.html");
+		driver.get(Commons.BASE_URL + "alerts.html");
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {

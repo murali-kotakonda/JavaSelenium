@@ -33,8 +33,9 @@ public class TestXpathNotes {
 		  
 		2.
 		<label id='error'>Enter values here</label>
-		WebElement webElement =driver.findElement(By.xpath("//label[@id='error']"))
 		-> get element that has 'label' as tag name and id as 'error'
+		WebElement webElement =driver.findElement(By.xpath("//label[@id='error']"))
+
 		
 		3.<input type="text"/>
 		-> get element that has 'input' as tag name and type as 'text'
@@ -73,6 +74,7 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		<p class="show"> test4 </p>
 		
 		 Xpath=//p[@class='show']
+		 List<WebElement> elements=driver.findElements(By.xpath("//p[@class='show']"));
 		 */
 	
 	
@@ -95,18 +97,28 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 
 		  
   		Ex2:
-		 <input type= 'subContractor' />
-		 <input type= 'subRegister' />
-     	  <p type= 'subAgent' />
-     
-	      Xpath=//*[contains(@type,'sub')]  -- Get all elements if the attribute type has partial value 'sub'
-	      Xpath=//input[contains(@type,'sub')]  -- Get only input tag elements if the attribute type has partial value 'sub'
-	      Xpath=//p[contains(@type,'sub')]  -- Get only p tag elements if the attribute type has partial value 'sub'
-			 
+		A)<input type= 'subContractor' />
+		B) <input type= 'subRegister' />
+		C) <p type= 'subAgent' />
+		D)  <input type= 'password' />
+	      
+			1.-- Get only input tag elements if the attribute type has partial value 'sub'
+			 Xpath=//input[contains(@type,'sub')] 
+			fetches A & B
+
+			2. -- Get only p tag elements if the attribute type has partial value 'sub'
+			 Xpath=//p[contains(@type,'sub')]
+
+			fetches C
+
+			3. -- Get all elements if the attribute type has partial value 'sub'
+			 Xpath=//*[contains(@type,'sub')]
+			Fetches A , B & C
 	 
 	  Ex3: 
 		 <input name= 'btnUser1' />
 		 <input name= 'btnUser2' />
+		 <p name= 'btnUser3' />
 		 Xpath=//*[contains(@name,'btn')]  -- all elements if the attribute type has partial value 'btn'
 		 Xpath=//input[contains(@name,'btn')]  -- input elements if the attribute type has partial value 'btn'
 		 
@@ -115,8 +127,8 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		
 		EX4: 
 		    <a href="https://www.gmail.com"> click here </a> 
-		    driver.findElement(By.linkText("https://www.gmail.com")).click();
-		    driver.findElement(By.partialLinkText("gmail")).click();
+		    driver.findElement(By.linkText("click here")).click();
+			driver.findElement(By.partialLinkText("gmail")).click();
 			driver.findElement(By.xpath("//a[@href='https://www.gmail.com']	")).click();
 			driver.findElement(By.xpath("//a[contains(@href,'gmail')]	")).click();
 			driver.findElement(By.xpath("//a[contains(text(),'click here')]")).click();
@@ -166,8 +178,8 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 			
 		 Ex4:	
 			<button type="submit">Signup for Free</button>
-				Xpath= //button[text()=’ Signup for Free’]
-				Xpath=//button[contains(text(),’ Signup’ )]
+				Xpath= //button[text()='Signup for Free']
+				Xpath=//button[contains(text(),'Signup')]
 				Xpath= //button[@type='submit']
   		 */
 	      

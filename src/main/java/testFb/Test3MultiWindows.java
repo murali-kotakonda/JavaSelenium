@@ -12,17 +12,13 @@ import org.testng.annotations.Test;
 import util.BaseTest;
 import util.Commons;
 
-public class Test3MultiWindows extends BaseTest {
+public class Test3MultiWindows extends MyAppBaseTest {
 
 	@BeforeMethod
 	public void setup() {
 		super.setup();
-		driver.get(Commons.BASE_URL + "window1.html");
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		driver.get(Commons.BASE_URL + "windows.html");
+		sleep(5);
 	}
 
 	/**
@@ -60,7 +56,7 @@ public class Test3MultiWindows extends BaseTest {
 	@Test
 	public void testWindow() throws InterruptedException {
 		//assert the parent window title
-		assertEquals(driver.getTitle() , "In window1", "Invalid title");
+		Assert.assertEquals(driver.getTitle() , "In window1", "Invalid title");
 		
 		//Get the parent window name
 		String parentWindowHandle = driver.getWindowHandle();

@@ -1,17 +1,25 @@
-package test8.parallel;
+package parallel;
 
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import util.BaseTest;
+import util.Commons;
 
-public class Ex3 extends BaseTest{
-	  @Test
-	  public void fb() {
-	      driver.get("https://fb.com");
-	  }
-	  
-	  @Test
-	  public void amazon() {
-	      driver.get("https://www.amazon.com");
-	  }
+public class Ex3 {
+
+	@Test
+	public void youtube() {
+		WebDriver driver = Commons.getChromeDriver();
+		driver.get("https://www.youtube.com");
+		driver.close();
+	}
+
+	@Test
+	public void twitter() {
+		WebDriver driver = Commons.getChromeDriver();
+		driver.get("https://www.twitter.com");
+		driver.close();
+	}
 }

@@ -1,25 +1,20 @@
-package test15PiDataProvidersEx;
+package excelDataProvider;
+
+import java.io.IOException;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-/*
-admin	admin123	pass
-admin1	admin1_123	fail
-admin2	admin1_124	pass
-admin3	admin1_125	fail
-admin4	admin1_126	pass
-*/
+
 public class TestDataExcel {
 
-	@DataProvider(name = "excelData")
-	public static Object[][] Authentication() throws Exception {
-		return ExcelUtils.getTableArray("C://test//data.xlsx", "output");
+	@DataProvider(name = "test1")
+	public static Object[][] data() throws IOException {
+		return ExcelUtils.getTableArray("C://test//data.xlsx", "search");
 	}
 
-	@Test(dataProvider = "excelData")
-	public void Registration_data(String name, String pass,String status ) throws Exception {
-		System.out.println(name);
-		System.out.println(pass);
-		System.out.println(status);
+	@Test(dataProvider = "test1")
+	public void testData(String name) {
+		System.out.println(name );
 	}
+	
 }

@@ -30,7 +30,7 @@ public class Test10Frames extends BaseTest {
 	}
 	
 	/**
-	 <iframe id="fr1" src="frame_1.html">/</iframe>
+	<iframe id="fr1" src="frame_1.html">/</iframe>
 	<iframe id="fr1" src="frame_2.html">/</iframe>
 	<iframe id="fr1" src="frame_3.html">/</iframe>
 	<iframe id="fr1" src="frame_4.html">/</iframe>

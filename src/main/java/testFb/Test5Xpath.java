@@ -45,7 +45,6 @@ public class Test5Xpath extends BaseTest{
 	public void testXpath1() throws Exception  {
 		//get web element for link1 and click
 		driver.findElement(By.xpath("//a[@href='https://www.gmail.com']")).click();
-
 		sleep(5);
 		driver.navigate().back();
 		
@@ -69,9 +68,11 @@ public class Test5Xpath extends BaseTest{
 		WebElement label =driver.findElement(By.xpath("//label[@id='error']"));
 		assertEquals( label.getText(),"Enter values here" ,"invalid label value");
 		
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("testuser2");
+		driver.findElement(By.xpath("//input[@id='error']")).sendKeys("testuser1");
+		
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("selenium");
 		sleep(4);
-		//driver.findElement(By.xpath("//input[@id='error']")).sendKeys("testuser1");
+		
 	}
 
 	/**

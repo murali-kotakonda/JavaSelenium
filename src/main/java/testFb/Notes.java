@@ -33,7 +33,7 @@ findElements() – returns a list of WebElement objects matching the locator crite
 
 
 
-Input Box:	
+Input Box/password/text area:	
 sendKeys()	used to enter values onto text boxes
 clear()	used to clear text boxes of its current value
 

@@ -22,11 +22,17 @@ in selenium locating the web element we have following Options:
 7.By class name
 
 
-
+which method to use for getting the single web element?
 findElement() 
 – finds a single web element and returns as a WebElement object.
 - Find Element command throws NoSuchElementException if it does not find the element matching the criteria.
 - Find Element command returns the web element that matches the first most element within the web page
+
+
+
+which method to use for getting the multiple web element?
+findElements() 
+- finds multiple web elements
 
 
 ex:
@@ -58,12 +64,18 @@ ex:
     use item.clear();
   
   7.How to check if the web element is text box?  
-    <input type="text" id="myname" name="uName" />
-   call   item.getAttribute("type") method
-   
+    <input type="text" id="myname" name="uName" size="30"/>
+   call  
+   item.getAttribute("type") method
+   here input = tag
+   type, id , name , size are attributes
+
    ex:
  		String type = item.getAttribute("type") ;
- 		// type should be "text"
+ 	 
+
+      String size = item.getAttribute("size") ;
+ 
   
   8.How to check if the web element is password?  
     <input type="password" id="myname" name="uName" />
@@ -101,8 +113,13 @@ ex:
    System.out.println(element.getAttribute("id")); //uNameID
   
     
-  
-  
+  /**
+       How to check if the webelemnt is selected or not?
+       solution)
+       item.isSeleected() --> returns true/false
+       applicable : radio , checkbox , dropdown  
+     
+   */
  
   
  Actions: 

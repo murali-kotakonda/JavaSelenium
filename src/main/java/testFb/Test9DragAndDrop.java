@@ -9,6 +9,10 @@ import org.testng.annotations.Test;
 import util.BaseTest;
 
 /**
+ 	How to perfrom drag and drop?
+
+ 	Approach#1:
+ 	--------------------
  	WebElement From = driver.findElement(By.id(""));
 	WebElement To = driver.findElement(By.id(""));
 	Actions action = new Actions(driver);
@@ -19,7 +23,13 @@ import util.BaseTest;
 
 	dragAndDrop.perform();
 		
-	//Alternately u can also use Performing the drag and drop action  
+	
+ 	Approach#2:
+ 	--------------------
+ 	WebElement From = driver.findElement(By.id(""));
+	WebElement To = driver.findElement(By.id(""));
+	Actions action = new Actions(driver);
+	
 	action.dragAndDrop(From,To).build().perform();  
  */
 

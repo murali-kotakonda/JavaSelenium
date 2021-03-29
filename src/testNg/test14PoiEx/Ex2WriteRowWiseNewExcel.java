@@ -22,6 +22,7 @@ o/p in excel:
 60000    Mythri Tech   25   Hello
 
  */
+//create new excel
 public class Ex2WriteRowWiseNewExcel {
 	
 	public static void main(String[] args) throws IOException {

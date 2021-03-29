@@ -22,16 +22,21 @@ CSS:
 <p class="show"> Hello4  </p>
 
 
-
-css selector: $$("p.show")
+xapth : driver.findElement (By.xpath ("//p[@class='show']));
+css selector: driver.findElement (By.cssSelector ("p.show'])); 
+$$("p.show")
 -search by tag + class name
 
 
 1.Find element whose tag is input and class "attribute" name as login 
+<input class="login">
+driver.findElement (By.xpath ("//input[@class='login']));
 driver.findElement (By.cssSelector ("input.login"));
+
 
 2.Get all elements that has  class "attribute" name as login 
 driver.findElement (By.cssSelector (".login"));
+driver.findElement (By.xpath ("//*[@class='login']));
 
 
 CSS Selector :

@@ -86,24 +86,35 @@ public class Test7_1KeysGoogle extends BaseTest{
 	 press down
 	 press down
 	 press Enter
+
+	 //a.sendKeys(e, "selenium").build().perform();
 	 */
+
+
+   //working
 	@Test
-	public void t1()   {
+	public void t1() {
 		WebElement e = driver.findElement(By.name("q"));
+		
 		e.sendKeys("selenium");
 		sleep(2);
 		
-		//a.sendKeys(e, "selenium").build().perform();
 		Actions a = new Actions(driver);
+		
 		a.sendKeys(Keys.DOWN).build().perform();
 		sleep(2);
+		
 		a.sendKeys(Keys.DOWN).build().perform();
 		sleep(2);
+		
 		a.sendKeys(Keys.DOWN).build().perform();
 		sleep(2);
+		
 		a.sendKeys(Keys.ENTER).build().perform();
 		sleep(2);
+		
 	}
+ 
 	
 	/**
 	
@@ -145,7 +156,7 @@ public class Test7_1KeysGoogle extends BaseTest{
 	 scrolling up and down the web page, multiple value selection
 	 */
 	
-	@Test
+	@Test // working
 	public void t3SendKeysShiftKey()   {
 		WebElement element = driver.findElement(By.name("q"));
 		
@@ -171,7 +182,7 @@ public class Test7_1KeysGoogle extends BaseTest{
 		sleep(2);
 	}
 	
-	@Test
+	@Test  //WORKING
 	public void t4SendKeysShiftKey()   {
 		WebElement element = driver.findElement(By.name("q"));
 		
@@ -201,14 +212,14 @@ public class Test7_1KeysGoogle extends BaseTest{
 		2.control + End
 		3.control + f5
 	 */
-	@Test
+	@Test //WORKING
 	public void t3_HomeAndEnd() {
 		t1();
 		Actions action = new Actions(driver);
-		// Scroll Down using Actions class
+		// Press END using Actions class
 		action.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
 		sleep(3);
-		// Scroll Up using Actions class
+		// Press HOME using  Actions class
 		action.keyDown(Keys.CONTROL).sendKeys(Keys.HOME).perform();
 		sleep(3);
 		//Refresh
@@ -231,10 +242,5 @@ public class Test7_1KeysGoogle extends BaseTest{
 		 Thread.sleep(5000);
 	}
 	
-	@Test
-	public void t5() {
-		StringBuilder m = new StringBuilder("18end ");
-		m.delete(m.length()-4, m.length());
-		System.out.println(m);
-	}
+	 
 }
