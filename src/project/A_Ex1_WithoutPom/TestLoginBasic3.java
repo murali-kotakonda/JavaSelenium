@@ -1,6 +1,6 @@
 package A_Ex1_WithoutPom;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

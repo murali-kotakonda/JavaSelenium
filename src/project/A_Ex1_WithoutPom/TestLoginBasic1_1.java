@@ -28,11 +28,17 @@ public class TestLoginBasic1_1 extends BaseTest {
 	public void testValidCreds() {
 		WebElement form = driver.findElement(By.tagName("form"));
 		WebElement formTitle = driver.findElement(By.tagName("h1"));
+		
 		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
-		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
-		WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
 		WebElement name = driver.findElement(By.name("loginName"));
+
+
+		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
 		WebElement password = driver.findElement(By.name("password"));
+
+		WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
+		
+		
 
 		checkEnabledAndDisplayed(usernamelab, name, passwordlab, password, loginBtn);
 
@@ -150,7 +156,7 @@ public class TestLoginBasic1_1 extends BaseTest {
 		//TEST for invalid error message
 		WebElement invalidlogin = driver.findElement(By.xpath("/html/body/font"));
 		checkEnabledAndDisplayed(invalidlogin);
-		assertTrue(invalidlogin.getText().equals("Invalid Login."));
+		Assert.assertTrue(invalidlogin.getText().equals("Invalid Login."));
 	}
 
 	@Test

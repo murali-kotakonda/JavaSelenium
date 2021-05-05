@@ -34,7 +34,7 @@ public class Test7_CtrlC_ContrlV extends BaseTest {
 	public void keyActions() throws InterruptedException {
         // Enter the Name
         WebElement fullName = driver.findElement(By.name("uName"));
-        fullName.sendKeys("Murali");
+        fullName.sendKeys("Ramesh");
         
         sleep(3);
         

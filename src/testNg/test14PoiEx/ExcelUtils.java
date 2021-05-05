@@ -43,24 +43,22 @@ How to get workbook obj for existing excel file?
 ----------------------------------------------------
 Workbook fileObj = new XSSFWorkbook(new FileInputStream("<path>//Inputdata.xlsx"));
 	
-
-to get no of sheets
+How to get no of sheets
 --------------------------
 int numberOfSheets = fileObj.getNumberOfSheets();
 
-
-
+ 
 
 create sheet object:
 ---------------------------------
 Sheet sheetObj = fileObj.createSheet("data");
 
-get the 1st sheet
+get the existing sheet by number
 --------------------------------------
 Sheet sheetObj = fileObj.getSheetAt(0);
 
 
-get the sheet by name
+get the  existing sheet  by name
 --------------------------------------
 Sheet sheetObj = fileObj.getSheet("output");
 

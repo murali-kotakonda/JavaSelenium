@@ -50,7 +50,8 @@ public class Test4Alert1 extends BaseTest{
 
 		// Capturing alert message.
 		String alertMessage = alert.getText();
-		Assert.assertEquals(alertMessage, "Hello");
+		Assert.assertEquals(alertMessage, "Hello","invaldi alert message");
+
 		
 		 // Accepting alert	
 		 alert.accept();	
@@ -60,7 +61,7 @@ public class Test4Alert1 extends BaseTest{
 	
 	//<input type="button" name="alert2" onclick="check2()" value="alert2"><br><br>
 	@Test
-	public void testAlertOk() throws InterruptedException {
+	public void testAlert2Ok() throws InterruptedException {
 		driver.findElement(By.name("alert2")).click();
 		
 		// Switching to Alert
@@ -79,7 +80,7 @@ public class Test4Alert1 extends BaseTest{
 	
 	//<input type="button" name="alert2" onclick="check2()" value="alert2"><br><br>
 	@Test
-	public void testAlertCancel() throws InterruptedException {
+	public void testAlert2Cancel() throws InterruptedException {
 		driver.findElement(By.name("alert2")).click();
 		
 		// Switching to Alert

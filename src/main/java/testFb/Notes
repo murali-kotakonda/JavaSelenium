@@ -65,6 +65,8 @@ ex:
   
   7.How to check if the web element is text box?  
     <input type="text" id="myname" name="uName" size="30"/>
+     WebElement item = driver.findElement(By.id("myname"));  
+   
    call  
    item.getAttribute("type") method
    here input = tag
@@ -72,9 +74,7 @@ ex:
 
    ex:
  		String type = item.getAttribute("type") ;
- 	 
-
-      String size = item.getAttribute("size") ;
+ 	  String size = item.getAttribute("size") ;
  
   
   8.How to check if the web element is password?  

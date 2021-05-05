@@ -101,6 +101,9 @@ public class TestLoginBasic2 {
 		// test type for password
 		assertTrue(password.getAttribute("type").equals("password"));
 
+       name.clear();
+       password.clear();
+
 		name.sendKeys(userNameValue);
 		password.sendKeys(passwordValue);
 		loginBtn.click();

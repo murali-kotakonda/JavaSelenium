@@ -7,7 +7,6 @@ There are two types of classes:
 
 
 
-
 1.for every page there is a page class
 2.the page class contains
    - instance variables 
@@ -17,12 +16,12 @@ There are two types of classes:
       - verifictaion
       - any action 
       
-page class should contain the logic for :
+methods in page class should contain the logic for :
  A> identifying the webelements
  B> any action on web element
  
-   so far the A & B is writteen in test class.
-    if we write in test class it is diffcult for reusabilty.
+    so far the A & B is writteen in test class.
+    if we write in test class it is difficult for reusabilty.
     that why we are moving the logic to the page class.
      
 Steps:

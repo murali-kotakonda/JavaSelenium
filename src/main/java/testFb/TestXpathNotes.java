@@ -46,7 +46,7 @@ public class TestXpathNotes {
 		  <input type="submit" value="ADD"/>
 		
 		WebElement element1 =driver.findElement(By.xpath("//input[@value='RESET']"));
-		webElement element2 =driver.findElement(By.xpath("//input[@value='ADD']"));
+		WebElement element2 =driver.findElement(By.xpath("//input[@value='ADD']"));
 		
 		
 		
@@ -104,7 +104,7 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 	      
 			1.-- Get only input tag elements if the attribute type has partial value 'sub'
 			 Xpath=//input[contains(@type,'sub')] 
-			fetches A & B
+			fetches A & B 
 
 			2. -- Get only p tag elements if the attribute type has partial value 'sub'
 			 Xpath=//p[contains(@type,'sub')]
@@ -128,22 +128,33 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		EX4: 
 		    <a href="https://www.gmail.com"> click here </a> 
 		    driver.findElement(By.linkText("click here")).click();
-			driver.findElement(By.partialLinkText("gmail")).click();
+			driver.findElement(By.partialLinkText("click")).click();
 			driver.findElement(By.xpath("//a[@href='https://www.gmail.com']	")).click();
 			driver.findElement(By.xpath("//a[contains(@href,'gmail')]	")).click();
 			driver.findElement(By.xpath("//a[contains(text(),'click here')]")).click();
 					 
 		 */
 		 
-		//<input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 ">
-		 driver.findElement(By.xpath("//a[contains(text(), 'TESTING')]")).click();
 		
+
+<td class="abc> hello </td>
+
+here td = tag
+class ='abc ' ==> attribute
+hello  => text
+
+ 
+
 		 /*
 	      text()
 
 		  Syntax: //tag[text()=’text value‘]
 		           //*[text()='Search Google or type a URL']
-		 
+		
+		//<input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 ">
+		 driver.findElement(By.xpath("//a[contains(text(), 'TESTING')]")).click();
+		
+
 		 Ex1:
 		 <label>Enter message<label>
 		 here label is tag
@@ -239,7 +250,10 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
    		  Ex1:
     	    <label id="message1234" > Hello</label>
     	     <label id="error" > Hello</label>
-		    Xpath=//label[starts-with(@id,'message')]   //get the label that has id starting with message
+
+    	     //get the label that has id starting with message
+
+		    Xpath=//label[starts-with(@id,'message')]   
       
 			Ex2:
 			 <a href="gmail.com">START here</a>
@@ -248,7 +262,7 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		 click on gmail:
 		 
 		 xpath = //a[starts-with(text(), 'START')]  
-		 xpath = //a[starts-with(href, 'gmail')]
+		 xpath = //a[starts-with(@href, 'gmail')]
 		 
      	 driver.findElement(By.xpath("//a[starts-with(text(), 'START')]")).click();
 		 driver.findElement(By.xpath("//a[starts-with(href, 'gmail')]")).click();

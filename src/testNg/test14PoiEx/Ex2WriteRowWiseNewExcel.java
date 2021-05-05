@@ -10,6 +10,8 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+
+//create new excel
 /**
  Write to excel from java:
 ------------------------------
@@ -22,7 +24,7 @@ o/p in excel:
 60000    Mythri Tech   25   Hello
 
  */
-//create new excel
+
 public class Ex2WriteRowWiseNewExcel {
 	
 	public static void main(String[] args) throws IOException {

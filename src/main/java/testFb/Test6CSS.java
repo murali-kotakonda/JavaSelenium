@@ -25,7 +25,8 @@ public class Test6CSS extends BaseTest{
 			e.printStackTrace();
 		}
 	}
-	
+			//css : a#href='https://www.gmail.com
+		//css : a[href='https://www.gmail.com']
 	@Test
 	public void testCSS1() throws Exception  {
 		//get web element for link1

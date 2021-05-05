@@ -1,8 +1,5 @@
 package dataDriven;
-
-
 //Approach2
-
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.Alert;
@@ -44,7 +41,7 @@ public void Registration_data(String name, String pass,String status ) throws Ex
 }
 	
 
-	private void login(String un, String pwd) {
+	private void login1(String un, String pwd) {
 		WebElement form = driver.findElement(By.tagName("form"));
 		WebElement formTitle = driver.findElement(By.tagName("h1"));
 		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
@@ -130,7 +127,6 @@ public void Registration_data(String name, String pass,String status ) throws Ex
 	
 
 	public void testAlertPassword() {
-		
 		//test for alert message
 		Alert a = driver.switchTo().alert();
 		Reporter.log(a.getText());

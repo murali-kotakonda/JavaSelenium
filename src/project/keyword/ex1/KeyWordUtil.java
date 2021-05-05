@@ -13,9 +13,13 @@ import org.testng.Reporter;
 
 import util.Commons;
 
-
+/*
+- for every keyword create a method.
+- call the method based on the keyword configured in the excel.
+*/
 public class KeyWordUtil {
 	WebDriver driver;
+	private static final String BASE_URL = "";
 	
 	public KeyWordUtil(WebDriver driver) {
 		super();
@@ -27,7 +31,7 @@ public class KeyWordUtil {
 	 */
 	public void enter_URL(WebDriver driver, String data) throws IOException {
 		if(data.equals("BASE_URL")) {
-			data = Commons.BASE_URL;
+			data =  BASE_URL;
 		}
 		driver.get(data);
 	}
@@ -46,7 +50,7 @@ public class KeyWordUtil {
 			 enter_URL(driver, data);
 			break;
 
-		case "get_currentURL":
+		case "GET_URL"://get_currentURL
 			//Set text on control
 			get_currentURL(driver);
 			break;
@@ -61,7 +65,8 @@ public class KeyWordUtil {
 			/*
 			 * case "wait": keyword.wait(driver, objectName, locatorType);
 			 */
-		case "implicitWait":
+			//WAIT
+		case "WAIT": //"implicitWait":
 			Thread.sleep(8000);
 			break;
 

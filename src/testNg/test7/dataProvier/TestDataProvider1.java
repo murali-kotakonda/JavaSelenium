@@ -6,26 +6,30 @@ import org.testng.annotations.Test;
 /**
  Dataprovider:
 ---------------
-1.execute the same Test case but with different data 
+Req:
+test the same test case with multiple and different data
+assume we need to test for 100 times
+
+ will you write 100 test cases?
+ will you run the test case using a loop?
+ 
+ 
 ex: search in google , but every time with different data
 
 solution: 
 - use data provider
 
 providing the custom data to the test-case
+
 impact:
 ----------
 the test case will run based on the no of data you provide
    
-
-
-
+ 
 changes:
 -----------
-
-1.provide a method that returns Object[][] that contains the different data to be tested.
-2.How to pass data to the test case
-
+1.provide a dataprovider method that returns Object[][] that contains the different data to be tested.
+2.How to pass dataprovider  to the test case
 
 
 1.write a method that provides the data

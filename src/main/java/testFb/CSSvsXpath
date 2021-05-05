@@ -22,7 +22,7 @@ CSS:
 <p class="show"> Hello4  </p>
 
 
-xapth : driver.findElement (By.xpath ("//p[@class='show']));
+xpath : driver.findElement (By.xpath ("//p[@class='show']));
 css selector: driver.findElement (By.cssSelector ("p.show'])); 
 $$("p.show")
 -search by tag + class name
@@ -94,6 +94,6 @@ Tag and ID :  css=tag#id
 Tag and Class-  css=tag.class
 Tag and Attribute css=tag[attribute=value]
 Tag, class, and attribute = css=tag.class[attribute=value]
- inner text css=tag:contains("inner text")
+inner text css=tag:contains("inner text")
 
 

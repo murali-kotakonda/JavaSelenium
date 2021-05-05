@@ -132,12 +132,13 @@ public class TestMouseOpeartions extends BaseTest{
 	public void testText2_dc_rc() {
 		Actions action = new Actions(driver);
 		
-		//move to text field and click
-		WebElement element = getTextFieldByName("uName");
 		
+		WebElement element = getTextFieldByName("uName");
+		//move to text field and click
 		action.moveToElement(element).click().build().perform();
 		sleep(3);
 		
+		//enter selenium
 		action
 		.sendKeys(element, "selenium")
 		.build().perform();

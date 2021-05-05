@@ -4,7 +4,7 @@
   
    <test name = "register">
       <classes>
-     	 <class name="parameter.Test1"/>
+     	 <class name="parameter.T1"/>
       </classes>
     </test>
     

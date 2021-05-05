@@ -212,7 +212,8 @@ public class Test7_1KeysGoogle extends BaseTest{
 		2.control + End
 		3.control + f5
 	 */
-	@Test //WORKING
+		//WORKING
+	@Test 
 	public void t3_HomeAndEnd() {
 		t1();
 		Actions action = new Actions(driver);

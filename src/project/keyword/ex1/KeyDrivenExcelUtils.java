@@ -9,6 +9,16 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+
+/**
+->
+1.Read the excel using apache poi
+2.scan every row
+3.read every row info and keep inside the action object
+4.keep every action obj to the list
+5.pass the list of action objects to the test class
+ */
+
 public class KeyDrivenExcelUtils {
 	private FileInputStream fileInputStream;
 	private XSSFWorkbook workbook;

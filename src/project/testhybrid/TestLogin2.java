@@ -13,7 +13,15 @@ import keyword.ex1.Action;
 import keyword.ex1.KeyDrivenExcelUtils;
 import keyword.ex2.KeyWordUtil;
 import util.Commons;
+/*  
+DataProvider:  returns list of testcase objects
 
+Every test case contains list of actions
+
+KeywordExcelUtils:  --> returns list of action Objects
+
+KeywordUtils :-------> performs the each action
+*/
 public class TestLogin2 {
 
 	KeyWordUtil keyword;
@@ -22,7 +30,7 @@ public class TestLogin2 {
 	
 	@BeforeTest
 	public void setup() {
-		keyword = new KeyWordUtil(Commons.getDriver());
+		keyword = new KeyWordUtil(Commons.getChromeDriver());
 		utils = new KeyDrivenExcelUtils(excelFilePath);
 	}
 

@@ -126,6 +126,9 @@ public class Test5Xpath extends BaseTest{
 		<p class="show"> Hello2 </p>
 		<p class="show"> Hello3  </p>
 		<p class="show"> Hello4  </p>
+
+		1.get all web elements that has 'p' as tag name and class='show' 
+		2.validate the text
 	 */
 	@Test
 	public void t5() throws Exception {

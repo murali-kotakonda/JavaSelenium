@@ -58,6 +58,17 @@ public class Test8MouseHover extends BaseTest {
 		Notes:
 		For mouse hover
 		use moveToElement() on actions
+
+			steps:
+	1.get the web element obj
+	2.get actions obj
+	3.call movetoElement() method
+	4.call build and perform method
+	
+		WebElement element = driver.findElement(By.linkText("Click here"));
+		Actions  action= actions.moveToElement(element);
+     	action.build().perform(); 
+     	
 	 */
 	@Test
 	public void t2() throws InterruptedException {

@@ -1,4 +1,4 @@
-package test14PoiEx;
+package test15PiDataProvidersEx;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

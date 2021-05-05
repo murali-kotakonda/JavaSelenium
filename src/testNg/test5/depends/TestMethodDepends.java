@@ -3,12 +3,7 @@ package test5.depends;
 import org.testng.annotations.Test;
 
 public class TestMethodDepends {
-		@Test(dependsOnMethods = { "login" })
-		public void createAccount() {
-			System.out.println("createAccount");
-		}
-
-		@Test
+	  @Test
 		public void login() {
 			System.out.println("login");
 		}
@@ -17,4 +12,12 @@ public class TestMethodDepends {
 		public void logout() {
 			System.out.println("logout");
 		}
+
+
+		@Test(dependsOnMethods = { "login" })
+		public void createAccount() {
+			System.out.println("createAccount");
+		}
+
+		
 }

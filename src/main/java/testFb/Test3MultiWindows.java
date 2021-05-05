@@ -22,14 +22,13 @@ public class Test3MultiWindows extends MyAppBaseTest {
 	}
 
 	/**
-	 How to get the current window name?
-	   String parentWindowHandle = driver.getWindowHandle();
-	 
-	 
-	 How to get all window handles?
-	   Set<String> allWindowHandles = driver.getWindowHandles();
-	 
-	 How to switch between the windows?
+	   How to get the current window name?
+	  	 String windowHandle = driver.getWindowHandle();
+	  	 
+	   How to get all window handles/names?
+	   	  Set<String> allWindowHandles = driver.getWindowHandles();
+	  
+	  How to switch between the windows?
 	   driver.switchTo().window("<window name>");
 	 
 	 
@@ -48,7 +47,7 @@ public class Test3MultiWindows extends MyAppBaseTest {
    assert/validate the parent window title
    enter the data to the field in parent window
   
-  <a id="gLink1" href="test.html" onclick="window.open('test.html', 
+  <a id="gLink1" href="form.html" onclick="window.open('form.html', 
                          'newwindow', 
                          'width=700,height=750');return false;">Open Window</a>
                          
@@ -76,7 +75,7 @@ public class Test3MultiWindows extends MyAppBaseTest {
 		Thread.sleep(2000);
 		
 		//enter the data for the fields in child window
-		driver.findElement(By.name("name")).sendKeys("user1");
+		driver.findElement(By.name("uName")).sendKeys("user1");
 		driver.findElement(By.name("password")).sendKeys("user1");
 		Thread.sleep(2000);
 		

@@ -14,6 +14,11 @@ import org.testng.annotations.Test;
 import util.BaseTest;
 
 /**
+-> empty data
+-> valid data
+-> invalid data
+-> already existing data
+
  testcases for add new employee:
 --------------------------------
 1.empty loginName
@@ -28,13 +33,16 @@ import util.BaseTest;
 10.mobile > 10
 11.success emp creation
 12.testCase for loginName already exists
+13.invalid date for dob
 
 common:
 --------------
 ->login
 ->click on 'add new employee' link
-->logout
+-> verify the content of add employee page
 -> get the webelement objects + assertions on fileds
+->logout
+
 
  */
 public class TestAddemp extends BaseTest {
@@ -75,7 +83,6 @@ public class TestAddemp extends BaseTest {
 		
 		//validate the alert
 		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
 		Assert.assertEquals(a.getText(), "Please provide loginName!");
 		sleep(3);
 		a.accept();
@@ -196,7 +203,7 @@ public class TestAddemp extends BaseTest {
 		addEmpolyee("raju", "raju@1234", "rajvardhan", "kumar", "03/31/1992", "30000", "8899445577");
 		WebElement errorMsg = driver.findElement(By.id("errorMsg"));
 		Assert.assertEquals(errorMsg.getText(), "Employee Created!");
-		sleep(100);
+		sleep(4);
 	}
 	
 	@Test(dependsOnMethods ="addEmpSuccess" )
@@ -208,7 +215,7 @@ public class TestAddemp extends BaseTest {
 	}
 
 	//@Test(priority = 7)
-	public void invali() throws Exception {
+	public void invalid() throws Exception {
 		addEmpolyee("thirupathi", "vaddem", "thirupathi", "vaddempudi", "03/31/1992", "30000", "8899445577");
 		//emp.invalid("thirupathi", "", "thirupathi", "vaddempudi", "03/31/1992", "3000", "8899445577");
 		// TODO : CHECK DATA

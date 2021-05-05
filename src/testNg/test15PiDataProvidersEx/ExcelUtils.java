@@ -28,13 +28,18 @@ public class ExcelUtils {
 			Row row = sheetObj.getRow(i);
 			for (int j = 0; j < columns; j++) {
 				Cell cell = row.getCell(j);
-				CellType cellType = cell.getCellType();
-				if (cellType.equals(CellType.STRING)) {
-					data[i][j] = cell.getStringCellValue();
-				} else if (cellType.equals(CellType.NUMERIC)) {
-					data[i][j] = cell.getNumericCellValue();
-				} else if (cellType.equals(CellType.BOOLEAN)) {
-					data[i][j] = cell.getBooleanCellValue();
+				
+				if(cell==null) {
+					data[i][j]  = "";
+				}else {
+					CellType cellType = cell.getCellType();
+					if (cellType.equals(CellType.STRING)) {
+						data[i][j] = cell.getStringCellValue();
+					} else if (cellType.equals(CellType.NUMERIC)) {
+						data[i][j] = cell.getNumericCellValue();
+					} else if (cellType.equals(CellType.BOOLEAN)) {
+						data[i][j] = cell.getBooleanCellValue();
+					}
 				}
 			}
 		}

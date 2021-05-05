@@ -1,4 +1,4 @@
-package excelDataProvider;
+package test15PiDataProvidersEx;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import myapp.MyAppBaseTest;
+import testFb.MyAppBaseTest;
 
 public class TestDataExcel3 extends MyAppBaseTest{
 

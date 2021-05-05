@@ -33,7 +33,7 @@ excel:
 public class LoginTestWithoutPOM extends BaseTest {
 	
 	@DataProvider(name = "excelData")
-	public static Object[][] Authentication() throws Exception {
+	public static Object[][] getData() throws Exception {
 		return ExcelUtils.getTableArray("C://test1//DataProvider.xlsx", "Sheet2");
 	}
 
@@ -46,7 +46,7 @@ public class LoginTestWithoutPOM extends BaseTest {
 	 */
 
 	@Test(dataProvider = "excelData")
-	public void Registration_data(String name, String pass, String assertType) throws Exception {
+	public void testLogin(String name, String pass, String assertType) throws Exception {
 		// this method is written in LoginPage
 		login(name, pass);
 		if (assertType.equals("A")) {

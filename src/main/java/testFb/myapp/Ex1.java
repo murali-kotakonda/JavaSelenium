@@ -43,7 +43,7 @@ public class Ex1 extends BaseTest{
 		 Assert.assertTrue(element.isEnabled() ,"fn should be enabled");
 		 
 		 //How to check if the text field is displayed
-		 Assert.assertTrue(element.isDisplayed(),"ln should be enabled");
+		 Assert.assertTrue(element.isDisplayed(),"fn should be enabled");
 		 
 		 //How to check if the field is text field
 		 Assert.assertEquals(element.getAttribute("type") , "text");
@@ -211,18 +211,18 @@ public class Ex1 extends BaseTest{
 		WebElement voter = driver.findElement(By.name("proof2"));
 		WebElement pan = driver.findElement(By.name("proof3"));
 
-		assertEquals(passport.getAttribute("type"), "checkbox");
-		assertEquals(voter.getAttribute("type"), "checkbox");
-		assertEquals(pan.getAttribute("type"), "checkbox");
+		Assert.assertEquals(passport.getAttribute("type"), "checkbox");
+		Assert.assertEquals(voter.getAttribute("type"), "checkbox");
+		Assert.assertEquals(pan.getAttribute("type"), "checkbox");
 
 		// checkEnabledAndDisplayed
-		assertTrue(passport.isEnabled(), "passport should  enabled");
-		assertTrue(voter.isEnabled(), "voter should  enabled");
-		assertTrue(pan.isEnabled(), "pan should be enabled");
+		Assert.assertTrue(passport.isEnabled(), "passport should  enabled");
+		Assert.assertTrue(voter.isEnabled(), "voter should  enabled");
+		Assert.assertTrue(pan.isEnabled(), "pan should be enabled");
 
-		assertFalse(passport.isSelected(), "passport is not selected.");
-		assertFalse(voter.isSelected(), "voter is not selected.");
-		assertTrue(pan.isSelected(), "pan is  selected.");
+		Assert.assertFalse(passport.isSelected(), "passport is not selected.");
+		Assert.assertFalse(voter.isSelected(), "voter is not selected.");
+		Assert.assertTrue(pan.isSelected(), "pan is  selected.");
 
 		// unchek pan
 		pan.click();
@@ -233,8 +233,8 @@ public class Ex1 extends BaseTest{
 		voter.click();
 		
 		Thread.sleep(2000);
-		// select pan
-		pan.click();
+		// select passport
+		passport.click();
 		
 		Thread.sleep(2000);
 	}
@@ -258,13 +258,13 @@ public class Ex1 extends BaseTest{
 		// <input type="radio" name="gender" id="oRadio" value="other"> Other
 		List<WebElement> radios = driver.findElements(By.name("gender"));
 		int size = radios.size();
-		assertEquals(size, 3, "Invalid no of radios for gender");
+		Assert.assertEquals(size, 3, "Invalid no of radios for gender");
 
 		// content test
 		List<String> expectedGenerValues = Arrays.asList("male", "female", "other");
 		for (WebElement element : radios) {
 			String genderValue = element.getAttribute("value");
-			assertTrue(expectedGenerValues.contains(genderValue));
+			Assert.assertTrue(expectedGenerValues.contains(genderValue));
 		}
 		
 		//get specific
@@ -277,9 +277,9 @@ public class Ex1 extends BaseTest{
 		Assert.assertEquals(oRadio.getAttribute("type"), "radio");
 
 		// checkEnabledAndDisplayed
-		assertTrue(mRadio.isEnabled() && mRadio.isDisplayed(), "mRadio should be enabled and displayed");
-		assertTrue(fRadio.isEnabled() && fRadio.isDisplayed(), "fRadio should be enabled and displayed");
-		assertTrue(oRadio.isEnabled() && oRadio.isDisplayed(), "oRadio should be enabled and displayed");
+		Assert.assertTrue(mRadio.isEnabled() && mRadio.isDisplayed(), "mRadio should be enabled and displayed");
+		Assert.assertTrue(fRadio.isEnabled() && fRadio.isDisplayed(), "fRadio should be enabled and displayed");
+		Assert.assertTrue(oRadio.isEnabled() && oRadio.isDisplayed(), "oRadio should be enabled and displayed");
 		
 
 		Assert.assertTrue(mRadio.isSelected(), "mRadio is selected.");
@@ -427,6 +427,11 @@ public class Ex1 extends BaseTest{
 	@Test
 	public void testMultiDropdown() throws InterruptedException {
 		WebElement citizen = driver.findElement(By.name("citizen"));
+		// How to check if the citizen is enabled
+		Assert.assertTrue(citizen.isEnabled(), "citizen should be enabled");
+
+		// How to check if the citizen is displayed
+		Assert.assertTrue(citizen.isDisplayed(), "citizen should be displayed");
 		
 		//create select obj
 		Select select = new Select(citizen);
@@ -434,10 +439,12 @@ public class Ex1 extends BaseTest{
 		Assert.assertEquals(citizen.getAttribute("multiple"),"true","citizen is multi dropdown");
 		Assert.assertTrue(select.isMultiple(),"citizen is multi dropdown");
 		
-		//How to get all the options
-		List<WebElement> options  = select.getOptions();
-		
-	
+			// How to get all the options
+		List<WebElement> options = select.getOptions();
+		// validate the number of cities
+		int size = options.size();
+		Assert.assertEquals(size, 4, "invalid no of options");
+							
 		
 		//select the values in dropdown
 		select.selectByVisibleText("India");
