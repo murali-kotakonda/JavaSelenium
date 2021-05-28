@@ -25,8 +25,8 @@ Smoke Testing and Sanity Testing:
 -------------------------------------
 Smoke:
 -------
-- mostly done using the tool.
 - Build verification testing.
+- mostly done using the jenins tool.
 - check if the new build is stable.
 - verify the app lauched successfully or is the deployment success and check  installation is proper or check if the pages are responsive (in time/not at all).
 - verify critical funtionality.

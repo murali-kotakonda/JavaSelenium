@@ -138,4 +138,13 @@ public class MyAppBaseTest {
 		checkEnabledAndDisplayed(link);
 		return link;
 	}
+	
+	private static void check(int i) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void main(String[] args) {
+		Integer i = null;
+		check(i);
+	}
 }

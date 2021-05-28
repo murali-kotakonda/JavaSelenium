@@ -2,8 +2,10 @@ package util;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebElement;
@@ -97,6 +99,7 @@ public class Commons {
 		System.setProperty("webdriver.chrome.driver", exePath);
 	
 		WebDriver driver = new ChromeDriver();
+		
 		Options manage = driver.manage();
 		manage.deleteAllCookies();
 		manage.window().maximize();

@@ -12,7 +12,7 @@ import util.Commons;
   solution:
   call Commons.takeSnapShot(driver, "C://test//test.png");
  */
-public class Test1 extends BaseTest{
+public class TestScreenShot extends BaseTest{
 
 	@Test
 	public void takeScreenShot() throws Exception {

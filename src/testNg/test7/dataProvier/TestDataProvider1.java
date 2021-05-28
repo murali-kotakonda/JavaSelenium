@@ -28,8 +28,9 @@ the test case will run based on the no of data you provide
  
 changes:
 -----------
-1.provide a dataprovider method that returns Object[][] that contains the different data to be tested.
-2.How to pass dataprovider  to the test case
+1.provide a dataprovider method that 
+returns Object[][] that contains the different data to be tested.
+2.pass dataprovider  to the test case
 
 
 1.write a method that provides the data
