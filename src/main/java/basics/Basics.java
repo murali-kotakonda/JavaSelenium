@@ -11,7 +11,14 @@ we need to provide the driver to the selenium frameworks.
 the drivers are available under https://www.selenium.dev/downloads/
 
 
-
+protected 
 
 	 * */
+	
+	protected Basics() {
+		
+	}
+	public static void main(String[] args) {
+		
+	}
 }

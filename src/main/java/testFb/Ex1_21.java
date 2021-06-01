@@ -13,7 +13,7 @@ public class Ex1_21 extends MyAppBaseTest{
 	public void openForm() {
 		//open the form.html
 		driver.get(URL + "form.html");
-		
+		"".length();
 	}
 	
 	//<input type="text" id="myname" name="uName">
