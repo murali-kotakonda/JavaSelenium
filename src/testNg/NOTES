@@ -103,6 +103,17 @@ Marks a method as a factory that returns objects that will be used by TestNG as 
 @Listeners
 Defines listeners on a test class.
 
+Order of annotations:
+-----------------------------------
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+@BeforeMethod
+@Test
+@AfterMethod
+@AfterClass
+@AfterTest
+@AfterSuite
 
 Class setup:
 --------------------------------
