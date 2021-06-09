@@ -1,4 +1,4 @@
-package testng;
+package test1;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -9,7 +9,7 @@ import util.Commons;
 public class MyBaseTest {
 
 	// get driver
-		WebDriver driver; 
+		public WebDriver driver; 
 				
 		@BeforeClass
 		public void openDriver() {

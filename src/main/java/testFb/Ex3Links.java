@@ -40,7 +40,6 @@ public class Ex3Links extends MyAppBaseTest{
 	public void testYt() {
 		WebElement link = driver.findElement(By.id("ytUrl"));
 		checkEnabledAndDisplayed(link);
-		By.className(className)
 		link.click();
 		sleep(3);
 	}

@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import util.BaseTest;
 import util.Commons;
 
-
 /**
   Req:Take screenshot for facebook.
   solution:
@@ -23,7 +22,7 @@ public class TestScreenShot extends BaseTest{
 		driver.get("http://facebook.com");
 
 		// Call take screenshot function
-		takeSnapShot(driver, "C://test//test.jpeg");
+		takeSnapShot("C://test//test.jpeg");
 		Thread.sleep(5000);
 		
 		driver.quit();

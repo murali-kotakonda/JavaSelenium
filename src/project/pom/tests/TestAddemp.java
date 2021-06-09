@@ -1,4 +1,4 @@
-package pomtests;
+package pom.tests;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.PageFactory;
@@ -8,8 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pompages.AddEmp;
-import pompages.LoginPage;
+import pom.pompages.AddEmp;
+import pom.pompages.LoginPage;
 
 public class TestAddemp extends POMBaseTest {
 	

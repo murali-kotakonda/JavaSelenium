@@ -1,4 +1,4 @@
-package testng;
+package test1;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -12,7 +12,7 @@ import util.Commons;
   Open browser hit the gmail.com
 
  */
-public class Ex9 { 
+public class Ex00 { 
 	
 	@Test
 	public void fb() throws InterruptedException {

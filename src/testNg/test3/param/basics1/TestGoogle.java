@@ -4,7 +4,7 @@ package test3.param.basics1;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import test0.MyBaseTest;
+import test1.MyBaseTest;
 
 public class TestGoogle extends MyBaseTest{
 

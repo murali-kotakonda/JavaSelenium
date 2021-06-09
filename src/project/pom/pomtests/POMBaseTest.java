@@ -1,4 +1,4 @@
-package pomtests;
+package pom.pomtests;
 
 import static org.testng.Assert.assertTrue;
 

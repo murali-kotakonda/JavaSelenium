@@ -6,10 +6,10 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import util.BaseTest;
 import util.Commons;
 
 public class Test3MultiWindows extends MyAppBaseTest {

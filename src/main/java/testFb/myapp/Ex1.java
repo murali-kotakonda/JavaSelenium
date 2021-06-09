@@ -486,7 +486,7 @@ public class Ex1 extends BaseTest{
 
 
 			//validate the number of citizen
-		int size = options.size();
+		size = options.size();
 		assertEquals(size, 4,"invalid no of citizen");
 		
 		List<String> expectedCitizen =Arrays.asList("India","Pakistan","America","Australia");

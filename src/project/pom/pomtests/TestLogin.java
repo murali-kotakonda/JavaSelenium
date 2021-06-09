@@ -1,4 +1,4 @@
-package pomtests;
+package pom.pomtests;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;

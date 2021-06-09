@@ -1,4 +1,4 @@
-package parallel;
+package test8.parallelEx;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;

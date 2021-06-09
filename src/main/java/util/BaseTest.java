@@ -54,9 +54,9 @@ public class BaseTest {
 		}
 	}
 	
-	public static void takeSnapShot(WebDriver webdriver, String fileWithPath) throws Exception {
+	public void takeSnapShot(  String fileWithPath) throws Exception {
 		// Convert web driver object to TakeScreenshot
-		TakesScreenshot scrShot = ((TakesScreenshot) webdriver);
+		TakesScreenshot scrShot = ((TakesScreenshot) driver);
 		// Call getScreenshotAs method to create image file
 		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
 		// Move image file to new destination

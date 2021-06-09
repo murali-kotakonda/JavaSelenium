@@ -1,4 +1,5 @@
-package suiteEx;
+package test3.suiteEx.suiteExNew;
+
 import org.testng.annotations.Test;
 
 public class Test1 {

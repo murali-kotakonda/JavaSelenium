@@ -14,7 +14,7 @@ import pom.pages.LoginPage;
 import pom.pages.LogoutPage;
 import util.Commons;
 
-public class TestAddemp extends Headerutility {
+public class TestAddemp2 extends Headerutility {
 	LoginPage login;
 	AddEmp emp;
 	Headerutility header;

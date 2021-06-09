@@ -14,7 +14,7 @@ use "driver.getTitle()"
 
 */
 
-public class Ex2 {
+public class Ex2Title2 {
 public static void main(String[] args) throws Exception {
 	System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 	WebDriver driver = new ChromeDriver();
@@ -25,7 +25,6 @@ public static void main(String[] args) throws Exception {
 	System.out.println(title);
 	Thread.sleep(5000);
 	
-	
 	//open  youtube
 	driver.get("https://www.youtube.com");
 	title = driver.getTitle();
@@ -33,7 +32,6 @@ public static void main(String[] args) throws Exception {
 	Thread.sleep(5000);
 	
 	driver.close();
-	
 }
 }
 

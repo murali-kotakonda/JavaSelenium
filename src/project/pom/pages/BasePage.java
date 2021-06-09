@@ -1,4 +1,4 @@
-package pompages;
+package pom.pages;
 
 import static org.testng.Assert.assertTrue;
 

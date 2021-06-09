@@ -1,12 +1,10 @@
 package testFb;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import util.Commons;
 public class TestXpathNotes {
-	
 	  /**
 		 xpath:
 		-----------
@@ -134,18 +132,15 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 			driver.findElement(By.xpath("//a[contains(text(),'click here')]")).click();
 					 
 		 */
-		 
-		
-
-<td class="abc> hello </td>
-
-here td = tag
-class ='abc ' ==> attribute
-hello  => text
-
  
 
 		 /*
+	      <td class="abc> hello </td>
+
+		here td = tag 
+		class ='abc ' ==> attribute
+		hello  => text
+	      
 	      text()
 
 		  Syntax: //tag[text()=’text value‘]

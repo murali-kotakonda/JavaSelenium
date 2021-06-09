@@ -7,49 +7,10 @@ open the browser and Hit the URL "https://youtube.com" using the Java and fetch 
 */
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-import util.Commons;
-
-
-
-/**
- How to perform refresh on page?
-------------------------------------
-driver.navigate().refresh();
-
-How to perform back on page?
-------------------------------------
-driver.navigate().back();
-
- 
-How to perform forward on page?
-------------------------------------
-driver.navigate().forward();
-
-Req:
-1.Open gmail.com
-2.wait for 5 seconds
-3.perform refresh
-
-4.Open youtube.com
-5.wait for 5 seconds
-6.Perform back operation 
-
-
-7.wait for 5 seconds
-8.Perform forward operation
-
-9.wait for 5 seconds
-10.close the browser
- 
- */
-
-import org.openqa.selenium.WebDriver;
-
-import util.Commons;
 public class Ex4 {
 
-	
 	public static void main(String[] args) throws Exception {
 		//get webdriver 
 		 System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");

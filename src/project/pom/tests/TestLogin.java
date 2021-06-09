@@ -1,10 +1,10 @@
-package pomtests;
+package pom.tests;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pompages.LoginPage;
+import pom.pompages.LoginPage;
 
 public class TestLogin extends POMBaseTest {
 

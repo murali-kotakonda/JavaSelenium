@@ -20,6 +20,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import util.Commons;
+
 public class EmpBaseTest {
 
 	public WebDriver driver;

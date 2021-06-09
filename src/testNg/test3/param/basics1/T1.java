@@ -37,7 +37,7 @@ package test3.param.basics1;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-public class Test1 {
+public class T1 {
 	
 	@BeforeMethod
 	@Parameters(value = {"userName"})
