@@ -4,16 +4,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
- How to get the page title:
------------------------------
-1. create the driver object
-2.call  driver.getTitle() method to get the title
-
-
 Req:
 open the browser and Hit the URL "https://gmail.com" using the Java and fetch the title 
  
-  
+   
+
+ How to get the page title:
+-----------------------------
+1.create the driver object
+2.Open the url
+2.call  driver.getTitle() method to get the title
+
+
+
   
  */
 public class Ex2Title {

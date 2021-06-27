@@ -11,6 +11,8 @@ what is the order of execution?
 solution?
 1)1st preference is given to test method that does not have priority.
 2)2nd  preference is given to test method that  has priority.
+3)3rd preference is given to test method in alphabetical order
+
 
 Explanation:
 First preference: Non-prioritized methods:

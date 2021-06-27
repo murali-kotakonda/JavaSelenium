@@ -3,7 +3,7 @@ package test5.depends;
 import org.testng.annotations.Test;
 
 public class TestMethodDepends {
-	  @Test
+	    @Test
 		public void login() {
 			System.out.println("login");
 		}

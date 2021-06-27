@@ -91,7 +91,7 @@ public class Ex1 extends BaseTest{
 		 Assert.assertEquals(element.getAttribute("type") , "text");
 
 		 	//How to check width
-		 Assert.assertEquals(element.getAttribute("width") , "30");
+		// Assert.assertEquals(element.getAttribute("width") , "30");
 		 
 		 //How to check size
 		 Assert.assertEquals(element.getAttribute("size") , "30");
@@ -207,6 +207,15 @@ public class Ex1 extends BaseTest{
 			assertTrue(expectedChecks.contains(checkValue));
 		}
 
+		/*
+		for (WebElement checkbox : checkboxes) {
+					String value = checkbox.getAttribute("value");
+					Assert.assertTrue(expectedValues.contains(value));
+					Assert.assertEquals(checkbox.getAttribute("type"), "checkbox");
+					Assert.assertTrue(checkbox.isEnabled() && checkbox.isDisplayed(), "checkbox should be enabled and displayed");
+				}	
+		*/
+		
 		WebElement passport = driver.findElement(By.name("proof1"));
 		WebElement voter = driver.findElement(By.name("proof2"));
 		WebElement pan = driver.findElement(By.name("proof3"));
@@ -260,13 +269,23 @@ public class Ex1 extends BaseTest{
 		int size = radios.size();
 		Assert.assertEquals(size, 3, "Invalid no of radios for gender");
 
-		// content test
+		// test the value for every radio button 
 		List<String> expectedGenerValues = Arrays.asList("male", "female", "other");
 		for (WebElement element : radios) {
 			String genderValue = element.getAttribute("value");
 			Assert.assertTrue(expectedGenerValues.contains(genderValue));
 		}
 		
+		//verify the radio values
+		 /*
+		for(WebElement radio : radios) {
+			String genderValue = radio.getAttribute("value");
+			Assert.assertTrue(expectedGenderValues.contains(genderValue));
+			Assert.assertEquals(radio.getAttribute("type"), "radio");
+			Assert.assertTrue(radio.isEnabled() && radio.isDisplayed(), 
+					"radio should be enabled and displayed");
+		}
+		*/
 		//get specific
 		WebElement mRadio = driver.findElement(By.id("mRadio"));
 		WebElement fRadio = driver.findElement(By.id("fRadio"));
@@ -314,9 +333,9 @@ public class Ex1 extends BaseTest{
 		
   2.Get the all the options in the dropdown.
     //create select obj
-		Select select = new Select(cities);
+	Select select = new Select(cities);
 		
-		//How to get all the options
+	 //How to get all the options
 		List<WebElement> options  = select.getOptions();
     
   3.How to get the no of options
@@ -350,10 +369,10 @@ public class Ex1 extends BaseTest{
 		WebElement cities = driver.findElement(By.name("city"));
 
 
-		// How to check if the password is enabled
+		// How to check if the dropdown is enabled
 		Assert.assertTrue(cities.isEnabled(), "cities should be enabled");
 
-		// How to check if the password is displayed
+		// How to check if the dropdown is displayed
 		Assert.assertTrue(cities.isDisplayed(), "cities should be displayed");
 		
 
@@ -503,5 +522,55 @@ public class Ex1 extends BaseTest{
 			count++;
 		}
 	}
+
+
+	// <textarea name="address" rows="5" cols="80"></textarea>
+	@Test
+	public void testTextArea() throws InterruptedException {
+		WebElement address = driver.findElement(By.name("address"));
+		// How to check if the address is enabled
+			Assert.assertTrue(address.isEnabled(), "address should be enabled");
+
+			// How to check if the address is displayed
+			Assert.assertTrue(address.isDisplayed(), "address should be displayed");
+
+		checkEnabledAndDisplayed(address);
+		
+		Assert.assertEquals(address.getAttribute("rows"), "5", "invalid no of rows");
+		Assert.assertEquals(address.getAttribute("cols"), "80", "invalid no of cols");
+		address.sendKeys("#51/15 a-51, panathur road, bangalore.");
+		Thread.sleep(3000);
+	}
+	
+	//Upload image :<input type="file" name="fileupload" accept="image/*" /> <br />
+	@Test
+	public void testUpload() throws InterruptedException {
+		WebElement uploadElement = driver.findElement(By.name("fileupload"));
+			// How to check if the address is enabled
+			Assert.assertTrue(uploadElement.isEnabled(), "uploadElement should be enabled");
+
+			// How to check if the address is displayed
+			Assert.assertTrue(uploadElement.isDisplayed(), "uploadElement should be displayed");
+
+		checkEnabledAndDisplayed(uploadElement);
+		
+		Assert.assertEquals(uploadElement.getAttribute("type"), "file", "invalid type.");
+		Assert.assertEquals(uploadElement.getAttribute("accept"), "image/*", "invalid accept.");
+		
+		uploadElement.sendKeys("C:\\test\\test1.txt");
+		Thread.sleep(3000);
+		//<input type="submit" name="submit" value="submit" />
+		
+		WebElement submit = driver.findElement(By.name("submit"));
+		// How to check if the address is enabled
+			Assert.assertTrue(submit.isEnabled(), "submit should be enabled");
+
+			// How to check if the address is displayed
+			Assert.assertTrue(submit.isDisplayed(), "submit should be displayed");
+			
+		submit.submit();
+		Thread.sleep(3000);
+	}
+	
 
 }

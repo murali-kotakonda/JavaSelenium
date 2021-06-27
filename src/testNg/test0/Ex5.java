@@ -4,9 +4,10 @@ import org.testng.annotations.Test;
  
 /**
   By default the test cases are executed in alphabetical order.
+  By default, methods annotated by @Test are executed alphabetically. 
+ 
  */
-  // By default, methods annotated by @Test are executed alphabetically. 
-//In TestNg the method that has @Test is eligible for running.
+  
 public class Ex5 {
 	
 	@Test

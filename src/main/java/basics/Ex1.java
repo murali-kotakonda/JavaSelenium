@@ -16,8 +16,8 @@ Steps:
 
 1.Create the web driver Object using the driver software.
 Provide the driver software location ""C:\\chromedriver.exe" to the System.
-         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+WebDriver driver = new ChromeDriver();
     
 2.Open the URL
   driver.get("https://www.gmail.com");
@@ -25,6 +25,12 @@ Provide the driver software location ""C:\\chromedriver.exe" to the System.
 3.close the browser
   driver.quit()
   
+WebDriver driver = new ChromeDriver();
+Here WebDriver is a interface
+ChromeDriver is a child class.
+
+Based on the browser we need the child class.
+
   
   
 */

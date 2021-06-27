@@ -88,10 +88,17 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		 
 		 syntax: tag[contains(@attribute, ‘value‘)]
 		  
-		  Ex1:
+		  Ex1.1:
 		  <img src='ProfilePic123445.jpg'/>
    		  Xpath= //img[contains(@src,’Profile’)] - similar match
 		  Xpath = //img[@src='ProfilePic123445.jpg']  - exact match
+
+		Ex1.2:
+		<a href="https://www.gmail.com"> click here for gmail page </a>
+		WebElement =driver.find_element_by_xpath("//a[@href='https://www.gmail.com']")
+		WebElement =driver.find_element_by_xpath("//a[contains(@href,'gmail')]")
+		WebElement =driver.find_element_by_xpath("//a[contains(text(),'gmail page')]")  -- partial serach by text
+
 
 		  
   		Ex2:
@@ -142,13 +149,20 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		hello  => text
 	      
 	      text()
-
 		  Syntax: //tag[text()=’text value‘]
 		           //*[text()='Search Google or type a URL']
 		
 		//<input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 ">
 		 driver.findElement(By.xpath("//a[contains(text(), 'TESTING')]")).click();
 		
+			<td>UserID</td>
+			<td>name</td>
+			<td>age</td>
+			
+			
+			//td[text()='UserID']
+			//td[text()='name']
+			//td[text()='age']
 
 		 Ex1:
 		 <label>Enter message<label>

@@ -19,6 +19,9 @@ How to perform forward on page?
 ------------------------------------
 driver.navigate().forward();
 
+How to maximize the window?
+------------------------------------
+driver.manage().window().maximize();
 
 Req:
 1.Open gmail.com
@@ -26,9 +29,9 @@ Req:
 3.perform refresh
 4.Open youtube.com
 5.wait for 5 seconds
-6.Perform back operation  ====> it will go to gmail.com
+6.Perform back operation  
 7.wait for 5 seconds
-8.Perform forward operation====> it will go to youtube.com
+8.Perform forward operation 
 9.wait for 5 seconds
 10.close the browser
  */

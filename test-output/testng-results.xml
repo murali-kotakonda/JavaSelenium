@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="99" started-at="2021-06-04T17:02:05Z" finished-at="2021-06-04T17:02:05Z">
+  <suite name="Default suite" duration-ms="119" started-at="2021-06-16T07:34:58Z" finished-at="2021-06-16T07:34:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="99" started-at="2021-06-04T17:02:05Z" finished-at="2021-06-04T17:02:05Z">
-      <class name="test0.Ex9">
-        <test-method status="PASS" signature="test1()[pri:0, instance:test0.Ex9@4df50bcc]" name="test1" duration-ms="45" started-at="2021-06-04T22:32:05Z" finished-at="2021-06-04T22:32:05Z">
+    <test name="Default test" duration-ms="119" started-at="2021-06-16T07:34:58Z" finished-at="2021-06-16T07:34:58Z">
+      <class name="test0.Ex14Priority">
+        <test-method status="PASS" signature="test5()[pri:0, instance:test0.Ex14Priority@4df50bcc]" name="test5" duration-ms="46" started-at="2021-06-16T13:04:58Z" finished-at="2021-06-16T13:04:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-      </class> <!-- test0.Ex9 -->
+        </test-method> <!-- test5 -->
+        <test-method status="PASS" signature="apple()[pri:0, instance:test0.Ex14Priority@4df50bcc]" name="apple" duration-ms="4" started-at="2021-06-16T13:04:58Z" finished-at="2021-06-16T13:04:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apple -->
+        <test-method status="PASS" signature="boycott()[pri:0, instance:test0.Ex14Priority@4df50bcc]" name="boycott" duration-ms="7" started-at="2021-06-16T13:04:58Z" finished-at="2021-06-16T13:04:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- boycott -->
+      </class> <!-- test0.Ex14Priority -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

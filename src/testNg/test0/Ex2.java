@@ -2,15 +2,30 @@ package test0;
 
 /* 
  @Test - for every test method.
-if we have 6 test methods
+ if we have 6 test methods
 @Test will execute for 6 times
 
  
- @BeforeMethod - is executed before every test method. 
+@BeforeMethod - is executed before every test method. 
 if we have 6 test methods, then "@BeforeMethod" will execute for 6 times
 
 @AfterMethod - is executed before after test method.
 if we have 6 test methods, then "@AfterMethod" will execute for 6 times
+
+
+
+o/p:
+In before
+running test1
+In after
+
+In before
+running test2
+In after
+
+In before
+running test3
+In after
 
 
  * */

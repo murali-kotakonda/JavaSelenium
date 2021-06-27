@@ -17,32 +17,32 @@ public class Test5 {
 		}
 
 		@BeforeClass
-		public void beforeClass41() {
+		public void beforeClass51() {
 			System.out.println("Test5:in beforeClass");
 		}
 
 		@AfterClass
-		public void afterClass41() {
+		public void afterClass51() {
 			System.out.println("Test5:in afterClass");
 		}
 
 		@BeforeTest
-		public void beforeTest41() {
+		public void beforeTest51() {
 			System.out.println("Test5:in beforeTest");
 		}
 
 		@AfterTest
-		public void afterTest41() {
+		public void afterTest51() {
 			System.out.println("Test5:in afterTest");
 		}
 
 		@BeforeSuite
-		public void beforeSuite41() {
+		public void beforeSuite51() {
 			System.out.println("Test5:in beforeSuite");
 		}
 
 		@AfterSuite
-		public void afterSuite41() {
+		public void afterSuite51() {
 			System.out.println("Test5:in afterSuite");
 		}
 }

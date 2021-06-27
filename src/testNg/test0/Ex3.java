@@ -18,6 +18,25 @@ if we have 6 test methods, then "@AfterMethod" will execute for 6 times
 
 @AfterClass - is executed one time after all operations.
 
+o/p:
+
+In BeforeClass
+
+In before
+In test1
+In after
+
+In before
+In test2
+In after
+
+In before
+In test3
+In after
+
+In AfterClass
+
+
  * */
 
 import org.testng.annotations.AfterMethod;
@@ -38,12 +57,12 @@ public class Ex3 {
 	
 	@BeforeMethod
 	public void before() {
-		System.out.println("In before");
+		System.out.println("In beforeMethod");
 	}
 	
 	@AfterMethod
 	public void after() {
-		System.out.println("in after ");
+		System.out.println("In afterMethod");
 	}
 	
 	@Test

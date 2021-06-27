@@ -1,9 +1,11 @@
-Using selenium we need to work on web page elements.
+
+Using selenium  'driver' object we need to work on web page elements.
 
 
 Steps:
 ------------
-1.get the web element object for the page element using driver
+For every field on web page get the web element object using driver.
+
 
 
 How to get web element objects:
@@ -28,8 +30,9 @@ In Selenium locating the web element we have following Options:
 
 
 
- By Name:
+By Name:
 ------------------------------------
+Html:
 <html>
  <body>
   <form id="loginForm">
@@ -41,13 +44,15 @@ In Selenium locating the web element we have following Options:
 <html>
 
 
+Java:
 WebElement unObj = driver.findElement(By.name("username"));
 WebElement pwdObj = driver.findElement(By.name("password"));
 WebElement ageObj = driver.findElement(By.name("age"));
-	
 
- By ID:
+
+By ID:
 ------------------------------------
+Html:
 <html>
  <body>
   <form id="loginForm">
@@ -58,30 +63,15 @@ WebElement ageObj = driver.findElement(By.name("age"));
  </body>
 <html>
 
-
+Java:
 WebElement unObj = driver.findElement(By.id("username"));
 WebElement pwdObj = driver.findElement(By.id("password"));
 WebElement ageObj = driver.findElement(By.id("age"));
-
-
-Get multiple elements
-------------------------------------
-<html>
- <body>
-  <form id="loginForm">
-   <input name="username" type="text" />
-   <input name="username" type="username" />
-   <input name="continue" type="submit" value="Login" />
-  </form>
- </body>
-<html>
-
-
-WebElement unObjs = driver.findElements(By.name("username")); # list of web element object
-
+ 
 
 By Tag Name:
 -------------------------
+Html:
 <html>
  <body>
   <h1>Welcome</h1>
@@ -90,7 +80,10 @@ By Tag Name:
 <html>
 
 
-WebElement h1Obj  = driver.findElements(By.tagName("h1"));
+
+Java:
+WebElement h1Obj = driver.findElement(By.tagName("h1"));
+WebElement pObj = driver.findElement(By.id("p"));
 
 
 By Link text/partial link text:
@@ -99,11 +92,11 @@ By Link text/partial link text:
 <a href="https://www.google.com">Open google</a>
 
 		
-WebElement obj1  = driver.findElements(By.linkText("Open Gmail""));
-WebElement obj2  = driver.findElements(By.linkText("Open google"));
+WebElement obj1  = driver.findElement(By.linkText("Open Gmail""));
+WebElement obj2  = driver.findElement(By.linkText("Open google"));
 
-WebElement obj4  = driver.findElements(By.partialLinkText("Gmail"));
-WebElement h1Obj  = driver.findElements(By.partialLinkText("google"));
+WebElement obj4  = driver.findElement(By.partialLinkText("Gmail"));
+WebElement h1Obj  = driver.findElement(By.partialLinkText("google"));
 
 
 By Class name:
@@ -114,7 +107,27 @@ By Class name:
 </body>
 <html>
 
-WebElement h1Obj  = driver.findElements(By.className("content"));
+WebElement h1Obj  = driver.findElement(By.className("content"));
+
+
+ Get multiple elements
+------------------------------------
+<html>
+ <body>
+  <form id="loginForm">
+   <input name="username" type="text" />
+   <input name="username" type="text" />
+   <input name="continue" type="submit" value="Login" />
+  </form>
+ </body>
+<html>
+
+
+Java:
+List<WebElement> unObjs = driver.findElements(By.name("username"));   
+
+unObjs.get(0); #get 1st web element
+unObjs.get(1); #get 2nd web element
 
 
 
@@ -149,7 +162,7 @@ ex:
    WebElement item = driver.findElement(By.id("myname"));  
    
    
-   3.How to check if the  web element is displayed?
+  3.How to check if the  web element is displayed?
  	use "item.isDisplayed()"  
 	   -returns true if element is displayed
 	   -returns false if element is not displayed
@@ -159,27 +172,36 @@ ex:
 	   -returns true if element is Enabled
 	   -returns false if element is not Enabled
  
-	Input Box/password/text area:	
-	sendKeys()	used to enter values onto text boxes
-	clear()	used to clear text boxes of its current value
+ 
 
   5.How to enter the text to the text-field/password/text area/popup?
-     use item.sendKeys("kumar");
+     use sendKeys()  used to enter values onto text boxes  
+    ex:
+    item.sendKeys("kumar");
 	   
   6.How to clear the text for the  text-field/password/text area/popup?
-    use item.clear();
+  use clear() used to clear text boxes of its current value
+    ex:
+    item.clear();
   
-  7.How to check if the web element is text box?  
+      
+7.How to check if the web element is text box/password?  
     <input type="text" id="myname" name="uName" size="30"/>
-     WebElement item = driver.findElement(By.id("myname"));  
-   
-   call  
-   item.getAttribute("type") method
+    <input type="password" id="password"  />
+    
    here input = tag
    type, id , name , size are attributes
-   
 
-   ex:
+    WebElement nameObj = driver.findElement(By.id("username"));
+    WebElement pwdObj = driver.findElement(By.id("password"));
+  
+  using the webelement obj get the attribute value?
+   call  getAttribute("type") method
+  
+  String type1= nameObj.getAttribute("type") ; // returns 'text'
+  String type2= pwdObj.getAttribute("type") ; // returns 'password'
+   
+  ex:
  	  String type = item.getAttribute("type") ;
  	  String size = item.getAttribute("size") ;
  
@@ -194,15 +216,16 @@ ex:
         String type = item.getAttribute("type") ;
  		// type should be "hidden"
   
+  
   10.How to check if the web element is radio?
-   <input type="radio" id="myname" name="uName" />
-        String type = item.getAttribute("type") ;
- 		// type should be "radio"
-   
+     <input type="radio" id="myname" name="uName" />
+      WebElement nameObj = driver.findElement(By.id("myname"));
+      String type1= nameObj.getAttribute("type") ; // returns 'radio'
+    
   11.How to check if the web element is checkbox?
     <input type="checkbox" id="myname" name="uName" />
-  		 String type = item.getAttribute("type") ;
- 		// type should be "checkbox"
+     WebElement nameObj = driver.findElement(By.id("myname"));
+      String type1= nameObj.getAttribute("type") ;// returns 'checkbox'
     
  
  
@@ -219,16 +242,16 @@ ex:
    System.out.println(element.getAttribute("class"));   //text-class
    System.out.println(element.getAttribute("id")); //uNameID
   
-    
-  /**
-       How to check if the webelement is selected or not?
-       solution)
+13.How to check if the webelement is selected or not?
+solution)
        item.isSeleected() --> returns true/false
        applicable : radio , checkbox , dropdown  
-   */
 
-Links:
-click()	used to click on the link and wait for page load to complete before proceeding to the next command.
+14.How to perform click operation on the web-element?
+click() used to click on the link and wait for page load to complete before proceeding to the next command.
+Ex:
+Links/checkbox/button/radio-button:
+
 
 
 
@@ -236,44 +259,10 @@ Submit Button:
 submit()	 use the submit() method on any element within the form
 
 
-Check Box, Radio Button:
-click()	used to toggle the element on/off
-
-  
- Actions: 
- --------
- -mouse operations
-- keyboard opeartions
-
- -Action Class in Selenium is a built-in feature provided by the selenium for
- handling keyboard and mouse events.
- - It includes various operations 
- such as multiple events clicking by control key, drag and drop events
  
+
+  
  
- ex:
- ->KeyPress,key up, key down, enter, tab, pageup, page down and context menu interactions.
--> hover over and drag and drop.
-->double click , right click'
-  
-  
- KEY:
--------------
-sendKeys(keysToSend): Sends a series of keystrokes onto the element.
-keyDown(theKey): Sends a key press without release it.
-keyUp(theKey): Performs a key release.
-
-
-
-Mouse:
--------------- 
-click(): Clicks on the element.
-doubleClick (): Double clicks on the element.
-contextClick() : Performs a context-click (right-click) on the element.
-clickAndHold(): Clicks at the present mouse location without releasing.  
-moveToElement(toElement):  
-  
-  
   
   
   

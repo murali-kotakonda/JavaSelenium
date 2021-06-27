@@ -10,6 +10,43 @@ import org.testng.annotations.Test;
 import util.BaseTest;
 
 /**
+Actions: 
+ --------
+ -mouse operations
+- keyboard opeartions
+
+ -Action Class in Selenium is a built-in feature provided by the selenium for
+ handling keyboard and mouse events.
+ - It includes various operations 
+ such as multiple events clicking by control key, drag and drop events
+ 
+ 
+ ex:
+ ->KeyPress,key up, key down, enter, tab, pageup, page down and context menu interactions.
+-> hover over and drag and drop.
+->double click , right click'
+  
+  
+ KEY:
+-------------
+sendKeys(keysToSend): Sends a series of keystrokes onto the element.
+keyDown(theKey): Sends a key press without release it.
+keyUp(theKey): Performs a key release.
+
+
+
+Mouse:
+-------------- 
+click(): Clicks on the element.
+doubleClick (): Double clicks on the element.
+contextClick() : Performs a context-click (right-click) on the element.
+clickAndHold(): Clicks at the present mouse location without releasing.  
+moveToElement(toElement):  
+  
+  
+
+  
+
 Actions:
 ----------
  Action Class in Selenium is a built-in feature provided by the selenium for

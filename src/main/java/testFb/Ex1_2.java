@@ -343,35 +343,6 @@ public class Ex1_2 extends BaseTest{
 		
 	}
 	
-	// <textarea name="address" rows="5" cols="80"></textarea>
-	@Test
-	public void testTextArea() throws InterruptedException {
-		WebElement address = driver.findElement(By.name("address"));
-		checkEnabledAndDisplayed(address);
-		
-		Assert.assertEquals(address.getAttribute("rows"), "5", "invalid no of rows");
-		Assert.assertEquals(address.getAttribute("cols"), "80", "invalid no of cols");
-		address.sendKeys("#51/15 a-51, panathur road, bangalore.");
-		Thread.sleep(3000);
-	}
-	
-	//Upload image :<input type="file" name="fileupload" accept="image/*" /> <br />
-	@Test
-	public void testUpload() throws InterruptedException {
-		WebElement uploadElement = driver.findElement(By.name("fileupload"));
-		checkEnabledAndDisplayed(uploadElement);
-		
-		Assert.assertEquals(uploadElement.getAttribute("type"), "file", "invalid type.");
-		Assert.assertEquals(uploadElement.getAttribute("accept"), "image/*", "invalid accept.");
-		
-		uploadElement.sendKeys("C:\\test\\test1.txt");
-		Thread.sleep(3000);
-		//<input type="submit" name="submit" value="submit" />
-		
-		WebElement submit = driver.findElement(By.name("submit"));
-		submit.submit();
-		Thread.sleep(3000);
-	}
 	
 	
 }

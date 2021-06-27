@@ -1,20 +1,9 @@
-- TestNG is a testing framework which has been inspired by JUnit. 
--is a test engine using which we will run the test cases.
+ - In TestNG, NG stands for "Next Generation".
+- TestNG  an open source automated Testing frameworK
+- is a test engine using which we will run the test cases.
 - use annotations for writing the test cases.
-
-TestNG is a more powerful testing framework than Junit as it contains more powerful functionalities such as:
-
-
-What is TestNG:
----------------------
-TestNG is a very important framework when you are actually developing the framework from scratch level.
-TestNG provides you full control over the test cases and the execution of the test cases. 
-Due to this reason, TestNG is also known as a testing framework.
-Cedric Beust is the developer of a TestNG framework.
-If you want to run a test case A before that as a pre-request you need to run multiple test cases before you begin a test case A. You can set and map with the help of TestNG so that pre-request test cases run first and then only it will trigger a test case A. In such way, you can control the test cases.
-TestNG framework came after Junit, and TestNG framework adds more powerful functionality and easier to use.
-It is an open source automated TestNG framework. In TestNG, NG stands for "Next Generation".
-TestNG framework eliminates the limitations of the older framework by providing more powerful and flexible test cases with help of easy annotations, grouping, sequencing and parametrizing.
+-  provides full control over the test cases and the execution of the test cases. 
+- TestNG has more powerful and flexible test cases with help of easy annotations, grouping, sequencing and parametrizing.
 
 
 
@@ -27,24 +16,29 @@ It is supported by various tools and plug-ins such as Eclipse, Maven, IDEA, etc.
 It supports Data-driven testing with the help of @DataProvider.
 
 
-
 Adv:
 In TestNG, annotations are easier to understand than Junit.
 It produces the HTML reports for implementation.
 It also generates the Logs.
-In TestNG, there is no constraint available such as @beforeclass and @afterclass which is present in Junit.
+Parallel execution of test cases, 
+i.e., running multiple test cases is only possible in the TestNG framework.
+It allows you to run the test cases of a particular group. 
+    Let's consider a scenario where we have created two groups such as 'Smoke' and 'Regression'. If you want to execute the test cases in a 'Regression' group, then this can only be possible in the TestNG framework.
 TestNG enables you to group the test cases easily which is not possible in JUnit.
+
 TestNG supports three additional levels such as @Before/After suite, @Before/AfterTest, and Before/AfterGroup.
 TestNG does not extend any class. TestNG framework allows you to define the test cases where each test case is independent of other test cases.
-It allows you to run the test cases of a particular group. Let's consider a scenario where we have created two groups such as 'Smoke' and 'Regression'. If you want to execute the test cases in a 'Regression' group, then this can only be possible in the TestNG framework.
-Parallel execution of test cases, i.e., running multiple test cases is only possible in the TestNG framework.
+In TestNG, there is no constraint available such as @beforeclass and @afterclass which is present in Junit.
+
 
 Eclipse TestNg integration:
 --------------------------------
+https://github.com/cbeust/testng-eclipse
+
 Help>install new software
 1.
 Name: TestNG 
-Url: https://dl.bintray.com/testng-team/testng-eclipse-release/
+Url: https://testng.org/testng-eclipse-update-site
 
 2.
 TestNG P2 - https://dl.bintray.com/testng-team/testng-p2-release
@@ -103,7 +97,7 @@ Marks a method as a factory that returns objects that will be used by TestNG as 
 @Listeners
 Defines listeners on a test class.
 
-Order of annotations:
+Order of execution of annotations:
 -----------------------------------
 @BeforeSuite
 @BeforeTest
@@ -115,12 +109,16 @@ Order of annotations:
 @AfterTest
 @AfterSuite
 
-Class setup:
---------------------------------
-Create Test class
-write one method for one test case -[test method]
-every test method has @Test annotation.
-[Every test method has @Test annotation before the method declaration.]
+syntax for test method:
+-------------------------
+
+  @Test
+  public void test1(){
+  
+  
+  }
+ - Every test method has @Test annotation before the method declaration
+
 
   
 syntax of Test class:

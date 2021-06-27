@@ -137,6 +137,7 @@ public class Test5Xpath extends BaseTest{
 		assertEquals( elements.size(),4 ,"Invalid value");
 		
 		for(WebElement  e1: elements) {
+			e1.get
 			assertTrue(e1.getText().contains("Hello"),"Expected Hello");
 		}
 		sleep(5);

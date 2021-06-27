@@ -2,17 +2,17 @@ package basics;
 
 /*
 
--  How to delete the page cookies?
-   driver.manage().deleteAllCookies();
-
--  How to delete the page cookie by name?
-   driver.manage().deleteCookieNamed("language");
+  - How to GET the page cookie by name?   
+   driver.manage().getCookieNamed("<cookie name>")
    
--  How to GET the page cookie by name?   
-   driver.manage().getCookieNamed("SID")
+   - How to get the page cookies?
+     Set<Cookie> cookies = driver.manage().getCookies();
    
- - How to get the page cookies?
-   Set<Cookie> cookies = driver.manage().getCookies();
+   -  How to delete the page cookies?
+   		driver.manage().deleteAllCookies();
+   
+  -  How to delete the page cookie by name?
+     driver.manage().deleteCookieNamed("<cookie name>");
     
 */
 

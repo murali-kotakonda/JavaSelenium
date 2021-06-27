@@ -38,5 +38,10 @@ public class Test1 {
 	@Test(groups = { "login","updateProfile" })
 	public void updateProfile() {
 		System.out.println("updateProfile success");
+		B b = new B();
+		((A)b).equals("");
 	}
+	
 }
+
+ 
