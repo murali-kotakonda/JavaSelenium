@@ -14,7 +14,7 @@ Manual Testing class:
    
    ABC Corp would opt for a bidding . 
      
-  The company that gives the low budget and faster delivery + good past client experience + support.
+   The company that gives the low budget and faster delivery + good past client experience + support.
    
    SOftware has to be developed by amazon..
      

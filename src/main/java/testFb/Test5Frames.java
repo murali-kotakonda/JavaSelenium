@@ -8,11 +8,18 @@ import util.BaseTest;
 import util.Commons;
 
 /**
- 	How to switch to a frame?
- 	   driver.switchTo().frame(<num>);
-       driver.switchTo().frame(1);
-       
-       driver.switchTo().frame("<id>");
+ 	<iframe id="fr1" src="frame_1.html">/</iframe>
+	<iframe id="fr2" src="frame_2.html">/</iframe>
+	<iframe id="fr3" src="frame_3.html">/</iframe>
+	<iframe id="fr4" src="frame_4.html">/</iframe>
+	
+	How to switch to a frame?
+	 1.driver.switchTo().frame(<num>);
+	   ex:
+	   driver.switchTo().frame(1);
+	   
+	 2.driver.switchTo().frame("<id>");
+	   ex:
 	   driver.switchTo().frame("fr1");
 	 
   How to switch to a parent frame?	
@@ -30,10 +37,7 @@ public class Test10Frames extends BaseTest {
 	}
 	
 	/**
-	<iframe id="fr1" src="frame_1.html">/</iframe>
-	<iframe id="fr1" src="frame_2.html">/</iframe>
-	<iframe id="fr1" src="frame_3.html">/</iframe>
-	<iframe id="fr1" src="frame_4.html">/</iframe>
+	
 
 	 */
 	@Test

@@ -22,14 +22,18 @@ public class Test3MultiWindows extends MyAppBaseTest {
 	}
 
 	/**
-	   How to get the current window name?
-	  	 String windowHandle = driver.getWindowHandle();
-	  	 
-	   How to get all window handles/names?
-	   	  Set<String> allWindowHandles = driver.getWindowHandles();
-	  
-	  How to switch between the windows?
-	   driver.switchTo().window("<window name>");
+	 
+	 How to get the current window name?
+	 solution:
+	 String windowName = driver.getWindowHandle();
+	 
+	 How to get all window handles/names?
+	 solution:
+	 Set<String> allWindowHandles = driver.getWindowHandles();
+	 
+	 How to switch between the windows?
+	 solution:
+	 driver.switchTo().window("<window name>");
 	 
 	 
    steps:
@@ -55,7 +59,7 @@ public class Test3MultiWindows extends MyAppBaseTest {
 	@Test
 	public void testWindow() throws InterruptedException {
 		//assert the parent window title
-		Assert.assertEquals(driver.getTitle() , "In window1", "Invalid title");
+		Assert.assertEquals(driver.getTitle() , "in window1", "Invalid title");
 		
 		//Get the parent window name
 		String parentWindowHandle = driver.getWindowHandle();
@@ -71,7 +75,7 @@ public class Test3MultiWindows extends MyAppBaseTest {
 		driver.switchTo().window(childWindowHandle);
 		
 		//assert/validate child window title
-	    assertEquals(driver.getTitle() , "Hello Python", "Invalid title");
+	    assertEquals(driver.getTitle() , "my form page", "Invalid title");
 		Thread.sleep(2000);
 		
 		//enter the data for the fields in child window
@@ -84,7 +88,7 @@ public class Test3MultiWindows extends MyAppBaseTest {
 		Thread.sleep(2000);
 		
 		//assert/validate the parent window title
-		assertEquals(driver.getTitle() , "In window1", "Invalid title");
+		assertEquals(driver.getTitle() , "in window1", "Invalid title");
 		
 		//enter the data to the field in parent window
 		driver.findElement(By.name("uName")).sendKeys("kumar");

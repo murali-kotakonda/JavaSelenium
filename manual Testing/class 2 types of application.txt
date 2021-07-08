@@ -1,21 +1,20 @@
-based on types of apps, testing appraches + plan  + tools will change.
-
+based on types of apps, testing approaches + plan  + tools will change.
 
 
 Types of applications:
 ------------------
 1.standaAlone appliction/ desktop application(personal)
-  s/w that requires installtion on desktop.
+  s/w that requires installation on desktop.
   installation and usage on same system.
   
   installation depends on the system configuration.
-
   that on a single sytem based on system config.
-  installtion(compatability) + os 
+  installation(compatability) + os 
+ 
   ex: chrome, firefox , skype, ms word, excel, games
 
-  most of cases no internet required.
-  software install + acces will be in same system.
+  most of cases internet is not required.
+  software install + access will be in same system.
   online/offline.
   depended 	on client config.....
 
@@ -23,8 +22,7 @@ Types of applications:
   - mostly single user.
   - app that requires no internet will have data  reside in samee system
   - app that requires internet will have data  reside in diff remote system.
-
-
+ Test using UTF, QTP
   
 2.web application  business [need internet]:
 - runs 24/7
@@ -34,14 +32,24 @@ Types of applications:
 - for accessing the app , we need the url.
 - test on chrome,firefox,ie.
 - we have static and dynamic web apps.
+Test using selenium, qtp
 
-3.web services application:
+
+3.web services application: 
 [consumer and provider are involved.]
 one business app interacts with another business application.
+- Heterogeneous apps can communicate with each other using services.
+- communication between apps
+- mostly B-B apps uses webservices
+ 
+examples: 
+
 ex1:
-enduser ------->   Red Bus Travels   ------->   Orange 
+PAYTM recharge
+
+ex2:
+enduser ------->   Red Bus    ------->   Orange Travels
                       [Java]                      [Python]
-Heterogeneous apps can communicate with each other using webservcies.
 
 Red Bus Travels  ==> consumer of web service
 Orange  == provider of web service
@@ -49,35 +57,40 @@ Orange  == provider of web service
 Red Bus Travels  is a web application
 Orange is a web services application so that any app can talk with Red Bus Travels .
 
-ex2:
-endusers --- > Swiggy/Zomato --> all restaurents
-
 ex3:
-endusers ----> bookmyshow -------> any city, any theatre
+endusers --- > Swiggy/Zomato --> all Restaurents
 
 ex4:
+endusers ----> bookmyshow -------> any city, any theatre
+
+ex5:
 - ATM machine [icici  bank].
 
-endusers[citi] ----->  ATM machine [icici  bank] --> citi 
-endusers[sbi] ----->   ATM machine [icici  bank] --> sbi
-endusers[hdfc] ----->   ATM machine [icici  bank] --> hdfc
+endusers[citi] ----->  ATM machine [icici  bank] --> citi  BANK
+endusers[sbi] ----->   ATM machine [icici  bank] --> sbi BANK
+endusers[hdfc] ----->   ATM machine [icici  bank] --> hdfc BANK
 
 customer ------> Business ----> business 
          standalone         webservices
          web application 		 
 businss to business communication.
  
-C-B ===> We need web application
-B-B ===> WE NEDD Web services
+Provider has to be a web-service app 
+consumer can be standalone/web/web service app 
 
+C-B ===> We need web application
+B-B ===> WE need Web services
+
+Tester has do webservice testing at provider end.
+technologies for testing : postman client , jmeters, rest easy,rest assure
 
 4.Mobile apps :
-- feature in web and mobile pp might not b same.
+- feature in web and mobile app might not b same.
 testing on play store and apple store
 android/ ios/ apple/ apps.
 - install in mobile using (apple store/ play store)
 - app runs on mobile.
-- app work on touch basis [only smart phoes].
+- app work on touch basis [only smart phones].
 mobiles apps can be with or without internet
 internet: watsup, instagram , fb , tiktok
 w/o internet : photo editor , notepad ,calculator , music player , 

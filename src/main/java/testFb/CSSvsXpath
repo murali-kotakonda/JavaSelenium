@@ -1,17 +1,4 @@
-When to use XPath ID's:
-------------------------------------
-Cases where you only want to support one selector type
-Your browser does not fully support CSS or all the CSS selectors you need (older browsers such as IE, for example, doesn't support all CSS selectors)
-You need to do a task that only an XPath would support (finding an element by moving back up the DOM)
 
-<ul>
-    <li><a href="maps.google.com"> Google Maps Sub-domain </a></li>
-    <li><a href="mail.icloud.com"> Link to iCloud Mail Services</a></li>
-    <li><a href="mail.opera.com"> Opera Mail </a></li>
-    <li><a href="mail.google.com"> Gmail Services </a></li>
-</ul>
-	
-a[href^="some value here"]
 
 CSS:
 --------
@@ -39,6 +26,61 @@ driver.findElement (By.cssSelector (".login"));
 driver.findElement (By.xpath ("//*[@class='login']));
 
 
+3. 
+<input type="text" id ="uname">
+driver.findElement (By.xpath ("//input[@id='uname']));
+driver.findElement (By.cssSelector ("input#uname"));
+
+for css:
+input#uname   => tag name = input and id ='uname'
+input.login   => tag name = input and class = 'login'
+
+
+4.  
+<a href='https://www.gmail.com'>click here </a>
+<a href='https://www.fb.com'>click here </a>
+
+xpath : driver.findElement (By.xpath ("//a[@href='https://www.gmail.com']));
+css   : driver.findElement (By.cssSelector ("a[href = 'https://www.gmail.com' ]"));
+
+
+
+Xpath :
+--------------------------------------------------------------------------------------------------------------
+XPath stands for XML Path
+XPath is used to find the element in the HTML DOM
+The success rate of finding an element using Xpath is too high
+XPath is used where element has no other way of locating
+XPath provider plugins are available but encouraged to use only to validate the user written XPath
+Slower in IE
+Can locate element by text
+Can locate parent elements
+Starts with / or //
+More flexible
+
+XPath we can traverse both forward and backward whereas CSS selector only moves forward.
+Although CSS selectors perform far better than Xpath
+Xpath tend to become complex and hence make hard to read
+Xpath engines are different in each browser, hence make them inconsistent.
+
+
+
+When to use XPath ID's:
+------------------------------------
+Cases where you only want to support one selector type
+Your browser does not fully support CSS or all the CSS selectors you need (older browsers such as IE, for example, doesn't support all CSS selectors)
+You need to do a task that only an XPath would support (finding an element by moving back up the DOM)
+
+<ul>
+    <li><a href="maps.google.com"> Google Maps Sub-domain </a></li>
+    <li><a href="mail.icloud.com"> Link to iCloud Mail Services</a></li>
+    <li><a href="mail.opera.com"> Opera Mail </a></li>
+    <li><a href="mail.google.com"> Gmail Services </a></li>
+</ul>
+	
+a[href^="some value here"]
+
+
 CSS Selector :
 ------------------------------------------------------------------------
 CSS stands for cascading style sheet
@@ -62,26 +104,7 @@ Easier to learn/understand syntax - they are more readable
 Heavily used in development (JQuery is heavily reliant on CSS)
 Generally, CSS selectors can do almost everything an XPath ID can do
 
-
-Xpath :
---------------------------------------------------------------------------------------------------------------
-XPath stands for XML Path
-XPath is used to find the element in the HTML DOM
-The success rate of finding an element using Xpath is too high
-XPath is used where element has no other way of locating
-XPath provider plugins are available but encouraged to use only to validate the user written XPath
-Slower in IE
-Can locate element by text
-Can locate parent elements
-Starts with / or //
-More flexible
-
-XPath we can traverse both forward and backward whereas CSS selector only moves forward.
-Although CSS selectors perform far better than Xpath
-Xpath tend to become complex and hence make hard to read
-Xpath engines are different in each browser, hence make them inconsistent.
-
-
+ 
 css:
 -----------
 Locating by CSS Selector -  

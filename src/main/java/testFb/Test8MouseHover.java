@@ -25,16 +25,17 @@ public class Test8MouseHover extends BaseTest {
 
 	@Test
 	public void testTextF() throws InterruptedException {
-		WebElement txtUsername = driver.findElement(By.id("myname"));
-		txtUsername.sendKeys("kumar");
+		WebElement element = driver.findElement(By.name("uName"));
+		element.sendKeys("user1");
 		
-		// or
-		sleep(5);
-		new Actions(driver).moveToElement(txtUsername)
-				.click()
-				.sendKeys(txtUsername, "shyam")
-				.build().perform();
-
+		Thread.sleep(3000);
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element)
+		       .sendKeys(element, " user2")
+		       .build()
+		       .perform();
+		
+	   Thread.sleep(3000);
 	}
 
 
@@ -74,28 +75,32 @@ public class Test8MouseHover extends BaseTest {
 	public void t2() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		
-		/* 
-		WebElement element = driver.findElement(By.linkText("Click here"));
-		Actions  action= actions.moveToElement(element);
-     	action.build().perform(); 
-        */
-		sleep(3);
+		//mouse over on link1
+		actions.moveToElement(getLinkObj("Click for fb")).build().perform();
+		Thread.sleep(3000);
+	
+		//mouse over on link2
+		actions.moveToElement(getLinkObj("Click for Gmail")).build().perform();
+		Thread.sleep(3000);
 		
-	    actions.moveToElement(getByLinkText("Click here")).build().perform();
-	    sleep(3);
-	    
-		actions.moveToElement(getByLinkText("Click for Date")).build().perform();
-		sleep(3);
+		//mouse over on link3
+		actions.moveToElement(getLinkObj("Click for Google")).build().perform();
+		Thread.sleep(3000);
 		
-		actions.moveToElement(getByLinkText("Send Data")).build().perform();
-		sleep(3);
+		//mouse over on link4
+		actions.moveToElement(getLinkObj("form page")).build().perform();
+		Thread.sleep(3000);
 		
-		actions.moveToElement(getByLinkText("Ex1")).build().perform();
-		sleep(3);
+		//mouse over on link5
+		actions.moveToElement(getLinkObj("alert page")).build().perform();
+		Thread.sleep(3000);
 		
-		actions.moveToElement(getByLinkText("Ex2")).build().perform();
-		sleep(3);
 	}
+
+	public WebElement getLinkObj(String linkText) {
+		return driver.findElement(By.linkText(linkText));
+	}
+
 	
 	/**
 		Notes:
@@ -106,32 +111,31 @@ public class Test8MouseHover extends BaseTest {
 	public void t3() throws InterruptedException {
 		Actions actions = new Actions(driver);
 		
-	    actions.moveToElement(getByLinkText("Click here")).click().build().perform();
-	    sleep(3);
-		
+		//mouse over on link1
+		actions.moveToElement(getLinkObj("Click for fb")).click().build().perform();
+		Thread.sleep(3000);
+		driver.navigate().back();
+	
+		//mouse over on link2
+		actions.moveToElement(getLinkObj("Click for Gmail")).click().build().perform();
+		Thread.sleep(3000);
 		driver.navigate().back();
 		
-		actions.moveToElement(getByLinkText("Click for Date")).click().build().perform();
-		sleep(3);
-		
+		//mouse over on link3
+		actions.moveToElement(getLinkObj("Click for Google")).click().build().perform();
+		Thread.sleep(3000);
 		driver.navigate().back();
 		
-		actions.moveToElement(getByLinkText("Send Data")).click().build().perform();
-		sleep(3);
-		
+		//mouse over on link4
+		actions.moveToElement(getLinkObj("form page")).click().build().perform();
+		Thread.sleep(3000);
 		driver.navigate().back();
 		
-		actions.moveToElement(getByLinkText("Ex1")).click().build().perform();
-		sleep(3);
-		
+		//mouse over on link5
+		actions.moveToElement(getLinkObj("alert page")).click().build().perform();
+		Thread.sleep(3000);
 		driver.navigate().back();
 		
-		actions.moveToElement(getByLinkText("Ex2")).click().build().perform();
-		sleep(3);
-		
-		driver.navigate().back();
-		
-		sleep(3);
 	}
 
 	/**
@@ -198,28 +202,28 @@ public class Test8MouseHover extends BaseTest {
 
 	//double click + right click
 	@Test
-	public void testText_3() {
+	public void testText_3() throws InterruptedException {
+		WebElement element = driver.findElement(By.name("uName"));
+		
 		Actions action = new Actions(driver);
 		
-		//move to text field and click
-		WebElement element = getTextFieldByName("uName");
-		
-		action.moveToElement(element).click().build().perform();
-		sleep(3);
-		
+		//enter selenium
 		action
 		.sendKeys(element, "selenium")
 		.build().perform();
-
+		Thread.sleep(3000);
+		
 		// Double click
 		action.doubleClick(element).build().perform();
-		sleep(3);
+		Thread.sleep(3000);
 		
 		// Right click
 		action.contextClick(element).build().perform();
-		sleep(3);
+		Thread.sleep(3000);
 		
 	}
+
+ 
 
 	@Test
 	public void testText_4() {

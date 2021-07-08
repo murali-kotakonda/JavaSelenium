@@ -20,10 +20,15 @@ public class TestXpathNotes {
 
 		solution)
 		 -> get element that has 'a' as tag name and href as 'https://www.gmail.com'
+		    syntax:
+   				//a[@href = 'https://www.gmail.com' ]
+
 		 	WebElement element1 = driver.findElement(By.xpath("//a[@href='https://www.gmail.com']"));
 		    WebElement element2 = driver.findElement(By.cssSelector("a[href='https://www.gmail.com']"));
 
 		 -> get element that has 'a' as tag name and href as 'https://www.fb.com'
+		   syntax:
+   				//a[@href = 'https://www.fb.com' ]
 		    WebElement element3 = driver.findElement(By.xpath("//a[@href='https://www.fb.com']"));
 		    WebElement element4 = driver.findElement(By.xpath("a[href='https://www.fb.com']"));
 
@@ -31,14 +36,23 @@ public class TestXpathNotes {
 		  
 		2.
 		<label id='error'>Enter values here</label>
-		-> get element that has 'label' as tag name and id as 'error'
-		WebElement webElement =driver.findElement(By.xpath("//label[@id='error']"))
+		<input id='error' type='text'/> 
+		<label id='error2'>Enter data</label>
+		
+	 -> get element that has 'label' as tag name and id as 'error'
+		syntax:
+		 //label[@id='error']
+
+
+		 WebElement element2 = driver.findElement(By.xpath(" //label[@id='error']"));
 
 		
-		3.<input type="text"/>
+		3. <input type="text"/>
 		-> get element that has 'input' as tag name and type as 'text'
-		WebElement webElement =driver.findElement(By.xpath("//input[@type='text']"))
-		
+		syntax:
+		 //input[@type='text']
+		 
+		WebElement element2 = driver.findElement(By.xpath("//input[@type='text']"));
 		
 		4.<input type="submit" value="RESET"/>
 		  <input type="submit" value="ADD"/>
@@ -48,7 +62,7 @@ public class TestXpathNotes {
 		
 		
 		
-<input type="text" name="username"  id ="myName"/>
+5.<input type="text" name="username"  id ="myName"/>
 WebElement  we1 = driver.findElement(By.name("username"))
  WebElement we2 = driver.findElement(By.id("myName")
 WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
@@ -58,14 +72,14 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
  WebElement we5 = WebElement element2 = driver.findElement(By.tagName("input"))
 
 		
-		5. <input type="text" name="age"/>
+		6. <input type="text" name="age"/>
 		WebElement element3=driver.findElement(By.xpath("//input[@name='age']"));
 		
 		
-		6.<img src="mypic.jpeg/>
+		7.<img src="mypic.jpeg/>
 		 WebElement element3=driver.findElement(By.xpath("//img[@src='mypic.jpeg']"));
 		
-		7.
+		8.
 		<p class="show"> test1 </p>
 		<p class="show"> test2 </p>
 		<p class="show"> test3 </p>
@@ -88,20 +102,20 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		 
 		 syntax: tag[contains(@attribute, ‘value‘)]
 		  
-		  Ex1.1:
+		9:
 		  <img src='ProfilePic123445.jpg'/>
    		  Xpath= //img[contains(@src,’Profile’)] - similar match
 		  Xpath = //img[@src='ProfilePic123445.jpg']  - exact match
 
-		Ex1.2:
+		10:
 		<a href="https://www.gmail.com"> click here for gmail page </a>
-		WebElement =driver.find_element_by_xpath("//a[@href='https://www.gmail.com']")
-		WebElement =driver.find_element_by_xpath("//a[contains(@href,'gmail')]")
-		WebElement =driver.find_element_by_xpath("//a[contains(text(),'gmail page')]")  -- partial serach by text
+		WebElement element1 =driver.find_element_by_xpath("//a[@href='https://www.gmail.com']")
+		WebElement element2 =driver.find_element_by_xpath("//a[contains(@href,'gmail')]")
+		WebElement element3 =driver.find_element_by_xpath("//a[contains(text(),'gmail page')]")  -- partial serach by text
 
 
 		  
-  		Ex2:
+  		11:
 		A)<input type= 'subContractor' />
 		B) <input type= 'subRegister' />
 		C) <p type= 'subAgent' />
@@ -117,7 +131,7 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 			fetches C
 
 			3. -- Get all elements if the attribute type has partial value 'sub'
-			 Xpath=//*[contains(@type,'sub')]
+			 Xpath=//*[contains(@type,'sub')]    -> tag name can be anything , but type should contain 'sub'
 			Fetches A , B & C
 	 
 	  Ex3: 
@@ -142,9 +156,8 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
  
 
 		 /*
-	      <td class="abc> hello </td>
-
-		here td = tag 
+	     <td class="abc">hello</td>		
+		here td => tag 
 		class ='abc ' ==> attribute
 		hello  => text
 	      
@@ -155,23 +168,33 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		//<input type="text" placeholder="Organization/Company Name" name="organization_name" value="" class="form-control sign-up-input-2 ">
 		 driver.findElement(By.xpath("//a[contains(text(), 'TESTING')]")).click();
 		
+		12.
 			<td>UserID</td>
 			<td>name</td>
 			<td>age</td>
 			
-			
-			//td[text()='UserID']
-			//td[text()='name']
-			//td[text()='age']
+		WebElement element1=driver.findElement(By.xpath("//td[text()='UserID']"));  
+		WebElement element2=driver.findElement(By.xpath("//td[text()='name']")); 
+		WebElement element3=driver.findElement(By.xpath("//td[text()='age']")); 
+     	
 
-		 Ex1:
+ 	    13:
+		  <label id="abc">Enter Id<label> 
+		  <label id="abc">Enter Name<label> 
+		   
+		  WebElement we1 =driver.findElement(By.xpath("//input[text()='Enter Id']"));
+		  WebElement we2 =driver.findElement(By.xpath("//input[text()='Enter Name']"));
+		   
+
+		14:
 		 <label>Enter message<label>
+		
 		 here label is tag
 		 'Enter message' is the text
 		 
 		
 
-		  <label id="xyz">Enter message<label>
+	
 		  here label is tag
 		  id is the attribute , 'xyz' is attribute value
 		 'Enter message' is the text
@@ -179,13 +202,10 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		 Xpath = //label[text()='Enter message']   -> exact match
 		 Xpath = //label[contains(text() ,'message')]-> similar match
 		 
-		 Ex1.1:
-		  <label id="abc">Enter Id<label> 
-		  <label id="abc">Enter Name<label> 
-		   
-		  WebElement we1 =driver.findElement(By.xpath("//input[text()='Enter Id']"));
-		  WebElement we2 =driver.findElement(By.xpath("//input[text()='Enter Name']"));
-		   
+		
+		WebElement we1 =driver.findElement(By.xpath("//label[text()='Enter message']")); -> exact match
+		WebElement we2 =driver.findElement(By.xpath("//label[contains(text() ,'message')]"));-> similar match
+
 
 		 Ex2:
 		   <td>UserID</td>
@@ -212,16 +232,19 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		 Syntax: //tag[XPath Statement-1 or XPath Statement-2]
 		 Syntax: //tag[XPath Statement-1 and XPath Statement-2]
 		
-		Ex:1
+		15.
 		<input type="button" name="CLEAR">
 		<input type="submit" name="submit">
 		<input type="button" name="btnReset">
 		 
 		 Req: click on submit button or Reset buton
 		solution:
-		xpath:  //input[@type='submit' or @name='btnReset']
-		
-		Ex:2
+		xpath:  //input[@name='submit' or @name='btnReset']
+		List<WebElement> wes =driver.findElements(By.xpath("//input[@name='submit' or @name='btnReset']"));
+		  
+
+
+		16.
 		<input type="submit" name="btnLogin">
 		<input type="button" name="btnLogin">
 		<input type="submit" name="btnReset">
@@ -229,7 +252,7 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		 click on submit button and with name as btnLogin
 		//input[@type='submit' and @name='btnLogin']
 		  
-		 Ex:3 
+		 17.
 		 <input type="user-message1" class="form-control1">
 		 <input type="user-message2" class="form-control1">
 		 <input type="user-message1" class="form-control3">

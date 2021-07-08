@@ -90,30 +90,69 @@ public class Test7_1KeysGoogle extends BaseTest{
 		driver.get("https://www.google.com/");
 		sleep(3);
 	}
-	
+	/**
+	Open Google.com
+	 Type selenium
+	 press down
+	 press down
+	 press down
+	 press Enter
 
+   */
 	@Test // WORKING
-	public void test1() {
-		//create action object
+	public void test1() throws InterruptedException {
+		WebElement element = driver.findElement(By.name("q"));
+		
+		//create actions object
 		Actions actions = new Actions(driver);
-		WebElement textField = getByName("q");
-		textField.sendKeys("selenium");
-		sleep(3);
 		
-		actions.moveToElement(textField).click().build().perform();
-		sleep(3);
+		// How to enter data
+		element.sendKeys("selenium");
+		Thread.sleep(3000);
+				
+		// How to do the mouse over and click
+		actions.moveToElement(element).click().build().perform();
+		Thread.sleep(3000);
+
+		// press arrow down
+		actions.sendKeys(Keys.ARROW_DOWN).build().perform();
+		Thread.sleep(3000);
+
+		// press arrow down
+		actions.sendKeys(Keys.ARROW_DOWN).build().perform();
+		Thread.sleep(3000);
+
+		// press arrow down
+		actions.sendKeys(Keys.ARROW_DOWN).build().perform();
+		Thread.sleep(3000);
+
+		// press enter
+		actions.sendKeys(Keys.ENTER).build().perform();
+		Thread.sleep(3000);
+
+	}
+
+	@Test //WORKING
+	public void test2Builder() throws InterruptedException {
+		WebElement element = driver.findElement(By.name("q"));
 		
-		actions.sendKeys(Keys.DOWN).build().perform();
-		sleep(3);
+		//create actions object
+		Actions actions = new Actions(driver);
 		
-		actions.sendKeys(Keys.DOWN).build().perform();
-		sleep(3);
+		//How to enter data
+		element.sendKeys("selenium");
+		Thread.sleep(3000);
 		
-		actions.sendKeys( Keys.DOWN).build().perform();
-		sleep(3);
+		//How to do the mouse over and click
+		actions.moveToElement(element).click()
+		.sendKeys(Keys.ARROW_DOWN)
+		.sendKeys(Keys.ARROW_DOWN)
+		.sendKeys(Keys.ARROW_DOWN)
+		.sendKeys(Keys.ENTER)
+		.build().perform();
 		
-		actions.sendKeys( Keys.ENTER).build().perform();
-		sleep(3);
+		Thread.sleep(3000);
+		
 	}
 
 	/**
@@ -152,36 +191,16 @@ public class Test7_1KeysGoogle extends BaseTest{
 		
 	}
  
-	
+	 
 	/**
-	
-	/**
-	Open Google.com
-	 search selenium
-	 press down
-	 press down
-	 press down
-	 press Enter
-
-	How to send the text using the actions.
+ 
+     How to send the text using the actions.
 	 solution:
 	 a.sendKeys(<elementObj>, "<some text>").build().perform();
 		
 	 
 	 */
-	@Test
-	public void t2FailedSendKeys()   {
-		WebElement e = driver.findElement(By.name("q"));
-		Actions a = new Actions(driver);
-
-		a.sendKeys(Keys.DOWN).build().perform();
-		sleep(3);
-		a.sendKeys(Keys.DOWN).build().perform();
-		sleep(3);
-		a.sendKeys(Keys.DOWN).build().perform();
-		sleep(3);
-		a.sendKeys(Keys.ENTER).build().perform();
-	}
+	 
 	
 	/**
 	 How to press the shify key?
@@ -193,54 +212,85 @@ public class Test7_1KeysGoogle extends BaseTest{
 	 scrolling up and down the web page, multiple value selection
 	 */
 	
-	@Test // working
-	public void t3SendKeysShiftKey()   {
-		WebElement element = driver.findElement(By.name("q"));
-		
-		Actions action = new Actions(driver);
-		
-		//Type selenium in caps using SHIFT
+
+	/**
+	Open Google.com
+	 
+	 Type 'selenium' [in capital using shift key]
+	 Type 'interview questions' [without shift]
+	 
+	 press down
+	 press down
+	 press down
+	 press Enter
+	 
+	 How to send the text using the actions.
+	 solution:
+	  sendKeys(<elementObj>, "<some text>").build().perform();
+	 * @throws InterruptedException 
+	 
+
+	 	//Type selenium in caps using SHIFT
 		//action.keyDown(element, Keys.SHIFT).sendKeys(element, "selenium").keyUp(element, Keys.SHIFT).build().perform();
 		
-		//Type selenium  in caps using SHIFT and  then type java tutorial 
-		action.keyDown(element, Keys.SHIFT);
-		action.sendKeys(element, "selenium");
-		action.keyUp(element, Keys.SHIFT);
-		action.build().perform();
-		sleep(3);
-				
-		action.sendKeys(Keys.DOWN).build().perform();
-		sleep(2);
-		action.sendKeys(Keys.DOWN).build().perform();
-		sleep(2);
-		action.sendKeys(Keys.DOWN).build().perform();
-		sleep(2);
-		action.sendKeys(Keys.ENTER).build().perform();
-		sleep(2);
-	}
-	
-	@Test  //WORKING
-	public void t4SendKeysShiftKey()   {
+
+   */
+
+	@Test // working
+	public void testShift() throws InterruptedException {
 		WebElement element = driver.findElement(By.name("q"));
 		
 		Actions action = new Actions(driver);
 		
-		//Type selenium  in caps using SHIFT and  then type java tutorial 
+		//press shift
 		action.keyDown(element, Keys.SHIFT);
+		//enter selenium
 		action.sendKeys(element, "selenium");
+		//release shift
 		action.keyUp(element, Keys.SHIFT);
-		action.sendKeys(element, " java tutorial");
+		
+		//enter 'interview questions'
+		action.sendKeys(element, "interview questions");
+		
 		action.build().perform();
-		sleep(3);
-				
-		action.sendKeys(Keys.DOWN).build().perform();
-		sleep(2);
-		action.sendKeys(Keys.DOWN).build().perform();
-		sleep(2);
-		action.sendKeys(Keys.DOWN).build().perform();
-		sleep(2);
+		Thread.sleep(3000);
+		
+		// press arrow down
+		action.sendKeys(Keys.ARROW_DOWN).build().perform();
+		Thread.sleep(3000);
+
+		// press arrow down
+		action.sendKeys(Keys.ARROW_DOWN).build().perform();
+		Thread.sleep(3000);
+
+		// press arrow down
+		action.sendKeys(Keys.ARROW_DOWN).build().perform();
+		Thread.sleep(3000);
+
+		// press enter
 		action.sendKeys(Keys.ENTER).build().perform();
-		sleep(2);
+		Thread.sleep(3000);
+		
+	}
+
+
+	 @Test //doubt
+	public void testShiftBuilder() throws InterruptedException {
+		WebElement element = driver.findElement(By.name("q"));
+		
+		Actions action = new Actions(driver);
+		
+		//press shift
+		action.keyDown(element, Keys.SHIFT) 
+		      .sendKeys(element, "selenium") 
+		      .keyUp(element, Keys.SHIFT)
+		      .sendKeys(element, "interview questions")
+		      .sendKeys(Keys.ARROW_DOWN) 
+		      .sendKeys(Keys.ARROW_DOWN)
+		      .sendKeys(Keys.ARROW_DOWN)
+		      .sendKeys(Keys.ENTER)
+		      .build().perform();
+		Thread.sleep(3000);
 	}
 	
 	/**
@@ -254,15 +304,19 @@ public class Test7_1KeysGoogle extends BaseTest{
 	public void t3_HomeAndEnd() {
 		t1();
 		Actions action = new Actions(driver);
+		Actions action = new Actions(driver);
+		
 		// Press END using Actions class
-		action.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
-		sleep(3);
-		// Press HOME using  Actions class
-		action.keyDown(Keys.CONTROL).sendKeys(Keys.HOME).perform();
-		sleep(3);
-		//Refresh
+		action.keyDown(Keys.CONTROL).sendKeys(Keys.END).build().perform();
+		Thread.sleep(3000);
+		
+		// Press Home using Actions class
+		action.keyDown(Keys.CONTROL).sendKeys(Keys.HOME).build().perform();
+		Thread.sleep(3000);
+		
+		// Press f5 using Actions class
 		action.keyDown(Keys.CONTROL).sendKeys(Keys.F5).build().perform();
-		sleep(3);
+		Thread.sleep(3000);
 	}
 	
 	@Test

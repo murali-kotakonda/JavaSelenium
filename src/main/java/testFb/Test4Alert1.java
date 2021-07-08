@@ -50,7 +50,7 @@ public class Test4Alert1 extends BaseTest{
 
 		// Capturing alert message.
 		String alertMessage = alert.getText();
-		Assert.assertEquals(alertMessage, "Hello","invaldi alert message");
+		Assert.assertEquals(alertMessage, "Hello","invalid alert message");
 
 		
 		 // Accepting alert	

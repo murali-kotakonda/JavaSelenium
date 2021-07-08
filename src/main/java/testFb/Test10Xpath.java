@@ -44,14 +44,17 @@ public class Test5Xpath extends BaseTest{
 	@Test
 	public void testXpath1() throws Exception  {
 		//get web element for link1 and click
-		driver.findElement(By.xpath("//a[@href='https://www.gmail.com']")).click();
-		sleep(5);
+		WebElement element1 = driver.findElement(By.xpath("//a[@href = 'https://www.gmail.com']"));
+		element1.click();
+					
+		Thread.sleep(3000);
 		driver.navigate().back();
 		
 		//get web element for link2 and click
-		driver.findElement(By.xpath("//a[@href='https://www.fb.com']")).click();
-		
-		Thread.sleep(5000);
+		WebElement element2 = driver.findElement(By.xpath("//a[@href = 'https://www.fb.com']"));
+		element2.click();
+				
+		Thread.sleep(3000);
 		driver.navigate().back();
 	}
 	
@@ -66,12 +69,14 @@ public class Test5Xpath extends BaseTest{
 	@Test
 	public void t2() throws Exception {
 		WebElement label =driver.findElement(By.xpath("//label[@id='error']"));
-		assertEquals( label.getText(),"Enter values here" ,"invalid label value");
+		Assert.assertEquals(label.getText(), "Enter values here");
 		
-		driver.findElement(By.xpath("//input[@id='error']")).sendKeys("testuser1");
 		
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("selenium");
-		sleep(4);
+		WebElement field =driver.findElement(By.xpath("//input[@id='error']"));
+		field.sendKeys("shyam");
+		Thread.sleep(3000);
+		//driver.findElement(By.xpath("//input[@type='text']")).sendKeys("selenium");
+		 
 		
 	}
 
@@ -137,7 +142,7 @@ public class Test5Xpath extends BaseTest{
 		assertEquals( elements.size(),4 ,"Invalid value");
 		
 		for(WebElement  e1: elements) {
-			e1.get
+			 
 			assertTrue(e1.getText().contains("Hello"),"Expected Hello");
 		}
 		sleep(5);

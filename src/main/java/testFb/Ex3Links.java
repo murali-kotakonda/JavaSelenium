@@ -35,16 +35,7 @@ public class Ex3Links extends MyAppBaseTest{
 	}
 	
 
-	//<a href="https://www.youtube.com" id="ytUrl">Click here for Youtube</a>
-	@Test
-	public void testYt() {
-		WebElement link = driver.findElement(By.id("ytUrl"));
-		checkEnabledAndDisplayed(link);
-		link.click();
-		sleep(3);
-	}
-	
-	/*  
+    /*  
 	<a href="https://www.google.com">Click Here for Google</a>
 	
 	How to click on link?
@@ -55,16 +46,35 @@ public class Ex3Links extends MyAppBaseTest{
 	We have two approaches to .get the web element object for link?
 		a) By.linkText("")
 		b) By.partialLinkText("")
-		
+	
+	By.linkText("<pass entire text>"):
+	-------------------------------------
 		WebElement link = driver.findElement(By.linkText("Click Here for Google")); //exact match of link name
-		WebElement plink = driver.findElement(By.partialLinkText("Google"));//partial match of link name
-		
 		link.click();
-		plink/click();
-	   */
+		
+	 By.partialLinkText("<pass the partial value>"):
+	 --------------------------------------------	
+		WebElement link = driver.findElement(By.partialLinkText("Google"));//partial match of link name
+		link.click();	
+	*/
+
+	//<a href="https://www.youtube.com" id="ytUrl">Click here for Youtube</a>
+	@Test
+	public void testYt() {
+		WebElement link = driver.findElement(By.id("ytUrl"));
+			Assert.assertTrue(link.isEnabled());
+		Assert.assertTrue(link.isDisplayed());
+		checkEnabledAndDisplayed(link);
+		link.click();
+		sleep(3);
+	}
+	
+	
 	@Test
 	public void Google1() throws InterruptedException {
 		WebElement link = driver.findElement(By.linkText("Click here for Google"));
+			Assert.assertTrue(link.isEnabled());
+		Assert.assertTrue(link.isDisplayed());
 		checkEnabledAndDisplayed(link);
 		link.click();
 		Thread.sleep(3000);
@@ -73,6 +83,8 @@ public class Ex3Links extends MyAppBaseTest{
 	@Test
 	public void Google2() throws InterruptedException {
 		WebElement link = driver.findElement(By.partialLinkText("Google"));
+			Assert.assertTrue(link.isEnabled());
+		Assert.assertTrue(link.isDisplayed());
 		checkEnabledAndDisplayed(link);
 		link.click();
 		Thread.sleep(3000);

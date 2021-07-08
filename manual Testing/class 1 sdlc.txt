@@ -24,8 +24,8 @@ ACTIVITIES:
 1.Analysis   (Req gathering):[WHAT TO DO] [DISCUSS FUNTIONALLY]
  Abc corp shares requirement to Accenture
 Every team has a Analyst , knows the domain and knowledge on the app.
-  ( senior tester/lead) + SCOPE
--> -scope,feasiabilty,impact
+ - Involves senior tester/lead and discuss on  SCOPE
+-> scope,feasiabilty,impact
 ---> document , no emails, central place where every body can access.
 ex: wiki
 freeze all requiremnets.
@@ -52,16 +52,18 @@ testers create test data required for testing.
 
 ABC CORP IS USING V.12
 
-3.Coding/Implemntation  --> Developer + UI dev + DB Dev
+3.Coding/Implementation  --> Developer + UI dev + DB Dev
 4.Unit Testing --> only v.13 features UI dev/Developer(change password)
 5.Testing --> 
 from v.12 to v.13 
  - testing on different systems
  - testing on different browsers
  - Funtional , Nonfuntional , security , performance , integration , Regression, Load testing , stress testing.
+ 
+ 
 6.Build + Deployment + Documentation(Release notes)
 ABC Corp will have v.13
-7.Maintaince + Support
+7.Maintainance + Support
 
 defects from abc corp
 
