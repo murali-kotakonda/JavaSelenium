@@ -233,7 +233,7 @@ public class Ex1_2 extends BaseTest{
 	@Test
 	public void testCityDropDown() throws InterruptedException {
 		WebElement cities = driver.findElement(By.name("city"));
-
+		driver.switchTo();
 		//get options
 		Select select = new Select(cities);
 

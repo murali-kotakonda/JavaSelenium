@@ -14,9 +14,11 @@ import keyword.ex1.KeyDrivenExcelUtils;
 import keyword.ex2.KeyWordUtil;
 import util.Commons;
 /*  
-DataProvider:  returns list of testcase objects
+
 
 Every test case contains list of actions
+
+DataProvider:  returns list of testcase objects
 
 KeywordExcelUtils:  --> returns list of action Objects
 

@@ -12,7 +12,8 @@ public class TestLogin extends POMBaseTest {
 	
 	@BeforeClass
 	public void init() {
-		loginPageObj = PageFactory.initElements(driver, LoginPage.class);
+		// loginPageObj= new LoginPage(); we have to create web element objs
+		loginPageObj = PageFactory.initElements(driver, LoginPage.class);// selenium will create web element objs
 	}
 
 	@Test

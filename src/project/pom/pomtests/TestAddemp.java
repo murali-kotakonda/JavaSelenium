@@ -24,6 +24,7 @@ public class TestAddemp extends POMBaseTest {
 	@BeforeMethod
 	public void login() {
 		loginPageObj.login("admin", "admin");
+		sleep(5);
 		loginPageObj.clickAddNewEmp();
 		empPageObj=PageFactory.initElements(driver,AddEmp.class);
 	}

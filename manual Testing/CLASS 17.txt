@@ -9,14 +9,12 @@ Functional testing:
 -> User Acceptance Testing  (customer)
 
 
-
 coverage/guidelines/testing techniques under functional testing:
 ------------------------------------------
 a)Boundary Value analysis:[BVA]
 b)Equivalence class partitioning (ECP)
 c)decision table based testing
 d)state transition
-
 e)Object Properties testing:
 f)Error handling/coverage testing:
 g)calculation /manipulation testing:
@@ -38,7 +36,7 @@ coverage/guidelines under functional testing:
 ------------------------------------------
 a)Object Properties testing:
 In web page everything is an object
-And every object has properties and behaviour
+And every object has properties[data type] and behaviour
 Every obj has certain properties
 ex:
 in a Registration page 
@@ -54,11 +52,14 @@ behaviour : onchange , onclick
 
 
  password is object
- we type should not be visible + if we chose to show password should showsize + isdisplayed +onchange
-  behaviour : onchange , onclick  
+ properties:
+ - not visible + 
+ -  size + isdisplayed +onchange
+ 
+ behaviour :
+  onchange , onclick  
 
 1.on page open un + pwd is enabled.
-
 
 state dropdown obj -> if we change state then city dropdown changes...
 city dropdown obj ->  shows cities based on state selected
@@ -71,16 +72,24 @@ During  functional testing tester has to validate the properties of every object
 age is a number and app should not even allow to enter any other chars except digits
 
 
+
 b)Error handling/coverage testing:
 applicable for only for negative scenario.
-validate he error message shown by the app is as expected
+- Test with 
+  a) empty data
+  b) invalid data
+  c) existing data   (register)
+  d) non-existing data  (login )
+- validate The error message shown by the app is as expected
 
 ERRORS:
 ->when db is down , 
 ->when app is crashed.
 ->When 3rd party app is down
--> error with invalid input  like (age<18)
-or non existence data
+
+verify:
+1.flow is stopped.
+2.the app should throw meaningful messages.
 
 In all these cases the app should throw meaningful messages.
 
@@ -89,13 +98,17 @@ Rules for tester
 -> test the error message displayed to customer.
 -> Test the expected erorr message has to be displayed on the screen.
 -> test the app should give meaningful message.
-ex: 
-1."Please enter valid password"   
---Not a meaning error message
-2."Password should be min 5 chars and max 10 chars".
--- meaning full message.
-3. Instead of message "LoginName Not accepted."
- use "LoginName is already in use".
+	ex: 
+	1."Please enter valid password"   
+	--Not a meaning error message
+	2."Password should be min 5 chars and max 10 chars".
+	-- meaning full message.
+	
+    3.
+	"LoginName Not accepted." --Not a meaning error message
+	 "LoginName is already in use"   -- meaning full message.
+	 "LoginNameshould be min 5 chars and max 10 chars"   -- meaning full message.
+	 
 
 Approach:
 [Provide invalid data +
@@ -109,8 +122,8 @@ c)calculation /manipulation testing:
 Used mostly in the cases where mathematical calculations are applicable.
 
 Approach:
-1.provide some vaues to the page
-2.Process the activity
+1.provide some values to the page
+2.Process the activity [add items, checkout ]
 3.compare the output from the page with the expected value.
 
 CASE#1:
@@ -153,7 +166,7 @@ d)Links coverage:
 -application has links as agreed by business.
 
 what should be covered:
-Test link , button or any navigations to backend
+Test link , button for any navigations to back-end
 
 Tests to cover:
 - check if the expected links are displayed on the page.
@@ -195,13 +208,22 @@ e)Boundary Value analysis:[BVA]- LENGTH/range
 Boundary value analysis is based on testing at the boundaries between partitions. 
 It includes maximum, minimum, inside or outside boundaries, typical values and error values.
 BVA is used when the requirement has boundaries for testing.
-Ex1:
-Input condition is valid between 1 to 10
-Boundary values 0,1,2 and 9,10,11
 
-testcases are:
+steps:
+---------
+1.define the minimum 
+2.define the maximum 
+3.testcases are:
 min-1 , min , min+1
 max-1, max, max+1
+
+
+Ex1:
+Input condition is valid between 1 to 10
+min = 1
+max = 10 
+
+Boundary values 0,1,2 and 9,10,11
 
 
 Ex2: 
@@ -221,8 +243,10 @@ max= 10
 
 f)Equivalence class partitioning (ECP):- Value
 ---------------------------------
-Equivalent Class Partitioning allows you to divide set of test condition into a partition which should be considered the testing. 
-This software testing method divides the input domain of a program into classes of data from which test cases should be designed.
+Equivalent Class Partitioning allows you to divide set of test condition into a partition
+ which should be considered the testing. 
+This software testing method divides the input domain of a program into classes of data 
+from which test cases should be designed.
  
 Case#1:
 username field allows only lower case.
@@ -250,10 +274,13 @@ alpha numeric
 
 
 Case#3:
+-For account page only admin has access.
+
+
 There are 4 types of users :
 ADMIN ,AGENT, CUSTOMER, RETAILER.
 
--For account page only admin has access.
+
 
 test cases:
 1.Access as ADMIN
@@ -265,10 +292,18 @@ test cases:
 
 summary:
 
-1.MobileNum should be exactly 10 digits -> USE BVA + ECP
+
+1.MobileNum should be exactly 10 digits ->  -> USE BVA + ECP
+testcases :
+ 1. 9 digits
+ 2. 10 digits 
+ 3. 11 diguts 
+ 4. 10 alphabets 
+ 5. 10 spcl chars 
+ 6. 10 alpha numeric 
+ 
 2.username allows 6 - 8 Characters-> USE BVA
 3.username allows only alphabets and only . and _ are allowed  -> USE ECP
-
 
 g)decision table based testing
 -------------------------------
@@ -286,6 +321,18 @@ For example, a submit button should be enabled if the user has entered all requi
 
 Refer diagram
 
+      Name       email      message      RegisterButton
+	   F           F            F            F 
+	   T           F            F            F    
+       F           T            F            F
+	   F           F            T            F
+	   T           T            F            F
+	   T           F            T            F
+	   F           T            T            F
+	   T           T            T            T 
+	   
+	   
+	   
 CASE#2:
 Req: 
 - Get transaction with in 30 days
@@ -293,10 +340,62 @@ Req:
 - From Time and toTime should be within 30 days
 
        NoInput   From Time <30   toTime>30
-Data<30    T          T           F
+Data 30    T          T           F
 Data>30    F          F           F
 
+   
+CASE#2:
+Req: 
+- Page fetches only last 30 days data 
+- From Time and toTime are optional
+- From Time and toTime should be within 30 days
 
+
+1.If data exists within 30 days 
+Todays date : June 1st
+
+   fromDate   toDate             Result
+     empty     empty           fetch  lst 30 days data 
+	 
+	 empty     may 30          fetch last 30 days info        
+     empty     may 15          fetch from may 1st to may 15 
+	 empty     jan 1           no data 
+	 empty     Jun 20          Invalid date
+	 
+	 may 1      empty          fetch last 30 days info
+	 may 15     empty          fetch may 15 to may 30 
+	 jan 1      empty          fetch last 30 days info
+	 Jun 20     empty          Invalid date
+	 
+	 may 1      may 30          fetch last 30 days info  
+	 may 10     may 20          fetch may 10 to may 20
+	 jan 1      may 30          fetch last 30 days info  
+     jan 1      jan 30          no data 	 
+	 
+	 may 20     june 20         invalid date 
+	 june 20    dec 30          invalid date 
+	 dec 30     june 20         invaid date 
+
+2.If data doesnt exists within 30 days 
+
+   fromDate   toDate             Result
+     empty     empty            no data 
+	 
+	 empty     may 30          no data         
+     empty     may 15          no data 
+	 empty     jan 1           no data 
+ 
+	 
+	 may 1      empty           no data 
+	 may 15     empty           no data 
+	 jan 1      empty           no data 
+ 
+	 
+	 may 1      may 30           no data  
+	 may 10     may 20           no data 
+	 jan 1      may 30          no data  
+     jan 1      jan 30          no data 	 
+ 
   
 steps:
 Enlist the inputs in rows
@@ -332,6 +431,7 @@ un          pwd        result
 (=10)+V    (=8)+V      PASS
 
 
+
 state transition:
 ------------------
 -> in a single flow the state changes based on input/usertype.
@@ -357,23 +457,23 @@ After adding : Not eligible
   2.Try to Add product when one product in cart   -> Fail
   3.Remove the product from cart
        state changes from 'Not Eligible' to 'Eligible'
-  4.Try to Add product when one product in cart   -> pass
+  4.Try to Add product when nothing in cart.   -> pass
    state changes from 'Eligible' to 'Not Eligible'
-
+  5.Try to Add product  when customer already purchased the product - > Fail
   
-2.After 30 days dont access the features as Licence expired.
+2.After 30 days don't access the features as Licence expired.
 
 States:
 Not Expired
 Expired
 
 Test cases:
-1.Test all the features within 30 days [curr stet is Not Expired ]  -> Pass
-2.Test all the features after 30 days  [curr stet is  Expired ]  -> Fail
-
+1.Test all the features within 30 days [curr state is Not Expired ]  -> Pass
+2.Test all the features after 30 days  [curr state is  Expired ]  -> Fail
 
 3.LoggedinUser vs Loggedout user
-Ex purcahse product in amazon 
+Ex:
+purchase product in amazon 
 access product -> both
 add to cart -> both
 purchase -> only loggedin user can purchase.
@@ -381,15 +481,17 @@ purchase -> only loggedin user can purchase.
 
 4. privilege customer vs normal customer.
 -Access amazon prime content without subscription.
--same user make payment for subscription.
-and Access amazon prime content withsubscription.
+-same normal customer make payment for subscription.
+and Access amazon prime content with subscription.
 
 
 Example:
 if the user enters a valid password in any of the first three attempts 
-the user will be able to log in successfully. 
+the user will be able to log in successfully.
+
 If the user enters valid username but  invalid password in the first or second try, 
-the user will be prompted to re-enter the password. When the user enters password incorrectly 5th time, 
+the user will be prompted to re-enter the password. 
+When the user enters password incorrectly 5th time, 
 the action has taken, and the account will be blocked.
 ACTIVE ---> BLOCKED.
 
@@ -406,13 +508,14 @@ Internationalization  testing:
 ----------------------------
 -> app that supports multi languages.
 Test the application to support the page in diff language.
--> currancy change based on nation
+-> currency change based on nation
 -> date + local information has to be tested.
 -> locality testing
 localization testing 
 (testing particular location )
-ex: 
-1.currancy change
+ex:book a cab
+ 
+1.currency change
 2.change the date + time format
 3.collect voter id for indians
 collect ssn for us

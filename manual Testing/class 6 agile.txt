@@ -4,7 +4,6 @@ Agile:[process]
 -> Sprint [is process , part of agile , flavour of agile]
 ->
 
-
 People:   
 ----------
 Product Owner   --> Analyst
@@ -12,13 +11,13 @@ Techincal owner --> Tech leads
 Quality owner  --> Testing leads 
 Developes (UI, JAVA,DB),
 Testers
+Architect
 Dev Ops
 Manager -> manage people 
-Architect 
 Scrum Master
 ---------------------
--certified in agile 
 - gives tasks to entire team
+-certified in agile 
 -manage work/ allocate work for the people.
 -decides priority of work [defect/task].
 -decide on the release of application.
@@ -45,8 +44,8 @@ two weeks window or period where all team mates are occupied for the delivery of
 sprint:
 ---------
 two weeks period .
-team will work on user stories.
 every sprint has a number.
+team will work on user stories.
 
 
 50 Requirements :
@@ -78,7 +77,7 @@ USER STORY
 TASK 
 
 
-Requirements is didvided into EPIC
+Requirements is divided into EPIC
 Every Epic has multiple User Stories
 Every user story has multiple tasks 
 
@@ -118,10 +117,10 @@ BackLog: [taken care by product owner ]
 ---------------------------------------------------------------
 -Future Epics/User stories.
 - Yet to complete.
--Product owner prepares the epic and user stories.
+-Product owner prepares the epic and user stories from bakclog
 - Not finalized requirements 
 
-If the requirements are finalized then backlog item is converted to EPIC.
+If the requirements are finalized then backlog item is converted to EPIC/userstory.
 
 
 Burn down chart: 
@@ -145,7 +144,6 @@ Meetings:
 
  
 
-
 Planning (MEETING): 
 -------------
 - once in 2 weeks or one meeting for one sprint . 
@@ -161,7 +159,7 @@ SCRUM:(work status update )
 --------
 - It is a daily meeting for 15 mints.
 - every body has to attend.
-- ever body has to speak.
+- every body has to speak.
 -share their status of work [ work started/ work inprogess/
  work completed/work going to status /blocker].
 

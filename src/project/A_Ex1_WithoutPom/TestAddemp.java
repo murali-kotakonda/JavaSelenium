@@ -1,6 +1,6 @@
 package A_Ex1_WithoutPom;
 
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -37,7 +37,7 @@ import util.BaseTest;
 
 common:
 --------------
-->login
+->login with valid creds
 ->click on 'add new employee' link
 -> verify the content of add employee page
 -> get the webelement objects + assertions on fileds
@@ -50,7 +50,6 @@ public class TestAddemp extends BaseTest {
 	@BeforeMethod
 	public void login() {
 		 //write code for login + click "add new employee"
-		
 		//login
 		login("admin", "admin");
 		
@@ -221,11 +220,11 @@ public class TestAddemp extends BaseTest {
 		// TODO : CHECK DATA
 	}
 
+	//WebElement form = driver.findElement(By.id("command"));
+	//WebElement empdata = driver.findElement(By.tagName("h2"));
+
 	public void addEmpolyee(String loginName, String password1, String FName, String LName, String birth, String salary,
 			String mobileNum) throws Exception {
-
-		//WebElement form = driver.findElement(By.id("command"));
-		//WebElement empdata = driver.findElement(By.tagName("h2"));
 
 		WebElement emploginlabel = driver.findElement(By.id("empLoginLbl"));
 		WebElement logname = driver.findElement(By.id("loginName"));
@@ -280,7 +279,7 @@ public class TestAddemp extends BaseTest {
 				maritalstatuslabel, matrialstatus, acceptlabel, accept, submit);
 		
 		
-		assertTrue(emploginlabel.getText().equals("Employee login Name:"));
+		Assert.assertTrue(emploginlabel.getText().equals("Employee login Name:"));
 		assertTrue(logname.getAttribute("type").equals("text"));
 		
 		assertTrue(emppwdlabel.getText().equals("Employee Password:"));
@@ -328,15 +327,17 @@ public class TestAddemp extends BaseTest {
 		pass.sendKeys(password1);
 		fname.sendKeys(FName);
 		lname.sendKeys(LName);
-		design.sendKeys("Analyst");
 		sex.click();
 		dob.sendKeys(birth);
-		status.sendKeys("Active");
-		deptid.sendKeys("IT");
-		managerid.sendKeys("112");
 		sal.sendKeys(salary);
 		cellNo.sendKeys(mobileNum);
-		matrialstatus.sendKeys("single");
+		
+		//design.sendKeys("Analyst");
+		//status.sendKeys("Active");
+		//deptid.sendKeys("IT");
+		//managerid.sendKeys("112");
+		//matrialstatus.sendKeys("single");
+		
 		accept.click();
 		submit.click();
 	}

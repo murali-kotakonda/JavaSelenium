@@ -26,18 +26,17 @@ public class TestLoginBasic1_1 extends BaseTest {
 
 	@Test
 	public void testValidCreds() {
-		WebElement form = driver.findElement(By.tagName("form"));
+		//WebElement form = driver.findElement(By.tagName("form"));
+		
 		WebElement formTitle = driver.findElement(By.tagName("h1"));
 		
 		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
 		WebElement name = driver.findElement(By.name("loginName"));
 
-
 		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
 		WebElement password = driver.findElement(By.name("password"));
 
 		WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
-		
 		
 
 		checkEnabledAndDisplayed(usernamelab, name, passwordlab, password, loginBtn);
@@ -77,7 +76,7 @@ public class TestLoginBasic1_1 extends BaseTest {
 	
 	@Test
 	public void testValidUnAndInvalidPwd() {
-		WebElement form = driver.findElement(By.tagName("form"));
+		//WebElement form = driver.findElement(By.tagName("form"));
 		WebElement formTitle = driver.findElement(By.tagName("h1"));
 		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
 		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
@@ -119,7 +118,7 @@ public class TestLoginBasic1_1 extends BaseTest {
 	
 	@Test
 	public void testInValidUnAndInvalidPwd() {
-		WebElement form = driver.findElement(By.tagName("form"));
+		//WebElement form = driver.findElement(By.tagName("form"));
 		WebElement formTitle = driver.findElement(By.tagName("h1"));
 		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
 		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
@@ -161,7 +160,7 @@ public class TestLoginBasic1_1 extends BaseTest {
 
 	@Test
 	public void testUserNameEmptyAndPasswordEmpty() {
-		WebElement form = driver.findElement(By.tagName("form"));
+		//WebElement form = driver.findElement(By.tagName("form"));
 		WebElement formTitle = driver.findElement(By.tagName("h1"));
 		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
 		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
@@ -249,7 +248,7 @@ public class TestLoginBasic1_1 extends BaseTest {
 	
 	@Test
 	public void testUserNameNotEmptyAndPasswordEmpty() {
-		WebElement form = driver.findElement(By.tagName("form"));
+		//WebElement form = driver.findElement(By.tagName("form"));
 		WebElement formTitle = driver.findElement(By.tagName("h1"));
 		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
 		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));

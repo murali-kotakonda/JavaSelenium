@@ -23,12 +23,14 @@ import org.testng.annotations.BeforeTest;
 public class BaseTest {
 
 	public WebDriver driver;
+	
+	public static final String URL = "http://localhost:8012/EmpDemo";
 
 	@BeforeTest
 	public void setup() {
 		System.out.println("in setup");
 		driver = Commons.getChromeDriver();
-		driver.get("http://localhost:8012/EmpDemo");
+		driver.get(URL);
 	}
 
 	@AfterTest

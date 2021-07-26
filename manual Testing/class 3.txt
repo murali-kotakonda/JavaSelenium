@@ -35,9 +35,17 @@ software testing:
 - aims at the capabilities of the application.
 - intended to identify problem areas/bugs/issues/defect.
 
-Defect--> any scenario/ any test case which is not working
-as per customer specification.
-- check whethere application meets the customer requirements.
+				 
+Why Testing:
+-> fixing the issue after delivery is expensive.
+-> ensure the software is 100% bug free.
+-> ensure app meets the quality [perf + funtional+ non -functional], stable , security.
+-> ensure quality delivery.
+
+
+Defect--> 
+any scenario/ any test case which is not working as per customer specification..
+- check whether application meets the customer requirements.
 - identify any gaps/miscommunication.
 - Tester is the 1st customer.
 
@@ -49,36 +57,13 @@ in fb , along with image upload , text msg is not added: medium
 
 - based on impact to the application/flow/users testers has to decide the severity.
 
-Nov 11th:
---------------
-v20--> consumed by customer.[ login , inbox ]
-V21---> 
-New requiremnts[draft] + 10 defects for login,inbox.
-Fix the defects first and then procced with new requirements.
 
-
-Testing:
-1.Manual testing - no tool/technology for testing
-- sql , sqldeveloper + any database
-- process tools:  wiki , github ,svn , Jira, jenkins 
-
-2.automation testing. 
--need tool/language for testing.
-- html
-- java
-- selenium
-- testng
-- Maven
-- Apache POI
-- cucumber
-- SQL
-
-Requiremnt gap:
+Requirement gap:
 -----------
 There is login page with username + password + login button.
 
 for success login -> show home page
-for all failure case -> shoow login page with error message  "invalid credentials."
+for all failure case -> show login page with error message  "invalid credentials."
 
 test cases:
 1. login name is corect  + pwd correct ---> show home page
@@ -95,13 +80,33 @@ currently it is showing as:
                  with msg acocunt locked.
 --> show login page with error message "show acocunt locked."  [MISISNG TEST CASE]
 				 
-				 
-				 
-Why Testing:
--> fixing the issue after delivery is expensive.
--> ensure the software is 100% bug free.
--> ensure app meets the quality [perf + funtional+ non -functional], stable , security.
--> ensure quality delivery.
+		
+
+Nov 11th:
+--------------
+v20--> consumed by customer.[ login , inbox ]
+V21---> 
+New requiremnts[draft] + 10 defects for login,inbox.
+Fix the defects first and then proceed with new requirements.
+
+
+Testing:
+1.Manual testing - no tool/technology for testing
+- sql , sqldeveloper + any database
+- process tools:  wiki , github ,svn , Jira, jenkins 
+
+2.automation testing. 
+-need tool/language for testing.
+- java
+- selenium
+- html
+- testng
+- Maven
+- Apache POI
+- cucumber
+- SQL
+
+
 
 Quality:[from business view]
 ---------

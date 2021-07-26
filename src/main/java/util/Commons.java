@@ -78,7 +78,7 @@ driver.close(); -> will close only the current window
  */
 
 public class Commons {
-	public static final String BASE_URL ="http://localhost:8081/myapp/";
+	public static final String BASE_URL ="http://localhost:8084/EmpDemo/";
 
 	public static WebDriver getDriver(String browser) {
 		if("chrome".equals(browser)) {

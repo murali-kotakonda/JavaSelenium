@@ -15,7 +15,7 @@ import util.Commons;
 public class AddEmp  extends BasePage{
 	
 	public AddEmp(WebDriver idriver) {
-		this.driver = idriver;
+		super(idriver);
 	}
 	
 	@FindBy(id="command") 
@@ -86,6 +86,7 @@ public class AddEmp  extends BasePage{
 		assertTrue(status.getAttribute("name").equals("login.status"));
 		status.sendKeys("Active");
 		assertTrue(departmentlabel.getText().equals("Department:"));
+		
 		assertTrue(deptid.getAttribute("name").equals("department.id"));
 		deptid.sendKeys("IT");
 		assertTrue(managerlabel.getText().equals("Manager :"));

@@ -3,19 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
   <test name="Default test(failed)" parallel="none">
     <classes>
-      <class name="testWithoutPom.LoginTest">
+      <class name="keyword.TestLogin">
         <methods>
-          <include name="testUserNameNotEmptyAndPasswordEmpty"/>
-          <include name="testUserNameEmptyAndPasswordEmpty"/>
-          <include name="testUserNameEmptyAndPasswordNotEmpty"/>
-          <include name="testInValidUnAndInvalidPwd"/>
-          <include name="testUserNameNotEmptyAndPasswordLengthLessThan4Chars"/>
+          <include name="close"/>
+          <include name="performLogin"/>
           <include name="setup"/>
-          <include name="testUserNameNotEmptyAndPasswordGreaterThan10Chars"/>
-          <include name="testValidCreds"/>
-          <include name="testValidUnAndInvalidPwd"/>
         </methods>
-      </class> <!-- testWithoutPom.LoginTest -->
+      </class> <!-- keyword.TestLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

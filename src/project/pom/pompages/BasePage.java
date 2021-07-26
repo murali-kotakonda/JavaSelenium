@@ -6,9 +6,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import util.Commons;
+
 public class BasePage {
 	
 	public WebDriver driver;
+
+	public BasePage(WebDriver driver) {
+		super();
+		this.driver = driver;
+	}
 
 	public void clickAddNewEmp() {
 		// click on "Add New Employee" link
@@ -19,6 +26,14 @@ public class BasePage {
 		WebElement addemp = driver.findElement(By.id("addEmpLbl"));
 		assertTrue(addemp.getText().equals("Add New Employee"));
 		addemp.click();
+	}
+	
+	public void logout() {
+		//logout
+		WebElement logout = driver.findElement(By.id("logoutLbl"));;
+		Commons.checkEnabledAndDisplayed(logout);
+		assertTrue(logout.getText().equals("Logout"));
+		logout.click();
 	}
 	
 }

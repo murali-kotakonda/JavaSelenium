@@ -18,8 +18,6 @@ c) Form to contain Login button
 -> For failure login show message as "login failure" , show in login page
 
 
-
-
 Queries:
 1.Please share the wireframe/mockup screen for the login page.
 
@@ -32,13 +30,10 @@ If password is empty then this screen should show a pop up menu asking "please e
 
 
 Terms:
-
 1)Client's side validation (the check is done at client's side, but the call is not submittted to the back side eg: psw has to 8 digit, psw should not be empty, age can't be greater than 100, age should be a number, date of birth should be in numbers not alphabets, only syntax(use in proper format) related checks at client's side)
-
 2)Server's side validation (validation will happens only after submitting the data to the backend eg: check if username is correct, check if psw is correct)
 
 Test Cases:
-
 1) Check for login success under valid credentials.(username correct, psw is correct)
 2) Check for login faliure under invalid credentials.(username correct, psw is wrong)
 3) Check for login faliure under invalid credentials.(username wrong, psw is wrong)
@@ -63,17 +58,16 @@ ans) please show the popup message "Please enter username"
 ans) please show the popup message "Please enter password"
 
 
-
-
 BR1.1:
 --------------
-IF UN is correct and pwd is worng for 5 times lock the account.
+IF UN is correct and pwd is wrong for 5 times lock the account.
 
 Queries)
-once account is loacked the show error message "Your account is locked.Please contact Admin."
+1.what is the error mesage
+once account is locked then show error message "Your account is locked.Please contact Admin."
 
-should we also show message how many attempts are left over  - Not required.
-
+2.should we also show message how many attempts are left over 
+ - Not required.
 
 There is a user with "Kumar" as loginname , "Kumar" as password:
 
@@ -85,14 +79,15 @@ case1:
 5. enter "Kumar" + "Kumar1" --> "your account is locked.Please conact admin"
 6. enter "Kumar" + "Kumar" -->   "your account is locked.Please conact admin"
 
-Refer Test cases un and pwd.jfif
+Refer class 9Test cases un and pwd.jfif
+
 
 TestCases:
 --------------
 1.verify account locked with valid un + invalid pwd for 5 times
-2.verify login failure for locked account
+2.verify login failure for locked account with valid creds. [in 6th attempt]
 3.verify login success in 5th attempt
-4.verify account is not locked  in 6th attempt  of invalid creds
+4.verify account is not locked  with  invalid creds after above test case
 
 BR#2
 --please add a new page for registration.
@@ -111,16 +106,16 @@ BR#2
 - register button 
 
 Queries)
-1.If reg is succes which poage do we navigate to?
-ans) Logn page with message  "Registration Success".
+1.If registration is success which page do we navigate to?
+ans) Login page with message  "Registration Success".
 
 2.Any limitation of age
 ans) yes , min 18 
 
-3.Any limitation in the no fo digits for mobil
+3.Any limitation in the no for digits for mobile
 ans) mobil no has to be exactly 10 digits, if not show popup message "mobile number has to exactly 10 digits"
 
-4.Any limitation in the no of charc for 1st name and last name
+4.Any limitation in the no of characters for 1st name and last name
 ans) min 5 chars and max 15 chars
 
 5)default value for gender
@@ -133,7 +128,13 @@ ans) By default  HR is selected
 
 8) is the mno , email unique??? Yes
 
+9) pattern for user name
+  user name has to be minimum  5 characters and max 10 characters
 
+10) pattern for password
+ password has to be minimum  5 characters and max 10 characters
+ 
+ 
 Client side validations
 --------------------------------
 -- all fields are madatory
@@ -148,21 +149,21 @@ Client side validations
 
 Server side valdiations:
 ----------------------------------------------------
-1. if e registration is success show registration success message on login  page. and 
+1. if the registration is success show "registration success" message on login  page. and 
 verify user should able to login 
 2.Login name have to be unique, if not display message on the 
-registraion page stating:
-login name alreday in use.
+registration page stating:
+login name already in use.
 3.Mobile number have to be unique, if not display message on the 
 registraion page stating:
 mobile number already in use.
-4.Emaid id have to be unique, if not display message on the 
-registraion page stating:
-email alreday in use.
-5. if registartion is success then use username and password on the login screen to login (Refer BR#1)\
- 
- 
-BR#2 Testcases:
+4.Email id have to be unique, if not display message on the 
+registration page stating:
+email already in use.
+5. if registration is success then use username and password on the login screen to login
+
+(Refer BR#1)
+BR#2 Test-cases:
 ----------
 1.Popup msg to appear when username is empty
 2.Popup msg to appear when password is empty
@@ -186,40 +187,59 @@ BR#2 Testcases:
 20.verify login success with the registered use @ testcase#16
 
 
-
-
 test case 1(screen content test)
 verify registration page contain the expected feilds.
+
 test case 2(screen behaviour)
 verify the registration failed and pop up is displayed when user name is missing.
+
 test case 3
 verify the registratin failed and pop up is displayed when password is missing.
+
 test case 4
 verify the registratin failed and pop up is displayed when confirm password is missing.
+
 test case 5
 verify the registratin failed and pop up is displayed when first name is missing.
+
 test case 6
 verify the registratin failed and pop up is displayed when last name is missing.
+
 test case 7
 verify the registratin failed and pop up is displayed when date of birth is missing.
+
 test case 8
 verify the registratin failed and pop up is displayed when mobile number is missing.
+
 test case 9
 verify the registratin failed and pop up is displayed when email is missing.
+
 test case 10
 verify registration success with valid form details.
+
 test case 11
 verify the registration failed when password and confirm password are different and popup message is display
+
 test case 12
 verify the registration failed if password is more than 10 characters a pop up message has to be displayed.
+
 test case 13
 verify registration failed if password is less than 5 character a pop up message has to be displayed.
+
 test case 14
 verify registration failed if mobile number is more than 10 digits pop up message has to be displayed.
+
 test case 15 
 verify registration failed if mobile number is less than 10 digits pop up message has to be displayed.
+
 test case 16
 verify registration failed if email is invalid formate pop up message has to be displayed.
+
 test case 17
 verify registration failed if date of birth is invalid formate pop up message has to be displayed. 
- 
+
+18.verify Registration failure with existing username 
+19.verify Registration failure with existing mobile number
+20.verify Registration failure with existing email  id
+
+

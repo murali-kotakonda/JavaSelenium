@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Please provide loginName!]]>
+    </line>
+    <line>
+      <![CDATA[Please provide Password!]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="119" started-at="2021-06-16T07:34:58Z" finished-at="2021-06-16T07:34:58Z">
+  <suite name="Default suite" duration-ms="24161" started-at="2021-07-18T09:20:21Z" finished-at="2021-07-18T09:20:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="119" started-at="2021-06-16T07:34:58Z" finished-at="2021-06-16T07:34:58Z">
-      <class name="test0.Ex14Priority">
-        <test-method status="PASS" signature="test5()[pri:0, instance:test0.Ex14Priority@4df50bcc]" name="test5" duration-ms="46" started-at="2021-06-16T13:04:58Z" finished-at="2021-06-16T13:04:58Z">
+    <test name="Default test" duration-ms="24161" started-at="2021-07-18T09:20:21Z" finished-at="2021-07-18T09:20:46Z">
+      <class name="keyword.TestLogin">
+        <test-method status="PASS" signature="setup()[pri:0, instance:keyword.TestLogin@2f112965]" name="setup" is-config="true" duration-ms="10957" started-at="2021-07-18T14:50:21Z" finished-at="2021-07-18T14:50:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method status="PASS" signature="apple()[pri:0, instance:test0.Ex14Priority@4df50bcc]" name="apple" duration-ms="4" started-at="2021-06-16T13:04:58Z" finished-at="2021-06-16T13:04:58Z">
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="performLogin()[pri:0, instance:keyword.TestLogin@2f112965]" name="performLogin" duration-ms="6464" started-at="2021-07-18T14:50:32Z" finished-at="2021-07-18T14:50:39Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Please provide loginName!]]>
+            </line>
+            <line>
+              <![CDATA[Please provide Password!]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- performLogin -->
+        <test-method status="PASS" signature="close()[pri:0, instance:keyword.TestLogin@2f112965]" name="close" is-config="true" duration-ms="6708" started-at="2021-07-18T14:50:39Z" finished-at="2021-07-18T14:50:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- apple -->
-        <test-method status="PASS" signature="boycott()[pri:0, instance:test0.Ex14Priority@4df50bcc]" name="boycott" duration-ms="7" started-at="2021-06-16T13:04:58Z" finished-at="2021-06-16T13:04:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- boycott -->
-      </class> <!-- test0.Ex14Priority -->
+        </test-method> <!-- close -->
+      </class> <!-- keyword.TestLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

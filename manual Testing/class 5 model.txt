@@ -24,11 +24,12 @@ testing + deployment + maintainance..
 Problems:
 ----------------------------
 
-->dev compltion takes almost 75% of the estimation.
+->dev completion takes almost 75% of the estimation.
 
 -> Testers cannot start work until dev completes , but dev completion takes 5 months .
 till 5 months testers are not utilized.
  No proper utilization of Team mates. 
+
 
 ->after the 5.5 months ,  tester created 500 defects ,
   Is it poissible to fix the 500 defects in remaining 15 days??
@@ -118,7 +119,7 @@ Divide all requirements into 5 sets :
   3.Development 
   4.UnitTesting 
   5.Testing ( funtional/Regression/Perf..etc...) ON "A" , "B" ,"C" ,"D" ,"E"
-  6.Defect Fixing for "A" , "B"  , "C" , "E"
+  6.Defect Fixing for "A" , "B"  , "C" , "D"
 
 
 - customer(ABC) will see the outcome minimum for very month.

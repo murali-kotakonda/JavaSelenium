@@ -1,0 +1,73 @@
+DataProvider:
+---------------------
+- Read from excel file
+- fetch the test data
+
+
+- write the test cases in java
+- Every row contains test data
+
+keyword driven:
+------------------------------
+- Read from excel file
+- Read
+  a) test data
+  b) instruction
+  
+ 
+- write the test cases in excel file
+
+every row is a instuction 
+every row has to perform certain action..
+Every row in excel contains:
+  1.ACTIONS 
+  2.TEST DATA
+  3.ASSERTIONS
+
+
+steps:
+--------------
+convert every row to action obj.
+One test case requires list of action objects.
+
+Excel contains
+-> multiple test cases
+-> every test case contains multiple actions
+
+
+1.Read the excel using apache poi
+2.scan every row
+3.read every row info and keep inside the action object
+4.keep all action objs to the list
+5.pass the list of action objects to the test class
+
+
+
+
+
+classes:
+--------------
+1.Action 
+
+2.KeyDrivenExcelUtils 
+ -> convert row to action obj
+ -> fetches all the action objects for every test case
+ -> contains apache poi code
+
+3.KeyWordUtil
+- for every keyword create a method.
+- call the method based on the keyword configured in the excel.
+
+4.Test class
+   -> requires KeyDrivenExcelUtils obj
+      - get all the action objs for every test case
+      
+   -> requires KeyWordUtil obj
+      - for every action obj call perform() method
+      
+         
+ 
+
+
+
+

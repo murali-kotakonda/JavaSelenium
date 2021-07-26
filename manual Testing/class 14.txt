@@ -41,7 +41,6 @@ System testing:
 - black box(without knowing coding)
 
 
-
 different types of system testing:
 ---------------------------------
 Decided during the Test planning
@@ -82,7 +81,8 @@ Test the stability in terms of speed,security,recovery, handling load.
 sanitation testing:
 ---------------------
 check if the app is providing any extra features beyond the customer requirements.
-aplication has to provide the features as decided in the analysis; any extra features should not be added.
+application has to provide the features as decided in the analysis; 
+any extra features should not be added.
 
 
 Performance testing:
@@ -112,7 +112,7 @@ diff between load vs stress testing
 Security Testing:
 -----------------------
 Done by security specialist.
-Should not expose cust data , privacy 
+Should not expose customer data , privacy 
 Make sure app is away from frauds, hacking.
 Ex: 
 ->Login authentication ; only successul login with valid creds can able to visit the home page.
@@ -149,7 +149,7 @@ Test:
 a)Test installation on diff platforms.
 b)Test if the install steps are clear 
 c)guidelines  for installation
-d)Test time taken + slowness + unsuccessfull installtion.
+d)Test time taken + slowness + unsuccessfull installation.
 e)Is it installing in the path specified by customer?
 f)were the process added?? were registry entry made successfuly?
 g)If already istalled??  what will happen if We reinstall

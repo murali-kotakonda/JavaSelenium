@@ -2,6 +2,7 @@ Test case document:
 -------------------
 what are the columns required for the TC doc.
 
+
 common info for all test cases:
 ------------------------------------------
 ->Project Name with version
@@ -12,34 +13,42 @@ common info for all test cases:
 -> last updated date  -> when is the last change happened.
 -> Type of testing -> system/perf/load
 
+
 Every test case has :
 ------------------------
-1.Test case#number FC3.6_620_B_T1
-2.Test case description -> what is the test case abt (one liner)
-	ex
+1.Test case#number 
+FC3.6_620_B_T1
+2.Test case description 
+-> what is the test case abt (one liner)
+	ex:
 	1.login success with valid creds.
-	2.login faillure with valid creds.  
+	2.login faillure with Invalid creds. 
 3.Screen Name/funtion: on which page/module the test case has to be executed.
 Login screen
 4.Assumptions: 
 may be yes/no .
-for login , assumption user is alreday registerd and active.
+for login , assumption user is already registerd and active.
 5.pre-conditions:
 valid url
 login screen to open.
 login screen should show login name + pwd with submit button.
 6.Test steps: 
-setp by step actions to be performed on the page.
+step by step actions to be performed on the page.
 ->open www.fb.com
 ->under username enter "admin"
 ->under password enter "admin123"
 ->click on "submit" button
+
 7.Test data 
 "admin"
 "admin123"
+
+
 8.post conditions(optional)
 -> backend services/db are in place.
 -> db test to chek whether the dates are updated in table.
+
+
 9.expected result- ;[ how you expect the app to behave. ]
 home page should be shown for the loggedin user.
 
@@ -52,10 +61,13 @@ Update as  SUCCESS if 9 and 10 are matching
 Update as  FAIL if 9 and 10 are NOT matching.
 
 12.executed by : TESTER NAME 
+
 13.defect id:
 create defect in defect tracking tool(ex: jira) if 9 and 10 are not matching.
 and share the defcet number to track the status.
+
 14.comments : add any comments if required.
+
 15.script id:
 the automation script name for this test case.
 16.create/modified date :last date

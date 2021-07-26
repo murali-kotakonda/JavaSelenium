@@ -1,9 +1,9 @@
 Why do we have bugs/defects:
 ----------------------------
--> Req gap
+-> bad code practices
+-> Requirement gap
 -> Missing scenario/ missing test case [ignorance].
 -> edge scenario [unexpected].
-
 ex: 
 every department has multi employees.
 requirement : show department 
@@ -30,16 +30,16 @@ business case:
    lack of time
 -> load/perf test is not appropiate.
 -> testing is not done well by testers.- lack of intent
--> as customers increaes , the no of requests increases that leads to performance.
+-> as customers increases , the no of requests increases that leads to performance.
 
 testing steps:
 --------------
 -> write test cases
 -> test data creation.  [ex: registration , signup, create account] 
 -> test executions   , login success, login failure, 
--> for every test execution validate.
+-> for every test execution validate the expected and actual
 -> test data cleanup [clean data used for registration].
-->reporting the test results
+->reporting the test results and share with the team.
 -> for failed test cases create defects
 
 SKills for tester:
@@ -54,7 +54,7 @@ SKills for tester:
 ->  commitment , intent towards work.
 - know the mode of busniess of application.
 - what kind of application
-- what are the feature/funtionalitiues offered to customers.
+- what are the feature/funtionalities offered to customers.
 - reachability ( desktop/mobile/web)
 - domain of the application.
  ecommerce,

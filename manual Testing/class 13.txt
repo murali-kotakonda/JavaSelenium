@@ -4,7 +4,7 @@ verification vs validation:
 Verification:
 ------------------
 before the application is ready.
-correctness and completenes of the documents.ex: test case doc
+correctness and completeness of the documents.ex: test case doc
 before the application has been developed.
 check are we going on right track.
 are we planning to build the correct system??
@@ -38,9 +38,7 @@ Testing phase requires to do different types of testing.
 1.Unit Testing    (white)  --> Dev
 2.Integration testing (white) --> Dev 
 3.System testing   (black) --> Tester
-4.UAT User Acceptance testing (black) --> Customer
-
-
+4.UAT [User Acceptance testing ] (black) --> Customer
 
 
 1.Unit Testing:
@@ -100,7 +98,7 @@ ex:
 Component1 1: customer application 
 Component1 2: Ticketing application 
 
-Ticketing application  has to fetch the customer infom from the  "customer application"
+Ticketing application  has to fetch the customer inform from the  "customer application"
 
 ex: webservices
 - application can have multiple modules.
@@ -134,7 +132,6 @@ accenture has to complete:
 
 
 Myntra  has to do UAT testing
-
 
 
 UserAcceptanceTesting:

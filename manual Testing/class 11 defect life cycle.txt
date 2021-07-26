@@ -8,7 +8,7 @@ Every defect created by tester should contain:
 Additional information to reproduce the issue, e.g. server, browser version, operating system, ...
 - what is expected and what is the actual from application.
 - priority (high/medium/low/very high)
-- Enviroment(sandbox/commit/live).
+- Enviroment (sandbox/commit/live).
 - which browser 
 - what is the request data used in the scenario.
 - Log statements.
@@ -29,14 +29,11 @@ Scrum master assign the defect to any of the developer.
 Assigning to developer and start analysis. or atleast the RCA [Root cause analysis].
 if the defect is invalid then mark as Reject/Duplicate/Not Reproduable.
 
--> In-progress :
-Defect is accepted and dev chages are in progress.
-
-
 -> Author action [clarification required]:
 info provided by tester is not sufficient.
 dev needs additional info .
 then defect falls under tester place 
+
 
 -> Dev close /Fixed : 
  - When developer makes necessary code changes and verifies the fix is addressed 
@@ -56,13 +53,28 @@ the status to "Reopened" and the defect is passed to dev team.
 -> Reject/Duplicate/Consultation/Not Reproduable
 
 
+-> Closed
+Once the bug is fixed and it is tested by the tester.
+Closed  means that the bug is fixed, tested and approved.
+
+
+
+-> In-progress :
+Defect is accepted and dev chages are in progress.
+
+
 -> Test completed/Verified
 Mark as Test completed when the testings are completed and successfull.
 check if the new test case has to be written or not.
   
   
--> Closed
-Once the bug is fixed and it is tested by the tester.
-Closed  means that the bug is fixed, tested and approved.
+  
+JIRA:
+-----------
+1.Creating EPIC
+2.Creating user story
+3.creating task 
+4.creating defects 
 
+Agile is managed using the JIRA tool. 
   

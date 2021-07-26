@@ -1,10 +1,11 @@
 Order of testing :
 -------------------------------
--> Funtional Testing for   New Features (using test cases)
--> Test Defects  (ReTesting )
--> Regression  ------> Heavy + costly + time consuming.
+-> Funtional Testing for   New Features (using test cases)[only single env is enough]
+-> Test Defects  (ReTesting )  [only single env is enough]
+-> Regression  ------> Heavy + costly + time consuming. [run in all the spaces/env ]
 -> Non Funtional Testing like perf , load , stress 
 -> UAT (customer)
+
 
 
 Regression is costly + time consuming.
@@ -20,7 +21,6 @@ Introduce additional testing(Smoke Testing and Sanity Testing) for Time saving:
 -> UAT (customer)
 
 
-
 Smoke Testing and Sanity Testing:
 -------------------------------------
 Smoke:
@@ -28,7 +28,8 @@ Smoke:
 - Build verification testing.
 - mostly done using the jenins tool.
 - check if the new build is stable.
-- verify the app lauched successfully or is the deployment success and check  installation is proper or check if the pages are responsive (in time/not at all).
+- verify the app lauched successfully or is the deployment success and 
+  check  installation is proper or check if the pages are responsive (in time/not at all).
 - verify critical funtionality.
 ->Minor changes/fixes .
 ->if Smoke fails , then no need to go for regresion and create HIGH defect.
@@ -40,4 +41,3 @@ Sanity :
 -> basic navigation, basic flow testing , 
 ->Minor changes/fixes .
 ->if sanity fails , then no need to go for regression and create defect.
-
