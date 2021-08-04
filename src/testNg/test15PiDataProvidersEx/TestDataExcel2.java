@@ -13,7 +13,7 @@ public class TestDataExcel2 {
 
 	@DataProvider(name = "excelData")
 	public static Object[][] Authentication() throws Exception {
-		return ExcelUtils.getTableArray("C://test//data.xlsx", "output");
+		return ExcelUtils.getTableArray("C://test//data.xlsx", "search1");
 	}
 
 	@Test(dataProvider = "excelData")
