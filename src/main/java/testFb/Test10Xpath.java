@@ -90,11 +90,11 @@ public class Test5Xpath extends BaseTest{
 	public void t3() throws Exception {
 		driver.findElement(By.xpath("//input[@value='RESET']")).click();
 		sleep(3);
-		assertEquals( driver.findElement(By.id("dynamicData")).getText(),"RESET selected" ,"Invalid value");
+		Assert.assertEquals( driver.findElement(By.id("dynamicData")).getText(),"RESET selected" ,"Invalid value");
 		
 		driver.findElement(By.xpath("//input[@value='ADD']")).click();
 		sleep(3);
-		assertEquals( driver.findElement(By.id("dynamicData")).getText(),"ADD selected" ,"Invalid value");
+		Assert.assertEquals( driver.findElement(By.id("dynamicData")).getText(),"ADD selected" ,"Invalid value");
 	}
 	
 	/**
@@ -139,11 +139,11 @@ public class Test5Xpath extends BaseTest{
 	public void t5() throws Exception {
 		//List<WebElement> elements = driver.findElements(By.xpath("//*[@class='show']"));
 		List<WebElement> elements = driver.findElements(By.xpath("//p[@class='show']"));
-		assertEquals( elements.size(),4 ,"Invalid value");
+		Assert.assertEquals( elements.size(),4 ,"Invalid value");
 		
 		for(WebElement  e1: elements) {
 			 
-			assertTrue(e1.getText().contains("Hello"),"Expected Hello");
+			Assert.assertTrue(e1.getText().contains("Hello"),"Expected Hello");
 		}
 		sleep(5);
 	}

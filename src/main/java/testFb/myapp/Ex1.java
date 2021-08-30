@@ -225,9 +225,9 @@ public class Ex1 extends BaseTest{
 		Assert.assertEquals(pan.getAttribute("type"), "checkbox");
 
 		// checkEnabledAndDisplayed
-		Assert.assertTrue(passport.isEnabled(), "passport should  enabled");
-		Assert.assertTrue(voter.isEnabled(), "voter should  enabled");
-		Assert.assertTrue(pan.isEnabled(), "pan should be enabled");
+		Assert.assertTrue(passport.isEnabled() && passport.isDisplayed(), "passport should  enabled");
+		Assert.assertTrue(voter.isEnabled() && voter.isDisplayed(), "voter should  enabled");
+		Assert.assertTrue(pan.isEnabled() && pan.isDisplayed(), "pan should be enabled");
 
 		Assert.assertFalse(passport.isSelected(), "passport is not selected.");
 		Assert.assertFalse(voter.isSelected(), "voter is not selected.");
@@ -248,6 +248,15 @@ public class Ex1 extends BaseTest{
 		Thread.sleep(2000);
 	}
 
+
+private void verifyCheck(WebElement element) {
+		 Assert.assertTrue(element.isEnabled(),"checkbox should be enabled");
+		 Assert.assertTrue(element.isDisplayed(),"checkbox should be displayed");
+		 Assert.assertEquals(element.getAttribute("type"), "checkbox","field should be radio field");
+	}
+	
+
+	
 	/**
 	     How to know if the radio button is selected or not?
   		use element.isSelected() -> returns true/false
@@ -318,6 +327,13 @@ public class Ex1 extends BaseTest{
 		Thread.sleep(2000);
 	}
 	
+
+private void verifyRadio(WebElement element) {
+		 Assert.assertTrue(element.isEnabled(),"radio should be enabled");
+		 Assert.assertTrue(element.isDisplayed(),"radio should be displayed");
+		 Assert.assertEquals(element.getAttribute("type"), "radio","field should be radio field");
+	}
+
 
 	/*
 	Select City

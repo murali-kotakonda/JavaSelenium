@@ -19,7 +19,7 @@ import util.Commons;
 */
 public class KeyWordUtil {
 	WebDriver driver;
-	private static final String BASE_URL = "";
+	private static final String BASE_URL = "http://localhost:8087/EmpDemo";
 	
 	public KeyWordUtil(WebDriver driver) {
 		super();
@@ -30,7 +30,7 @@ public class KeyWordUtil {
 	 method for keyword "URL"
 	 */
 	public void enter_URL(WebDriver driver, String data) throws IOException {
-		if(data.equals("BASE_URL")) {
+		if(data == null || data.equals("") || data.equals("BASE_URL")) {
 			data =  BASE_URL;
 		}
 		driver.get(data);

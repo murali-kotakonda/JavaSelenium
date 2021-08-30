@@ -1,141 +1,85 @@
 package dataDriven;
 //Approach2
-import static org.testng.Assert.assertTrue;
+import java.io.IOException;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.Reporter;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import test15PiDataProvidersEx.ExcelUtils;
-import util.BaseTest;
+import emppages.LoginPage;
+import excelDataDriven.ExcelUtils;
+import testNg.BaseTest;
 
+/**
+ Data provider for login page
+
+excel:
+------------------
+<username> , <password> , <asserType>
+
+admin	a	
+
+
+/*
+	 if asserType = A (login success) then perform Logout
+	 if asserType = B then Test for Alert (Please provide LoginName!)
+	 if asserType = C then Test for Alert (Please provide Password!)
+	 if asserType = D then Test for TextMessage (Invalid Login)
+	 if asserType = E then Test for password Length (Invalid Login)
+ */
+ 
 public class LoginTestWithPOM extends BaseTest {
 	
-	@DataProvider(name = "excelData")
-	public static Object[][] Authentication() throws Exception {
-		return ExcelUtils.getTableArray("C://test1//DataProvider.xlsx", "");
-	}
-
-	/*
-	 if Status = A (login success) then perform Logout
-	 if Status = B then Test for Alert (Please provide LoginName!)
-	 if Status = C then Test for Alert (Please provide Password!)
-	 if Status = D then Test for TextMessage (Invalid Login)
-	 
-	 */
-@Test(dataProvider = "excelData")
-public void Registration_data(String name, String pass,String status ) throws Exception {
-		//this method is written in LoginPage
-		name = name==null?"": name;
-		pass =pass==null? "":pass;
-		login(name,pass);
-		if( status.equals("A"))	{testValidCreds();}
-		else if( status.equals("B")) {testAlertLoginName();}
-		else if( status.equals("C")) {testAlertPasswordName ();}
-		else if( status.equals("D")) {testInvalidLogin();}
-		else if( status.equals("E")) {testAlertPassword();}
-}
+	LoginPage loginPageObj;
 	
-
-	private void login1(String un, String pwd) {
-		WebElement form = driver.findElement(By.tagName("form"));
-		WebElement formTitle = driver.findElement(By.tagName("h1"));
-		WebElement usernamelab = driver.findElement(By.id("userNameLbl"));
-		WebElement passwordlab = driver.findElement(By.id("passwordLbl"));
-		WebElement loginBtn = driver.findElement(By.xpath("//input[@value='Login']"));
-		WebElement name = driver.findElement(By.name("loginName"));
-		WebElement password = driver.findElement(By.name("password"));
-
-		checkEnabledAndDisplayed(usernamelab, name, passwordlab, password, loginBtn);
-
-		// test the form name
-		assertTrue(formTitle.getText().equals("Login Page"));
-
-		// test label for username
-		assertTrue(usernamelab.getText().equals("User Name:"));
-
-		// test label for Password
-		assertTrue(passwordlab.getText().equals("Password:"));
-
-		// test label for button
-		assertTrue(loginBtn.getAttribute("value").equals("Login"));
-
-		// test type for username
-		assertTrue(name.getAttribute("type").equals("text"));
-
-		// test type for password
-		assertTrue(password.getAttribute("type").equals("password"));
-
-		name.clear();
-		password.clear();
-		name.sendKeys(un);
-		password.sendKeys(pwd);
-		loginBtn.click();
-
-		sleep(5);
+	@BeforeClass
+	public void mysetup() {
+		//loginPageObj = new LoginPage(driver);
+		loginPageObj = PageFactory.initElements(driver, LoginPage.class);
 	}
 	
-
-	public void testValidCreds() {
-		WebElement logout = driver.findElement(By.id("logoutLbl"));;
-		checkEnabledAndDisplayed(logout);
-		assertTrue(logout.getText().equals("Logout"));
-		logout.click();
-		sleep(5);
+	@BeforeMethod
+	public void openForm() {
+		//open the form.html
+		driver.get(EMPDEMO_URL);
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+		}
+	}
+	
+	@DataProvider(name = "test1")
+	public static Object[][] data() throws IOException {
+		return ExcelUtils.getTableArray("DataProvider.xlsx", "input");
 	}
 
-
-
-
-	public void testInvalidLogin() {
-
-
-		//TEST for invalid error message
-		WebElement invalidlogin = driver.findElement(By.xpath("/html/body/font"));
-		checkEnabledAndDisplayed(invalidlogin);
-		assertTrue(invalidlogin.getText().equals("Invalid Login."));
-	}
-
-
-	public void testAlertLoginName() {
-
+	@Test(dataProvider = "test1")
+	public void testData(String name,String pass, String assertType) {
+		if(name==null) {
+			name ="";
+		}
+		if(pass==null) {
+			pass ="";
+		}
 		
-		//test for alert message
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "Please provide loginName!");
-		a.accept();
-	}
-	
-
-
-
-	public void testAlertPasswordName() {
-
+		loginPageObj.login(name,pass);
+		sleep(4);
 		
-		//test for alert message
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "Please provide Password!");
-		a.accept();
-		sleep(5);
+		if(assertType.equals("A")) {
+			loginPageObj.logout();
+		}else if(assertType.equals("B")) {
+			loginPageObj.validateLoginNameAlert();
+		}else if(assertType.equals("C")) {
+			loginPageObj.validatePasswordAlert();
+		}else if(assertType.equals("D")) {
+			loginPageObj.validateLoginFailure();
+		}else if(assertType.equals("E")) {
+			loginPageObj.validatePasswordLength();
+		}
 	}
 	
-
-	public void testAlertPassword() {
-		//test for alert message
-		Alert a = driver.switchTo().alert();
-		Reporter.log(a.getText());
-		Assert.assertEquals(a.getText(), "password has to be minimum 5 chars and max 10 chars!");
-		a.accept();
-		sleep(5);
-	}
-
 }
-
 
 

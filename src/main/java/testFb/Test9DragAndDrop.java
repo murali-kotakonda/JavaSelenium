@@ -49,7 +49,9 @@ public class Test9DragAndDrop extends BaseTest {
 		WebElement target = driver.findElement(By.id("droppable"));
 		sleep(3);
 		
-		new Actions(driver).dragAndDrop(source, target).build().perform();
+		Actions action = new Actions(driver);
+		
+		action.dragAndDrop(source, target).build().perform();
 		driver.switchTo().defaultContent();
 		sleep(3);
 	}

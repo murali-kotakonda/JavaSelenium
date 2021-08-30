@@ -14,7 +14,7 @@ use "driver.getTitle()"
 
 */
 
-public class Ex2Title2 {
+public class Ex3 {
 public static void main(String[] args) throws Exception {
 	System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 	WebDriver driver = new ChromeDriver();

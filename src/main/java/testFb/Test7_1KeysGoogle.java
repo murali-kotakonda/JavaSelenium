@@ -304,7 +304,6 @@ public class Test7_1KeysGoogle extends BaseTest{
 	public void t3_HomeAndEnd() {
 		t1();
 		Actions action = new Actions(driver);
-		Actions action = new Actions(driver);
 		
 		// Press END using Actions class
 		action.keyDown(Keys.CONTROL).sendKeys(Keys.END).build().perform();

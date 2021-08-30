@@ -1,8 +1,5 @@
 package basics;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 /**
  
 How to perform refresh on page?
@@ -36,12 +33,21 @@ Req:
 10.close the browser
  */
 
-public class NavigationEx {
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Ex4 {
 	public static void main(String[] args) throws InterruptedException {
 		// create driver obj
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+		Thread.sleep(3000);// wait for 5 seconds
 		
+		driver.manage().window().maximize();
+
 		// open browser
 		driver.get("http://www.gmail.com");
 		Thread.sleep(5000);// wait for 5 seconds

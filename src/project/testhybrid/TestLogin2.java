@@ -41,6 +41,8 @@ public class TestLogin2 {
 		keyword.close();
 	}
 	
+		//get all actions object and convert to testcase obj and keep inside the object[][]
+
 	@DataProvider(name="hybridData")
 	public Object[][] getDataFromDataprovider() throws IOException{
 		List<TestCase>  testCases = getTestCases();
@@ -67,6 +69,7 @@ public class TestLogin2 {
 		return testcases;
 	}
 	
+	//pass the testcase obj
 	@Test(dataProvider = "hybridData")
 	public void performLogin(TestCase testCase) throws IOException, InterruptedException {
 		for(Action action: testCase.getActions())

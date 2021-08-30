@@ -45,7 +45,7 @@ public class TestXpathNotes {
 
 
 		 WebElement element2 = driver.findElement(By.xpath(" //label[@id='error']"));
-
+		 WebElement element3 = driver.findElement(By.xpath("//label[@id='error2']"));
 		
 		3. <input type="text"/>
 		-> get element that has 'input' as tag name and type as 'text'
@@ -63,13 +63,13 @@ public class TestXpathNotes {
 		
 		
 5.<input type="text" name="username"  id ="myName"/>
-WebElement  we1 = driver.findElement(By.name("username"))
- WebElement we2 = driver.findElement(By.id("myName")
-WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
- WebElement we4 = driver.findElement(By.xpath("//input[@id='myName']"))
-  WebElement element2 = driver.findElement(By.cssSelector("//input[@name='username']"))
-  WebElement element2 = driver.findElement(By.cssSelector("//input[@id='myName']"))
- WebElement we5 = WebElement element2 = driver.findElement(By.tagName("input"))
+WebElement  we1 = driver.findElement(By.name("username"));
+ WebElement we2 = driver.findElement(By.id("myName");
+WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"));
+ WebElement we4 = driver.findElement(By.xpath("//input[@id='myName']"));
+  WebElement element2 = driver.findElement(By.cssSelector("//input[@name='username']"));
+  WebElement element2 = driver.findElement(By.cssSelector("//input[@id='myName']"));
+ WebElement we5 = WebElement element2 = driver.findElement(By.tagName("input"));
 
 		
 		6. <input type="text" name="age"/>
@@ -84,6 +84,7 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		<p class="show"> test2 </p>
 		<p class="show"> test3 </p>
 		<p class="show"> test4 </p>
+		<p class="display"> test5 </p>
 		
 		 Xpath=//p[@class='show']
 		 List<WebElement> elements=driver.findElements(By.xpath("//p[@class='show']"));
@@ -109,9 +110,9 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 
 		10:
 		<a href="https://www.gmail.com"> click here for gmail page </a>
-		WebElement element1 =driver.find_element_by_xpath("//a[@href='https://www.gmail.com']")
-		WebElement element2 =driver.find_element_by_xpath("//a[contains(@href,'gmail')]")
-		WebElement element3 =driver.find_element_by_xpath("//a[contains(text(),'gmail page')]")  -- partial serach by text
+		WebElement element1 =driver.findElement(By.xpath("//a[@href='https://www.gmail.com']"))
+		WebElement element2 =driver.findElement(By.xpath("//a[contains(@href,'gmail')]"))
+		WebElement element3 =driver.findElement(By.xpath("//a[contains(text(),'gmail page')]"))  -- partial serach by text
 
 
 		  
@@ -160,7 +161,7 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 		here td => tag 
 		class ='abc ' ==> attribute
 		hello  => text
-	      
+	          search by text: 
 	      text()
 		  Syntax: //tag[text()=’text value‘]
 		           //*[text()='Search Google or type a URL']
@@ -277,7 +278,9 @@ WebElement we3 = driver.findElement(By.xpath("//input[@name='username']"))
 	      /*
 	      Start-with function finds the element whose attribute value
 
-		  Syntax: //tag[starts-with(@attribute, ‘value‘)]
+		   Syntax: //tag[starts-with(@attribute, ‘value‘)]
+		  
+		   Syntax: //tag[ends-with(@attribute, ‘value‘)]
 		  
    		  Ex1:
     	    <label id="message1234" > Hello</label>

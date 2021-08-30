@@ -19,7 +19,7 @@ Provide the driver software location ""C:\\chromedriver.exe" to the System.
 System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
 WebDriver driver = new ChromeDriver();
     
-2.Open the URL
+2.Open the URL usting get() method
   driver.get("https://www.gmail.com");
   
 3.close the browser
@@ -43,6 +43,8 @@ public class Ex1 {
 		
 		//open the url
 		driver.get("http://www.google.com");
+	
+    //wait for 5 seconds
 		Thread.sleep(5000);
 		//	close the browser
 		driver.quit();

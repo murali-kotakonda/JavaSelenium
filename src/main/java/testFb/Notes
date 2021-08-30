@@ -83,17 +83,25 @@ Html:
 
 Java:
 WebElement h1Obj = driver.findElement(By.tagName("h1"));
-WebElement pObj = driver.findElement(By.id("p"));
+WebElement pObj = driver.findElement(By.tagName("p"));
 
 
 By Link text/partial link text:
 ---------------------------------------------------------
+HTML:
 <a href="https://www.gmail.com">Open Gmail</a>
 <a href="https://www.google.com">Open google</a>
 
-		
+JAVA:
 WebElement obj1  = driver.findElement(By.linkText("Open Gmail""));
 WebElement obj2  = driver.findElement(By.linkText("Open google"));
+
+ 
+By partial link text:
+---------------------------------------------------------
+<a href="https://www.gmail.com">Open Gmail</a>
+<a href="https://www.google.com">Open google</a>
+
 
 WebElement obj4  = driver.findElement(By.partialLinkText("Gmail"));
 WebElement h1Obj  = driver.findElement(By.partialLinkText("google"));
@@ -263,6 +271,15 @@ submit()	 use the submit() method on any element within the form
 
   
  
+ Common Exceptions in Selenium WebDriver
+NoSuchElementException.
+NoSuchWindowException.
+NoSuchFrameException.
+NoAlertPresentException.
+InvalidSelectorException.
+ElementNotVisibleException.
+ElementNotSelectableException.
+TimeoutException.
   
   
   

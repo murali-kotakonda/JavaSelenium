@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import util.BaseTest;
 import util.Commons;
+//latest
 
 public class TestMouseOpeartions extends BaseTest{
 	
@@ -39,55 +40,65 @@ public class TestMouseOpeartions extends BaseTest{
 		sleep(3);
 	}
 	
+	/*
+	 <a href="https://www.fb.com">Click for fb</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.gmail.com">Click for Gmail</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.google.com">Click for Google</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="form.html">form page</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="alerts.html">alert page</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 */
 	@Test
-	public void test2() {
-		//create action object
+	public void mouseHover() {
+		// create action object
 		Actions actions = new Actions(driver);
-		
+
 		//move to element
-		actions.moveToElement(getByLinkText("Click here")).build().perform();
+		actions.moveToElement(getByLinkText("Click for fb")).build().perform();
 		sleep(3);
-		
-		actions.moveToElement(getByLinkText("Click for Date")).build().perform();
+		//move to element
+		actions.moveToElement(getByLinkText("Click for Gmail")).build().perform();
 		sleep(3);
-
-		actions.moveToElement(getByLinkText("Send Data")).build().perform();
+		//move to element
+		actions.moveToElement(getByLinkText("Click for Google")).build().perform();
 		sleep(3);
-
-		actions.moveToElement(getByLinkText("Ex1")).build().perform();
+		//move to element
+		actions.moveToElement(getByLinkText("form page")).build().perform();
 		sleep(3);
-
-		actions.moveToElement(getByLinkText("Ex2")).build().perform();
+		//move to element
+		actions.moveToElement(getByLinkText("alert page")).build().perform();
 		sleep(3);
 	}
 	
-	//move to element and click
+	
+	
 	@Test
-	public void test3() {
-		//create action object
+	public void mouseHoverAndclick() {
+		// create action object
 		Actions actions = new Actions(driver);
-		
-		//move to element
-		actions.moveToElement(getByLinkText("Click here")).click().build().perform();
-		sleep(3);
-		
-		driver.navigate().back();
-		
-		actions.moveToElement(getByLinkText("Click for Date")).click().build().perform();
-		sleep(3);
 
-		driver.navigate().back();
-		
-		actions.moveToElement(getByLinkText("Send Data")).click().build().perform();
+		//move to element and click
+		actions.moveToElement(getByLinkText("Click for fb")).click().build().perform();
 		sleep(3);
-
+		
 		driver.navigate().back();
 		
-		actions.moveToElement(getByLinkText("Ex1")).click().build().perform();
+		//move to element and click
+		actions.moveToElement(getByLinkText("Click for Gmail")).click().build().perform();
 		sleep(3);
 		driver.navigate().back();
 		
-		actions.moveToElement(getByLinkText("Ex2")).click().build().perform();
+		//move to element  and click
+		actions.moveToElement(getByLinkText("Click for Google")).click().build().perform();
+		sleep(3);
+		driver.navigate().back();
+		
+		//move to element and click
+		actions.moveToElement(getByLinkText("form page")).click().build().perform();
+		sleep(3);
+		driver.navigate().back();
+		
+		//move to element and click
+		actions.moveToElement(getByLinkText("alert page")).click().build().perform();
 		sleep(3);
 		driver.navigate().back();
 	}

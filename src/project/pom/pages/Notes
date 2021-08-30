@@ -11,9 +11,6 @@ if a web page changed
 then we have to make java changes in severeal files
 
 
-There are two types of classes:
-- page class  [for every web page]
-- test classes [for every web page]
 
  page class :
  ------------------------
@@ -57,3 +54,22 @@ Steps:
 -> pages
 -> tests
 
+
+  
+1.emppages
+       - BasePage
+       - LoginPage
+       - AddEmpPage
+       
+  2.emptest
+      -MyBaseTest
+      -LoginTest
+         - create obj for LoginPage
+         - and call methods using LoginPage
+      -AddEmpTest
+          - create obj for AddEmpPage and LoginPage
+         - and call methods using LoginPage
+          - and call methods using AddEmpPage
+      
+
+      

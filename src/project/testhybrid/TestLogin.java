@@ -29,7 +29,7 @@ public class TestLogin {
 	
 	@BeforeTest
 	public void setup() {
-		keyword = new KeyWordUtil(Commons.getDriver());
+		keyword = new KeyWordUtil(Commons.getChromeDriver());
 		utils = new KeyDrivenExcelUtils(excelFilePath);
 	}
 

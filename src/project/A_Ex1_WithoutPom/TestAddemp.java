@@ -66,6 +66,29 @@ public class TestAddemp extends BaseTest {
 		addemp.click();
 	}
 
+	//@BeforeMethod   working         
+	public void openForm() {
+		//open the form.html
+		driver.get(EMPDEMO_URL);
+		
+		//login sucessfull
+		login("admin","admin");
+		sleep(3);
+		
+		//click on add new employee
+		//EmployeeLbl
+		//move to element
+		Actions actions = new Actions(driver);
+		actions.moveToElement(driver.findElement(By.id("EmployeeLbl"))).build().perform();
+		sleep(3);
+		
+		WebElement emplabel = driver.findElement(By.id("addEmpLbl"));
+		emplabel.click();
+		
+		sleep(5);
+	}
+	
+
 	
 	@AfterMethod
 	public void logout() {

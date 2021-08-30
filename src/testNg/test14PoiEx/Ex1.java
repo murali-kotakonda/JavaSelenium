@@ -25,8 +25,10 @@ admin5
 public class Ex1 {
 public static void main(String[] args) throws FileNotFoundException, IOException {
 	
+	//create wrkbook
 	Workbook fileObj = new XSSFWorkbook(new FileInputStream("C:\\test\\Inputdata.xlsx"));
 	
+	//create sheet
 	Sheet sheetObj = fileObj.getSheetAt(0);
 
 	//get sheet

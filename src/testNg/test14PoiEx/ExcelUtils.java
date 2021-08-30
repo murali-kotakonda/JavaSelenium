@@ -74,13 +74,15 @@ How to get row object:
 Row row = sheetObj.getRow(<row num>);
 
 
+
 How to create cell object:
 --------------------------
-row.createCell(<cell num>);
+Cell cell = row.createCell(<cell num>);
 
 How to get cell:
 ---------------------------
 Cell cell = row.getCell(<cell num>);
+
 
 
 

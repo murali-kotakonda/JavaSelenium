@@ -33,11 +33,6 @@ driver.close(); -> will close only the current window
    How to delete the page cookies?
    driver.manage().deleteAllCookies();
   
-  
--  How to maximize the window?
-	Options manage = driver.manage();
-	manage.window().maximize();
-		  
 -   How to define the pageTimeout?
     manage.timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
 
@@ -50,6 +45,13 @@ driver.close(); -> will close only the current window
 			System.out.println(cookie.getPath() + " - " + cookie.getValue());
 		}
   
+
+  
+-  How to maximize the window?
+	Options manage = driver.manage();
+	manage.window().maximize();
+		  
+		  
  - How to maximize the window?
   driver.manage().window().maximize();
   
