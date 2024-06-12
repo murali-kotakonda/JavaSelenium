@@ -34,7 +34,6 @@ info provided by tester is not sufficient.
 dev needs additional info .
 then defect falls under tester place 
 
-
 -> Dev close /Fixed : 
  - When developer makes necessary code changes and verifies the fix is addressed 
    then he will make defect status as "Fixed" and the defect is passed to testing team.
