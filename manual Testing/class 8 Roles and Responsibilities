@@ -1,44 +1,26 @@
 Roles and responsibilities:
 ------------------------------------------
 1)scrum master will assign the tasks/user stories for me.
-
 2)I invoved in analysing the userstories for validating and feasibility.
-
-3)I involved in the test planning with qualiy owner and decide the
--> estimate
-->types of testing to be performed
-->preparing the environment
--> prepare the requirement tracetbility matrix
-
-4)
-WRITE the test cases in excel doc and upload in the wiki
-
-
-5)
-I will have a review of the test cases with the developers and quality owner/technicla owner and
+3)I involved in the test planning with qualiTy owner and decide the
+   -> estimate
+   ->types of testing to be performed
+   ->preparing the environment
+   -> prepare the requirement tracetbility matrix
+4)WRITE the test cases in excel doc and upload in the wiki
+5)I will have a review of the test cases with the developers and quality owner/Technical owner and
 correct the test cases
-
-
 6)Write the automated test cases using java and selenium  following the POM model.
-
-
-
-7)Execute the test cases on different environments(TS1, TS2 , staging , preprod ) 
+7)Execute the test cases on different environments(dev, QA , UAT, staging  ) 
 and perform funtional, sanity, smoke, regressional testing.
-
 if required i will also participate in database and performance testing.
-
 8)If there are any defcets identified then i will create the defects using JIRA tool
  and assign the respective defect to the   developers
- 
 9)I perform the retesting once the defect is addressed by developer.
-
 10)Share the test report to the entire team.
-
-11) as part of spring i do participate in many meetings:
--Planning 
--SCRUM
--Review
--Demo
--Retro 
- 
+11) as part of sprint i do participate in many meetings:
+    -Planning 
+    -SCRUM
+    -Review
+    -Demo
+    -Retro 
