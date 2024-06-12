@@ -13,7 +13,7 @@ Role of Tester in SDLC:
 Design/Test planning:
 	-to understand non-funtional requirements(security,hacking,load,perf,).
 	-prepare the low-level test plan document
-	 a) when testing starts
+	 a) when testing starts + end 
 	 b) on which env
 	 c) types of testing
 	(risk,tools,env,security,scope, assumptions,).
@@ -25,8 +25,7 @@ Design/Test planning:
 	1.create 1lakh records in db for testing
 	2.create types of users for the applciation.
 
-		load testing:
-		-----------------
+          load testing:[after functional testing]
 	  ex for non-function(load testing):
          Test  : login with single user admin and admin
 		-> with 100 users
