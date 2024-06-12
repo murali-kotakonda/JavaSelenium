@@ -129,5 +129,71 @@ test scenarios:
 
 
 
+Sample Login screen test cases:
+-------------------------------
+1. Positive Login Page Test Cases
+Positive test cases are test cases that follow the “happy path” i.e. testing if the Login page functions as expected under valid inputs. These test cases explore scenarios where users do what they are supposed to do, such as:
+
+Valid username and password combination successfully logs the user in.
+Testing with the minimum allowed username and password length.
+Testing with a username and password containing alphanumeric characters.
+Successful login with the "Remember Me" option selected.
+Testing login with a username that contains both uppercase and lowercase characters.
+Successful login using a valid email address as the username.
+Successful login using a valid phone number as the username.
+Successful login with multi-factor authentication (MFA) enabled.
+Testing login with a username that includes special characters (e.g., @, #, $).
+Successful login using social media accounts (if applicable).
+Successful login using biometric authentication (e.g., fingerprint, face recognition).
+Testing login after a password reset to ensure the new password works.
+Successful login after an account recovery process.
+Successful login with localization settings (testing with different languages).
+Testing login with different browsers (e.g., Chrome, Firefox, Edge).
+
+
+
+
+
+
+Negative Login Page Test Cases
+In contrast, negative testing for the Login page aims to explore scenarios that deviate from that “happy path”. Users don’t always do what we want them to do. Sometimes they do unexpected things, and a good tester understands that unpredictability to test accordingly. Some common negative test cases you should test on your Login page include:
+
+​​Entering an incorrect password for a valid username.
+Entering an incorrect username for a valid password.
+Entering an empty username field.
+Entering an empty password field.
+Entering a username that does not exist in the system.
+Entering a password that does not meet password strength requirements.
+Testing login with excessive length usernames and passwords.
+Testing login with incorrect case (uppercase/lowercase) in the username.
+Testing login with expired or deactivated user accounts.
+Testing login with suspended user accounts.
+Multiple consecutive failed login attempts triggering an account lockout.
+Testing login after the session has expired due to inactivity.
+Testing login with incorrect multi-factor authentication (MFA) codes.
+Entering invalid characters (e.g., scripts) in the username or password fields.
+Testing login with CAPTCHA validation failure.
+
+
+
+
+UI Test Scenarios
+Verify that all the controls including text-boxes, buttons, and links are present on the Login page.
+Verify that the font specifications of the labels and the text written on the different elements should be clear.
+Verify that the size, color, and UI of the different elements are as per the specifications. 
+Verify that the application’s UI is responsive i.e. it should adjust to different screen resolutions and devices.
+
+Verify that as soon as the login page opens, by default the cursor should remain on the username textbox.
+Verify that the user is able to navigate or access the different controls by pressing the ‘Tab’ key on the keyboard.
+Verify that the password is in masked form when entered.
+Verify if the password can be copy-pasted or not.
+Verify that the user is able to login by entering valid credentials and clicking on the ‘Login’ button.
+Verify that the user is able to login by entering valid credentials and pressing Enter key.
+Verify that the user is not able to login with an invalid username and password.
+Verify that the validation message gets displayed in case the user leaves the username or password field as blank.
+Verify that the validation message is displayed in the case the user exceeds the character limit of the user name and password fields.
+Verify that reset button functionality on the login page. Clicking on it should clear the textbox’s content.
+Verify if there is a checkbox with the label “remember password” on the login page.
+Verify that closing the browser should not log-out an authenticated user. Launching the application should lead the user to login state only.
 
 
