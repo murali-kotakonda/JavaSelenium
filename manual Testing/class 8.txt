@@ -17,6 +17,8 @@ Design/Test planning:
 	 b) on which env
 	 c) types of testing
 	(risk,tools,env,security,scope, assumptions,).
+
+  After test planning:
 	-write the test cases covering all postive and negative for the requirement ,followed by review with devs and qa lead.
 	-share the test cases/use cases document to developers  followed by review. 
 	-prepare the environment .ex: 
