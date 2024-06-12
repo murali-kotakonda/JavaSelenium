@@ -103,8 +103,27 @@ requirements-traceability-matrix document:
 - collets all requirements and for every reuirement what are the test cases ids's.
 
  
+Final BR#1 after queries:
+------
+-> 1.1 Introduce new screen for Login.
+-> 1.2 Provide app name in the top
+-> 1.3 In the page body provide a form :
+  a) Form to contain  username label + text field for filling username
+  b) Form to contain  password label + text field for filling password
+  c) Form to contain Login button
+-> 1.4 For successfull login show message as "login success".
+-> 1.5 For failure login show message as "login failure".
+1.6 If user name is empty then this screen should show a pop up menu asking "please enter user name". This is a client's side validation.
+1.7 If password is empty then this screen should show a pop up menu asking "please enter password". This is a client's side validation.
 
 
+
+
+test scenarios:
+---------------
+1.Login success
+2.Login failure
+3.Security Login 
 
 
 
