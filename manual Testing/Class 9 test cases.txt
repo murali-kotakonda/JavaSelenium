@@ -1,3 +1,15 @@
+
+test case
+A test case is a specific set of steps or instructions or specific inputs that can be used to test a particular function or feature of a software application. 
+It usually includes the input values and expected results when after running a test.
+a test case is a collection of conditions under which a tester will determine whether the application behaves as expected.
+
+test scenario
+a test scenario is a high-level description of how a particular function or feature of an application should work. 
+It usually includes a general description of the steps that should be followed to test the function or feature and the expected results. 
+ a test scenario is a description of the steps a tester would take to verify that an application works as expected.
+
+
 Test case document:
 -------------------
 what are the columns required for the TC doc.
