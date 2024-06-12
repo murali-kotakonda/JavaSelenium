@@ -27,8 +27,8 @@ Design/Test planning:
 
 		load testing:
 		-----------------
-		Test 
-		login with single user admin and admin
+	  ex for non-function(load testing):
+         Test  : login with single user admin and admin
 		-> with 100 users
 		-> with 200 users
 		-> with 500 users
