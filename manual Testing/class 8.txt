@@ -34,7 +34,9 @@ Design/Test planning:
 		-> with 500 users
 		-> with 1000 users
 		-> with 1 lakh users
-		
+		use tool like load runner or jmeters for running with multi users.
+
+
 		login with 100 users  at the same time
 		-> with 100 users
 		-> with 200 users
