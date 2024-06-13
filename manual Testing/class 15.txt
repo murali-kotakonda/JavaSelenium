@@ -59,4 +59,30 @@ After Retesting we need to do the Regression Testing.
  ----------------
   -Test without testcase and without prior knowledge of the application.
   -create defect for any flaw identified.
-  
+
+
+
+
+
+Regression is costly + time consuming.
+Perf testing follows after Regression.
+
+Order:
+--------
+-> Test New Features (using test cases)
+-> Test Defects  (ReTesting )
+-> Regression  ------> Heavy + costly + time consuming.
+-> Non Funtional Testing
+-> UAT (customer)
+
+Inroduce additional testing for Time saving:
+-> Test New Features (using test cases)
+-> Test Defects (ReTesting)
+-> Smoke + Sanity Testing 
+-> Regression  ------> Heavy + costly + time consuming.
+-> Non Funtional Testing
+-> UAT (customer)
+
+
+
+
