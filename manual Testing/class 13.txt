@@ -141,12 +141,21 @@ UserAcceptanceTesting:
 - Pre-production system.
 - If there is an issue, then client creates defects and assigns to amazon
 
+
 alpha : testing at developers site . system setup is done by accenture.
 [mynta and accenture will participate with mock data]
+Alpha Testing is a type of software testing performed to identify bugs before releasing the product to real users or to the public.
+Alpha Testing is one of the user acceptance tests. It is the first stage of software testing, during which the internal development team tests the program before making it available to clients or people outside the company.
+
+
 
 beta : testing at customers site with his own test data.
 with realtime data.
-[only myntra will participate as real time data is invovled]
+[only myntra[Abc corp] will participate as real time data is invovled]
+Beta Testing is performed by real users of the software application in a real environment. Beta testing is one type of User Acceptance Testing. A pre-release version of the product is made available for testing to a chosen set of external users or customers 
+during the second phase of software testing.
+
+-Acceptance criteria should be met for testing to be passed and that is validated by customer 
 
 -Acceptance criteria should be met for testing to be passed and that is validated by customer 
 
