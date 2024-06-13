@@ -11,6 +11,16 @@ c)Defects(reTesting).
 d)db testing,
 
 
+Funtional testing:
+------------------
+->Test New Features (using test cases)
+-> Test Defects  (ReTesting )
+-> Before Regression perform sanity + smoke
+-> Regression  [just before the delivery]
+-> Non Funtional Testing.
+-> User Acceptance Testing  (customer)
+
+
 
 Test strategy:
 ---------------------------
