@@ -78,14 +78,18 @@ age is a number and app should not even allow to enter any other chars except di
 
 
 
+
 b)Error handling/coverage testing:
 applicable for only for negative scenario.
 - Test with 
-  a) empty data
+  a) empty/size/alpah/splchar/digits/alphaNumeric data
   b) invalid data
   c) existing data   (register)
   d) non-existing data  (login )
+  
 - validate The error message shown by the app is as expected
+
+ 
 
 ERRORS:
 ->when db is down , 
