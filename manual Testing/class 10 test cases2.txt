@@ -171,8 +171,28 @@ Final BR#2 Req:
 BR#2-Registration :
 -------------------
 
+BR#2-Registration :
+-------------------
+
 1) New Registration page.
 2) This form should contain 
+  user name(login name)
+  password
+  confirm password.
+  first name
+  last name
+  gender  (radio button, male, female, other)
+  date of birth (dd/mm/yyyy)- label and calander & input
+  department (HR, recruitment and finance)(drop down)
+  mobile number
+  email
+  register button
+
+3) All fields are mandatory
+   If any of the field is missing then display error message by specifying that particular Lable name.
+
+4) Additional field info for Registration form.
+
     A)- user name(login name)
 	     – user name should contain min 10 char to max 15 -only alphabets 
        - SHOW ERROR MESSAGE AS: 'user name should contain min 10 char to max 15'
@@ -201,11 +221,12 @@ BR#2-Registration :
 		    - If user name already exist show error message as :: 'Email already in use.'
     K)- register button
 	      - After successful registration - show ‘Registration success’
-	  
-4) All fields are mandatory
-   If any of the field is missing then display error message by specifying that particular Lable name.
 
 
+
+
+
+ 
  
 
 
