@@ -131,6 +131,7 @@ c)calculation /manipulation testing:
 Used mostly in the cases where mathematical calculations are applicable.
 
 Approach:
+ex: ecommerce order
 1.provide some values to the page
 2.Process the activity [add items, checkout ]
 3.compare the output from the page with the expected value.
