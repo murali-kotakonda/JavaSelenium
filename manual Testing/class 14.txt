@@ -92,6 +92,10 @@ any extra features should not be added.
 
 Performance testing:
 --------------------
+ It is a testing technique carried out to determine system performance in terms of sensitivity, 
+ reactivity, and stability under a particular workload. 
+
+
 We need seperate system for perf testing
 We need perf tools Like load runner, jmeters.
 Done by testing + perf team.
