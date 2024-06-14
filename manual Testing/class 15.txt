@@ -18,13 +18,13 @@ test based on the requirement sepcified during the analysis.
 check the behaviour of system.
 
 
+
 Funtional testing:
 ------------------
 ->Test New Features (using test cases)
+-> Test Defects  (ReTesting )
 -> existing features(regression)
 -> Before Regression perform sanity + smoke
--> Test Defects  (ReTesting )
--> Regression  [just before the delivery]
 
 
 
