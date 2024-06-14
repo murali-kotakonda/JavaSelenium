@@ -76,6 +76,8 @@ After Retesting we need to do the Regression Testing.
  ----------------
   -Test without testcase and without prior knowledge of the application.
   -create defect for any flaw identified.
+  -Monkey Testing is a technique where the user tests the application or system by providing random inputs and checking the behavior, 
+  or seeing whether the application or system will crash
 
 
 Smoke Testing and Sanity Testing:
