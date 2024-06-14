@@ -491,7 +491,7 @@ After adding : Not eligible
    state changes from 'Eligible' to 'Not Eligible'
   5.Try to Add product  when customer already purchased the product - > Fail
   
-2.After 30 days don't access the features as Licence expired.
+2.After 30 days features are not available  as Licence is expired.
 
 States:
 Not Expired
