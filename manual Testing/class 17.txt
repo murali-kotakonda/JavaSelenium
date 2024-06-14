@@ -11,6 +11,11 @@ Functional testing:
 
 coverage/guidelines/testing techniques under functional testing:
 ------------------------------------------
+Software Testing Techniques help you design better test cases.
+Manual Testing Techniques help reduce the number of test cases to be executed while increasing test coverage. 
+They help identify test conditions that are otherwise difficult to recognize.
+
+
 a)Boundary Value analysis:[BVA]
 b)Equivalence class partitioning (ECP)
 c)decision table based testing
