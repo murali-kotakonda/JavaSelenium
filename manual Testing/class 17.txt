@@ -82,8 +82,8 @@ age is a number and app should not even allow to enter any other chars except di
 b)Error handling/coverage testing:
 applicable for only for negative scenario.
 - Test with 
-  a) empty/size/alpah/splchar/digits/alphaNumeric data
-  b) invalid data
+  a) empty data
+  b) invalid (size/alpah/splchar/digits/alphaNumeric) data
   c) existing data   (register)
   d) non-existing data  (login )
   
