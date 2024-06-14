@@ -21,7 +21,6 @@ Funtional testing:
 -> User Acceptance Testing  (customer)
 
 
-
 Test strategy:
 ---------------------------
  a) the new features(Test cases V-12 ) + ->Manual
@@ -61,8 +60,6 @@ After Retesting we need to do the Regression Testing.
   -create defect for any flaw identified.
 
 
-
-
 Smoke Testing and Sanity Testing:
 -------------------------------------
 
@@ -86,7 +83,6 @@ Sanity :
 ->basic navigation, basic flow testing .
 ->Minor changes/fixes .
 ->if sanity fails , then no need to go for regresion and create defect.
-
 
 
 Order:
