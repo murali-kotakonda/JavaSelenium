@@ -68,6 +68,10 @@ check if the new test case has to be written or not.
 
 What is Priority?
 Priority is defined as a parameter that decides the order in which a defect should be fixed. Defects having a higher priority should be fixed first. 
+-Priority is divided into 3 categories:
+Low
+Medium
+High 
 
 
 What is Severity?
@@ -75,7 +79,11 @@ Severity is defined as the extent to which a particular defect can create an imp
 
 -A higher effect of the bug on system functionality will lead to a higher severity level.
 -A QA engineer determines the severity level of a bug.
-
+-Severity is divided into 4 categories:
+Critical
+Major
+Medium
+Low
 
 
 
@@ -104,7 +112,25 @@ spelling mistake in the company name.
  Load conditions – High
 
 
+1. High Severity High Priority: Consider an example of a web application where the if after filling in the login details, the user cannot click the login button then this is the case of high severity and high priority.
 
+High Severity: If the login button is not clickable then the whole application is blocked and none of the functions can be accessed by the user
+High Priority: If the login button is not clickable this means that the application is not letting any user log in then what is the use of such an application? Such defects are high-priority defects as the users will avoid such applications and businesses will be impacted.
+
+2. High Severity Low Priority: Consider the example of the application being used on the older versions of Internet Explorer say IE8. This is a case of high severity and low priority.
+
+High Severity: The fault, in this case, is of high severity because when the application is accessed on the older version, the page will not load properly and a few fields and text will be overlapped thus whole application will be impacted.
+Low Priority: The defect is of low priority because very few actual users use IE8 or older versions so the fix can wait.
+
+3. Low Severity Low Priority: Consider the example of the help or faq section of the website where the theme or font style of a section of the page does not match with that of the rest of the page.
+
+Low Severity: The defect is of low severity as the defect is not affecting the website functionality.
+Low Priority: The defect is of low priority as not many users will access this particular section of the website so the fix can wait.
+
+4. Low Severity High Priority: Consider the example when there is a typo on the website. For example, the case of the school website where the ‘Admission Form’ is misspelled as ‘Admission Form’. 
+
+Low Severity: The defect is of low severity because functionality-wise there is no issue.
+High Priority: The defect is of high priority since it is related to business and needs to be fixed as soon as possible.
 
 JIRA:
 -----------
