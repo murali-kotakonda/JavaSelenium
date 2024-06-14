@@ -3,8 +3,6 @@ Functional Testing:
 Functional Testing is a type of Software Testing in which the system is tested against the functional requirements and specifications. 
 Functional testing ensures that the application properly satisfies the requirements or specifications. This type of testing is particularly concerned with the result of processing.
 
-
-
 Functional Testing Process: Typical Steps
 Step 1 – Requirements Analysis. Understand and analyze the functional requirements of the software.
 Step 2 – Test Planning. ...
@@ -14,26 +12,20 @@ Step 5 – Execute Tests. ...
 Step 6 – Compare Results. ...
 Step 7 – Test Reports.
 
-
 -> done by tester.
 -> blackbox testing
 test based on the requirement sepcified during the analysis.
 check the behaviour of system.
--> Testing the 
-a)new features(Test cases) + 
-b)existing features(regression) + 
-c)Defects(reTesting).
-d)db testing,
 
 
 Funtional testing:
 ------------------
 ->Test New Features (using test cases)
--> Test Defects  (ReTesting )
+-> existing features(regression)
 -> Before Regression perform sanity + smoke
+-> Test Defects  (ReTesting )
 -> Regression  [just before the delivery]
--> Non Funtional Testing.
--> User Acceptance Testing  (customer)
+
 
 
 Test strategy:
@@ -117,5 +109,6 @@ Inroduce additional testing for Time saving:
 -> UAT (customer)
 
 
+ 
 
 
