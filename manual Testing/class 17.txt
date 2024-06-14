@@ -198,7 +198,7 @@ w.r.t. value and length.
 
 EX:
 user name allows only alphabets   [value ]
-user name size is 6 to 8       [lenth] , range 
+user name size is 6 to 8       [length] , range 
 
 we should test both +ve and -ve cases
 for +ve data => app should allow
@@ -229,6 +229,22 @@ max-1, max, max+1
 
 
 Ex1:
+Input condition is valid between 1 to 100
+min = 1
+max = 100
+
+
+Boundary values:
+0 - -ve
+1 - +ve
+2 - +ve
+99 - +ve
+100 - +ve
+101 - -ve
+
+
+
+Ex2:
 Input condition is valid between 1 to 10
 min = 1
 max = 10 
@@ -259,7 +275,7 @@ This software testing method divides the input domain of a program into classes 
 from which test cases should be designed.
  
 Case#1:
-username field allows only lower case.
+username field allows only lower case alphabets.
 
 VALID : [a-z]  
         ex:kumar
@@ -305,12 +321,16 @@ summary:
 
 1.MobileNum should be exactly 10 digits ->  -> USE BVA + ECP
 testcases :
+
  1. 9 digits
  2. 10 digits 
  3. 11 diguts 
  4. 10 alphabets 
  5. 10 spcl chars 
  6. 10 alpha numeric 
+ 7. empty
+
+
  
 2.username allows 6 - 8 Characters-> USE BVA
 3.username allows only alphabets and only . and _ are allowed  -> USE ECP
