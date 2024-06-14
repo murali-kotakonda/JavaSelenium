@@ -35,6 +35,11 @@ https://www.oracle.com/database/technologies/xe-downloads.html
 
 System testing:
 ---------------
+
+System testing is a form of black-box testing that assesses the complete functionality and performance of a fully integrated software system. It is conducted after integration testing and before User-acceptance testing. 
+
+It aims to identify any flaws in the integrated components of the system and to guarantee that the system complies with the specified requirements and operates as expected by the end users.
+
 - test the integrated system , final product.
 -Test the entire application functionality w.r.t the test cases.
 - done by testing team.
