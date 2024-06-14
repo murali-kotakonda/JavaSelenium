@@ -185,6 +185,8 @@ ex: .avi , .mp4 , .VOB
 c) Migrate form older infrastruture to new infrastructure
 ex: from win 7 to mac.
 
+monothilic to microservice migration
+
 Test: 
 a) If the data still exists post migration .
 is there any loss of data??
