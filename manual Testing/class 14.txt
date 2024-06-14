@@ -106,6 +106,9 @@ b)Test by increasing the no of users ex: 50, 100, 1000, 2000 users  + increase t
 find min , max , average  response times
 c) goal is identify the Threshold.(max respon time) per page.
 ex: test based on the current usage.
+Load tests help you understand how a system behaves under an expected load.
+
+
 
 ->Stress Testing :
 Test the app and check how the app is handling the stress.
@@ -113,6 +116,8 @@ ex:
 Test with 1lakh records with 10 lakh customers .
 what is the memory occupany + cpu occupancy + res time + load on db + instances availability + load balancer.
 -> Test the app to saturation point considering future.
+Stress tests help you understand the upper limits of a system's capacity using a load beyond the expected maximum.
+
 
 
 diff between load vs stress testing
