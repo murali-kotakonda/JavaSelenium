@@ -380,15 +380,15 @@ Req:
 - From Time and toTime are optional
 - From Time and toTime should be within 30 days
 
+DATA MAY EXIT OR MAY NOT EXIT
 
 1.If data exists within 30 days 
 Todays date : June 1st
 
-   fromDate   toDate             Result
-     empty     empty           fetch  lst 30 days data 
-	 
+        fromDate   toDate             Result
+        empty     empty           fetch  lst 30 days data 	 
 	 empty     may 30          fetch last 30 days info        
-     empty     may 15          fetch from may 1st to may 15 
+         empty     may 15          fetch from may 1st to may 15 
 	 empty     jan 1           no data 
 	 empty     Jun 20          Invalid date
 	 
@@ -400,7 +400,7 @@ Todays date : June 1st
 	 may 1      may 30          fetch last 30 days info  
 	 may 10     may 20          fetch may 10 to may 20
 	 jan 1      may 30          fetch last 30 days info  
-     jan 1      jan 30          no data 	 
+         jan 1      jan 30          no data 	 
 	 
 	 may 20     june 20         invalid date 
 	 june 20    dec 30          invalid date 
@@ -439,7 +439,7 @@ CASE#3:
 In a login page 
 - Username has to be  10 chars,only alphabets
 - password has to be 8 chars, only alphabets
-- if UserName & password both are valid then login is success.
+- if UserName & password both are valid then login is success ,if not login failed.
 Use BVA + ECP + Decision tree
 
 SYNTAX CORRECT: 
