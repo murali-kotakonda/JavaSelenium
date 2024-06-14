@@ -92,7 +92,7 @@ any extra features should not be added.
 
 Performance testing:
 --------------------
- It is a testing technique carried out to determine system performance in terms of sensitivity, 
+ It is a testing technique carried out to determine system performance in terms of sensitivity, speed, responsiveness,
  reactivity, and stability under a particular workload. 
 
 
