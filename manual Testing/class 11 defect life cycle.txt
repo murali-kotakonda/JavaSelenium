@@ -17,7 +17,6 @@ Where should we create defect or what is the defect tracking tool?
 JIRA
 
   
-
 - Every defect has a state
 
 States:
@@ -65,9 +64,48 @@ Defect is accepted and dev chages are in progress.
 -> Test completed/Verified
 Mark as Test completed when the testings are completed and successfull.
 check if the new test case has to be written or not.
-  
-  
-  
+
+
+What is Priority?
+Priority is defined as a parameter that decides the order in which a defect should be fixed. Defects having a higher priority should be fixed first. 
+
+
+What is Severity?
+Severity is defined as the extent to which a particular defect can create an impact on the software. Severity is a parameter to denote the implication and the impact of the defect on the functionality of the software. 
+
+-A higher effect of the bug on system functionality will lead to a higher severity level.
+-A QA engineer determines the severity level of a bug.
+
+
+
+
+1.Low priority-Low severity – 
+A spelling mistake in a page not
+frequently navigated by users.
+2. Low priority-High severity – 
+Application crashing in some very
+corner cases.
+3. High priority-Low severity 
+– Slight change in logo color or
+spelling mistake in the company name.
+4. High priority-High severity 
+– Issue with login functionality.
+
+
+
+ User interface defects – Low
+ Boundary-related defects – Medium
+ Error handling defects – Medium
+ Calculation defects – High
+ Misinterpreted data – High
+ Hardware failures – High
+ Compatibility issues – High
+ Control flow defects – High
+ Load conditions – High
+
+
+
+
 JIRA:
 -----------
 1.Creating EPIC
