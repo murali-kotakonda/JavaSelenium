@@ -162,6 +162,54 @@ registration page stating:
 email already in use.
 5. if registration is success then use username and password on the login screen to login
 
+
+
+
+
+Final BR#2 Req:
+---------------
+BR#2-Registration :
+-------------------
+
+1) New Registration page.
+2) This form should contain 
+    A)- user name(login name)
+	     – user name should contain min 10 char to max 15 -only alphabets 
+       - SHOW ERROR MESSAGE AS: 'user name should contain min 10 char to max 15'
+		   - If user name already exist show error message as :: 'login name already in use.'
+  	B)- password
+	     - password has to be minimum  5 characters and max 10 characters, - any characters
+       - SHOW ERROR MESSAGE AS: 'password has to be minimum  5 characters and max 10 characters'
+  	C)- confirm password.
+	     - if confirm password doesnt match show error message "Please match the confirm password and Password field's"
+    D)- first name
+    E)- last name
+    F)- gender  (radio button, male, female, other)
+       No default selection
+    G)- date of birth (dd/mm/yyyy)- label and calander & input
+	      - D.O.B has to be a valid format, display error message if invalid :: 'Please enter valid date of birth'.
+    H)- department (HR, recruitment and finance)(drop down)
+      No default selection
+    I)- mobile number
+	      - mobile number has to exactly 10 digits- only India - only digits
+        - SHOW ERROR MESSAGE AS: 'mobile number has to exactly 10 digits'
+		    - If mobil number doesnt contain digits error message :: 'mobile number should contain only digits'
+		    - If user name already exist show error message as :: 'Mobile number already in use.'
+    J)- email 
+		    - email has to be a valid format
+        - SHOW ERROR MESSAGE AS: 'Please enter valid email'	
+		    - If user name already exist show error message as :: 'Email already in use.'
+    K)- register button
+	      - After successful registration - show ‘Registration success’
+	  
+4) All fields are mandatory
+   If any of the field is missing then display error message by specifying that particular Lable name.
+
+
+ 
+
+
+
 (Refer BR#1)
 BR#2 Test-cases:
 ----------
