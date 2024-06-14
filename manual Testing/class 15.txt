@@ -27,16 +27,27 @@ Funtional testing:
 -> Before Regression perform sanity + smoke
 
 
-
 Test strategy:
 ---------------------------
  a) the new features(Test cases V-12 ) + ->Manual
- b) Defects(retesting Issues till v-11).  -> Manual
+ b) Defects(retesting Issues till v-11). ->Manual
  c) existing features(regression v-11)  ->manual/AUtomation . But preferred automation.
 
 
 Regression Testing:
 --------------------
+Regression testing is a black box testing technique. 
+For any change in the software,  Regression testing has to ensure there is no  impact in the existing functionality of the product. 
+Regression testing is making sure that the product works fine with new functionality, bug fixes, or any change in the existing feature.
+
+
+Techniques for the selection of Test cases for Regression Testing
+* Select all test cases:  
+* Select test cases randomly:  
+* Select modification traversing test cases: In this technique, only those test cases are selected that cover and test the modified portions of the source code and the parts that are affected by these modifications.
+* Select higher priority test cases:  
+
+
 a)Testing the existing/already delivered features.
 b)Regression testing is required always:
 -> Defect fix
