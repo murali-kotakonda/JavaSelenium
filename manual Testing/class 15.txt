@@ -85,10 +85,14 @@ Smoke Testing and Sanity Testing:
 
 Smoke:
 -------
+Smoke testing is a testing technique that is used to check the basic functionality of a software application or system after a build or release. 
+This testing is done to ensure that the build is stable enough for further testing.
+Smoke testing is typically performed by testers or developers before any detailed testing is performed.
+
 - mostly done using the tool.
 - Build verification testing.
 - check if the new build is stable.
-- verify the app lauched successfully or is the deployment success and check  installation is proper or check if the pages are responsive (in time/not at all).
+- verify the app lauched successfully or is the deployment success  or check if the pages are responsive (in time/not at all).
 - verify critical funtionality.
 ->Minor changes/fixes .
 ->if Smoke fails , then no need to go for regresion and create HIGH defect.
@@ -99,6 +103,9 @@ Perf testing follows after Regression.
 
 Sanity :
 -----------
+Sanity testing is used to validate the changes made to one or few specific parts of the application 
+in order to make sure that the software is still functioning as expected after a small change or a bug fix
+
 ->UAT TESTING done by tester.
 ->basic navigation, basic flow testing .
 ->Minor changes/fixes .
